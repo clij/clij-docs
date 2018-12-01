@@ -130,15 +130,19 @@ GPU mean filter no 7 took 20
 GPU mean filter no 8 took 27
 GPU mean filter no 9 took 24
 GPU mean filter no 10 took 23
-
 ```
 
-**Heureka, we can spare 90% of the time by executing the operation on the GPU!**
+**Heureka, we can spare 98% of the time by executing the operation on the GPU!**
 Side note: ImageJs mean filter runs inplace. Thus, the with every iteration in the for loop, the image becomes more and more blurry. 
 The OpenCL operation in the GPU always starts from the _input_ image and puts its result in the _blurred_ image. 
 Thus, the resulting images will look different. 
 Be a sceptical scietist when processing images in the GPU. Check that the workflow is indeed doing the right thing. This is especially important when working with experimental software.
 
+When executing the same code on an AMD Ryzen 3 CPU / Vega 3 GPU:
 
+
+These are just rough benchmarks. When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
+
+Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page]() to stay up-to-date.
 
 
