@@ -14,11 +14,9 @@ This is how your code might look like if you do GPU based image processing in Im
 The presented software is in early developmental stage. Yet it is unclear where this project is heading towards. 
 In order to know what might be necessary to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
 
-* **Share efforts** I will not ask you to support coding this thing. However, you are welcome if you feel like sharing efforts.
-
-* **Talk about your motiviation** It is very important for me to know who would use ClearCLIJ and for what. 
+* **Tell me about your application** It is very important for me to know who would use ClearCLIJ and for what. 
 This is kind of necessary to justify efforts. 
-Developing things like that is not my job. But I'm happy doing it; if people use it.
+Developing things like that is _not_ my job. But I'm happy doing it; if people use it.
 Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](http://image.sc) or tweet to me [@haesleinhuepf](http://twitter.com/haesleinhuepf) if you find this tool useful. 
 Tell me your story. What do you do with it? How do you like it?
 
@@ -29,6 +27,8 @@ It might be that an error only appears on your computer and I cannot see what le
 Please describe in detail what you did before the error message appeared. 
 Also please tell me on what computer/operating system you are running Fiji.
 
+* **Share efforts** I will not ask you to support coding this thing. However, you are welcome if you feel like sharing efforts.
+
 * **Communication is key** I do work a lot with ImageJ/Fiji and I do work a lot with OpenCL. Building the bridge between both might be a low hanging apple for me. 
 But again, I need to know other people views and opinions in order to make this project successful. 
 
@@ -37,7 +37,7 @@ Thanks for reading. Now, let's get started.
 
 ## Installation
 Download and install [Fiji from its website](https://fiji.sc/Downloads).
-Add the update site `http://sites.imagej.net/clij` to your Fiji installation. [Read more about how to activate update sites]( https://imagej.net/Following_an_update_site).
+Add the update site `http://sites.imagej.net/clij` to your Fiji installation. If needed [read more about how to activate update sites]( https://imagej.net/Following_an_update_site).
 Restart Fiji. ClearCLIJ is successfully installed, if you find a menu entry _Plugins > CLIJ_.
 
 **Please note:** This is experimental software, it may have side effects on your Fiji installation and may break other plugins. 
