@@ -168,31 +168,31 @@ print("Pulining one image from the GPU took " + (getTime() - time) + " msec");
 When executing the macro on an Intel Core i7-8650U CPU and Intel UHD Graphics 620 GPU, the output is:
 
 ```java
-CPU mean filter no 1 took 2808 msec
-CPU mean filter no 2 took 2799 msec
-CPU mean filter no 3 took 2802 msec
-CPU mean filter no 4 took 3500 msec
-CPU mean filter no 5 took 4530 msec
-CPU mean filter no 6 took 4430 msec
-CPU mean filter no 7 took 4355 msec
-CPU mean filter no 8 took 4315 msec
-CPU mean filter no 9 took 4437 msec
-CPU mean filter no 10 took 4442 msec
-Pushing two images to the GPU took 826 msec
-GPU mean filter no 1 took 674 msec
-GPU mean filter no 2 took 19 msec
-GPU mean filter no 3 took 19 msec
-GPU mean filter no 4 took 17 msec
-GPU mean filter no 5 took 18 msec
-GPU mean filter no 6 took 17 msec
-GPU mean filter no 7 took 19 msec
-GPU mean filter no 8 took 18 msec
-GPU mean filter no 9 took 18 msec
-GPU mean filter no 10 took 19 msec
-Pulining one image from the GPU took 1109 msec
+CPU mean filter no 1 took 3043 msec
+CPU mean filter no 2 took 4350 msec
+CPU mean filter no 3 took 4467 msec
+CPU mean filter no 4 took 4611 msec
+CPU mean filter no 5 took 4509 msec
+CPU mean filter no 6 took 4384 msec
+CPU mean filter no 7 took 4422 msec
+CPU mean filter no 8 took 4379 msec
+CPU mean filter no 9 took 4365 msec
+CPU mean filter no 10 took 4372 msec
+Pushing two images to the GPU took 819 msec
+GPU mean filter no 1 took 872 msec
+GPU mean filter no 2 took 183 msec
+GPU mean filter no 3 took 192 msec
+GPU mean filter no 4 took 195 msec
+GPU mean filter no 5 took 212 msec
+GPU mean filter no 6 took 251 msec
+GPU mean filter no 7 took 305 msec
+GPU mean filter no 8 took 300 msec
+GPU mean filter no 9 took 260 msec
+GPU mean filter no 10 took 263 msec
+Pulling one image from the GPU took 1123 msec
 ```
 
-Thus, on the CPU it takes 38 seconds, while using the GPU it just takes 3 seconds. Let's execute it again.
+Thus, on the CPU it takes 43 seconds, while using the GPU it just takes 5 seconds. Let's execute it again.
 
 ```java
 CPU mean filter no 1 took 2623 msec
@@ -216,18 +216,26 @@ GPU mean filter no 7 took 21 msec
 GPU mean filter no 8 took 22 msec
 GPU mean filter no 9 took 21 msec
 GPU mean filter no 10 took 27 msec
-Pulining one image from the GPU took 406 msec
+Pulling one image from the GPU took 406 msec
 ```
 
-On the CPU it still takes 38 seconds, while using the GPU it goes down to less than one second. 
+On the CPU it still takes 39 seconds, while using the GPU it goes down to three seconds. 
 The additional speedup comes from the caching mechanism mentioned above.
 
-**Heureka, we can spare 98% of the time by executing the operation on the GPU!**
+**Heureka, we can spare 90% of the time by executing the operation on the GPU!** And this works on a small laptop without dedicated GPU.
+
 Side note: ImageJs mean filter runs inplace. That means the result is stored in the same memory as the input image. 
 With every iteration in the for loop, the image becomes more and more blurry. 
 The OpenCL operation in the GPU always starts from the _input_ image and puts its result in the _blurred_ image. 
 Thus, the resulting images will look different. 
-Be a sceptical scietist when processing images in the GPU. Check that the workflow is indeed doing the right thing. This is especially important when working with experimental software.
+Be a sceptical scietist when processing images in the GPU. 
+Check that the workflow is indeed doing the right thing. 
+This is especially important when working with experimental software. 
+In presented case, have a look at [mean.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU are. 
+Usually I observed small differences between ImageJ and OpenCL especially at the borders of the images.
+This is the view on results from the mean filter on CPU and GPU together with the difference image of both:
+
+![Image](images/visual_CPU_GPU_comparison.png)
 
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
