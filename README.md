@@ -181,7 +181,7 @@ GPU mean filter no 10 took 23
 
 **Heureka, we can spare 98% of the time by executing the operation on the GPU!**
 Side note: ImageJs mean filter runs inplace. That means the result is stored in the same memory as the input image. 
-Thus, the with every iteration in the for loop, the image becomes more and more blurry. 
+With every iteration in the for loop, the image becomes more and more blurry. 
 The OpenCL operation in the GPU always starts from the _input_ image and puts its result in the _blurred_ image. 
 Thus, the resulting images will look different. 
 Be a sceptical scietist when processing images in the GPU. Check that the workflow is indeed doing the right thing. This is especially important when working with experimental software.
