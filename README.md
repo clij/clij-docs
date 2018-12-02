@@ -46,23 +46,12 @@ Use a freshly downloaded Fiji installation for testing experimental plugins like
 [Read the BSD license file](http://github.com/haesleinhuepf/ClearCLIJ/license.txt) for more details.
 
 ## A first macro
-The first step is selecting the OpenCL device / GPU you would like to use to process your images. 
-Start the macro recorder to record your choice by clicking Fijis menu _Plugins > Macro > Record_. 
-Afterwards, click the menu _Plugins > CLIJ > CLIJ Macro Extensions_.
-The selection dialog will open. Make your choice and click ok:
-
-![Image](images/device_dialog.png)
-
-Ignore the error message which comes up. Have a look in the macro recorder and click it's _Create_ button.
-
-![Image](images/macro_recorder.png)
-
 The first macro is [help.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/help.ijm).
 It will assist us to get an overview which methods are supported by ClearCLIJ to process images. 
 It looks like this:
 
 ```java
-run("CLIJ Macro Extensions", "cl_device=[Intel(R) UHD Graphics 620]");
+run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_help("add");
 ```
 
@@ -75,17 +64,20 @@ Ext.CLIJ_addScalar(Image source, Image destination, Number scalar);
 Ext.CLIJ_addWeightedPixelwise(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
 ```
 
-Note: The first line of this macro contains the specific name for a GPU. If you don't have the named GPU in your computer, another one will be chosen.
+Keep this example program, you might need it later again if you want to search for help on ClearCLIJ methods. 
+It also tells you which parameters the methods need in order to run.
+
+Note: The first line of this macro may contain the specific name for a GPU.
+You can - but you don't have to - specify one. 
+If none is specified, the system will take the first one found.
+If you don't have the named GPU in your computer, another one will be chosen.
 You don't have to enter the full name, you can also just specify a part of the name.
-In order to run on any `HD` named GPU, change the program. With this, it will run on more different computers:
+In order to run on any `HD` named GPU, change the macro like this:
 
 ```java
 run("CLIJ Macro Extensions", "cl_device=HD");
 Ext.CLIJ_help("add");
 ```
-
-Keep this example program, you might need it later again if you want to search for help on ClearCLIJ methods. 
-It also tells you which parameters the methods need in order to run.
 
 ## Transferring images between ImageJ and the GPU
 In order to allow images to be processed by the GPU, you need to transfer them into the memory of the GPU. 
@@ -112,7 +104,7 @@ rename("Blurred");
 blurred = getTitle();
 
 // Init GPU
-run("CLIJ Macro Extensions", "cl_device=HD");
+run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // push images to GPU
