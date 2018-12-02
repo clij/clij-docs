@@ -112,7 +112,7 @@ rename("Blurred");
 blurred = getTitle();
 
 // Init GPU
-run("CLIJ Macro Extensions", "cl_device=[Intel(R) UHD Graphics 620]");
+run("CLIJ Macro Extensions", "cl_device=HD");
 Ext.CLIJ_clear();
 
 // push images to GPU
@@ -174,7 +174,7 @@ Ext.CLIJ_pull(blurred);
 print("Pulining one image from the GPU took " + (getTime() - time) + " msec");
 ```
 
-When executing the macro on an Intel Core i7-8650U CPU and Intel UHD Graphics 620 GPU, the output is:
+When executing the macro on an Intel Core i7-8650U CPU with a built-in Intel UHD Graphics 620 GPU (Windows 10, 64 bit), the output is:
 
 ```java
 CPU mean filter no 1 took 3043 msec
@@ -233,6 +233,7 @@ The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
 And this works on a small laptop without dedicated GPU.
+Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics (note the missing U in front of HD), the time saving is just 50%.
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
