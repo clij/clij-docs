@@ -1,13 +1,14 @@
 # ClearCLIJ - OpenCL based GPU image processing from ImageJ macro
 
-Image processing in modern GPUs allows for accellerating processing speeds massively. This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc). 
+Image processing in modern GPUs allows for accelerating processing speeds massively. 
+This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [ClearCLIJ](https://github.com/haesleinhuepf/clearclij/) library. 
 It is not necessary to learn OpenCL itself. 
-Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience. \
+Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
 The list of preprogrammed routines might be extended depending on the communities needs.
 
 ## Before we start
 The presented software is in early developmental stage. Yet it is unclear where this project is heading towards. 
-In order to know if it makes sense to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
+In order to know what might be necessary to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
 
 * **Share efforts** I will not ask you to support coding this thing. However, you are welcome if you feel like sharing efforts.
 
@@ -18,6 +19,11 @@ Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](http://image.sc
 Tell me your story. What do you do with it? How do you like it?
 
 * **Guide development** Think about functionality you would like to have. [Formulate a github issue](https://github.com/ClearControl/clearclij/issues) or again, drop me as message.
+
+* **Report errors** Report error messages as [github issue](https://github.com/ClearControl/clearclij/issues). 
+It might be that an error only appears on your computer and I cannot see what lead to it.
+Please describe in detail what you did before the error message appeared. 
+Also please tell me on what computer/operating system you are running Fiji.
 
 * **Communication is key** I do work a lot with ImageJ/Fiji and I do work a lot with OpenCL. Building the bridge between both might be a low hanging apple for me. 
 But again, I need to know other people views and opinions in order to make this project successful. 
