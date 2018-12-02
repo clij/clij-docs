@@ -75,6 +75,15 @@ Ext.CLIJ_addScalar(Image source, Image destination, Number scalar);
 Ext.CLIJ_addWeightedPixelwise(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
 ```
 
+Note: The first line of this macro contains the specific name for a GPU. If you don't have the named GPU in your computer, another one will be chosen.
+You don't have to enter the full name, you can also just specify a part of the name.
+In order to run on any `HD` named GPU, change the program. With this, it will run on more different computers:
+
+```java
+run("CLIJ Macro Extensions", "cl_device=HD");
+Ext.CLIJ_help("add");
+```
+
 Keep this example program, you might need it later again if you want to search for help on ClearCLIJ methods. 
 It also tells you which parameters the methods need in order to run.
 
