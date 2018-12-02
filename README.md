@@ -6,7 +6,7 @@ It is not necessary to learn OpenCL itself.
 Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
 The list of preprogrammed routines might be extended depending on the communities needs.
 
-This is how your code might look like if you do GPU based image processing in ImageJ macro>
+This is how your code might look like if you do GPU based image processing in ImageJ macro:
 
 ![Image](images/example.png)
 
