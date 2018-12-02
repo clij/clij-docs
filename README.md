@@ -225,7 +225,7 @@ The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
 And this works on a small laptop without dedicated GPU.
-Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics (note the missing U in front of HD), the time saving is just 50%.
+Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, the time saving is just 50%.
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
