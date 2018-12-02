@@ -195,28 +195,28 @@ Pulling one image from the GPU took 1123 msec
 Thus, on the CPU it takes 43 seconds, while using the GPU it just takes 5 seconds. Let's execute it again.
 
 ```java
-CPU mean filter no 1 took 2623 msec
-CPU mean filter no 2 took 2738 msec
-CPU mean filter no 3 took 2795 msec
-CPU mean filter no 4 took 3701 msec
-CPU mean filter no 5 took 4663 msec
-CPU mean filter no 6 took 4416 msec
-CPU mean filter no 7 took 4439 msec
-CPU mean filter no 8 took 4376 msec
-CPU mean filter no 9 took 4545 msec
-CPU mean filter no 10 took 4320 msec
-Pushing two images to the GPU took 227 msec
-GPU mean filter no 1 took 18 msec
-GPU mean filter no 2 took 19 msec
-GPU mean filter no 3 took 20 msec
-GPU mean filter no 4 took 19 msec
-GPU mean filter no 5 took 20 msec
-GPU mean filter no 6 took 20 msec
-GPU mean filter no 7 took 21 msec
-GPU mean filter no 8 took 22 msec
-GPU mean filter no 9 took 21 msec
-GPU mean filter no 10 took 27 msec
-Pulling one image from the GPU took 406 msec
+CPU mean filter no 1 took 2596 msec
+CPU mean filter no 2 took 2739 msec
+CPU mean filter no 3 took 2913 msec
+CPU mean filter no 4 took 3336 msec
+CPU mean filter no 5 took 4643 msec
+CPU mean filter no 6 took 4505 msec
+CPU mean filter no 7 took 4473 msec
+CPU mean filter no 8 took 4524 msec
+CPU mean filter no 9 took 4414 msec
+CPU mean filter no 10 took 4435 msec
+Pushing two images to the GPU took 249 msec
+GPU mean filter no 1 took 216 msec
+GPU mean filter no 2 took 222 msec
+GPU mean filter no 3 took 237 msec
+GPU mean filter no 4 took 245 msec
+GPU mean filter no 5 took 243 msec
+GPU mean filter no 6 took 244 msec
+GPU mean filter no 7 took 275 msec
+GPU mean filter no 8 took 251 msec
+GPU mean filter no 9 took 267 msec
+GPU mean filter no 10 took 253 msec
+Pulling one image from the GPU took 433 msec
 ```
 
 On the CPU it still takes 39 seconds, while using the GPU it goes down to three seconds. 
