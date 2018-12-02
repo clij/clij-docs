@@ -232,7 +232,7 @@ Be a sceptical scietist when processing images in the GPU.
 Check that the workflow is indeed doing the right thing. 
 This is especially important when working with experimental software. 
 In presented case, have a look at [mean.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU are. 
-Usually I observed small differences between ImageJ and OpenCL especially at the borders of the images.
+In some of the filters, I observed small differences between ImageJ and OpenCL especially at the borders of the images.
 This is the view on results from the mean filter on CPU and GPU together with the difference image of both:
 
 ![Image](images/visual_CPU_GPU_comparison.png)
