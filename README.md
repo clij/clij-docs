@@ -176,12 +176,12 @@ The OpenCL operation in the GPU always starts from the _input_ image and puts it
 Thus, the resulting images will look different. 
 Be a sceptical scietist when processing images in the GPU. Check that the workflow is indeed doing the right thing. This is especially important when working with experimental software.
 
-When executing the same code on an AMD Ryzen 3 CPU / Vega 3 GPU:
-
-
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
+
+## Limitations
+An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I experienced some issues on AMD GPUs. [Check the project page for a full list of tested systems](http://github.com/haesleinhuepf/ClearCLIJ). Let me know, if you experience issues on systems which were not reported in that list.
 
 Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page]() to stay up-to-date.
 
