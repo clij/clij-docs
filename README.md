@@ -219,7 +219,7 @@ GPU mean filter no 10 took 27 msec
 Pulining one image from the GPU took 406 msec
 ```
 
-On the CPU it still takes 38 seconds, while using the GPU it goes down to les than one second. 
+On the CPU it still takes 38 seconds, while using the GPU it goes down to less than one second. 
 The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 98% of the time by executing the operation on the GPU!**
