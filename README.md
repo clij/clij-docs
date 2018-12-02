@@ -6,6 +6,10 @@ It is not necessary to learn OpenCL itself.
 Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
 The list of preprogrammed routines might be extended depending on the communities needs.
 
+This is how your code might look like if you do GPU based image processing in ImageJ macro>
+
+![Image](images/example.png)
+
 ## Before we start
 The presented software is in early developmental stage. Yet it is unclear where this project is heading towards. 
 In order to know what might be necessary to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
