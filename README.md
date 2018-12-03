@@ -354,6 +354,52 @@ GPU mean filter no 9 took 340 msec
 GPU mean filter no 10 took 336 msec
 Pulling one image from the GPU took 250 msec
 
+Intel HD Fedora
+CPU mean filter no 1 took 2700 msec
+CPU mean filter no 2 took 2769 msec
+CPU mean filter no 3 took 2845 msec
+CPU mean filter no 4 took 2995 msec
+CPU mean filter no 5 took 3068 msec
+CPU mean filter no 6 took 2816 msec
+CPU mean filter no 7 took 2845 msec
+CPU mean filter no 8 took 2854 msec
+CPU mean filter no 9 took 2805 msec
+CPU mean filter no 10 took 2798 msec
+Pushing two images to the GPU took 409 msec
+GPU mean filter no 1 took 1316 msec
+GPU mean filter no 2 took 1017 msec
+GPU mean filter no 3 took 984 msec
+GPU mean filter no 4 took 981 msec
+GPU mean filter no 5 took 978 msec
+GPU mean filter no 6 took 983 msec
+GPU mean filter no 7 took 988 msec
+GPU mean filter no 8 took 996 msec
+GPU mean filter no 9 took 987 msec
+GPU mean filter no 10 took 979 msec
+Pulling one image from the GPU took 469 msec
+CPU mean filter no 1 took 2898 msec
+CPU mean filter no 2 took 2720 msec
+CPU mean filter no 3 took 2722 msec
+CPU mean filter no 4 took 2808 msec
+CPU mean filter no 5 took 3091 msec
+CPU mean filter no 6 took 2832 msec
+CPU mean filter no 7 took 2775 msec
+CPU mean filter no 8 took 2767 msec
+CPU mean filter no 9 took 2785 msec
+CPU mean filter no 10 took 2859 msec
+Pushing two images to the GPU took 137 msec
+GPU mean filter no 1 took 1007 msec
+GPU mean filter no 2 took 991 msec
+GPU mean filter no 3 took 988 msec
+GPU mean filter no 4 took 986 msec
+GPU mean filter no 5 took 985 msec
+GPU mean filter no 6 took 993 msec
+GPU mean filter no 7 took 984 msec
+GPU mean filter no 8 took 982 msec
+GPU mean filter no 9 took 980 msec
+GPU mean filter no 10 took 978 msec
+Pulling one image from the GPU took 228 msec
+
 
 
 
