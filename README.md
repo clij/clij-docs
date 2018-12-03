@@ -224,8 +224,10 @@ On the CPU it still takes 39 seconds, while using the GPU it goes down to three 
 The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
-And this works on a small laptop without dedicated GPU.
-Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, the time saving is just 50%.
+And this works on a small laptop without dedicated GPU. I tested some more systems, just to see if and how fast CLIJ performs. The following numbers are time measurements from the second run:
+* Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, it takes 10 seconds.
+* On an **NVidia TITAN XP, it takes 0.7 seconds**.
+* An AMD Ryzen 3 / Vega GPU needed 4 seconds to perform the test.
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
@@ -250,7 +252,8 @@ ensuring these differences are small and in case they appear, they only influenc
 
 
 ## Limitations
-An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I experienced some issues on AMD GPUs. [Check the project page for a full list of tested systems](http://github.com/haesleinhuepf/ClearCLIJ). Let me know, if you experience issues on systems which were not reported in that list.
+An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
+[Check the project page for a full list of tested systems](http://github.com/haesleinhuepf/ClearCLIJ). Let me know, if you experience issues on systems which were not reported in that list.
 
 Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page]() to stay up-to-date.
 
@@ -259,154 +262,3 @@ Happy coding!
 Cheers,
 
 Robert _@haesleinhuepf_ Haase
-
-
-TitanX:
-CPU mean filter no 1 took 1645 msec
-CPU mean filter no 2 took 1203 msec
-CPU mean filter no 3 took 1219 msec
-CPU mean filter no 4 took 1203 msec
-CPU mean filter no 5 took 1235 msec
-CPU mean filter no 6 took 1187 msec
-CPU mean filter no 7 took 1219 msec
-CPU mean filter no 8 took 1227 msec
-CPU mean filter no 9 took 1219 msec
-CPU mean filter no 10 took 1187 msec
-Pushing two images to the GPU took 519 msec
-GPU mean filter no 1 took 1703 msec
-GPU mean filter no 2 took 31 msec
-GPU mean filter no 3 took 27 msec
-GPU mean filter no 4 took 26 msec
-GPU mean filter no 5 took 27 msec
-GPU mean filter no 6 took 19 msec
-GPU mean filter no 7 took 27 msec
-GPU mean filter no 8 took 28 msec
-GPU mean filter no 9 took 28 msec
-GPU mean filter no 10 took 18 msec
-Pulling one image from the GPU took 765 msec
-CPU mean filter no 1 took 1219 msec
-CPU mean filter no 2 took 1188 msec
-CPU mean filter no 3 took 1187 msec
-CPU mean filter no 4 took 1203 msec
-CPU mean filter no 5 took 1281 msec
-CPU mean filter no 6 took 1250 msec
-CPU mean filter no 7 took 1223 msec
-CPU mean filter no 8 took 1278 msec
-CPU mean filter no 9 took 1214 msec
-CPU mean filter no 10 took 1243 msec
-Pushing two images to the GPU took 219 msec
-GPU mean filter no 1 took 15 msec
-GPU mean filter no 2 took 28 msec
-GPU mean filter no 3 took 27 msec
-GPU mean filter no 4 took 24 msec
-GPU mean filter no 5 took 31 msec
-GPU mean filter no 6 took 28 msec
-GPU mean filter no 7 took 27 msec
-GPU mean filter no 8 took 17 msec
-GPU mean filter no 9 took 26 msec
-GPU mean filter no 10 took 26 msec
-Pulling one image from the GPU took 197 msec
-
-
-Best CPU device: AMD Ryzen 3 2300U with Radeon Vega Mobile gfx902
-CPU mean filter no 1 took 3468 msec
-CPU mean filter no 2 took 4404 msec
-CPU mean filter no 3 took 4124 msec
-CPU mean filter no 4 took 4104 msec
-CPU mean filter no 5 took 4068 msec
-CPU mean filter no 6 took 3628 msec
-CPU mean filter no 7 took 3594 msec
-CPU mean filter no 8 took 3722 msec
-CPU mean filter no 9 took 4091 msec
-CPU mean filter no 10 took 3929 msec
-Pushing two images to the GPU took 347 msec
-GPU mean filter no 1 took 662 msec
-GPU mean filter no 2 took 252 msec
-GPU mean filter no 3 took 300 msec
-GPU mean filter no 4 took 288 msec
-GPU mean filter no 5 took 286 msec
-GPU mean filter no 6 took 297 msec
-GPU mean filter no 7 took 295 msec
-GPU mean filter no 8 took 321 msec
-GPU mean filter no 9 took 347 msec
-GPU mean filter no 10 took 304 msec
-Pulling one image from the GPU took 530 msec
-CPU mean filter no 1 took 3332 msec
-CPU mean filter no 2 took 3750 msec
-CPU mean filter no 3 took 3737 msec
-CPU mean filter no 4 took 3843 msec
-CPU mean filter no 5 took 4130 msec
-CPU mean filter no 6 took 3981 msec
-CPU mean filter no 7 took 4000 msec
-CPU mean filter no 8 took 3751 msec
-CPU mean filter no 9 took 3926 msec
-CPU mean filter no 10 took 4011 msec
-Pushing two images to the GPU took 196 msec
-GPU mean filter no 1 took 331 msec
-GPU mean filter no 2 took 325 msec
-GPU mean filter no 3 took 324 msec
-GPU mean filter no 4 took 330 msec
-GPU mean filter no 5 took 325 msec
-GPU mean filter no 6 took 324 msec
-GPU mean filter no 7 took 337 msec
-GPU mean filter no 8 took 342 msec
-GPU mean filter no 9 took 340 msec
-GPU mean filter no 10 took 336 msec
-Pulling one image from the GPU took 250 msec
-
-Intel HD Fedora
-CPU mean filter no 1 took 2700 msec
-CPU mean filter no 2 took 2769 msec
-CPU mean filter no 3 took 2845 msec
-CPU mean filter no 4 took 2995 msec
-CPU mean filter no 5 took 3068 msec
-CPU mean filter no 6 took 2816 msec
-CPU mean filter no 7 took 2845 msec
-CPU mean filter no 8 took 2854 msec
-CPU mean filter no 9 took 2805 msec
-CPU mean filter no 10 took 2798 msec
-Pushing two images to the GPU took 409 msec
-GPU mean filter no 1 took 1316 msec
-GPU mean filter no 2 took 1017 msec
-GPU mean filter no 3 took 984 msec
-GPU mean filter no 4 took 981 msec
-GPU mean filter no 5 took 978 msec
-GPU mean filter no 6 took 983 msec
-GPU mean filter no 7 took 988 msec
-GPU mean filter no 8 took 996 msec
-GPU mean filter no 9 took 987 msec
-GPU mean filter no 10 took 979 msec
-Pulling one image from the GPU took 469 msec
-CPU mean filter no 1 took 2898 msec
-CPU mean filter no 2 took 2720 msec
-CPU mean filter no 3 took 2722 msec
-CPU mean filter no 4 took 2808 msec
-CPU mean filter no 5 took 3091 msec
-CPU mean filter no 6 took 2832 msec
-CPU mean filter no 7 took 2775 msec
-CPU mean filter no 8 took 2767 msec
-CPU mean filter no 9 took 2785 msec
-CPU mean filter no 10 took 2859 msec
-Pushing two images to the GPU took 137 msec
-GPU mean filter no 1 took 1007 msec
-GPU mean filter no 2 took 991 msec
-GPU mean filter no 3 took 988 msec
-GPU mean filter no 4 took 986 msec
-GPU mean filter no 5 took 985 msec
-GPU mean filter no 6 took 993 msec
-GPU mean filter no 7 took 984 msec
-GPU mean filter no 8 took 982 msec
-GPU mean filter no 9 took 980 msec
-GPU mean filter no 10 took 978 msec
-Pulling one image from the GPU took 228 msec
-
-
-
-
-
-
-
-
-
-
-
