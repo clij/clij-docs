@@ -193,7 +193,7 @@ GPU mean filter no 10 took 263 msec
 Pulling one image from the GPU took 1123 msec
 ```
 
-Thus, on the CPU it takes 43 seconds, while using the GPU it just takes 5 seconds. Let's execute it again.
+Thus, on the **CPU it takes 43 seconds**, while using the **GPU it just takes 5 seconds**. Let's execute it again.
 
 ```java
 CPU mean filter no 1 took 2596 msec
@@ -220,7 +220,7 @@ GPU mean filter no 10 took 253 msec
 Pulling one image from the GPU took 433 msec
 ```
 
-On the CPU it still takes 39 seconds, while using the GPU it goes down to three seconds. 
+On the **CPU it still takes 39 seconds**, while using the **GPU it goes down to three seconds**. 
 The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
