@@ -308,7 +308,51 @@ GPU mean filter no 10 took 26 msec
 Pulling one image from the GPU took 197 msec
 
 
-
+Best CPU device: AMD Ryzen 3 2300U with Radeon Vega Mobile gfx902
+CPU mean filter no 1 took 3468 msec
+CPU mean filter no 2 took 4404 msec
+CPU mean filter no 3 took 4124 msec
+CPU mean filter no 4 took 4104 msec
+CPU mean filter no 5 took 4068 msec
+CPU mean filter no 6 took 3628 msec
+CPU mean filter no 7 took 3594 msec
+CPU mean filter no 8 took 3722 msec
+CPU mean filter no 9 took 4091 msec
+CPU mean filter no 10 took 3929 msec
+Pushing two images to the GPU took 347 msec
+GPU mean filter no 1 took 662 msec
+GPU mean filter no 2 took 252 msec
+GPU mean filter no 3 took 300 msec
+GPU mean filter no 4 took 288 msec
+GPU mean filter no 5 took 286 msec
+GPU mean filter no 6 took 297 msec
+GPU mean filter no 7 took 295 msec
+GPU mean filter no 8 took 321 msec
+GPU mean filter no 9 took 347 msec
+GPU mean filter no 10 took 304 msec
+Pulling one image from the GPU took 530 msec
+CPU mean filter no 1 took 3332 msec
+CPU mean filter no 2 took 3750 msec
+CPU mean filter no 3 took 3737 msec
+CPU mean filter no 4 took 3843 msec
+CPU mean filter no 5 took 4130 msec
+CPU mean filter no 6 took 3981 msec
+CPU mean filter no 7 took 4000 msec
+CPU mean filter no 8 took 3751 msec
+CPU mean filter no 9 took 3926 msec
+CPU mean filter no 10 took 4011 msec
+Pushing two images to the GPU took 196 msec
+GPU mean filter no 1 took 331 msec
+GPU mean filter no 2 took 325 msec
+GPU mean filter no 3 took 324 msec
+GPU mean filter no 4 took 330 msec
+GPU mean filter no 5 took 325 msec
+GPU mean filter no 6 took 324 msec
+GPU mean filter no 7 took 337 msec
+GPU mean filter no 8 took 342 msec
+GPU mean filter no 9 took 340 msec
+GPU mean filter no 10 took 336 msec
+Pulling one image from the GPU took 250 msec
 
 
 
