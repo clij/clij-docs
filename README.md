@@ -259,3 +259,64 @@ Happy coding!
 Cheers,
 
 Robert _@haesleinhuepf_ Haase
+
+
+TitanX:
+CPU mean filter no 1 took 1645 msec
+CPU mean filter no 2 took 1203 msec
+CPU mean filter no 3 took 1219 msec
+CPU mean filter no 4 took 1203 msec
+CPU mean filter no 5 took 1235 msec
+CPU mean filter no 6 took 1187 msec
+CPU mean filter no 7 took 1219 msec
+CPU mean filter no 8 took 1227 msec
+CPU mean filter no 9 took 1219 msec
+CPU mean filter no 10 took 1187 msec
+Pushing two images to the GPU took 519 msec
+GPU mean filter no 1 took 1703 msec
+GPU mean filter no 2 took 31 msec
+GPU mean filter no 3 took 27 msec
+GPU mean filter no 4 took 26 msec
+GPU mean filter no 5 took 27 msec
+GPU mean filter no 6 took 19 msec
+GPU mean filter no 7 took 27 msec
+GPU mean filter no 8 took 28 msec
+GPU mean filter no 9 took 28 msec
+GPU mean filter no 10 took 18 msec
+Pulling one image from the GPU took 765 msec
+CPU mean filter no 1 took 1219 msec
+CPU mean filter no 2 took 1188 msec
+CPU mean filter no 3 took 1187 msec
+CPU mean filter no 4 took 1203 msec
+CPU mean filter no 5 took 1281 msec
+CPU mean filter no 6 took 1250 msec
+CPU mean filter no 7 took 1223 msec
+CPU mean filter no 8 took 1278 msec
+CPU mean filter no 9 took 1214 msec
+CPU mean filter no 10 took 1243 msec
+Pushing two images to the GPU took 219 msec
+GPU mean filter no 1 took 15 msec
+GPU mean filter no 2 took 28 msec
+GPU mean filter no 3 took 27 msec
+GPU mean filter no 4 took 24 msec
+GPU mean filter no 5 took 31 msec
+GPU mean filter no 6 took 28 msec
+GPU mean filter no 7 took 27 msec
+GPU mean filter no 8 took 17 msec
+GPU mean filter no 9 took 26 msec
+GPU mean filter no 10 took 26 msec
+Pulling one image from the GPU took 197 msec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
