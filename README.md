@@ -228,6 +228,7 @@ And this works on a small laptop without dedicated GPU. I tested some more syste
 * Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, it takes 10 seconds.
 * On an **NVidia TITAN XP, it takes 0.7 seconds**.
 * An AMD Ryzen 3 / Vega GPU needed 4 seconds to perform the test.
+
 These are just rough benchmarks. 
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
