@@ -17,7 +17,7 @@ In order to know what might be necessary to develop ClearCLIJ up to a degree whe
 * **Tell me about your application** It is very important for me to know who would use ClearCLIJ and for what. 
 This is kind of necessary to justify efforts. 
 Developing things like that is _not_ my job. But I'm happy doing it; if people use it.
-Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](http://image.sc) or tweet to me [@haesleinhuepf](http://twitter.com/haesleinhuepf) if you find this tool useful. 
+Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](https://forum.image.sc/t/opencl-gpu-based-image-processing-in-imagej-macro/21286) or tweet to me [@haesleinhuepf](http://twitter.com/haesleinhuepf) if you find this tool useful. 
 Tell me your story. What do you do with it? How do you like it?
 
 * **Guide development** Think about functionality you would like to have. [Formulate a github issue](https://github.com/ClearControl/clearclij/issues) or again, drop me as message.
