@@ -256,7 +256,7 @@ ensuring these differences are small and in case they appear, they only influenc
 An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
 [Check the project page for a full list of tested systems](http://github.com/haesleinhuepf/ClearCLIJ). Let me know, if you experience issues on systems which were not reported in that list.
 
-Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page]() to stay up-to-date.
+Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page](https://github.com/haesleinhuepf/clearclij) to stay up-to-date.
 
 Happy coding!
 
