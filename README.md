@@ -1,17 +1,17 @@
 # ClearCLIJ - OpenCL based GPU image processing from ImageJ macro
 
-Image processing in modern GPUs allows for accelerating processing speeds massively. 
-This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [ClearCLIJ](https://github.com/haesleinhuepf/clearclij/) library. 
+Image processing on modern graphics processing unit (GPUs) allows for accelerating processing speeds massively. 
+This page introduces how to do image processing on a GPU using [OpenCL](https://www.khronos.org/opencl/) from an ImageJ macro inside [Fiji](http://fiji.sc) using the [ClearCLIJ](https://github.com/haesleinhuepf/clearclij/) library. 
 It is not necessary to learn OpenCL itself. 
-Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
-The list of preprogrammed routines might be extended depending on the communities needs.
+Preprogrammed routines are meant to perform GPU image processing for you with a given ImageJ macro programming experience.
+The list of preprogrammed routines might be extended depending on the communitie's needs.
 
-This is how your code might look like if you do GPU based image processing in ImageJ macro:
+This is how your code might look like if you do GPU based image processing in an ImageJ macro:
 
 ![Image](images/example.png)
 
 ## Before we start
-The presented software is in early developmental stage. Yet it is unclear where this project is heading towards. 
+The presented software is in early developmental stage. Thus it is unclear where this project is heading towards. 
 In order to know what might be necessary to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
 
 * **Tell me about your application** It is very important for me to know who would use ClearCLIJ and for what. 
@@ -29,7 +29,7 @@ Also please tell me on what computer/operating system you are running Fiji.
 
 * **Share efforts** I will not ask you to support coding this thing. However, you are welcome if you feel like sharing efforts.
 
-* **Communication is key** I do work a lot with ImageJ/Fiji and I do work a lot with OpenCL. Building the bridge between both might be a low hanging apple for me. 
+* **Communication is key** I do work a lot with ImageJ/Fiji and I do work a lot with OpenCL. Building the bridge between both might be a low hanging fruit for me. 
 But again, I need to know other people views and opinions in order to make this project successful. 
 
 Thanks for reading. Now, let's get started.
@@ -38,7 +38,7 @@ Thanks for reading. Now, let's get started.
 ## Installation
 Download and install [Fiji from its website](https://fiji.sc/Downloads).
 Add the update site `http://sites.imagej.net/clij` to your Fiji installation. If needed [read more about how to activate update sites]( https://imagej.net/Following_an_update_site).
-Restart Fiji. ClearCLIJ is successfully installed, if you find a menu entry _Plugins > CLIJ_.
+Restart Fiji. ClearCLIJ is successfully installed, if you find a menu entry `_Plugins > CLIJ`_.
 
 **Please note:** This is experimental software, it may have side effects on your Fiji installation and may break other plugins. 
 It is strongly recommended to not install ClearCLIJ in a production environment. 
@@ -85,10 +85,10 @@ In order to view images which were processed by the GPU, you need to transfer th
 The two methods for doing this are called `push(image)` and `pull(image)`. 
 You can remove a single image from the GPUs memory by using the `release(image)` method. 
 Finally, you can remove all images from the GPU with the `clear()` method.
-Importantly, you cannot create images in the GPU _yet_.
-In order to process an image _A_ to an image _B_, both images _A_ and _B_ need to be pushed to the GPU. 
-Only then you can run methods to fill the image _B_ with values resulting from _A_. 
-Finally, after processing, you pull _B_ back from the GPU to ImageJ in order to show it.
+Importantly, you cannot create images on the GPU __yet__.
+In order to process an image __A__ to an image __B__, both images __A__ and __B__ need to be pushed to the GPU. 
+Only then you can run methods to fill the image __B__ with values resulting from __A__. 
+Finally, after processing, you pull __B__ back from the GPU to ImageJ in order to show it.
 
 Let's have a look at an example which loads an image and blurs it using the push-pull mechanism.
 
@@ -193,7 +193,7 @@ GPU mean filter no 10 took 263 msec
 Pulling one image from the GPU took 1123 msec
 ```
 
-Thus, on the **CPU it takes 43 seconds**, while using the **GPU it just takes 5 seconds**. Let's execute it again.
+Thus, on the **CPU it takes 43 seconds**, while using the **GPU it just takes .3 seconds**. Let's execute it again.
 
 ```java
 CPU mean filter no 1 took 2596 msec
@@ -220,11 +220,11 @@ GPU mean filter no 10 took 253 msec
 Pulling one image from the GPU took 433 msec
 ```
 
-On the **CPU it still takes 39 seconds**, while using the **GPU it goes down to three seconds**. 
+On the **CPU it still takes 39 seconds**, while using the **GPU it goes down to .3 seconds**. 
 The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
-And this works on a small laptop without dedicated GPU. I tested some more systems, just to see if and how fast CLIJ performs. The following numbers are time measurements from the second run:
+And this works on a small laptop without a dedicated GPU. I tested some more systems, just to see if and how fast CLIJ performs. The following numbers are time measurements from the second run:
 * Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, it takes 10 seconds.
 * On an **NVidia TITAN XP, it takes 0.7 seconds**.
 * An AMD Ryzen 3 / Vega GPU needed 4 seconds to perform the test.
@@ -233,9 +233,9 @@ These are just rough benchmarks.
 When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
 
-Side note: ImageJs mean filter runs _inplace_. That means the result is stored in the same memory as the input image. 
+Side note: ImageJs mean filter runs __inplace__. That means the result is stored in the same memory as the input image. 
 With every iteration in the for loop, the image becomes more and more blurry. 
-The OpenCL operation in the GPU always starts from the _input_ image and puts its result in the _blurred_ image. 
+The OpenCL operation in the GPU always starts from the __input__ image and puts its result in the __blurred__ image. 
 Thus, the resulting images will look different. 
 Be a sceptical scietist when processing images in the GPU. 
 Check that the workflow is indeed doing the right thing. 
