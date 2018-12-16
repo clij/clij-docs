@@ -85,10 +85,8 @@ In order to view images which were processed by the GPU, you need to transfer th
 The two methods for doing this are called `push(image)` and `pull(image)`. 
 You can remove a single image from the GPUs memory by using the `release(image)` method. 
 Finally, you can remove all images from the GPU with the `clear()` method.
-Importantly, you cannot create images in the GPU _yet_.
-In order to process an image _A_ to an image _B_, both images _A_ and _B_ need to be pushed to the GPU. 
-Only then you can run methods to fill the image _B_ with values resulting from _A_. 
-Finally, after processing, you pull _B_ back from the GPU to ImageJ in order to show it.
+In case the destination image doesn't exist, it will be created automatically in the GPU. 
+Just push an image _A_ to the GPU, process it with destination _B_ and afterwards, you can pull _B_ back from the GPU to ImageJ in order to show it.
 
 Let's have a look at an example which loads an image and blurs it using the push-pull mechanism.
 
@@ -98,10 +96,8 @@ run("T1 Head (2.4M, 16-bits)");
 input = getTitle();
 getDimensions(width, height, channels, slices, frames);
 
-// create an emtpy image to put the blurred pixels in
-newImage("Untitled", "16-bit black", width, height, slices);
-rename("Blurred");
-blurred = getTitle();
+// define under which name the result should be saved
+blurred = "Blurred";
 
 // Init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -109,13 +105,12 @@ Ext.CLIJ_clear();
 
 // push images to GPU
 Ext.CLIJ_push(input);
-Ext.CLIJ_push(blurred);
 
 // cleanup ImageJ
 run("Close All");
 
 // Blur in GPU
-Ext.CLIJ_blur3d(input, blurred, 20, 20, 1, 10, 10, 1);
+Ext.CLIJ_blur3d(input, blurred, 10, 10, 1);
 
 // Get results back from GPU
 Ext.CLIJ_pull(blurred);
@@ -123,6 +118,8 @@ Ext.CLIJ_pull(blurred);
 // Cleanup by the end
 Ext.CLIJ_clear();
 ```
+
+To find out, which images are currently stored in the GPU, run the `Ext.CLIJ_reportMemory();` method.
 
 ## Sparing time with GPU based image processing
 The overall goal for processing images in the GPU is sparing time. 
