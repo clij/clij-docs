@@ -1,7 +1,7 @@
-# ClearCLIJ - OpenCL based GPU image processing from ImageJ macro
+# CLIJ - OpenCL based GPU image processing from ImageJ macro
 
 Image processing in modern GPUs allows for accelerating processing speeds massively. 
-This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [ClearCLIJ](https://github.com/haesleinhuepf/clearclij/) library. 
+This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [CLIJ](https://github.com/clij/clij/) library. 
 It is not necessary to learn OpenCL itself. 
 Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
 The list of preprogrammed routines might be extended depending on the communities needs.
@@ -20,9 +20,9 @@ Developing things like that is _not_ my job. But I'm happy doing it; if people u
 Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](https://forum.image.sc/t/opencl-gpu-based-image-processing-in-imagej-macro/21286) or tweet to me [@haesleinhuepf](http://twitter.com/haesleinhuepf) if you find this tool useful. 
 Tell me your story. What do you do with it? How do you like it?
 
-* **Guide development** Think about functionality you would like to have. [Formulate a github issue](https://github.com/ClearControl/clearclij/issues) or again, drop me as message.
+* **Guide development** Think about functionality you would like to have. [Write a github issue](https://github.com/clij/clij/issues) or again, drop me as message.
 
-* **Report errors** Report error messages as [github issue](https://github.com/ClearControl/clearclij/issues). 
+* **Report errors** Report error messages as [github issue](https://github.com/clij/clij/issues). 
 It might be that an error only appears on your computer and I cannot see what lead to it.
 Please describe in detail what you did before the error message appeared. 
 Also please tell me on what computer/operating system you are running Fiji.
@@ -43,10 +43,10 @@ Restart Fiji. ClearCLIJ is successfully installed, if you find a menu entry _Plu
 **Please note:** This is experimental software, it may have side effects on your Fiji installation and may break other plugins. 
 It is strongly recommended to not install ClearCLIJ in a production environment. 
 Use a freshly downloaded Fiji installation for testing experimental plugins like this. 
-[Read the BSD license file](http://github.com/haesleinhuepf/ClearCLIJ/license.txt) for more details.
+[Read the BSD license file](http://github.com/clij/clij/license.txt) for more details.
 
 ## A first macro
-The first macro is [help.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/help.ijm).
+The first macro is [help.ijm](https://github.com/clij/clij/blob/master/src/main/macro/help.ijm).
 It will assist us to get an overview which methods are supported by ClearCLIJ to process images. 
 It looks like this:
 
@@ -59,9 +59,9 @@ By executing it, you will find a list of commands containing the term `add` in t
 
 ```java
 Found 3 method(s) containing the pattern "add":
-Ext.CLIJ_addPixelwise(Image summand1, Image summand2, Image destination);
-Ext.CLIJ_addScalar(Image source, Image destination, Number scalar);
-Ext.CLIJ_addWeightedPixelwise(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
+Ext.CLIJ_addImageAndScalar(Image source, Image destination, Number scalar);
+Ext.CLIJ_addImages(Image summand1, Image summand2, Image destination);
+Ext.CLIJ_addImagesWeighted(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
 ```
 
 Keep this example program, you might need it later again if you want to search for help on ClearCLIJ methods. 
@@ -110,7 +110,7 @@ Ext.CLIJ_push(input);
 run("Close All");
 
 // Blur in GPU
-Ext.CLIJ_blur3d(input, blurred, 10, 10, 1);
+Ext.CLIJ_blur3DFast(input, blurred, 10, 10, 1);
 
 // Get results back from GPU
 Ext.CLIJ_pull(blurred);
@@ -153,7 +153,7 @@ print("Pushing two images to the GPU took " + (getTime() - time) + " msec");
 // Local mean filter in GPU
 for (i = 1; i <= 10; i++) {
 	time = getTime();
-	Ext.CLIJ_mean3d(input, blurred, 3, 3, 3);
+	Ext.CLIJ_mean3D(input, blurred, 3, 3, 3);
 	print("GPU mean filter no " + i + " took " + (getTime() - time));
 }
 
@@ -242,18 +242,18 @@ This is the view on results from the mean filter on CPU and GPU together with th
 
 ![Image](images/visual_CPU_GPU_comparison.png)
 
-In presented case, have a look at [mean.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU actually are. 
+In presented case, have a look at [mean.ijm](https://github.com/clij/clij/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU actually are. 
 In some of the filters, I observed small differences between ImageJ and OpenCL especially at the borders of the images. 
 I am aware of these issues. 
-There is a large number of [unit tests in the library](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/java/net/haesleinhuepf/imagej/test/KernelsTest.java), 
+There is a large number of [unit tests in the library](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/), 
 ensuring these differences are small and in case they appear, they only influence the borders.
 
 
 ## Limitations
 An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
-[Check the project page for a full list of tested systems](http://github.com/haesleinhuepf/ClearCLIJ). Let me know, if you experience issues on systems which were not reported in that list.
+[Check the project page for a full list of tested systems](http://github.com/clij/clij). Let me know, if you experience issues on systems which were not reported in that list.
 
-Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page](https://github.com/haesleinhuepf/clearclij) to stay up-to-date.
+Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page](https://github.com/clij/clij) to stay up-to-date.
 
 Happy coding!
 
