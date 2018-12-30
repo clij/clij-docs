@@ -65,7 +65,8 @@ Ext.CLIJ_addImagesWeighted(Image summand1, Image summand2, Image destination, Nu
 ```
 
 Keep this example program, you might need it later again if you want to search for help on CLIJ methods. 
-It also tells you which parameters the methods need in order to run.
+It also tells you which parameters the methods need in order to run. The whole [reference of all command with description and example code is available online](https://clij.github.io/clij-docs/reference).
+
 
 Note: The first line of this macro may contain the specific name for a GPU.
 You can - but you don't have to - specify one. 
