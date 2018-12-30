@@ -11,10 +11,10 @@ This is how your code might look like if you do GPU based image processing in Im
 ![Image](images/example.png)
 
 ## Before we start
-The presented software is in early developmental stage. Yet it is unclear where this project is heading towards. 
-In order to know what might be necessary to develop ClearCLIJ up to a degree where people can _just_ use it, I need your help:
+The presented software is under development. 
+ In order to know what might be necessary to develop CLIJ up to a degree where people can _just_ use it, I need your help:
 
-* **Tell me about your application** It is very important for me to know who would use ClearCLIJ and for what. 
+* **Tell me about your application** It is very important for me to know who would use CLIJ and for what. 
 This is kind of necessary to justify efforts. 
 Developing things like that is _not_ my job. But I'm happy doing it; if people use it.
 Please drop me a mail (rhaase@mpi-cbg.de), create a [forum post](https://forum.image.sc/t/opencl-gpu-based-image-processing-in-imagej-macro/21286) or tweet to me [@haesleinhuepf](http://twitter.com/haesleinhuepf) if you find this tool useful. 
@@ -38,16 +38,16 @@ Thanks for reading. Now, let's get started.
 ## Installation
 Download and install [Fiji from its website](https://fiji.sc/Downloads).
 Add the update site `http://sites.imagej.net/clij` to your Fiji installation. If needed [read more about how to activate update sites]( https://imagej.net/Following_an_update_site).
-Restart Fiji. ClearCLIJ is successfully installed, if you find a menu entry _Plugins > CLIJ_.
+Restart Fiji. CLIJ is successfully installed, if you find a menu entry _Plugins > ImageJ on GPU (CLIJ)_.
 
 **Please note:** This is experimental software, it may have side effects on your Fiji installation and may break other plugins. 
-It is strongly recommended to not install ClearCLIJ in a production environment. 
+It is strongly recommended to not install CLIJ in a production environment. 
 Use a freshly downloaded Fiji installation for testing experimental plugins like this. 
 [Read the BSD license file](http://github.com/clij/clij/license.txt) for more details.
 
 ## A first macro
 The first macro is [help.ijm](https://github.com/clij/clij/blob/master/src/main/macro/help.ijm).
-It will assist us to get an overview which methods are supported by ClearCLIJ to process images. 
+It will assist us to get an overview which methods are supported by CLIJ to process images. 
 It looks like this:
 
 ```java
@@ -64,7 +64,7 @@ Ext.CLIJ_addImages(Image summand1, Image summand2, Image destination);
 Ext.CLIJ_addImagesWeighted(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
 ```
 
-Keep this example program, you might need it later again if you want to search for help on ClearCLIJ methods. 
+Keep this example program, you might need it later again if you want to search for help on CLIJ methods. 
 It also tells you which parameters the methods need in order to run.
 
 Note: The first line of this macro may contain the specific name for a GPU.
@@ -129,8 +129,8 @@ However, there is a drawback: pushing/pulling the images to/from the GPU takes t
 Thus, overall efficiency can only be achieved if whole pipelines are processed in the GPU. 
 Furthermore, repeatedly using the same operations on a GPU pays off because operations are cached. Reusing them is faster than using other methods. 
 
-Let's compare the `Mean 3D` filter of ImageJ with it's counterpart in ClearCLIJ.
-The example macro is [benchmarking.ijm](https://github.com/haesleinhuepf/clearclij/blob/master/src/main/macro/benchmarking.ijm). 
+Let's compare the `Mean 3D` filter of ImageJ with it's counterpart in CLIJ.
+The example macro is [benchmarking.ijm](https://github.com/clij/clij/blob/master/src/main/macro/benchmarking.ijm). 
 It executes both operations ten times and measures the time each operation takes. 
 This is just an excerpt of the macro:
 
@@ -227,7 +227,7 @@ And this works on a small laptop without dedicated GPU. I tested some more syste
 * An AMD Ryzen 3 / Vega GPU needed 4 seconds to perform the test.
 
 These are just rough benchmarks. 
-When ClearCLIJ matures, I might do a more detailed benchmarking of several methods. 
+When CLIJ matures, I might do a more detailed benchmarking of several methods. 
 This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
 
 Side note: ImageJs mean filter runs _inplace_. That means the result is stored in the same memory as the input image. 
@@ -250,10 +250,10 @@ ensuring these differences are small and in case they appear, they only influenc
 
 
 ## Limitations
-An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, ClearCLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
+An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, CLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
 [Check the project page for a full list of tested systems](http://github.com/clij/clij). Let me know, if you experience issues on systems which were not reported in that list.
 
-Again, please let me know what you think about ClearCLIJ, create github issues to guide its further development and [visit the project page](https://github.com/clij/clij) to stay up-to-date.
+Again, please let me know what you think about CLIJ, create github issues to guide its further development and [visit the project page](https://github.com/clij/clij) to stay up-to-date.
 
 Happy coding!
 
