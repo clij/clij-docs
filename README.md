@@ -153,14 +153,14 @@ print("Pushing two images to the GPU took " + (getTime() - time) + " msec");
 // Local mean filter in GPU
 for (i = 1; i <= 10; i++) {
 	time = getTime();
-	Ext.CLIJ_mean3D(input, blurred, 3, 3, 3);
+	Ext.CLIJ_mean3DBox(input, blurred, 3, 3, 3);
 	print("GPU mean filter no " + i + " took " + (getTime() - time));
 }
 
 // Get results back from GPU
 time = getTime();
 Ext.CLIJ_pull(blurred);
-print("Pulining one image from the GPU took " + (getTime() - time) + " msec");
+print("Pullning one image from the GPU took " + (getTime() - time) + " msec");
 ```
 
 When executing the macro on an Intel Core i7-8650U CPU with a built-in Intel UHD Graphics 620 GPU (Windows 10, 64 bit), the output is:
