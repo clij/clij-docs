@@ -46,6 +46,7 @@ public class MarkdownDocumentationGenerator {
                 documentation.append("Parameters: " + plugin.getParameterHelpText());
             }
         }
+        documentation.append("\n\n" + methodNames.size() + " plugins documented.");
 
         FileWriter writer = new FileWriter(new File("reference.md"));
         writer.write(documentation.toString());
