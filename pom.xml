@@ -8,13 +8,13 @@
 	<parent>
 		<groupId>net.haesleinhuepf</groupId>
 		<artifactId>clij-parent-pom</artifactId>
-		<version>0.3.1</version>
+		<version>0.3.2</version>
 		<relativePath />
 	</parent>
 
 	<groupId>net.haesleinhuepf</groupId>
 	<artifactId>clij-docs</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 
 	<name>clij-docs</name>
 	<description>clij-docs contains CLIJ documentation and documentation generators.</description>
@@ -91,7 +91,6 @@
         <dependency>
             <groupId>net.haesleinhuepf</groupId>
             <artifactId>clij_custom_convolution_plugin</artifactId>
-            <version>0.1.1</version>
         </dependency>
 	</dependencies>
 

@@ -80,8 +80,8 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_argMaximumZProjection
 
-Determines the maximumSphere projection of an image along Z.
-Furthermore, another image is generated containing the z-index where the maximumSphere was found (zero based).
+Determines the maximum projection of an image along Z.
+Furthermore, another image is generated containing the z-index where the maximum was found (zero based).
 
 **Parameters**: Image source, Image destination_max, Image destination_arg_max
 
@@ -293,7 +293,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3DSliceBySlice.java)
 
-## CLIJ_cLInfo
+## CLIJ_clInfo
 
 Outputs information about available OpenCL devices.
 
@@ -304,9 +304,9 @@ Outputs information about available OpenCL devices.
 **Macro example**: 
 ```
 run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_cLInfo();
+Ext.CLIJ_clInfo();
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CLInfo.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ClInfo.java)
 
 ## CLIJ_clear
 
@@ -424,7 +424,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_deconvolve
 
-Richardson lucy implementation (experimental).
+Richardson-Lucy implementation (experimental).
 
 **Parameters**: Image source, Image convolution_kernel, Image destination, Number iterations
 
@@ -614,7 +614,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_downsampleSliceBySliceHalfMedian
 
 Scales an image using scaling factors 0.5 for X and Y dimensions. The Z dimension stays untouched.
-The medianSphere method is applied. Thus, each pixel value in the destination image equals to the medianSphere of
+The median method is applied. Thus, each pixel value in the destination image equals to the median of
 four corresponding pixels in the source image.
 
 **Parameters**: Image source, Image destination
@@ -810,7 +810,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximum2DBox
 
-Computes the local maximumSphere of a pixels rectangular neighborhood. The rectangles size is specified by 
+Computes the local maximum of a pixels rectangular neighborhood. The rectangles size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -828,7 +828,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximum2DIJ
 
-Computes the local maximumSphere of a pixels circle-like neighborhood. The circle size is specified by 
+Computes the local maximum of a pixels circle-like neighborhood. The circle size is specified by 
 its radius.
 
 This operation is equal to ImageJs 'Maximum...' menu.
@@ -848,7 +848,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximum2DSphere
 
-Computes the local maximumSphere of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
+Computes the local maximum of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -866,7 +866,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximum3DBox
 
-Computes the local maximumSphere of a pixels cube neighborhood. The cubes size is specified by 
+Computes the local maximum of a pixels cube neighborhood. The cubes size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -884,7 +884,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximum3DSphere
 
-Computes the local maximumSphere of a pixels spherical neighborhood. The spheres size is specified by 
+Computes the local maximum of a pixels spherical neighborhood. The spheres size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -902,7 +902,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximumImageAndScalar
 
-Computes the maximumSphere of a constant scalar s and each pixel value x in a given image X.
+Computes the maximum of a constant scalar s and each pixel value x in a given image X.
 
 f(x, s) = max(x, s)
 
@@ -921,7 +921,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximumImages
 
-Computes the maximumSphere of a pair of pixel values x, y from two given images X and Y.
+Computes the maximum of a pair of pixel values x, y from two given images X and Y.
 
 f(x, s) = max(x, y)
 
@@ -941,7 +941,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximumOfAllPixels
 
-Determines the maximumSphere of all pixels in a given image. It will be stored in a new row of ImageJs
+Determines the maximum of all pixels in a given image. It will be stored in a new row of ImageJs
 Results table in the column 'Max'.
 
 **Parameters**: Image source
@@ -958,7 +958,7 @@ Ext.CLIJ_maximumOfAllPixels(source);
 
 ## CLIJ_maximumSliceBySliceSphere
 
-Computes the local maximumSphere of a pixels ellipsoidal 2D neighborhood in an image stack 
+Computes the local maximum of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -976,7 +976,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_maximumXYZProjection
 
-Determines the maximumSphere projection of an image along a given dimension. Furthermore, the X and Y
+Determines the maximum projection of an image along a given dimension. Furthermore, the X and Y
  dimesions of the resulting image must be specified by the user according to its definition:
 X = 0
 Y = 1
@@ -998,7 +998,7 @@ Ext.CLIJ_pull(destination_max);
 
 ## CLIJ_maximumZProjection
 
-Determines the maximumSphere projection of an image along Z.
+Determines the maximum projection of an image along Z.
 
 **Parameters**: Image source, Image destination_max
 
@@ -1015,7 +1015,7 @@ Ext.CLIJ_pull(destination_max);
 
 ## CLIJ_mean2DBox
 
-Computes the local meanSphere average of a pixels rectangular neighborhood. The rectangles size is specified by 
+Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1033,7 +1033,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_mean2DIJ
 
-Computes the local meanSphere average of a pixels circle-like neighborhood. The circle size is specified by 
+Computes the local mean average of a pixels circle-like neighborhood. The circle size is specified by 
 its radius.
 
 This operation is equal to ImageJs 'Mean...' menu.
@@ -1053,7 +1053,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_mean2DSphere
 
-Computes the local meanSphere average of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
+Computes the local mean average of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1071,7 +1071,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_mean3DBox
 
-Computes the local meanSphere average of a pixels cube neighborhood. The cubes size is specified by 
+Computes the local mean average of a pixels cube neighborhood. The cubes size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -1089,7 +1089,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_mean3DSphere
 
-Computes the local meanSphere average of a pixels spherical neighborhood. The spheres size is specified by 
+Computes the local mean average of a pixels spherical neighborhood. The spheres size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -1107,7 +1107,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_meanOfAllPixels
 
-Determines the meanSphere average of all pixels in a given image. It will be stored in a new row of ImageJs
+Determines the mean average of all pixels in a given image. It will be stored in a new row of ImageJs
 Results table in the column 'Mean'.
 
 **Parameters**: Image source
@@ -1124,7 +1124,7 @@ Ext.CLIJ_meanOfAllPixels(source);
 
 ## CLIJ_meanSliceBySliceSphere
 
-Computes the local meanSphere average of a pixels ellipsoidal 2D neighborhood in an image stack 
+Computes the local mean average of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1142,7 +1142,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_meanZProjection
 
-Determines the meanSphere average projection of an image along Z.
+Determines the mean average projection of an image along Z.
 
 **Parameters**: Image source, Image destination
 
@@ -1159,7 +1159,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_median2DSphere
 
-Computes the local medianSphere of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
+Computes the local median of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
 its half-width and half-height (radius).
 
 For technical reasons, the area of the ellipse must have less than 1000 pixels.
@@ -1179,7 +1179,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_median3DSphere
 
-Computes the local medianSphere of a pixels spherical neighborhood. The spheres size is specified by 
+Computes the local median of a pixels spherical neighborhood. The spheres size is specified by 
 its half-width, half-height and half-depth (radius).
 
 For technical reasons, the volume of the sphere must contain less than 1000 voxels.
@@ -1199,7 +1199,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_medianSliceBySliceSphere
 
-Computes the local medianSphere of a pixels ellipsoidal neighborhood. This is done slice-by-slice in a 3D 
+Computes the local median of a pixels ellipsoidal neighborhood. This is done slice-by-slice in a 3D 
 image stack. The ellipses size is specified by its half-width and half-height (radius).
 
 For technical reasons, the area of the ellipse must have less than 1000 pixels.
@@ -1219,7 +1219,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimum2DBox
 
-Computes the local minimumSphere of a pixels rectangular neighborhood. The rectangles size is specified by 
+Computes the local minimum of a pixels rectangular neighborhood. The rectangles size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1237,7 +1237,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimum2DIJ
 
-Computes the local minimumSphere of a pixels circle-like neighborhood. The circle size is specified by 
+Computes the local minimum of a pixels circle-like neighborhood. The circle size is specified by 
 its radius.
 
 This operation is equal to ImageJs 'Minimum...' menu.
@@ -1257,7 +1257,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimum2DSphere
 
-Computes the local minimumSphere of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
+Computes the local minimum of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
 its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1275,7 +1275,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimum3DBox
 
-Computes the local minimumSphere of a pixels cube neighborhood. The cubes size is specified by 
+Computes the local minimum of a pixels cube neighborhood. The cubes size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -1293,7 +1293,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimum3DSphere
 
-Computes the local minimumSphere of a pixels spherical neighborhood. The spheres size is specified by 
+Computes the local minimum of a pixels spherical neighborhood. The spheres size is specified by 
 its half-width, half-height and half-depth (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
@@ -1311,7 +1311,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimumImageAndScalar
 
-Computes the maximumSphere of a constant scalar s and each pixel value x in a given image X.
+Computes the maximum of a constant scalar s and each pixel value x in a given image X.
 
 f(x, s) = min(x, s)
 
@@ -1330,7 +1330,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimumImages
 
-Computes the minimumSphere of a pair of pixel values x, y from two given images X and Y.
+Computes the minimum of a pair of pixel values x, y from two given images X and Y.
 
 f(x, s) = min(x, y)
 
@@ -1350,7 +1350,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimumOfAllPixels
 
-Determines the minimumSphere of all pixels in a given image. It will be stored in a new row of ImageJs
+Determines the minimum of all pixels in a given image. It will be stored in a new row of ImageJs
 Results table in the column 'Min'.
 
 **Parameters**: Image source
@@ -1367,7 +1367,7 @@ Ext.CLIJ_minimumOfAllPixels(source);
 
 ## CLIJ_minimumSliceBySliceSphere
 
-Computes the local minimumSphere of a pixels elllipsoidal 2D neighborhood in an image stack 
+Computes the local minimum of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
@@ -1385,7 +1385,7 @@ Ext.CLIJ_pull(destination);
 
 ## CLIJ_minimumZProjection
 
-Determines the minimumSphere projection of an image along Z.
+Determines the minimum projection of an image along Z.
 
 **Parameters**: Image source, Image destination_sum
 
