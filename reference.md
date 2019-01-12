@@ -97,6 +97,26 @@ Ext.CLIJ_pull(destination_arg_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ArgMaximumZProjection.java)
 
+## CLIJ_automaticThreshold
+
+The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
+the GPU to create binary images as similar as possible to ImageJ 'Apply Threshold' method. Enter one 
+of these methods in the method text field:
+[Default, Huang, Intermodes, IsoData, IJ_IsoData, Li, MaxEntropy, Mean, MinError, Minimum, Moments, Otsu, Percentile, RenyiEntropy, Shanbhag, Triangle, Yen]
+
+**Parameters**: Image input, Image destination, String method
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(input);
+Ext.CLIJ_automaticThreshold(input, destination, method);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/AutomaticThreshold.java)
+
 ## CLIJ_binaryAnd
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -720,6 +740,23 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_help(searchFor);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Help.java)
+
+## CLIJ_histogram
+
+Determines the histogram of a given image.
+
+**Parameters**: Image source, Image destination, Number numberOfBins, Number minimumGreyValue, Number maximumGreyValue, Boolean determineMinAndMax
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_histogram(source, destination, numberOfBins, minimumGreyValue, maximumGreyValue, determineMinAndMax);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/Histogram.java)
 
 ## CLIJ_invert
 
@@ -1513,14 +1550,13 @@ Ext.CLIJ_push(image);
 
 Frees memory of a specified image in GPU memory.
 
-**Parameters**: Image image
+**Parameters**: String image
 
 **Available for**: 2D, 3D
 
 **Macro example**: 
 ```
 run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(image);
 Ext.CLIJ_release(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Release.java)
@@ -1745,4 +1781,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-93 plugins documented.
+95 plugins documented.
