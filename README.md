@@ -1,4 +1,4 @@
-# CLIJ - OpenCL based GPU image processing from ImageJ macro
+# CLIJ - GPU-accelerated image processing in ImageJ macro
 
 Image processing in modern GPUs allows for accelerating processing speeds massively. 
 This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [CLIJ](https://github.com/clij/clij/) library. 
