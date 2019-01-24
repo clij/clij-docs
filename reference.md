@@ -1667,6 +1667,46 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceTop.java)
 
+## CLIJ_rotate2D
+
+Rotates an image in plane. All angles are entered in degrees. If the image is not rotated around 
+the center, it is rotated around the coordinate origin.
+
+It is recommended to apply the rotation to an isotropic image.
+
+**Parameters**: Image source, Image destination, Number angle, Boolean rotateAroundCenter
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_rotate2D(source, destination, angle, rotateAroundCenter);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate2D.java)
+
+## CLIJ_rotate3D
+
+Rotates an image stack in 3D. All angles are entered in degrees. If the image is not rotated around 
+the center, it is rotated around the coordinate origin.
+
+It is recommended to apply the rotation to an isotropic image stack.
+
+**Parameters**: Image source, Image destination, Number angleX, Number angleY, Number angleZ, Boolean rotateAroundCenter
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_rotate3D(source, destination, angleX, angleY, angleZ, rotateAroundCenter);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate3D.java)
+
 ## CLIJ_rotateLeft
 
 Rotates a given input image by 90 degrees counter-clockwise. For that, X and Y axis of an image stack
@@ -1705,6 +1745,23 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/RotateRight.java)
 
+## CLIJ_scale
+
+Scales an image with a given factor.
+
+**Parameters**: Image source, Image destination, Number scaling_factor, Boolean scale_to_center
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_scale(source, destination, scaling_factor, scale_to_center);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale.java)
+
 ## CLIJ_set
 
 Sets all pixel values x of a given image X to a constant value v.
@@ -1722,6 +1779,26 @@ Ext.CLIJ_push(source);
 Ext.CLIJ_set(source, value);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Set.java)
+
+## CLIJ_subtractImages
+
+Subtracts one image X from another image Y pixel wise.
+
+f(x, y) = x - y
+
+**Parameters**: Image subtrahend, Image minuend, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(subtrahend);
+Ext.CLIJ_push(minuend);
+Ext.CLIJ_subtractImages(subtrahend, minuend, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SubtractImages.java)
 
 ## CLIJ_sumOfAllPixels
 
@@ -1779,6 +1856,40 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ThresholdIJ.java)
 
+## CLIJ_translate2D
+
+Translate an image stack in X and Y.
+
+**Parameters**: Image source, Image destination, Number translateX, Number translateY
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_translate2D(source, destination, translateX, translateY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Translate2D.java)
+
+## CLIJ_translate3D
+
+Translate an image stack in X, Y and Z.
+
+**Parameters**: Image source, Image destination, Number translateX, Number translateY, Number translateZ
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_translate3D(source, destination, translateX, translateY, translateZ);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Translate3D.java)
 
 
-95 plugins documented.
+
+101 plugins documented.
