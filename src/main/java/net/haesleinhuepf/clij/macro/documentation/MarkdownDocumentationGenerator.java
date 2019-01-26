@@ -38,6 +38,7 @@ public class MarkdownDocumentationGenerator {
 
         for (String name : methodNames) {
             CLIJMacroPlugin plugin = service.getCLIJMacroPlugin(name);
+            documentation.append("<a name=\"" + name + "\"></a>\n");
             if (plugin instanceof OffersDocumentation) {
                 OffersDocumentation documentedPlugin = (OffersDocumentation) plugin;
                 documentation.append(new MarkDownDocumentationTemplate(documentedPlugin.getDescription(), documentedPlugin.getAvailableForDimensions(), plugin));

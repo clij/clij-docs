@@ -1,5 +1,6 @@
 # CLIJ reference
 
+<a name="CLIJ_absolute"></a>
 ## CLIJ_absolute
 
 Computes the absolute value of every individual pixel x in a given image.
@@ -19,6 +20,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Absolute.java)
 
+<a name="CLIJ_addImageAndScalar"></a>
 ## CLIJ_addImageAndScalar
 
 Adds a scalar value s to all pixels x of a given image X.
@@ -38,6 +40,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AddImageAndScalar.java)
 
+<a name="CLIJ_addImages"></a>
 ## CLIJ_addImages
 
 Calculates the sum of pairs of pixels x and y of two images X and Y.
@@ -58,6 +61,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AddImages.java)
 
+<a name="CLIJ_addImagesWeighted"></a>
 ## CLIJ_addImagesWeighted
 
 Calculates the sum of pairs of pixels x and y from images X and Y weighted with factors a and b.
@@ -78,6 +82,43 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AddImagesWeighted.java)
 
+<a name="CLIJ_affineTransform"></a>
+## CLIJ_affineTransform
+
+Applies an affine transform to an image. Individual transforms must be separated by spaces.
+
+Supported transforms:
+* center: translate the coordinate origin to the center of the image
+* -center: translate the coordinate origin back to the initial origin
+* rotate=[angle]: rotate in X/Y plane (around Z-axis) by the given angle in degrees
+* rotateX=[angle]: rotate in Y/Z plane (around X-axis) by the given angle in degrees
+* rotateY=[angle]: rotate in X/Z plane (around Y-axis) by the given angle in degrees
+* rotateZ=[angle]: rotate in X/Y plane (around Z-axis) by the given angle in degrees
+* scale=[factor]: isotropic scaling according to given zoom factor
+* scaleX=[factor]: scaling along X-axis according to given zoom factor
+* scaleY=[factor]: scaling along Y-axis according to given zoom factor
+* scaleZ=[factor]: scaling along Z-axis according to given zoom factor
+* translateX=[distance]: translate along X-axis by distance given in pixels
+* translateY=[distance]: translate along X-axis by distance given in pixels
+* translateZ=[distance]: translate along X-axis by distance given in pixels
+
+Example transform:
+transform = "center scale=2 rotate=45 -center";
+
+**Parameters**: Image source, Image destination, String transform
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_affineTransform(source, destination, transform);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform.java)
+
+<a name="CLIJ_argMaximumZProjection"></a>
 ## CLIJ_argMaximumZProjection
 
 Determines the maximum projection of an image along Z.
@@ -97,6 +138,7 @@ Ext.CLIJ_pull(destination_arg_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ArgMaximumZProjection.java)
 
+<a name="CLIJ_automaticThreshold"></a>
 ## CLIJ_automaticThreshold
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -117,6 +159,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/AutomaticThreshold.java)
 
+<a name="CLIJ_binaryAnd"></a>
 ## CLIJ_binaryAnd
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -139,6 +182,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/BinaryAnd.java)
 
+<a name="CLIJ_binaryNot"></a>
 ## CLIJ_binaryNot
 
 Computes a binary image (containing pixel values 0 and 1) from and image X by negating its pixel values
@@ -160,6 +204,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/BinaryNot.java)
 
+<a name="CLIJ_binaryOr"></a>
 ## CLIJ_binaryOr
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -180,6 +225,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/BinaryOr.java)
 
+<a name="CLIJ_binaryXOr"></a>
 ## CLIJ_binaryXOr
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -202,6 +248,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/BinaryXOr.java)
 
+<a name="CLIJ_blur2D"></a>
 ## CLIJ_blur2D
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -219,6 +266,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2D.java)
 
+<a name="CLIJ_blur2DFast"></a>
 ## CLIJ_blur2DFast
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -238,6 +286,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2DFast.java)
 
+<a name="CLIJ_blur2DIJ"></a>
 ## CLIJ_blur2DIJ
 
 Computes the Gaussian blurred image of an image given a sigma.
@@ -258,6 +307,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2DIJ.java)
 
+<a name="CLIJ_blur3D"></a>
 ## CLIJ_blur3D
 
 Computes the Gaussian blurred image of an image given two sigma values in X, Y and Z. Thus, the filterkernel can have non-isotropic shape.
@@ -275,6 +325,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3D.java)
 
+<a name="CLIJ_blur3DFast"></a>
 ## CLIJ_blur3DFast
 
 Computes the Gaussian blurred image of an image given two sigma values in X, Y and Z. Thus, the filterkernel can have non-isotropic shape.
@@ -294,6 +345,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3DFast.java)
 
+<a name="CLIJ_blur3DSliceBySlice"></a>
 ## CLIJ_blur3DSliceBySlice
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -313,6 +365,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3DSliceBySlice.java)
 
+<a name="CLIJ_clInfo"></a>
 ## CLIJ_clInfo
 
 Outputs information about available OpenCL devices.
@@ -328,6 +381,7 @@ Ext.CLIJ_clInfo();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ClInfo.java)
 
+<a name="CLIJ_clear"></a>
 ## CLIJ_clear
 
 Resets the GPUs memory by deleting all cached images.
@@ -343,6 +397,7 @@ Ext.CLIJ_clear();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Clear.java)
 
+<a name="CLIJ_convolve"></a>
 ## CLIJ_convolve
 
 Convolve the image with a given kernel image. Kernel image and source image should have the same
@@ -362,6 +417,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/customconvolutionplugin/Convolve.java)
 
+<a name="CLIJ_copy"></a>
 ## CLIJ_copy
 
 Copies an image.
@@ -381,6 +437,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Copy.java)
 
+<a name="CLIJ_copySlice"></a>
 ## CLIJ_copySlice
 
 This method has two purposes: 
@@ -404,6 +461,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CopySlice.java)
 
+<a name="CLIJ_crop2D"></a>
 ## CLIJ_crop2D
 
 Crops a given rectangle out of a given image stack.
@@ -423,6 +481,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Crop2D.java)
 
+<a name="CLIJ_crop3D"></a>
 ## CLIJ_crop3D
 
 Crops a given sub-stack out of a given image stack.
@@ -442,6 +501,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Crop3D.java)
 
+<a name="CLIJ_deconvolve"></a>
 ## CLIJ_deconvolve
 
 Richardson-Lucy implementation (experimental).
@@ -460,6 +520,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/customconvolutionplugin/Deconvolve.java)
 
+<a name="CLIJ_detectMaximaBox"></a>
 ## CLIJ_detectMaximaBox
 
 Detects local maxima in a given square/cubic neighborhood. Pixels in the resulting image are set to 1 if
@@ -478,6 +539,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DetectMaximaBox.java)
 
+<a name="CLIJ_detectMaximaSliceBySliceBox"></a>
 ## CLIJ_detectMaximaSliceBySliceBox
 
 Detects local maxima in a given square neighborhood of an input image stack. The input image stack is 
@@ -497,6 +559,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DetectMaximaSliceBySliceBox.java)
 
+<a name="CLIJ_detectMinimaBox"></a>
 ## CLIJ_detectMinimaBox
 
 Detects local minima in a given square/cubic neighborhood. Pixels in the resulting image are set to 1 if
@@ -515,6 +578,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DetectMinimaBox.java)
 
+<a name="CLIJ_detectMinimaSliceBySliceBox"></a>
 ## CLIJ_detectMinimaSliceBySliceBox
 
 Detects local minima in a given square neighborhood of an input image stack. The input image stack is 
@@ -534,6 +598,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DetectMinimaSliceBySliceBox.java)
 
+<a name="CLIJ_dilateBoxIJ"></a>
 ## CLIJ_dilateBoxIJ
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -556,6 +621,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBoxIJ.java)
 
+<a name="CLIJ_dilateSphere"></a>
 ## CLIJ_dilateSphere
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -575,6 +641,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateSphere.java)
 
+<a name="CLIJ_divideImages"></a>
 ## CLIJ_divideImages
 
 Divides two images X and Y by each other pixel wise.
@@ -595,6 +662,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DivideImages.java)
 
+<a name="CLIJ_downsample2D"></a>
 ## CLIJ_downsample2D
 
 Scales an image using given scaling factors for X and Y dimensions. The nearest-neighbor method
@@ -613,6 +681,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Downsample2D.java)
 
+<a name="CLIJ_downsample3D"></a>
 ## CLIJ_downsample3D
 
 Scales an image using given scaling factors for X and Y dimensions. The nearest-neighbor method
@@ -631,6 +700,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Downsample3D.java)
 
+<a name="CLIJ_downsampleSliceBySliceHalfMedian"></a>
 ## CLIJ_downsampleSliceBySliceHalfMedian
 
 Scales an image using scaling factors 0.5 for X and Y dimensions. The Z dimension stays untouched.
@@ -650,6 +720,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DownsampleSliceBySliceHalfMedian.java)
 
+<a name="CLIJ_erodeBoxIJ"></a>
 ## CLIJ_erodeBoxIJ
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -672,6 +743,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBoxIJ.java)
 
+<a name="CLIJ_erodeSphere"></a>
 ## CLIJ_erodeSphere
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -691,6 +763,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeSphere.java)
 
+<a name="CLIJ_flip2D"></a>
 ## CLIJ_flip2D
 
 Flips an image in X and/or Y direction depending on boolean flags.
@@ -708,6 +781,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Flip2D.java)
 
+<a name="CLIJ_flip3D"></a>
 ## CLIJ_flip3D
 
 Flips an image in X, Y and/or Z direction depending on boolean flags.
@@ -725,6 +799,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Flip3D.java)
 
+<a name="CLIJ_help"></a>
 ## CLIJ_help
 
 Searches in the list of CLIJ commands for a given pattern. Lists all commands in case"" is handed
@@ -741,6 +816,7 @@ Ext.CLIJ_help(searchFor);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Help.java)
 
+<a name="CLIJ_histogram"></a>
 ## CLIJ_histogram
 
 Determines the histogram of a given image.
@@ -758,6 +834,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/Histogram.java)
 
+<a name="CLIJ_invert"></a>
 ## CLIJ_invert
 
 Computes the negative value of all pixels in a given image. It is recommended to convert images to 
@@ -780,6 +857,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Invert.java)
 
+<a name="CLIJ_localThreshold"></a>
 ## CLIJ_localThreshold
 
 Computes a binary image with pixel values 0 and 1 depending on if a pixel value x in image X 
@@ -801,6 +879,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/LocalThreshold.java)
 
+<a name="CLIJ_mask"></a>
 ## CLIJ_mask
 
 Computes a masked image by applying a mask to an image. All pixel values x of image X will be copied
@@ -823,6 +902,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mask.java)
 
+<a name="CLIJ_maskStackWithPlane"></a>
 ## CLIJ_maskStackWithPlane
 
 Computes a masked image by applying a 2D mask to an image stack. All pixel values x of image X will be copied
@@ -845,6 +925,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaskStackWithPlane.java)
 
+<a name="CLIJ_maximum2DBox"></a>
 ## CLIJ_maximum2DBox
 
 Computes the local maximum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -863,6 +944,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DBox.java)
 
+<a name="CLIJ_maximum2DIJ"></a>
 ## CLIJ_maximum2DIJ
 
 Computes the local maximum of a pixels circle-like neighborhood. The circle size is specified by 
@@ -883,6 +965,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DIJ.java)
 
+<a name="CLIJ_maximum2DSphere"></a>
 ## CLIJ_maximum2DSphere
 
 Computes the local maximum of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
@@ -901,6 +984,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DSphere.java)
 
+<a name="CLIJ_maximum3DBox"></a>
 ## CLIJ_maximum3DBox
 
 Computes the local maximum of a pixels cube neighborhood. The cubes size is specified by 
@@ -919,6 +1003,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum3DBox.java)
 
+<a name="CLIJ_maximum3DSphere"></a>
 ## CLIJ_maximum3DSphere
 
 Computes the local maximum of a pixels spherical neighborhood. The spheres size is specified by 
@@ -937,6 +1022,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum3DSphere.java)
 
+<a name="CLIJ_maximumImageAndScalar"></a>
 ## CLIJ_maximumImageAndScalar
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
@@ -956,6 +1042,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumImageAndScalar.java)
 
+<a name="CLIJ_maximumImages"></a>
 ## CLIJ_maximumImages
 
 Computes the maximum of a pair of pixel values x, y from two given images X and Y.
@@ -976,6 +1063,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumImages.java)
 
+<a name="CLIJ_maximumOfAllPixels"></a>
 ## CLIJ_maximumOfAllPixels
 
 Determines the maximum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -993,6 +1081,7 @@ Ext.CLIJ_maximumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumOfAllPixels.java)
 
+<a name="CLIJ_maximumSliceBySliceSphere"></a>
 ## CLIJ_maximumSliceBySliceSphere
 
 Computes the local maximum of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -1011,6 +1100,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumSliceBySliceSphere.java)
 
+<a name="CLIJ_maximumXYZProjection"></a>
 ## CLIJ_maximumXYZProjection
 
 Determines the maximum projection of an image along a given dimension. Furthermore, the X and Y
@@ -1033,6 +1123,7 @@ Ext.CLIJ_pull(destination_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumXYZProjection.java)
 
+<a name="CLIJ_maximumZProjection"></a>
 ## CLIJ_maximumZProjection
 
 Determines the maximum projection of an image along Z.
@@ -1050,6 +1141,7 @@ Ext.CLIJ_pull(destination_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumZProjection.java)
 
+<a name="CLIJ_mean2DBox"></a>
 ## CLIJ_mean2DBox
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -1068,6 +1160,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DBox.java)
 
+<a name="CLIJ_mean2DIJ"></a>
 ## CLIJ_mean2DIJ
 
 Computes the local mean average of a pixels circle-like neighborhood. The circle size is specified by 
@@ -1088,6 +1181,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DIJ.java)
 
+<a name="CLIJ_mean2DSphere"></a>
 ## CLIJ_mean2DSphere
 
 Computes the local mean average of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
@@ -1106,6 +1200,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DSphere.java)
 
+<a name="CLIJ_mean3DBox"></a>
 ## CLIJ_mean3DBox
 
 Computes the local mean average of a pixels cube neighborhood. The cubes size is specified by 
@@ -1124,6 +1219,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean3DBox.java)
 
+<a name="CLIJ_mean3DSphere"></a>
 ## CLIJ_mean3DSphere
 
 Computes the local mean average of a pixels spherical neighborhood. The spheres size is specified by 
@@ -1142,6 +1238,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean3DSphere.java)
 
+<a name="CLIJ_meanOfAllPixels"></a>
 ## CLIJ_meanOfAllPixels
 
 Determines the mean average of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -1159,6 +1256,7 @@ Ext.CLIJ_meanOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MeanOfAllPixels.java)
 
+<a name="CLIJ_meanSliceBySliceSphere"></a>
 ## CLIJ_meanSliceBySliceSphere
 
 Computes the local mean average of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -1177,6 +1275,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MeanSliceBySliceSphere.java)
 
+<a name="CLIJ_meanZProjection"></a>
 ## CLIJ_meanZProjection
 
 Determines the mean average projection of an image along Z.
@@ -1194,6 +1293,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MeanZProjection.java)
 
+<a name="CLIJ_median2DSphere"></a>
 ## CLIJ_median2DSphere
 
 Computes the local median of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
@@ -1214,6 +1314,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median2DSphere.java)
 
+<a name="CLIJ_median3DSphere"></a>
 ## CLIJ_median3DSphere
 
 Computes the local median of a pixels spherical neighborhood. The spheres size is specified by 
@@ -1234,6 +1335,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median3DSphere.java)
 
+<a name="CLIJ_medianSliceBySliceSphere"></a>
 ## CLIJ_medianSliceBySliceSphere
 
 Computes the local median of a pixels ellipsoidal neighborhood. This is done slice-by-slice in a 3D 
@@ -1254,6 +1356,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MedianSliceBySliceSphere.java)
 
+<a name="CLIJ_minimum2DBox"></a>
 ## CLIJ_minimum2DBox
 
 Computes the local minimum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -1272,6 +1375,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum2DBox.java)
 
+<a name="CLIJ_minimum2DIJ"></a>
 ## CLIJ_minimum2DIJ
 
 Computes the local minimum of a pixels circle-like neighborhood. The circle size is specified by 
@@ -1292,6 +1396,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum2DIJ.java)
 
+<a name="CLIJ_minimum2DSphere"></a>
 ## CLIJ_minimum2DSphere
 
 Computes the local minimum of a pixels ellipsoidal neighborhood. The ellipses size is specified by 
@@ -1310,6 +1415,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum2DSphere.java)
 
+<a name="CLIJ_minimum3DBox"></a>
 ## CLIJ_minimum3DBox
 
 Computes the local minimum of a pixels cube neighborhood. The cubes size is specified by 
@@ -1328,6 +1434,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum3DBox.java)
 
+<a name="CLIJ_minimum3DSphere"></a>
 ## CLIJ_minimum3DSphere
 
 Computes the local minimum of a pixels spherical neighborhood. The spheres size is specified by 
@@ -1346,6 +1453,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum3DSphere.java)
 
+<a name="CLIJ_minimumImageAndScalar"></a>
 ## CLIJ_minimumImageAndScalar
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
@@ -1365,6 +1473,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumImageAndScalar.java)
 
+<a name="CLIJ_minimumImages"></a>
 ## CLIJ_minimumImages
 
 Computes the minimum of a pair of pixel values x, y from two given images X and Y.
@@ -1385,6 +1494,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumImages.java)
 
+<a name="CLIJ_minimumOfAllPixels"></a>
 ## CLIJ_minimumOfAllPixels
 
 Determines the minimum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -1402,6 +1512,7 @@ Ext.CLIJ_minimumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumOfAllPixels.java)
 
+<a name="CLIJ_minimumSliceBySliceSphere"></a>
 ## CLIJ_minimumSliceBySliceSphere
 
 Computes the local minimum of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -1420,6 +1531,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumSliceBySliceSphere.java)
 
+<a name="CLIJ_minimumZProjection"></a>
 ## CLIJ_minimumZProjection
 
 Determines the minimum projection of an image along Z.
@@ -1437,6 +1549,7 @@ Ext.CLIJ_pull(destination_sum);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumZProjection.java)
 
+<a name="CLIJ_multiplyImageAndScalar"></a>
 ## CLIJ_multiplyImageAndScalar
 
 Multiplies all pixels value x in a given image X with a constant scalar s.
@@ -1456,6 +1569,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyImageAndScalar.java)
 
+<a name="CLIJ_multiplyImages"></a>
 ## CLIJ_multiplyImages
 
 Multiplies all pairs of pixel values x and y from two image X and Y.
@@ -1476,6 +1590,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyImages.java)
 
+<a name="CLIJ_multiplyStackWithPlane"></a>
 ## CLIJ_multiplyStackWithPlane
 
 Multiplies all pairs of pixel values x and y from an image stack X and a 2D image Y. x and y are at 
@@ -1497,6 +1612,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyStackWithPlane.java)
 
+<a name="CLIJ_power"></a>
 ## CLIJ_power
 
 Computes all pixels value x to the power of a given exponent a.
@@ -1516,6 +1632,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Power.java)
 
+<a name="CLIJ_pull"></a>
 ## CLIJ_pull
 
 Copies an image specified by its name from GPU memory back to ImageJ and shows it.
@@ -1531,6 +1648,7 @@ Ext.CLIJ_pull(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Pull.java)
 
+<a name="CLIJ_push"></a>
 ## CLIJ_push
 
 Copies an image specified by its name to GPU memory in order to process it there later.
@@ -1546,6 +1664,7 @@ Ext.CLIJ_push(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Push.java)
 
+<a name="CLIJ_release"></a>
 ## CLIJ_release
 
 Frees memory of a specified image in GPU memory.
@@ -1561,6 +1680,7 @@ Ext.CLIJ_release(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Release.java)
 
+<a name="CLIJ_reportMemory"></a>
 ## CLIJ_reportMemory
 
 Prints a list of all images cached in the GPU to ImageJs log window together with a sum of memory 
@@ -1577,6 +1697,7 @@ Ext.CLIJ_reportMemory();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ReportMemory.java)
 
+<a name="CLIJ_resliceBottom"></a>
 ## CLIJ_resliceBottom
 
 Flippes Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method but
@@ -1595,6 +1716,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceBottom.java)
 
+<a name="CLIJ_resliceLeft"></a>
 ## CLIJ_resliceLeft
 
 Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method 
@@ -1613,6 +1735,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceLeft.java)
 
+<a name="CLIJ_resliceRadial"></a>
 ## CLIJ_resliceRadial
 
 Computes a radial projection of an image stack. Starting point for the line is the center in any 
@@ -1631,6 +1754,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceRadial.java)
 
+<a name="CLIJ_resliceRight"></a>
 ## CLIJ_resliceRight
 
 Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method 
@@ -1649,6 +1773,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceRight.java)
 
+<a name="CLIJ_resliceTop"></a>
 ## CLIJ_resliceTop
 
 Flippes Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method but
@@ -1667,6 +1792,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceTop.java)
 
+<a name="CLIJ_rotate2D"></a>
 ## CLIJ_rotate2D
 
 Rotates an image in plane. All angles are entered in degrees. If the image is not rotated around 
@@ -1687,6 +1813,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate2D.java)
 
+<a name="CLIJ_rotate3D"></a>
 ## CLIJ_rotate3D
 
 Rotates an image stack in 3D. All angles are entered in degrees. If the image is not rotated around 
@@ -1707,6 +1834,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate3D.java)
 
+<a name="CLIJ_rotateLeft"></a>
 ## CLIJ_rotateLeft
 
 Rotates a given input image by 90 degrees counter-clockwise. For that, X and Y axis of an image stack
@@ -1726,6 +1854,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/RotateLeft.java)
 
+<a name="CLIJ_rotateRight"></a>
 ## CLIJ_rotateRight
 
 Rotates a given input image by 90 degrees clockwise. For that, X and Y axis of an image stack
@@ -1745,6 +1874,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/RotateRight.java)
 
+<a name="CLIJ_scale"></a>
 ## CLIJ_scale
 
 Scales an image with a given factor.
@@ -1762,6 +1892,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale.java)
 
+<a name="CLIJ_set"></a>
 ## CLIJ_set
 
 Sets all pixel values x of a given image X to a constant value v.
@@ -1780,6 +1911,7 @@ Ext.CLIJ_set(source, value);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Set.java)
 
+<a name="CLIJ_subtractImages"></a>
 ## CLIJ_subtractImages
 
 Subtracts one image X from another image Y pixel wise.
@@ -1800,6 +1932,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SubtractImages.java)
 
+<a name="CLIJ_sumOfAllPixels"></a>
 ## CLIJ_sumOfAllPixels
 
 Determines the sum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -1817,6 +1950,7 @@ Ext.CLIJ_sumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SumOfAllPixels.java)
 
+<a name="CLIJ_sumZProjection"></a>
 ## CLIJ_sumZProjection
 
 Determines the sum projection of an image along Z.
@@ -1834,6 +1968,7 @@ Ext.CLIJ_pull(destination_sum);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SumZProjection.java)
 
+<a name="CLIJ_thresholdIJ"></a>
 ## CLIJ_thresholdIJ
 
 Computes a binary image with pixel values 0 and 1. All pixel values x of a given input image with 
@@ -1856,6 +1991,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ThresholdIJ.java)
 
+<a name="CLIJ_translate2D"></a>
 ## CLIJ_translate2D
 
 Translate an image stack in X and Y.
@@ -1873,6 +2009,7 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Translate2D.java)
 
+<a name="CLIJ_translate3D"></a>
 ## CLIJ_translate3D
 
 Translate an image stack in X, Y and Z.
@@ -1892,4 +2029,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-101 plugins documented.
+102 plugins documented.
