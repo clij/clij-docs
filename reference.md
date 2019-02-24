@@ -98,6 +98,12 @@ Supported transforms:
 * scaleX=[factor]: scaling along X-axis according to given zoom factor
 * scaleY=[factor]: scaling along Y-axis according to given zoom factor
 * scaleZ=[factor]: scaling along Z-axis according to given zoom factor
+* shearXY=[factor]: shearing along X-axis in XY plane according to given factor
+* shearXZ=[factor]: shearing along X-axis in XZ plane according to given factor
+* shearYX=[factor]: shearing along Y-axis in XY plane according to given factor
+* shearYZ=[factor]: shearing along Y-axis in YZ plane according to given factor
+* shearZX=[factor]: shearing along Z-axis in XZ plane according to given factor
+* shearZY=[factor]: shearing along Z-axis in YZ plane according to given factor
 * translateX=[distance]: translate along X-axis by distance given in pixels
 * translateY=[distance]: translate along X-axis by distance given in pixels
 * translateZ=[distance]: translate along X-axis by distance given in pixels
@@ -157,7 +163,7 @@ Ext.CLIJ_push(input);
 Ext.CLIJ_automaticThreshold(input, destination, method);
 Ext.CLIJ_pull(destination);
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/AutomaticThreshold.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AutomaticThreshold.java)
 
 <a name="CLIJ_binaryAnd"></a>
 ## CLIJ_binaryAnd
@@ -461,6 +467,60 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CopySlice.java)
 
+<a name="CLIJ_countNonZeroPixels2DSphere"></a>
+## CLIJ_countNonZeroPixels2DSphere
+
+Counts non-zero pixels in a sphere around every pixel.Put the number in the result image.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_countNonZeroPixels2DSphere(source, destination, radiusX, radiusY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CountNonZeroPixels2DSphere.java)
+
+<a name="CLIJ_countNonZeroPixelsSliceBySliceSphere"></a>
+## CLIJ_countNonZeroPixelsSliceBySliceSphere
+
+Counts non-zero pixels in a sphere around every pixel slice by slice in a stack.Put the number in the result image.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_countNonZeroPixelsSliceBySliceSphere(source, destination, radiusX, radiusY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CountNonZeroPixelsSliceBySliceSphere.java)
+
+<a name="CLIJ_countNonZeroVoxels3DSphere"></a>
+## CLIJ_countNonZeroVoxels3DSphere
+
+Counts non-zero voxels in a sphere around every voxel.Put the number in the result image.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_countNonZeroVoxels3DSphere(source, destination, radiusX, radiusY, radiusZ);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CountNonZeroVoxels3DSphere.java)
+
 <a name="CLIJ_crop2D"></a>
 ## CLIJ_crop2D
 
@@ -641,6 +701,28 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateSphere.java)
 
+<a name="CLIJ_displacement"></a>
+## CLIJ_displacement
+
+For every pixel in source image 1, determine the pixel with the most similar intensity in 
+ the local neighborhood with a given radius in source image 2. Write the distance in 
+X and Y in the two corresponding destination images.
+
+**Parameters**: Image source1, Image source2, Image destinationDeltaX, Image destinationDeltaY, Number radiusX, Number radiusY
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source1);
+Ext.CLIJ_push(source2);
+Ext.CLIJ_displacement(source1, source2, destinationDeltaX, destinationDeltaY, radiusX, radiusY);
+Ext.CLIJ_pull(destinationDeltaX);
+Ext.CLIJ_pull(destinationDeltaY);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Displacement.java)
+
 <a name="CLIJ_divideImages"></a>
 ## CLIJ_divideImages
 
@@ -799,6 +881,63 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Flip3D.java)
 
+<a name="CLIJ_gradientX"></a>
+## CLIJ_gradientX
+
+Computes the gradient of gray values along X. Assuming a, b and c are three adjacent
+ pixels in X direction. In the target image will be saved as: b = c - a;
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_gradientX(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/GradientX.java)
+
+<a name="CLIJ_gradientY"></a>
+## CLIJ_gradientY
+
+Computes the gradient of gray values along Y. Assuming a, b and c are three adjacent
+ pixels in Y direction. In the target image will be saved as: b = c - a;
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_gradientY(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/GradientY.java)
+
+<a name="CLIJ_gradientZ"></a>
+## CLIJ_gradientZ
+
+Computes the gradient of gray values along Z. Assuming a, b and c are three adjacent
+ pixels in Z direction. In the target image will be saved as: b = c - a;
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_gradientZ(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/GradientZ.java)
+
 <a name="CLIJ_help"></a>
 ## CLIJ_help
 
@@ -832,7 +971,7 @@ Ext.CLIJ_push(source);
 Ext.CLIJ_histogram(source, destination, numberOfBins, minimumGreyValue, maximumGreyValue, determineMinAndMax);
 Ext.CLIJ_pull(destination);
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/histogramplugin/Histogram.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Histogram.java)
 
 <a name="CLIJ_invert"></a>
 ## CLIJ_invert
@@ -1322,7 +1461,7 @@ its half-width, half-height and half-depth (radius).
 
 For technical reasons, the volume of the sphere must contain less than 1000 voxels.
 
-**Parameters**: Image source, Image destination, Number radiusX, Number radiusY
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
 
 **Available for**: 3D
 
@@ -1330,7 +1469,7 @@ For technical reasons, the volume of the sphere must contain less than 1000 voxe
 ```
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push(source);
-Ext.CLIJ_median3DSphere(source, destination, radiusX, radiusY);
+Ext.CLIJ_median3DSphere(source, destination, radiusX, radiusY, radiusZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median3DSphere.java)
@@ -1911,6 +2050,26 @@ Ext.CLIJ_set(source, value);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Set.java)
 
+<a name="CLIJ_spotDisplacement"></a>
+## CLIJ_spotDisplacement
+
+For all non-zero pixels in source image 1: Determine the closest non-zero pixel in
+source image 2 and write the distance in the result image.
+
+**Parameters**: Image source1, Image source2, Image destination, Number radiusX, Number radiusY
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source1);
+Ext.CLIJ_push(source2);
+Ext.CLIJ_spotDisplacement(source1, source2, destination, radiusX, radiusY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SpotDisplacement.java)
+
 <a name="CLIJ_subtractImages"></a>
 ## CLIJ_subtractImages
 
@@ -2029,4 +2188,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-102 plugins documented.
+110 plugins documented.
