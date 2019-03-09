@@ -403,6 +403,68 @@ Ext.CLIJ_clear();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Clear.java)
 
+<a name="CLIJ_convertFloat"></a>
+## CLIJ_convertFloat
+
+Convert the input image to a float image with 32 bits per pixel.
+The target image should not exist with a different type before this 
+method is called.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_convertFloat(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertFloat.java)
+
+<a name="CLIJ_convertUInt16"></a>
+## CLIJ_convertUInt16
+
+Convert the input image to a unsigned integer image with 16 bits per pixel.
+Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cuting-off intensity ranges.
+The target image should not exist with a different type before this 
+method is called.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_convertUInt16(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertUInt16.java)
+
+<a name="CLIJ_convertUInt8"></a>
+## CLIJ_convertUInt8
+
+Convert the input image to a unsigned integer image with 8 bits per pixel.
+Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cuting-off intensity ranges.
+The target image should not exist with a different type before this 
+method is called.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_convertUInt8(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertUInt8.java)
+
 <a name="CLIJ_convolve"></a>
 ## CLIJ_convolve
 
@@ -2188,4 +2250,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-110 plugins documented.
+113 plugins documented.
