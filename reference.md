@@ -124,6 +124,42 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform.java)
 
+<a name="CLIJ_applyVectorField2D"></a>
+## CLIJ_applyVectorField2D
+
+Deforms an image according to distances provided in the given vector images. It is recommended to use 32-bit images for input, output and vector images. 
+
+**Parameters**: Image source, Image vectorX, Image vectorY, Image destination
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_push(vectorX);
+Ext.CLIJ_push(vectorY);
+Ext.CLIJ_applyVectorField2D(source, vectorX, vectorY, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ApplyVectorField2D.java)
+
+<a name="CLIJ_applyVectorField3D"></a>
+## CLIJ_applyVectorField3D
+
+ 
+
+**Parameters**: Deforms an image according to distances provided in the given vector images. It is recommended to use 32-bit images for input, output and vector images. 
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_applyVectorField3D(an, and);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ApplyVectorField3D.java)
+
 <a name="CLIJ_argMaximumZProjection"></a>
 ## CLIJ_argMaximumZProjection
 
@@ -2250,4 +2286,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-113 plugins documented.
+115 plugins documented.
