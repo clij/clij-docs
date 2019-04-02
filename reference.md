@@ -407,6 +407,23 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3DSliceBySlice.java)
 
+<a name="CLIJ_centerOfMass"></a>
+## CLIJ_centerOfMass
+
+Determines the center of mass of an image or image stack.
+
+**Parameters**: Image source
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_centerOfMass(source);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CenterOfMass.java)
+
 <a name="CLIJ_clInfo"></a>
 ## CLIJ_clInfo
 
@@ -798,28 +815,6 @@ Ext.CLIJ_dilateSphere(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateSphere.java)
-
-<a name="CLIJ_displacement"></a>
-## CLIJ_displacement
-
-For every pixel in source image 1, determine the pixel with the most similar intensity in 
- the local neighborhood with a given radius in source image 2. Write the distance in 
-X and Y in the two corresponding destination images.
-
-**Parameters**: Image source1, Image source2, Image destinationDeltaX, Image destinationDeltaY, Number radiusX, Number radiusY
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source1);
-Ext.CLIJ_push(source2);
-Ext.CLIJ_displacement(source1, source2, destinationDeltaX, destinationDeltaY, radiusX, radiusY);
-Ext.CLIJ_pull(destinationDeltaX);
-Ext.CLIJ_pull(destinationDeltaY);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Displacement.java)
 
 <a name="CLIJ_divideImages"></a>
 ## CLIJ_divideImages
@@ -1849,6 +1844,28 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyStackWithPlane.java)
 
+<a name="CLIJ_particleImageVelocimetry"></a>
+## CLIJ_particleImageVelocimetry
+
+For every pixel in source image 1, determine the pixel with the most similar intensity in 
+ the local neighborhood with a given radius in source image 2. Write the distance in 
+X and Y in the two corresponding destination images.
+
+**Parameters**: Image source1, Image source2, Image destinationDeltaX, Image destinationDeltaY, Number maxDelta
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source1);
+Ext.CLIJ_push(source2);
+Ext.CLIJ_particleImageVelocimetry(source1, source2, destinationDeltaX, destinationDeltaY, maxDelta);
+Ext.CLIJ_pull(destinationDeltaX);
+Ext.CLIJ_pull(destinationDeltaY);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ParticleImageVelocimetry.java)
+
 <a name="CLIJ_power"></a>
 ## CLIJ_power
 
@@ -2147,26 +2164,6 @@ Ext.CLIJ_push(source);
 Ext.CLIJ_set(source, value);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Set.java)
-
-<a name="CLIJ_spotDisplacement"></a>
-## CLIJ_spotDisplacement
-
-For all non-zero pixels in source image 1: Determine the closest non-zero pixel in
-source image 2 and write the distance in the result image.
-
-**Parameters**: Image source1, Image source2, Image destination, Number radiusX, Number radiusY
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source1);
-Ext.CLIJ_push(source2);
-Ext.CLIJ_spotDisplacement(source1, source2, destination, radiusX, radiusY);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SpotDisplacement.java)
 
 <a name="CLIJ_subtractImages"></a>
 ## CLIJ_subtractImages
