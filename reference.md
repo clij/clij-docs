@@ -1,4 +1,4 @@
-# CLIJ reference
+# CLIJ reference for ImageJ macro
 
 <a name="CLIJ_absolute"></a>
 ## CLIJ_absolute
