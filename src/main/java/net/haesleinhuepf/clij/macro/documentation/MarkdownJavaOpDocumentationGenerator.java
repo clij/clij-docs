@@ -80,7 +80,7 @@ public class MarkdownJavaOpDocumentationGenerator {
                     String description = findDocumentation(service, methodName, parametersWithType);
 
                     String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
-                            description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Groovy example**: \n<pre>\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "</pre>\n\n";
+                            description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Groovy example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
                     blocks.add(output);
                     methods++;
@@ -142,15 +142,20 @@ public class MarkdownJavaOpDocumentationGenerator {
             } else if (parameter.startsWith("Boolean")) {
                 code.append(parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
                 booleanParameterIndex++;
+            } else if (parameter.startsWith("AffineTransform3D")) {
+                code.append(" AffineTransform3D at = new AffineTransform3D();\n" +
+                        "at.translate(4, 0, 0);");
             }
         }
 
-        code.append("\n// Execute operation on GPU\n");
 
+        code.append("```\n\n```");
+        code.append("\n// Execute operation on GPU\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
             code.append("result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + " = ");
         }
-        code.append("<b>clij.op()." + methodName + "(" + parameters + ");</b>\n");
+        code.append("clij.op()." + methodName + "(" + parameters + ");\n");
+        code.append("```\n\n```");
 
         code.append("\n//show result\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
