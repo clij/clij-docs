@@ -14,14 +14,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * MarkdownDocumentationGenerator
+ * MarkdownIJMacroDocumentationGenerator
  * <p>
  * <p>
  * <p>
  * Author: @haesleinhuepf
  * 12 2018
  */
-public class MarkdownDocumentationGenerator {
+public class MarkdownIJMacroDocumentationGenerator {
     public static void main(String... args) throws IOException {
         generateMethodReference();
     }
