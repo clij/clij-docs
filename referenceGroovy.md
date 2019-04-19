@@ -159,7 +159,8 @@ clij = CLIJ.getInstance();
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
  AffineTransform3D at = new AffineTransform3D();
-at.translate(4, 0, 0);```
+at.translate(4, 0, 0);
+```
 
 ```
 // Execute operation on GPU
