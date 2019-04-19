@@ -16,7 +16,7 @@ import java.util.Collections;
  * Author: @haesleinhuepf
  * 01 2019
  */
-public class MarkdownJavaOpDocumentationGenerator {
+public class MarkdownGroovyOpDocumentationGenerator {
     final static String rootFolder = "C:/structure/code/clij-core/";
 
     public static void main(String ... args) throws IOException {
@@ -27,6 +27,7 @@ public class MarkdownJavaOpDocumentationGenerator {
         BufferedReader br = new BufferedReader(new FileReader(inputFile));
 
         StringBuilder builder = new StringBuilder();
+        builder.append("# CLIJ reference for ImageJ Groovy\n\n");
 
 
         String line;

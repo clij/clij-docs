@@ -1,3 +1,5 @@
+# CLIJ reference for ImageJ Groovy
+
 ## absolute( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes the absolute value of every individual pixel x in a given image.

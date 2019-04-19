@@ -30,7 +30,7 @@ public class MarkdownIJMacroDocumentationGenerator {
         CLIJMacroPluginService service = new Context(CLIJMacroPluginService.class).getService(CLIJMacroPluginService.class);
 
         StringBuilder documentation = new StringBuilder();
-        documentation.append("# CLIJ reference\n\n");
+        documentation.append("# CLIJ reference for ImageJ macro\n\n");
 
         ArrayList<String> methodNames = new ArrayList<String>();
         methodNames.addAll(service.getCLIJMethodNames());
