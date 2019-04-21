@@ -49,7 +49,7 @@ You can also get the result image as ImagePlus:
 result = clij.pull(imageOutput);
 ```
 
-A list of all `clij.op()....` methods is [available online](https://clij.github.io/clij-docs/referenceGroovy).
+A list of all `clij.op()....` methods with example code is available for [ImageJ Jython](https://clij.github.io/clij-docs/referenceJython), [ImageJ/Java](https://clij.github.io/clij-docs/referenceJava) and [ImageJ Groovy](https://clij.github.io/clij-docs/referenceGroovy).
 
 ## Low level API
 
@@ -70,7 +70,7 @@ resultStack = clij.execute(DownsampleXYbyHalfTask, "kernels/downsampling.cl", "d
 result = clij.pull(resultStack);
 result.show();
 ```
-Complete jython examples can be found in the [src/main/jython](https://github.com/clij/clij/blob/master/src/main/jython/) directory. More Java example code can be found in the package net.haesleinhuepf.clij.demo
+More examples can be found in the [src/main/jython](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/jython/) and [src/main/java](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/java/) directories.
 
 ## OpenCL Kernel calls with CLIJ.execute()
 The execute function asks for three or four parameters
