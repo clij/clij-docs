@@ -1,5 +1,4 @@
 # CLIJ - GPU-accelerated image processing in ImageJ macro
-
 Image processing in modern GPUs allows for accelerating processing speeds massively. 
 This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [CLIJ](https://github.com/clij/clij/) library. 
 It is not necessary to learn OpenCL itself. 
@@ -11,17 +10,10 @@ This is how your code might look like if you do GPU based image processing in Im
 ![Image](images/example.png)
 
 ## Installation
-Download and install [Fiji from its website](https://fiji.sc/Downloads).
-Add the update site `http://sites.imagej.net/clij` to your Fiji installation. If needed [read more about how to activate update sites]( https://imagej.net/Following_an_update_site).
-Restart Fiji. CLIJ is successfully installed, if you find a menu entry _Plugins > ImageJ on GPU (CLIJ)_.
-
-**Please note:** This is experimental software, it may have side effects on your Fiji installation and may break other plugins. 
-It is strongly recommended to not install CLIJ in a production environment. 
-Use a freshly downloaded Fiji installation for testing experimental plugins like this. 
-[Read the BSD license file](http://github.com/clij/clij/license.txt) for more details.
+Follow the [installation instructions](installationInFiji);
 
 ## A first macro
-The first macro is [help.ijm](https://github.com/clij/clij/blob/master/src/main/macro/help.ijm).
+A first example macro is [help.ijm](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/macro/help.ijm).
 It will assist us to get an overview which methods are supported by CLIJ to process images. 
 It looks like this:
 
@@ -224,15 +216,4 @@ I am aware of these issues.
 There is a large number of [unit tests in the library](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/), 
 ensuring these differences are small and in case they appear, they only influence the borders.
 
-
-## Limitations
-An often criticised issue when working with OpenCL is limited compatibility with graphics cards, operating systems and environments. To my best knowledge, CLIJ runs on recent Intels integrated HD graphics cards and NVidia graphics cards independent of the operating system. I also tested on an AMD Ryzen 3 / Vega GPU under Windows 10 and was happy to see it run. However, I experienced some issues on not as recent AMD GPUs. If you run into any trouble with a GPU I haven't tested: A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU. The issue behind is known and I'm working on it.
-[Check the project page for a full list of tested systems](http://github.com/clij/clij). Let me know, if you experience issues on systems which were not reported in that list.
-
-Again, please let me know what you think about CLIJ, create github issues to guide its further development and [visit the project page](https://github.com/clij/clij) to stay up-to-date.
-
-Happy coding!
-
-Cheers,
-
-Robert _@haesleinhuepf_ Haase
+[Back to CLIJ documentation](readme)

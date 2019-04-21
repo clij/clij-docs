@@ -1,41 +1,12 @@
 
-# CLIJ
+# CLIJ - GPU-accelerated image processing with ImageJ and Java 
 
-CLIJ is an ImageJ/Fiji plugin allowing you to run OpenCL GPU accelerated code from within Fijis script editor (e.g. macro and jython). CLIJ is based on [ClearCL](http://github.com/ClearControl/ClearCL), [Imglib2](https://github.com/imglib) and [SciJava](https://github.com/SciJava).
+CLIJ is a Java library and a ImageJ/Fiji plugin allowing you to run OpenCL GPU accelerated code from Java.
 
-## Accessing from ImageJ macro
+## High level API
+The high level API of CLIJ becomes accessible from your Java prpject by [linking its maven dependency](dependingViaMaven). Furthermore, it can be used from ImageJs scripting languages such as Groovy and Jython from Fijis script editor. Therefore, the [CLIJ update site needs to be activated](installationInFiji).
 
-Read the detailed documentation for [GPU-accelerated image processing using CLIJ from ImageJ macro](https://clij.github.io/clij-docs/).
-
-### Installation to ImageJ/Fiji
-
-Add the update site http://sites.imagej.net/clij to your Fiji installation. [Read more about how to activate update sites]( https://imagej.net/Following_an_update_site)
-
-### Depending on CLIJ
-
-If you want to access CLIJ from your Java code, it is recommended to depend on CLIJ via Maven dependencies. Add this dependency to the pom.xml file of your project:
-
-```xml
-<dependency>
-  <groupId>net.haesleinhuepf</groupId>
-  <artifactId>clij_</artifactId>
-  <version>0.18.0</version>
-</dependency>
-```
-
-To allow maven finding this artifact, add a repository to your pom.xml file:
-
-```xml
-<repository>
-  <id>clij</id>
-  <url>http://dl.bintray.com/haesleinhuepf/clij</url>
-</repository>
-```
-
-## High level API (Java, Jython, Groovy)
-
-When accessing [the Kernels class](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/kernels/Kernels.java) from Java, Python or Groovy, also `ClearCLImage`s can be handled. To start image processing with CLIJ, first create an instance. `CLIJ.getInstance()` takes one optional parameter, which should be part of the name of the OpenCL device. The following [example](https://github.com/clij/clij/blob/master/src/main/jython/maximumProjection.py) shows how to generate a maximum projection of a stack via OpenCL.
-
+To get started, you need a `clij` variable containing the CLIJ instance to access the GPU. The following example shows how to do this from ImageJ Jython:
 ```python
 from net.haesleinhuepf.clij import CLIJ;
 
@@ -136,86 +107,4 @@ parameter names. CLIJ will then for example detect the type of an image paramete
 instead of `float` or `int4` in order to make the OpenCL code type agnostic.
 
 
-## Supported / tested platforms
-There is a rudimentary list of tests implemented mainly testing conversion of types between CPU, GPU and JVM. Furthermore, there is one test applying an OpenCL kernel to images of type UnsignedShort. Following OpenCL devices were tested successfully:
-
-* AMD Radeon RX Vega 3 (OpenCL 2.0, Win 10 64 bit, Nov 2018)
-* Nvidia GeForce 940MX (OpenCL 2.0, Win 10 64 bit, Apr 2018)
-* NVidia GeForce GTX 960M (OpenCL 1.2, Win 10 64 bit, Feb 2018)
-* Intel(R) HD Graphics 620 (OpenCL 2.0, Fedora 27, Nov 2018)
-* Intel(R) HD Graphics 620 (OpenCL 1.2, Win 10 64bit, Sept 2018)
-* Intel(R) HD Graphics 530 (OpenCL 2.0, Win 10 64 bit, Feb 2018)
-* Intel(R) HD Graphics 515 (OpenCL 2.0, Win 10 64 bit, Feb 2018)
-* Intel(R) HD Graphics 405 (OpenCL 1.2, Win 10 64 bit, Feb 2018)
-* Intel(R) HD Graphics 400 (OpenCL 1.2, Win 10 64 bit, Nov 2018)
-* Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz (OpenCL 1.2, Win 10 64 bit, Apr 2018)
-* Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz (OpenCL 2.0, Win 10 64 bit, Feb 2018)
-* Intel(R) Core(TM) m3-6Y30 CPU @ 0.90GHz (OpenCL 2.0, Win 10 64 bit, Feb 2018)
-* Intel(R) Atom(TM) x7-Z8750  CPU @ 1.60GHz (OpenCL 1.2, Win 10 64 bit, Feb 2018)
-* Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz (OpenCL 1.2, Win 10 64 bit, Nov 2018)
-
-Tests failed on these devices:
-
-* AMD Ryzen 3 (OpenCL 1.2, Win 10 64 bit, Sept 2018)
-* AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G (OpenCL 1.2, Win 10 64 bit, Feb 2018)
-* Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz (OpenCL 1.2, macOS 10.12.6, Feb 2018)
-* Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz (OpenCL 1.2, Win 10 64 bit, Mar 2018)
-* Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (OpenCL 2.0, Fedora 27, Apr 2018)
-
-## Installation using maven
-
-Clone this repo
-```
-git clone https://github.com/clij/clij
-```
-
-Open pom.xml and enter the path of your Fiji installation in the line containing
-
-```
-<imagej.app.directory>C:/path/to/Fiji.app
-```
-
-Go to the source dir and deploy to your Fiji.app
-
-```
-cd clij
-deploy.bat
-```
-
-# Troubleshooting
-* Errors when processing big images on NVidia cards on Windows (CL_INVALID_COMMAND_QUEUE, CL_INVALID_PROGRAM_EXECUTABLE, CL_MEM_OBJECT_ALLOCATION_FAILURE): The issue is related to a timeout of the operating system interrupting processing on the GPU. Add these keys to the windows registry and restart the machine (warning, don't do this if you're not sure. Ask you IT department for support. [Read the BSD3 license file](license.txt) for details on what why we're not responsible for your actions on your computer ):
-```
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
-"TdrDelay"=dword:0000003c
-"TdrDdiDelay"=dword:0000003c
-```
-  Here is more information about what TDR is: https://docs.microsoft.com/en-us/windows-hardware/drivers/display/tdr-registry-keys
-* Fiji crashes when calling the first CLIJ filter: Check if the initialisation contains a proper name for a GPU.
-* "java.io.IOException: Cannot find source: [Object] <path/filename.cl>" exception: Navigate to the jars subdirectory of your Fiji installation and locate `clearcl.jar` files, e.g. by typing `dir clearcl*` or `ls clearcl*`. If there are several versions installed, remove the older one. In order to fix this exception, you need at least `clearcl-0.5.5-RH.jar`.
-* "clearcl.exceptions.ClearCLException: problem while setting argument 'parameter_of_type_float'": To hand over parameters of type float, you need to explicitly type it. Use `from java.lang import Float` and `Float(1.5)` to handover a value of 1.5 to an OpenCL parameter of type float.
-* After installation, Fiji doesn't start anymore: Navigate to your Fiji folder. Check if there is clij_0.4.0.jar located in _both_ folders `plugins` and `jars`. Delete both and run the installation instructions again.
-* ClearVolume doesn't work anymore. CLIJ needs developmental versions of dependencies, also ClearVolume needs. If both update sites are activated, Fiji may crash. Install only one of both at a time.
-* CLIJ doesn't start on Ubuntu linux with an error message that a class called ClearCLBackendJOCL cannot be initialized. Installing 'ocl-icd-opencl-dev' helped here.
-* CLIJ throws various exceptions, like CL_OUT_OF_HOST_MEMORY on Linux. Try installing an OpenCL-driver such as beignet. On Fedora 27 Linux, this command list helped (warning, don't execute these commands if you don't know what they are doing. Ask you IT department for support. [Read the BSD3 license file](license.txt) for details on what why we're not responsible for your actions on your computer ):
-
-```
-sudo yum install ocl-icd-devel
-sudo yum install cmake
-sudo yum install llvm
-sudo yum install llvm-devel
-sudo yum install libdrm libdrm-devel
-sudo yum install libXext-devel
-sudo yum install libXfixes-devel
-sudo yum install clang-devel
-
-git clone https://github.com/intel/beignet.git
-cd beignet/
-mkdir build
-cd build
-cmake ../
-make
-sudo make install
-
-```
-More info can be found on the website of the [beignet project](https://www.freedesktop.org/wiki/Software/Beignet/).
-
+[Back to CLIJ documentation](readme)

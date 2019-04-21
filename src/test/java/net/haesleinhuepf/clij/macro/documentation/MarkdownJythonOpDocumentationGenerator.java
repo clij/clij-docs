@@ -16,7 +16,7 @@ import java.util.Collections;
  * Author: @haesleinhuepf
  * 01 2019
  */
-public class MarkdownJavaOpDocumentationGenerator {
+public class MarkdownJythonOpDocumentationGenerator {
     final static String rootFolder = "C:/structure/code/clij-core/";
 
     public static void main(String ... args) throws IOException {
@@ -27,7 +27,7 @@ public class MarkdownJavaOpDocumentationGenerator {
         BufferedReader br = new BufferedReader(new FileReader(inputFile));
 
         StringBuilder builder = new StringBuilder();
-        builder.append("# CLIJ reference for ImageJ/Java\n\n");
+        builder.append("# CLIJ reference for ImageJ Jython\n\n");
 
 
         String line;
@@ -97,7 +97,7 @@ public class MarkdownJavaOpDocumentationGenerator {
         builder.append("\n");
         builder.append("Documented " + methods + " methods.\n");
 
-        File outputTarget = new File("referenceJava.md");
+        File outputTarget = new File("referenceJython.md");
 
         FileWriter writer = new FileWriter(outputTarget);
         writer.write(builder.toString());
@@ -118,9 +118,8 @@ public class MarkdownJavaOpDocumentationGenerator {
         StringBuilder code = new StringBuilder();
 
         code.append("// init CLIJ and GPU\n");
-        code.append("import net.haesleinhuepf.clij.CLIJ;\n");
-        code.append("import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;\n");
-        code.append("CLIJ clij = CLIJ.getInstance();\n\n");
+        code.append("from net.haesleinhuepf.clij import CLIJ;\n");
+        code.append("clij = CLIJ.getInstance();\n\n");
 
         code.append("// get input parameters\n");
         String[] parametersArray = parametersWithType.split(",");
@@ -132,20 +131,20 @@ public class MarkdownJavaOpDocumentationGenerator {
                 if (inputImage.length() == 0) {
                     inputImage = parameterName;
                 }
-                code.append("ClearCLBuffer " + parameterName + " = clij.push(" + parameterName + "ImagePlus);\n");
+                code.append(parameterName + " = clij.push(" + parameterName + "ImagePlus);\n");
             } else if (isOutputParameter(parameter)) {
-                code.append("ClearCLBuffer " + parameterName + " = clij.create(" + inputImage + ");\n");
+                code.append(parameterName + " = clij.create(" + inputImage + ");\n");
             } else if (parameter.startsWith("Float")) {
-                code.append("float " + parameterName + " = " + floatParameterValues[floatParameterIndex]+ ";\n");
+                code.append(parameterName + " = " + floatParameterValues[floatParameterIndex]+ ";\n");
                 floatParameterIndex++;
             } else if (parameter.startsWith("Integer")) {
-                code.append("int " + parameterName + " = " + integerParameterValues[integerParameterIndex] + ";\n");
+                code.append(parameterName + " = " + integerParameterValues[integerParameterIndex] + ";\n");
                 integerParameterIndex++;
             } else if (parameter.startsWith("Boolean")) {
-                code.append("boolean " + parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
+                code.append(parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
                 booleanParameterIndex++;
             } else if (parameter.startsWith("AffineTransform3D")) {
-                code.append("AffineTransform3D at = new AffineTransform3D();\n" +
+                code.append("at = new AffineTransform3D();\n" +
                         "at.translate(4, 0, 0);\n");
             }
         }
@@ -154,14 +153,14 @@ public class MarkdownJavaOpDocumentationGenerator {
         code.append("```\n\n```");
         code.append("\n// Execute operation on GPU\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
-            code.append(returnType + " result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + " = ");
+            code.append("result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + " = ");
         }
         code.append("clij.op()." + methodName + "(" + parameters + ");\n");
         code.append("```\n\n```");
 
         code.append("\n//show result\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
-            code.append("System.out.println(result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + ");\n");
+            code.append("print(result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + ");\n");
         }
 
         for (String parameter : parametersArray) {
@@ -172,6 +171,7 @@ public class MarkdownJavaOpDocumentationGenerator {
                 code.append(parameterName + "ImagePlus.show());\n");
             }
         }
+
 
         code.append("\n// cleanup memory on GPU\n");
         for (String parameter : parametersArray) {

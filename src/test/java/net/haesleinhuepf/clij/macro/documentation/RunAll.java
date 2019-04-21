@@ -7,5 +7,6 @@ public class RunAll {
         MarkdownGroovyOpDocumentationGenerator.main(args);
         MarkdownJavaOpDocumentationGenerator.main(args);
         MarkdownIJMacroDocumentationGenerator.main(args);
+        MarkdownJythonOpDocumentationGenerator.main(args);
     }
 }
