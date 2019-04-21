@@ -295,6 +295,8 @@ Ext.CLIJ_pull(destination);
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
 
+The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
+
 **Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY
 
 **Available for**: 2D
@@ -308,51 +310,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2D.java)
 
-<a name="CLIJ_blur2DFast"></a>
-## CLIJ_blur2DFast
-
-Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
-
-The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
-
-**Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_blur2DFast(source, destination, sigmaX, sigmaY);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2DFast.java)
-
-<a name="CLIJ_blur2DIJ"></a>
-## CLIJ_blur2DIJ
-
-Computes the Gaussian blurred image of an image given a sigma.
-
-The implementation is close to ImageJs Gaussian blur filter. Differences in pixel values compared to 
-ImageJ of up to 0.5% need to be tolerated.
-
-**Parameters**: Image source, Image destination, Number sigma
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_blur2DIJ(source, destination, sigma);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur2DIJ.java)
-
 <a name="CLIJ_blur3D"></a>
 ## CLIJ_blur3D
 
 Computes the Gaussian blurred image of an image given two sigma values in X, Y and Z. Thus, the filterkernel can have non-isotropic shape.
+
+The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
 
 **Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY, Number sigmaZ
 
@@ -366,26 +329,6 @@ Ext.CLIJ_blur3D(source, destination, sigmaX, sigmaY, sigmaZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3D.java)
-
-<a name="CLIJ_blur3DFast"></a>
-## CLIJ_blur3DFast
-
-Computes the Gaussian blurred image of an image given two sigma values in X, Y and Z. Thus, the filterkernel can have non-isotropic shape.
-
-The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
-
-**Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY, Number sigmaZ
-
-**Available for**: 3D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_blur3DFast(source, destination, sigmaX, sigmaY, sigmaZ);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3DFast.java)
 
 <a name="CLIJ_blur3DSliceBySlice"></a>
 ## CLIJ_blur3DSliceBySlice
@@ -517,26 +460,6 @@ Ext.CLIJ_convertUInt8(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertUInt8.java)
-
-<a name="CLIJ_convolve"></a>
-## CLIJ_convolve
-
-Convolve the image with a given kernel image. Kernel image and source image should have the same
-bit-type. Furthermore, it is recommended that the kernel image has an odd size in X, Y and Z.
-
-**Parameters**: Image source, Image convolution_kernel, Image destination
-
-**Available for**: 2D, 3D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_push(convolution_kernel);
-Ext.CLIJ_convolve(source, convolution_kernel, destination);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/customconvolutionplugin/Convolve.java)
 
 <a name="CLIJ_copy"></a>
 ## CLIJ_copy
@@ -676,25 +599,6 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Crop3D.java)
 
-<a name="CLIJ_deconvolve"></a>
-## CLIJ_deconvolve
-
-Richardson-Lucy implementation (experimental).
-
-**Parameters**: Image source, Image convolution_kernel, Image destination, Number iterations
-
-**Available for**: 2D, 3D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_push(convolution_kernel);
-Ext.CLIJ_deconvolve(source, convolution_kernel, destination, iterations);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/customconvolutionplugin/Deconvolve.java)
-
 <a name="CLIJ_detectMaximaBox"></a>
 ## CLIJ_detectMaximaBox
 
@@ -773,8 +677,8 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DetectMinimaSliceBySliceBox.java)
 
-<a name="CLIJ_dilateBoxIJ"></a>
-## CLIJ_dilateBoxIJ
+<a name="CLIJ_dilateBox"></a>
+## CLIJ_dilateBox
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
 The dilation takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
@@ -791,10 +695,10 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 ```
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push(source);
-Ext.CLIJ_dilateBoxIJ(source, destination);
+Ext.CLIJ_dilateBox(source, destination);
 Ext.CLIJ_pull(destination);
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBoxIJ.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBox.java)
 
 <a name="CLIJ_dilateSphere"></a>
 ## CLIJ_dilateSphere
@@ -895,8 +799,8 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DownsampleSliceBySliceHalfMedian.java)
 
-<a name="CLIJ_erodeBoxIJ"></a>
-## CLIJ_erodeBoxIJ
+<a name="CLIJ_erodeBox"></a>
+## CLIJ_erodeBox
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
 The erosion takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
@@ -913,10 +817,10 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 ```
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push(source);
-Ext.CLIJ_erodeBoxIJ(source, destination);
+Ext.CLIJ_erodeBox(source, destination);
 Ext.CLIJ_pull(destination);
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBoxIJ.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBox.java)
 
 <a name="CLIJ_erodeSphere"></a>
 ## CLIJ_erodeSphere
@@ -1176,27 +1080,6 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DBox.java)
 
-<a name="CLIJ_maximum2DIJ"></a>
-## CLIJ_maximum2DIJ
-
-Computes the local maximum of a pixels circle-like neighborhood. The circle size is specified by 
-its radius.
-
-This operation is equal to ImageJs 'Maximum...' menu.
-
-**Parameters**: Image source, Image destination, Number radius
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_maximum2DIJ(source, destination, radius);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DIJ.java)
-
 <a name="CLIJ_maximum2DSphere"></a>
 ## CLIJ_maximum2DSphere
 
@@ -1392,27 +1275,6 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DBox.java)
 
-<a name="CLIJ_mean2DIJ"></a>
-## CLIJ_mean2DIJ
-
-Computes the local mean average of a pixels circle-like neighborhood. The circle size is specified by 
-its radius.
-
-This operation is equal to ImageJs 'Mean...' menu.
-
-**Parameters**: Image source, Image destination, Number radius
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_mean2DIJ(source, destination, radius);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DIJ.java)
-
 <a name="CLIJ_mean2DSphere"></a>
 ## CLIJ_mean2DSphere
 
@@ -1606,27 +1468,6 @@ Ext.CLIJ_minimum2DBox(source, destination, radiusX, radiusY);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum2DBox.java)
-
-<a name="CLIJ_minimum2DIJ"></a>
-## CLIJ_minimum2DIJ
-
-Computes the local minimum of a pixels circle-like neighborhood. The circle size is specified by 
-its radius.
-
-This operation is equal to ImageJs 'Minimum...' menu.
-
-**Parameters**: Image source, Image destination, Number radius
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source);
-Ext.CLIJ_minimum2DIJ(source, destination, radius);
-Ext.CLIJ_pull(destination);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum2DIJ.java)
 
 <a name="CLIJ_minimum2DSphere"></a>
 ## CLIJ_minimum2DSphere
@@ -2222,8 +2063,8 @@ Ext.CLIJ_pull(destination_sum);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SumZProjection.java)
 
-<a name="CLIJ_thresholdIJ"></a>
-## CLIJ_thresholdIJ
+<a name="CLIJ_threshold"></a>
+## CLIJ_threshold
 
 Computes a binary image with pixel values 0 and 1. All pixel values x of a given input image with 
 value larger or equal to a given threshold t will be set to 1.
@@ -2240,10 +2081,10 @@ This plugin is comparable to setting a raw threshold in ImageJ and using the 'Co
 ```
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push(source);
-Ext.CLIJ_thresholdIJ(source, destination, threshold);
+Ext.CLIJ_threshold(source, destination, threshold);
 Ext.CLIJ_pull(destination);
 ```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ThresholdIJ.java)
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Threshold.java)
 
 <a name="CLIJ_translate2D"></a>
 ## CLIJ_translate2D
@@ -2283,4 +2124,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-115 plugins documented.
+107 plugins documented.

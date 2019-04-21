@@ -144,7 +144,7 @@ public class MarkdownGroovyOpDocumentationGenerator {
                 code.append(parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
                 booleanParameterIndex++;
             } else if (parameter.startsWith("AffineTransform3D")) {
-                code.append(" AffineTransform3D at = new AffineTransform3D();\n" +
+                code.append("at = new AffineTransform3D();\n" +
                         "at.translate(4, 0, 0);\n");
             }
         }
