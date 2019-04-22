@@ -559,6 +559,40 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CountNonZeroVoxels3DSphere.java)
 
+<a name="CLIJ_create2D"></a>
+## CLIJ_create2D
+
+Allocated memory for a new 2D image in the GPU memory. BitDepth must be 8 (unsigned byte), 16 (unsigned short) or 32 (float).
+
+**Parameters**: Image destination, Number width, Number height, Number bitDepth
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_create2D(destination, width, height, bitDepth);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Create2D.java)
+
+<a name="CLIJ_create3D"></a>
+## CLIJ_create3D
+
+Allocated memory for a new 3D image in the GPU memory. BitDepth must be 8 (unsigned byte), 16 (unsigned short) or 32 (float).
+
+**Parameters**: Image destination, Number width, Number height, Number depth, Number bitDepth
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_create3D(destination, width, height, depth, bitDepth);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Create3D.java)
+
 <a name="CLIJ_crop2D"></a>
 ## CLIJ_crop2D
 
@@ -2124,4 +2158,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-107 plugins documented.
+109 plugins documented.
