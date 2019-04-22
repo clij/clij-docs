@@ -45,18 +45,22 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Support](https://image.sc)
 
 ## Acknowledgements
-Development of CLIJ is a community effort. We would like to thank everybody who helped developing and testing. In particular thanks goes to 
-Laurent Thomas (Acquifer), 
+Development of CLIJ is a community effort. We would like to thank everybody who helped developing and testing. In particular thanks goes to
 Bruno C. Vellutini (MPI CBG),
-Jan Brocher (Biovoxxel), 
-J\"urgen Gluch (Fraunhofer IKTS),
-Tobias Pietzsch (MPI-CBG),
-Giovanni Cardone (MPI Biochem),
+Curtis Rueden (UW-Madison LOCI),
 Damir Krunic (DKFZ),
-Gaby G. Martins (IGC),
 Daniel J. White (GE),
+Gaby G. Martins (IGC),
+Giovanni Cardone (MPI Biochem),
+Jan Brocher (Biovoxxel), 
+Johannes Girstmair (MPI CBG),
+Juergen Gluch (Fraunhofer IKTS),
+Kota Miura (Heidelberg),
+Laurent Thomas (Acquifer), 
 Nico Stuurman (UCSF),
-Johannes Girstmair (MPI CBG).
+Pavel Tomancak (MPI CBG),
+Pradeep Rajasekhar (Monash University),
+Tobias Pietzsch (MPI-CBG)
 
 TODO:
 * Remove code examples from clij_
