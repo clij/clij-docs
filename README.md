@@ -39,7 +39,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
 * Extending CLIJ functionality
   * [CLIJ plugin template](https://github.com/clij/clij-plugin-template/)
   * [CLIJ example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
-* Troubleshotting
+* Troubleshooting
   * [List of tested systems](testedsystems)
   * [Troubleshooting](troubleshooting)
   * [Support](https://image.sc)
