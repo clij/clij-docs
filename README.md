@@ -21,8 +21,8 @@ If you search for support, please open a thread on the [image.sc](https://image.
 * Introduction to CLIJ programming
   * [CLIJ for ImageJ Macro programmers](macro_intro)
   * [CLIJ for Java programmers](api_intro)
-  * [CLIJ ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
-  * [CLIJ execution from the command line](https://github.com/clij/clij-executable-example)
+  * [ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
+  * [Execution from the command line](https://github.com/clij/clij-executable-example)
 * Application programming interface (API)
   * [API design principles](api_design_priciples)
   * [ImageJ Macro](reference)
@@ -30,15 +30,15 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Java](referenceJava)
   * [Groovy](referenceGroovy)
 * Code examples
-  * [ImageJ Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
-  * [ImageJ BeanShell](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/beanshell)
-  * [ImageJ Jython](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/jython)
-  * [ImageJ JavaScript](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/javascript)
-  * [ImageJ Groovy](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/groovy)
+  * [Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
+  * [BeanShell](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/beanshell)
+  * [Jython](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/jython)
+  * [JavaScript](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/javascript)
+  * [Groovy](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/groovy)
   * [Java](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/java/net/haesleinhuepf/clij/examples)
 * Extending CLIJ functionality
-  * [CLIJ plugin template](https://github.com/clij/clij-plugin-template/)
-  * [CLIJ example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
+  * [Plugin template](https://github.com/clij/clij-plugin-template/)
+  * [Example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
 * Troubleshooting
   * [List of tested systems](testedsystems)
   * [Troubleshooting](troubleshooting)
