@@ -22,6 +22,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [CLIJ for Java programmers](api_intro)
   * [CLIJ ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
   * [CLIJ execution from the command line](https://github.com/clij/)
+  * [API design principles](api_design_priciples)
 * Application programming interface (API)
   * [ImageJ Macro](reference)
   * [Jython](referenceJython)
@@ -29,7 +30,10 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Groovy](referenceGroovy)
 * Code examples
   * [ImageJ Macro](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/macro)
+  * [ImageJ BeanShell](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/beanshell)
   * [ImageJ Jython](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/jython)
+  * [ImageJ JavaScript](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/javascript)
+  * [ImageJ Groovy](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/groovy)
   * [Java](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples)
 * Extending CLIJ functionality
   * [CLIJ plugin template](https://github.com/clij/clij-plugin-template/)
@@ -38,6 +42,20 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [List of tested systems](testedsystems)
   * [Troubleshooting](troubleshooting)
   * [Support](https://image.sc)
+
+## Acknowledgements
+Development of CLIJ is a community effort. We would like to thank everybody who helped developing and testing. In particular thanks goes to 
+Laurent Thomas (Acquifer), 
+Bruno C. Vellutini (MPI CBG),
+Jan Brocher (Biovoxxel), 
+J\"urgen Gluch (Fraunhofer IKTS),
+Tobias Pietzsch (MPI-CBG),
+Giovanni Cardone (MPI Biochem),
+Damir Krunic (DKFZ),
+Gaby G. Martins (IGC),
+Daniel J. White (GE),
+Nico Stuurman (UCSF),
+Johannes Girstmair (MPI CBG).
 
 TODO:
 * Remove code examples from clij_
