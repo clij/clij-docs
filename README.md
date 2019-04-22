@@ -22,7 +22,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [CLIJ for ImageJ Macro programmers](macro_intro)
   * [CLIJ for Java programmers](api_intro)
   * [CLIJ ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
-  * [CLIJ execution from the command line](https://github.com/clij/)
+  * [CLIJ execution from the command line](https://github.com/clij/clij-executable-example)
 * Application programming interface (API)
   * [API design principles](api_design_priciples)
   * [ImageJ Macro](reference)
@@ -61,6 +61,7 @@ Johannes Girstmair (MPI CBG).
 TODO:
 * Remove code examples from clij_
 * Remove documentation from clij_, link here
+* Update links/intro on clij-notebook
 * Finish benchmarking page
 * Put Drosophila data sets for benchmarking online
 * Add link to BioRxiv
