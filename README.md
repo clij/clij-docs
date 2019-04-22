@@ -30,7 +30,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Java](referenceJava)
   * [Groovy](referenceGroovy)
 * Code examples
-  * [Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
+  * [ImageJ Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
   * [BeanShell](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/beanshell)
   * [Jython](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/jython)
   * [JavaScript](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/javascript)
