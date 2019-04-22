@@ -30,12 +30,12 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Java](referenceJava)
   * [Groovy](referenceGroovy)
 * Code examples
-  * [ImageJ Macro](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/macro)
-  * [ImageJ BeanShell](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/beanshell)
-  * [ImageJ Jython](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/jython)
-  * [ImageJ JavaScript](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/javascript)
-  * [ImageJ Groovy](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/groovy)
-  * [Java](https://mpicbg-csbd.github.io/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples)
+  * [ImageJ Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
+  * [ImageJ BeanShell](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/beanshell)
+  * [ImageJ Jython](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/jython)
+  * [ImageJ JavaScript](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/javascript)
+  * [ImageJ Groovy](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/groovy)
+  * [Java](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/java/net/haesleinhuepf/clij/examples)
 * Extending CLIJ functionality
   * [CLIJ plugin template](https://github.com/clij/clij-plugin-template/)
   * [CLIJ example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
