@@ -18,7 +18,7 @@ This might happend with older GPUs which have not been tested. A helpful workaro
 "clearcl.exceptions.ClearCLException: problem while setting argument 'parameter_of_type_float'": To hand over parameters of type float, you need to explicitly type it. Use `from java.lang import Float` and `Float(1.5)` to handover a value of 1.5 to an OpenCL parameter of type float.
 ## Class not found on Linux
 CLIJ doesn't start on Ubuntu linux with an error message that a class called ClearCLBackendJOCL cannot be initialized. Installing 'ocl-icd-opencl-dev' helped here.
-## Exceptions on Linus
+## Exceptions on Linux
 CLIJ throws various exceptions, like CL_OUT_OF_HOST_MEMORY on Linux. Try installing an OpenCL-driver such as beignet. On Fedora 27 Linux, this command list helped:
 
 ```
