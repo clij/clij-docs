@@ -1,4 +1,4 @@
-# CLIJ reference for ImageJ Groovy
+# CLIJ reference for ImageJ Jython
 
 ## absolute( ClearCLBuffer src,  ClearCLBuffer dst )
 
@@ -11,7 +11,7 @@ f(x) = |x|
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -45,7 +45,7 @@ f(x, s) = x + s
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -80,7 +80,7 @@ f(x, y) = x + y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -116,7 +116,7 @@ f(x, y, a, b) = x * a + y * b
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -152,7 +152,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -186,7 +186,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -218,7 +218,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -254,7 +254,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -293,7 +293,7 @@ Furthermore, another image is generated containing the z-index where the maximum
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -332,7 +332,7 @@ of these methods in the method text field:
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -367,7 +367,7 @@ of these methods in the method text field:
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -406,7 +406,7 @@ f(x, y) = x & y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -444,7 +444,7 @@ f(x) = !x
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -478,7 +478,7 @@ All pixel values except 0 in the input images are interpreted as 1.f(x, y) = x |
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -516,7 +516,7 @@ f(x, y) = (x & !y) | (!x & y)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -552,7 +552,7 @@ The 'fast' implementation is done separable. In case a sigma equals zero, the di
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -588,7 +588,7 @@ The 'fast' implementation is done separable. In case a sigma equals zero, the di
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -623,7 +623,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -657,7 +657,7 @@ f(x) = x
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -689,7 +689,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -722,7 +722,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -756,7 +756,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -790,7 +790,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -825,7 +825,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -859,7 +859,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -894,7 +894,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -933,7 +933,7 @@ there is no other pixel in a given radius which has a higher intensity, and to 0
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -968,7 +968,7 @@ given radius which has a higher intensity, and to 0 otherwise.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1002,7 +1002,7 @@ there is no other pixel in a given radius which has a lower intensity, and to 0 
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1037,7 +1037,7 @@ given radius which has a lower intensity, and to 0 otherwise.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1070,7 +1070,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1104,7 +1104,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1143,7 +1143,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1177,7 +1177,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1211,7 +1211,7 @@ f(x, y) = x / y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1246,7 +1246,7 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1281,7 +1281,7 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1318,7 +1318,7 @@ four corresponding pixels in the source image.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1355,7 +1355,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1389,7 +1389,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1421,7 +1421,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1455,7 +1455,7 @@ Flips an image in X and/or Y direction depending on boolean flags.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1489,7 +1489,7 @@ Flips an image in X and/or Y direction depending on boolean flags.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1525,7 +1525,7 @@ Computes the gradient of gray values along X. Assuming a, b and c are three adja
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1558,7 +1558,7 @@ Computes the gradient of gray values along Y. Assuming a, b and c are three adja
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1591,7 +1591,7 @@ Computes the gradient of gray values along Z. Assuming a, b and c are three adja
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1623,7 +1623,7 @@ Determines the histogram of a given image.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1660,7 +1660,7 @@ For binary images, use binaryNot.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1695,7 +1695,7 @@ f(x) = (1 if (x >=  m)); (0 otherwise)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1733,7 +1733,7 @@ f(x,m) = (x if (m != 0); (0 otherwise))
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1771,7 +1771,7 @@ f(x,m) = (x if (m != 0); (0 otherwise))
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1805,7 +1805,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1837,7 +1837,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1872,7 +1872,7 @@ f(x, s) = max(x, s)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1907,7 +1907,7 @@ f(x, s) = max(x, y)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1942,7 +1942,7 @@ Results table in the column 'Max'.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -1972,7 +1972,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2006,7 +2006,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2040,7 +2040,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2080,7 +2080,7 @@ Z = 2
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2115,7 +2115,7 @@ Determines the maximum projection of an image along Z.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2147,7 +2147,7 @@ dst_max.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2179,7 +2179,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2213,7 +2213,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2247,7 +2247,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2281,7 +2281,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2316,7 +2316,7 @@ Determines the mean average projection of an image along Z.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2351,7 +2351,7 @@ For technical reasons, the area of the ellipse must have less than 1000 pixels.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2385,7 +2385,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2419,7 +2419,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2454,7 +2454,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2486,7 +2486,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2521,7 +2521,7 @@ f(x, s) = min(x, s)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2556,7 +2556,7 @@ f(x, s) = min(x, y)
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2591,7 +2591,7 @@ Results table in the column 'Min'.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2621,7 +2621,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2655,7 +2655,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2689,7 +2689,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2724,7 +2724,7 @@ Determines the minimum projection of an image along Z.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2756,7 +2756,7 @@ dst_min.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2791,7 +2791,7 @@ f(x, s) = x * s
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2826,7 +2826,7 @@ f(x, y) = x * y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2860,7 +2860,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2895,7 +2895,7 @@ f(x, y) = x * y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2929,7 +2929,7 @@ output3d.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2966,7 +2966,7 @@ f(x, a) = x * a
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -2999,7 +2999,7 @@ dst.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3033,7 +3033,7 @@ offers less flexibility such as interpolation.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3066,7 +3066,7 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3099,7 +3099,7 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3132,7 +3132,7 @@ offers less flexibility such as interpolation.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3166,7 +3166,7 @@ such as interpolation.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3200,7 +3200,7 @@ such as interpolation.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3234,7 +3234,7 @@ f(x) = v
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3263,7 +3263,7 @@ clImage.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3293,7 +3293,7 @@ clImagesOut.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3329,7 +3329,7 @@ f(x, y) = x - y
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3363,7 +3363,7 @@ destination.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3392,7 +3392,7 @@ clImage.close();
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3421,7 +3421,7 @@ Determines the sum projection of an image along Z.
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
@@ -3456,7 +3456,7 @@ This plugin is comparable to setting a raw threshold in ImageJ and using the 'Co
 **Groovy example**: 
 ```
 // init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
+from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
 // get input parameters
