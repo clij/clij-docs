@@ -16,11 +16,12 @@
 * Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz (OpenCL 1.2, Win 10 64 bit, Nov 2018)
 
 Some of the tests failed on these devices:
-* AMD Ryzen 3 (OpenCL 1.2, Win 10 64 bit, Sept 2018)
-* AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G (OpenCL 1.2, Win 10 64 bit, Feb 2018)
-* Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz (OpenCL 1.2, macOS 10.12.6, Feb 2018)
-* Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz (OpenCL 1.2, Win 10 64 bit, Mar 2018)
-* Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (OpenCL 2.0, Fedora 27, Apr 2018)
+* AMD Ryzen 3&ast; (OpenCL 1.2, Win 10 64 bit, Sept 2018)
+* AMD A10-8700P Radeon R6, 10 Compute Cores 4C+6G&ast; (OpenCL 1.2, Win 10 64 bit, Feb 2018)
+* Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz&ast; (OpenCL 1.2, macOS 10.12.6, Feb 2018)
+* Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&ast; (OpenCL 1.2, Win 10 64 bit, Mar 2018)
+* Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz&ast; (OpenCL 2.0, Fedora 27, Apr 2018)
 
-
+ &ast; These CPU devices are accompanied by built-in GPUs which were tested successfully using CLIJ.
+ 
 [Back to CLIJ documentation](https://clij.github.io/clij-docs/)
