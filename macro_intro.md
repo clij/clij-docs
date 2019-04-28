@@ -13,7 +13,7 @@ This is how your code might look like if you do GPU based image processing in Im
 Follow the [installation instructions](installationInFiji);
 
 ## A first macro
-A first example macro is [help.ijm](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/macro/help.ijm).
+A first example macro is [help.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/help.ijm).
 It will assist us to get an overview which methods are supported by CLIJ to process images. 
 It looks like this:
 
@@ -98,7 +98,7 @@ Thus, overall efficiency can only be achieved if whole pipelines are processed i
 Furthermore, repeatedly using the same operations on a GPU pays off because operations are cached. Reusing them is faster than using other methods. 
 
 Let's compare the `Mean 3D` filter of ImageJ with it's counterpart in CLIJ.
-The example macro is [benchmarking.ijm](https://github.com/clij/clij/blob/master/src/main/macro/benchmarking.ijm). 
+The example macro is [benchmarking.ijm](https://github.com/clij/clij-docs/tree/master/src/main/macro/benchmarking.ijm). 
 It executes both operations ten times and measures the time each operation takes. 
 This is just an excerpt of the macro:
 
@@ -216,4 +216,4 @@ I am aware of these issues.
 There is a large number of [unit tests in the library](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/), 
 ensuring these differences are small and in case they appear, they only influence the borders.
 
-[Back to CLIJ documentation](readme)
+[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
