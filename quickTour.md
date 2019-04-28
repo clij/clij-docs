@@ -13,7 +13,7 @@ When clicking on the menu, you see a dialog asking for the parameters of the spe
 If ImageJs macro recorder up and running, the parameters entered in the dialog are recorded together with additional call necessary for pushing the image to the GPUs memory and pull the result back:
 ![Image](images/macro_recorder.png)
 
-For exploring CLIJ further, it is recommended to read the [introduction for macro programmers](macro_intro) and have a look at the [code examples](https://mpicbg-csbd.github.io/clij-docs/src/main/macro);
+For exploring CLIJ further, it is recommended to read the [introduction for macro programmers](macro_intro) and have a look at the [code examples](https://clij.github.io/clij-docs/src/main/macro);
 
-[Back to CLIJ documentation](README)
+[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
 
