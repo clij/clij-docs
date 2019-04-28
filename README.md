@@ -1,7 +1,3 @@
----
-redirect_from: "/"
----
-
 # CLIJ - GPU-accelerated image processing in ImageJ
 ## Introduction
 CLIJ is an OpenCL - ImageJ bridge and a [Fiji](https://fiji.sc/) plugin allowing users with no computer science background to explort GPU-acceleration for their image processing workflows. Increased efforts were put on documentation, code examples, interoperability, extensibility and user-convenience.
@@ -17,22 +13,22 @@ If you search for support, please open a thread on the [image.sc](https://image.
 
 ## Overview
 
-* [CLIJ - a quick tour](quickTour)
+* [CLIJ - a quick tour](https://clij.github.io/clij-docs/quickTour)
 * Installation
-  * [Fiji update site](installationInFiji)
-  * [Depending on CLIJ via maven](dependingViaMaven)
+  * [Fiji update site](https://clij.github.io/clij-docs/installationInFiji)
+  * [Depending on CLIJ via maven](https://clij.github.io/clij-docs/dependingViaMaven)
 * Introduction to CLIJ programming
-  * [CLIJ for ImageJ Macro programmers](macro_intro)
-  * [CLIJ for Java programmers](api_intro)
+  * [CLIJ for ImageJ Macro programmers](https://clij.github.io/clij-docs/macro_intro)
+  * [CLIJ for Java programmers](https://clij.github.io/clij-docs/api_intro)
   * [ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
   * [Execution from the command line](https://github.com/clij/clij-executable-example)
   * [Release notes](https://github.com/clij/clij/releases)
 * Application programming interface (API)
-  * [API design principles](api_design_priciples)
-  * [ImageJ Macro](reference)
-  * [Jython](referenceJython)
-  * [Java](referenceJava)
-  * [Groovy](referenceGroovy)
+  * [API design principles](https://clij.github.io/clij-docs/api_design_priciples)
+  * [ImageJ Macro](https://clij.github.io/clij-docs/reference)
+  * [Jython](https://clij.github.io/clij-docs/referenceJython)
+  * [Java](https://clij.github.io/clij-docs/referenceJava)
+  * [Groovy](https://clij.github.io/clij-docs/referenceGroovy)
 * Code examples
   * [ImageJ Macro](https://github.com/clij/clij-docs/tree/master/src/main/macro)
   * [BeanShell](https://github.com/clij/clij-docs/tree/master/src/main/beanshell)
@@ -44,8 +40,8 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Plugin template](https://github.com/clij/clij-plugin-template/)
   * [Example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
 * Troubleshooting
-  * [List of tested systems](testedsystems)
-  * [Troubleshooting](troubleshooting)
+  * [List of tested systems](https://clij.github.io/clij-docs/testedsystems)
+  * [Troubleshooting](https://clij.github.io/clij-docs/troubleshooting)
   * [Support](https://image.sc)
 
 ## Acknowledgements
