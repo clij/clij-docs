@@ -1,1 +1,6 @@
+title: CLIJ
+logo: /images/clij_logo.png
+description: GPU-accelerated image processing in ImageJ using CLIJ
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-minimal
