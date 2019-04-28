@@ -22,6 +22,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [CLIJ for Java programmers](api_intro)
   * [ImageJ Jupyter notebooks in Groovy](https://github.com/clij/clij-notebooks/blob/master/clij-intro.ipynb)
   * [Execution from the command line](https://github.com/clij/clij-executable-example)
+  * [Release notes](https://github.com/clij/clij/releases)
 * Application programming interface (API)
   * [API design principles](api_design_priciples)
   * [ImageJ Macro](reference)
@@ -29,12 +30,12 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [Java](referenceJava)
   * [Groovy](referenceGroovy)
 * Code examples
-  * [ImageJ Macro](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/macro)
-  * [BeanShell](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/beanshell)
-  * [Jython](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/jython)
-  * [JavaScript](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/javascript)
-  * [Groovy](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/groovy)
-  * [Java](https://github.com/mpicbg-csbd/clij-docs/tree/master/src/main/java/net/haesleinhuepf/clij/examples)
+  * [ImageJ Macro](https://github.com/clij/clij-docs/tree/master/src/main/macro)
+  * [BeanShell](https://github.com/clij/clij-docs/tree/master/src/main/beanshell)
+  * [Jython](https://github.com/clij/clij-docs/tree/master/src/main/jython)
+  * [JavaScript](https://github.com/clij/clij-docs/tree/master/src/main/javascript)
+  * [Groovy](https://github.com/clij/clij-docs/tree/master/src/main/groovy)
+  * [Java](https://github.com/clij/clij-docs/tree/master/src/main/java/net/haesleinhuepf/clij/examples)
 * Extending CLIJ functionality
   * [Plugin template](https://github.com/clij/clij-plugin-template/)
   * [Example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
@@ -60,14 +61,6 @@ Nico Stuurman (UCSF),
 Pavel Tomancak (MPI CBG),
 Pradeep Rajasekhar (Monash University),
 Tobias Pietzsch (MPI-CBG)
-
-TODO:
-* Remove code examples from clij_
-* Remove documentation from clij_, link here
-* Update links/intro on clij-notebook
-* Finish benchmarking page
-* Put Drosophila data sets for benchmarking online
-* Add link to BioRxiv
 
 
   
