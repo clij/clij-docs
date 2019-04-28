@@ -14,7 +14,6 @@ If you search for support, please open a thread on the [image.sc](https://image.
 ## Overview
 
 * [CLIJ - a quick tour](quickTour)
-* [Example benchmarks](benchmarking)
 * Installation
   * [Fiji update site](installationInFiji)
   * [Depending on CLIJ via maven](dependingViaMaven)
