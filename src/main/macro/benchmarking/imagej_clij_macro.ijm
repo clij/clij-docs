@@ -1,18 +1,18 @@
 //sourceFolder = "/home/rhaase/data/tif/"
 //resultFolder = "/home/rhaase/data/benchmark_results/"
 //computerName = "LenovoX380";
-sourceFolder = "f:/benchmarkdata/tif/"
-resultFolder = "f:/benchmarkdata/results/"
-computerName = "myers-pc-3";
+//sourceFolder = "f:/benchmarkdata/tif/"
+//resultFolder = "f:/benchmarkdata/results/"
+//computerName = "myers-pc-3";
 //sourceFolder = "D:/Robert/benchmarkdata/tif/"
 //resultFolder = "D:/Robert/benchmarkdata/results/"
 //computerName = "myers-pc-22";
 //sourceFolder = "C:/structure/data/tif/"
 //resultFolder = "C:/structure/data/benchmark_results/"
 //computerName = "OneMix";
-//sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
-//resultFolder = "C:/Users/rhaase/Desktop/temp/"
-//computerName = "LenovoX280";
+sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
+resultFolder = "C:/Users/rhaase/Desktop/temp/"
+computerName = "myers-pc-21";
 //sourceFolder = "C:/structure/data/benchm_20190104/tif/"
 //resultFolder = "C:/structure/data/benchm_20190104/results/"
 //computerName = "HPEnvy360Ryzen";
@@ -48,7 +48,6 @@ run("CLIJ Macro Extensions", "cl_device=" + cl_device);
 Ext.CLIJ_clear();
 
 for (t = 0; t < 117; t+=1) {
-	startTimeWholeLoop = getTime();
 	run("Close All");
 
     strNumber = "000000" + t;
@@ -57,6 +56,8 @@ for (t = 0; t < 117; t+=1) {
 	IJ.log(filename);
 	open(sourceFolder + filename);
 	run("32-bit");
+	
+	startTimeWholeLoop = getTime();
 	
 	time = getTime();
 	rename("original");
@@ -118,6 +119,8 @@ for (t = 0; t < 117; t+=1) {
 	numberOfSpots = sumGreyValue / 255;
 	
 	endTimeSpotDetection = getTime();
+
+	endTimeWholeLoop = getTime();
 	
 	IJ.log(workflow + ", t = " + t + ", n = " + numberOfSpots + ", time = " + ( getTime() - time ));
 
@@ -127,7 +130,6 @@ for (t = 0; t < 117; t+=1) {
 	run("Merge Channels...", "c1=[" + maxProjected + "] c2=[" + foundMaxima + "] create");
 	saveAs("Tiff", resultFolder + filename);
 
-	endTimeWholeLoop = getTime();
 
 	logText = "";
 	
