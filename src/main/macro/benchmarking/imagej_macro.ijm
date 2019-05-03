@@ -1,9 +1,9 @@
-sourceFolder = "/home/rhaase/data/tif/"
-resultFolder = "/home/rhaase/data/benchmark_results/"
-computerName = "LenovoX380";
-//sourceFolder = "f:/benchmarkdata/tif/"
-//resultFolder = "f:/benchmarkdata/results/"
-//computerName = "myers-pc-3";
+//sourceFolder = "/home/rhaase/data/tif/"
+//resultFolder = "/home/rhaase/data/benchmark_results/"
+//computerName = "LenovoX380";
+sourceFolder = "f:/benchmarkdata/tif/"
+resultFolder = "f:/benchmarkdata/results/"
+computerName = "myers-pc-3";
 //sourceFolder = "D:/Robert/benchmarkdata/tif/"
 //resultFolder = "D:/Robert/benchmarkdata/results/"
 //computerName = "myers-pc-22";
@@ -20,6 +20,9 @@ computerName = "LenovoX380";
 //resultFolder = "C:/structure/data/benchm_20190104/results/"
 //computerName = "msiGS65";
 workflow = "a";
+
+
+timeLogFile = "C:/structure/code/clij-benchmarking/data/benchmarking/all/" + computerName + "_workflow_imagej.csv";
 
 smallBlurSigmaInPixels = 2;
 blurSigmaInPixels = 6;
@@ -136,6 +139,11 @@ for (t = 0; t < 117; t+=1) {
 
 	IJ.log(logText);
 	File.append(logText, resultFolder + computerName + "_" + workflow + ".txt");
-	
-	break;
+
+
+	if (t == 0) {
+		File.append("Time_in_msec", timeLogFile);
+	}	
+	File.append((endTimeWholeLoop - startTimeWholeLoop), timeLogFile);
+	//break;
 }

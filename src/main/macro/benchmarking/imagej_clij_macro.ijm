@@ -1,18 +1,18 @@
 //sourceFolder = "/home/rhaase/data/tif/"
 //resultFolder = "/home/rhaase/data/benchmark_results/"
 //computerName = "LenovoX380";
-//sourceFolder = "f:/benchmarkdata/tif/"
-//resultFolder = "f:/benchmarkdata/results/"
-//computerName = "myers-pc-3";
+sourceFolder = "f:/benchmarkdata/tif/"
+resultFolder = "f:/benchmarkdata/results/"
+computerName = "myers-pc-3";
 //sourceFolder = "D:/Robert/benchmarkdata/tif/"
 //resultFolder = "D:/Robert/benchmarkdata/results/"
 //computerName = "myers-pc-22";
 //sourceFolder = "C:/structure/data/tif/"
 //resultFolder = "C:/structure/data/benchmark_results/"
 //computerName = "OneMix";
-sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
-resultFolder = "C:/Users/rhaase/Desktop/temp/"
-computerName = "LenovoX280";
+//sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
+//resultFolder = "C:/Users/rhaase/Desktop/temp/"
+//computerName = "LenovoX280";
 //sourceFolder = "C:/structure/data/benchm_20190104/tif/"
 //resultFolder = "C:/structure/data/benchm_20190104/results/"
 //computerName = "HPEnvy360Ryzen";
@@ -23,10 +23,13 @@ workflow = "c";
 //cl_device = "[Intel(R) HD Graphics 400]";
 //cl_device = "[GeForce GTX 1070 with Max-Q Design]";
 //cl_device = "[Intel(R) UHD Graphics 620]";
-cl_device = "HD";
-//cl_device = "TITAN";
+//cl_device = "HD";
+cl_device = "TITAN";
 //cl_device = "[Intel(R) UHD Graphics 630]";
 //cl_device = "gfx902";
+
+timeLogFile = "C:/structure/code/clij-benchmarking/data/benchmarking/all/" + computerName + "_workflow_clij.csv";
+
 
 smallBlurSigmaInPixels = 2;
 blurSigmaInPixels = 6;
@@ -141,5 +144,12 @@ for (t = 0; t < 117; t+=1) {
 	IJ.log(logText);
 	File.append(logText, resultFolder + computerName + "_" + workflow + ".txt");
 
-	break;
+
+
+	if (t == 0) {
+		File.append("Time_in_msec", timeLogFile);
+	}	
+	File.append((endTimeWholeLoop - startTimeWholeLoop), timeLogFile);
+	
+	//break;
 }
