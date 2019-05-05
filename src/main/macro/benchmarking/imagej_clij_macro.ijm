@@ -4,15 +4,15 @@
 //sourceFolder = "f:/benchmarkdata/tif/"
 //resultFolder = "f:/benchmarkdata/results/"
 //computerName = "myers-pc-3";
-sourceFolder = "D:/Robert/benchmarkdata/tif/"
-resultFolder = "D:/Robert/benchmarkdata/results/"
-computerName = "myers-pc-22";
+//sourceFolder = "D:/Robert/benchmarkdata/tif/"
+//resultFolder = "D:/Robert/benchmarkdata/results/"
+//computerName = "myers-pc-22";
 //sourceFolder = "C:/structure/data/tif/"
 //resultFolder = "C:/structure/data/benchmark_results/"
 //computerName = "OneMix";
-//sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
-//resultFolder = "C:/Users/rhaase/Desktop/temp/"
-//computerName = "myers-pc-21";
+sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
+resultFolder = "C:/Users/rhaase/Desktop/temp/"
+computerName = "myers-pc-21";
 //sourceFolder = "C:/structure/data/benchm_20190104/tif/"
 //resultFolder = "C:/structure/data/benchm_20190104/results/"
 //computerName = "HPEnvy360Ryzen";
@@ -24,7 +24,7 @@ workflow = "c";
 //cl_device = "[GeForce GTX 1070 with Max-Q Design]";
 //cl_device = "[Intel(R) UHD Graphics 620]";
 //cl_device = "HD";
-cl_device = "TITAN";
+cl_device = "HD";
 //cl_device = "[Intel(R) UHD Graphics 630]";
 //cl_device = "gfx902";
 
@@ -47,7 +47,7 @@ currentDate = "" + year + "-" + (month+1) + "-" + dayOfMonth;
 run("CLIJ Macro Extensions", "cl_device=" + cl_device);
 Ext.CLIJ_clear();
 
-for (t = 0; t < 117; t+=1) {
+for (t = 0; t < 30; t+=3) {
 	run("Close All");
 
     strNumber = "000000" + t;

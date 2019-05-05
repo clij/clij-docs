@@ -4,15 +4,15 @@
 //sourceFolder = "f:/benchmarkdata/tif/"
 //resultFolder = "f:/benchmarkdata/results/"
 //computerName = "myers-pc-3";
-sourceFolder = "D:/benchmarkdata/tif/"
-resultFolder = "D:/benchmarkdata/results/"
-computerName = "myers-pc-22";
+//sourceFolder = "D:/benchmarkdata/tif/"
+//resultFolder = "D:/benchmarkdata/results/"
+//computerName = "myers-pc-22";
 //sourceFolder = "C:/structure/data/tif/"
 //resultFolder = "C:/structure/data/benchmark_results/"
 //computerName = "OneMix";
-//sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
-//resultFolder = "C:/Users/rhaase/Desktop/temp/"
-//computerName = "myers-pc-21";
+sourceFolder = "C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/"
+resultFolder = "C:/Users/rhaase/Desktop/temp/"
+computerName = "myers-pc-21";
 //sourceFolder = "C:/structure/data/benchm_20190104/tif/"
 //resultFolder = "C:/structure/data/benchm_20190104/results/"
 //computerName = "HPEnvy360Ryzen";
@@ -37,7 +37,7 @@ IJ.log("" + year + "-" + month + "-" + dayOfMonth + " " + hour + ":" + minute + 
 IJ.log("Test on computer " + computerName);
 IJ.log("Test: " + workflow);
 
-for (t = 0; t < 117; t+=1) {
+for (t = 0; t < 30; t+=3) {
 	run("Close All");
 
     strNumber = "000000" + t;
