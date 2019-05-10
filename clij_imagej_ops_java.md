@@ -45,7 +45,10 @@ Object input = ij.io().open("PATH_TO_IMAGE");
 Object inputGPU = ij.op().run(CLIJ_push.class, input);
 ```
 
-In this example, `inputGPU` is of type `ClearCLBuffer`, but while staying in the Ops domain `Object` works fine and reduces casting.
+In this example, `inputGPU` is of type `ClearCLBuffer`, but while staying in the Ops domain `Object` works fine and reduces casting. Which you can still do if you want to access it's methods.
+```Java
+ClearCLBuffer buffer = (ClearCLBuffer) inputGPU;
+```
 
 Furthermore, you can create images, for example with the same size as a given one:
 ```Java
@@ -55,7 +58,7 @@ Object targetGPU = ij.op().run(CLIJ_create.class, inputGPU);
 Alternatively, create an image with a given size and a given type:
 
 ```Java
-Object targetGPU = ij.op().run(CLIJ_create.class, new long[] { input.dimension(0), input.dimension(1), 5 }, NativeTypeEnum.Float);
+Object targetGPU = ij.op().run(CLIJ_create.class, new long[] { buffer.getWidth(), buffer.getHeight() }, buffer.getNativeType());
 ```
 
 Most CLIJ Ops are hybrid, meaning they can act both as a computer and a function (see the [SpecialOps JavaDoc](https://javadoc.scijava.org/ImageJ/net/imagej/ops/special/SpecialOp.html) for further details). There are no inplace operations in CLIJ. 
@@ -63,13 +66,13 @@ Most CLIJ Ops are hybrid, meaning they can act both as a computer and a function
 In this example the output object will be automatically generated and returned by the Op (function):
 ```Java
 
-imageOutput = ij.op().run(CLIJ_maximumZProjection.class, imageInput);
+targetGPU = ij.op().run(CLIJ_maximumZProjection.class, inputGPU);
 ```
 
 In the next example both the input and the output are created beforehand and handed to the Op (computer):
 ```Java
 
-ij.op().run(CLIJ_maximumZProjection.class, imageOutput, imageInput);
+ij.op().run(CLIJ_maximumZProjection.class, targetGPU, inputGPU);
 ```
 **CAUTION** 
 Be aware that in this case the output is the first and the input is the second parameter, in contrast to other CLIJ APIs where the order is the other way around. 
