@@ -7,12 +7,12 @@ import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.kernels.Kernels;
 
 /**
- * LocalThresholdDemo
- * <p>
- * <p>
- * <p>
+ * * Mean filter for background determination,
+ * * background subtractionand
+ * * thresholding
+ *
  * Author: @haesleinhuepf
- * 06 2018
+ * May 2019
  */
 public class BackgroundSubtractionandThresholdingDemo {
     public static void main(String... args) {
@@ -39,6 +39,7 @@ public class BackgroundSubtractionandThresholdingDemo {
         clij.show(input, "original");
         clij.show(output, "mask");
 
+        // free memory afterwards
         input.close();
         output.close();
         background.close();
