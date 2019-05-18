@@ -13,7 +13,7 @@ from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 ```
 
-Afterwards, you can convert `ImagePlus` objects to ClearCL objects wich makes them accessible on the OpenCL device:
+Afterwards, you can convert `ImagePlus` objects to ClearCL objects which makes them accessible on the OpenCL device:
 
 ```python
 imageInput = clij.push(imp);
