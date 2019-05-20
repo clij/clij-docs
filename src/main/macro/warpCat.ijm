@@ -1,17 +1,16 @@
 // This script demonstrates how to apply a vector field
 // to an image in order to transform it non-rigidly
-// It uses the currently open image in ImageJ
 //
-// Ideally it shows a cat.
+// It uses a picture showing Pixel. Yes, the cat's name is Pixel.
 //
 // Author: Robert Haase, rhaase@mpi-cbg.de
 // May 2019
 //
 
-//run("Close All");
+run("Close All");
 
 // get test image
-//run("Blobs (25K)");
+open("https://github.com/clij/clij-docs/raw/master/src/main/resources/pixel_cat.tif");
 run("32-bit");
 rename("cat");
 
@@ -38,8 +37,10 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push("cat");
 Ext.CLIJ_push("shiftX");
 Ext.CLIJ_copy("shiftX", "shiftY");
-//Ext.CLIJ_push("shiftY");
 Ext.CLIJ_push("resultStack");
+
+// clean up imagej
+run("Close All");
 
 for (i = 0; i < 36; i++) {
 
