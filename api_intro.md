@@ -64,13 +64,17 @@ inputCLBuffer = clij.push(imp);
 outputCLBuffer = clij.create(inputCLBuffer); # allocate memory for result image
 
 # downsample the image stack using ClearCL / OpenCL
-resultStack = clij.execute(DownsampleXYbyHalfTask, "kernels/downsampling.cl", "downsample_xy_by_half_nearest", {"src":inputCLBuffer, "dst":outputCLBuffer});
+clij.execute(DownsampleXYbyHalfTask, "kernels/downsampling.cl", "downsample_xy_by_half_nearest", {"src":inputCLBuffer, "dst":outputCLBuffer});
 
 # convert the result back to imglib2 and show it
-result = clij.pull(resultStack);
+result = clij.pull(outputCLBuffer);
 result.show();
+
+# free memory on the GPU - needs to be done explicitly
+inputCLBuffer.close();
+outputCLBuffer.close();
 ```
-More examples can be found in the [src/main/jython](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/jython/) and [src/main/java](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/java/) directories.
+More examples can be found in the [src/main/jython](https://github.com/clij/clij-docs/blob/master/src/main/jython/) and [src/main/java](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/java/) directories.
 
 ## OpenCL Kernel calls with CLIJ.execute()
 The execute function asks for three or four parameters
@@ -107,4 +111,4 @@ parameter names. CLIJ will then for example detect the type of an image paramete
 instead of `float` or `int4` in order to make the OpenCL code type agnostic.
 
 
-[Back to CLIJ documentation](readme)
+[Back to CLIJ documentation](https://clij.github.io/)

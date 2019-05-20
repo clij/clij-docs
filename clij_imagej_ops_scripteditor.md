@@ -12,9 +12,9 @@ The Ops are available in ImageJ's script editor after installing the [CLIJ updat
 When calling an Op, a `CLIJService` will automatically initialize CLIJ if this did not already happen. In case you want to initialize CLIJ with a custom GPU, this is the way to go:
 
 ```python
-#@CLIJService clij
+#@CLIJService clijService
 
-clij.get("Intel(R) HD Graphics Kabylake Desktop GT1.5");
+clijService.get("Intel(R) HD Graphics Kabylake Desktop GT1.5");
 ```
 
 ## Using Ops
@@ -66,7 +66,15 @@ ui.show(target)
 
 ```
 
+After finishing imag processing, memory on GPU needs to be released explicitly:
+```python
+imageInput.close();
+imageOutput.close();
+targetGPU.close();
+```
+
+
 More examples can be found [here](https://github.com/clij/clij-ops/tree/master/src/test/resources/jython).
 
 
-[Back to CLIJ documentation](readme)
+[Back to CLIJ documentation](https://clij.github.io/)

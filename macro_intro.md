@@ -1,6 +1,6 @@
 # CLIJ - GPU-accelerated image processing in ImageJ macro
 Image processing in modern GPUs allows for accelerating processing speeds massively. 
-This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [CLIJ](https://github.com/clij/clij/) library. 
+This page introduces how to do image processing in the graphics processing unit (GPU) using [OpenCL](https://www.khronos.org/opencl/) from ImageJ macro inside [Fiji](http://fiji.sc) using the [CLIJ](https://clij.github.io/) library. 
 It is not necessary to learn OpenCL itself. 
 Preprogrammed routines are supposed to do GPU image processing for you with given ImageJ macro programming experience.
 The list of preprogrammed routines might be extended depending on the communities needs.
@@ -210,10 +210,10 @@ This is the view on results from the mean filter on CPU and GPU together with th
 
 ![Image](images/visual_CPU_GPU_comparison.png)
 
-In presented case, have a look at [mean.ijm](https://github.com/clij/clij/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU actually are. 
+In presented case, have a look at [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU actually are. 
 In some of the filters, I observed small differences between ImageJ and OpenCL especially at the borders of the images. 
 I am aware of these issues. 
 There is a large number of [unit tests in the library](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/), 
 ensuring these differences are small and in case they appear, they only influence the borders.
 
-[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
+[Back to CLIJ documentation](https://clij.github.io/)

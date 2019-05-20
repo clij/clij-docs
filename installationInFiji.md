@@ -10,5 +10,5 @@ On Windows and MacOS installation works right away in case the computer has a bu
 
 Linux users need to install drivers for OpenCL, even on Intel HD GPUs. It is recommended to install the packaged [beignet](https://github.com/intel/beignet) and [ocl-icd-devel](https://github.com/OCL-dev/ocl-icd).
 
-[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
+[Back to CLIJ documentation](https://clij.github.io/)
 

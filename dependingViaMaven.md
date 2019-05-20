@@ -20,4 +20,4 @@ To allow maven finding this artifact, add a repository to your pom.xml file:
 </repository>
 ```
 
-[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
+[Back to CLIJ documentation](https://clij.github.io/)

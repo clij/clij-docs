@@ -15,5 +15,5 @@ If ImageJs macro recorder up and running, the parameters entered in the dialog a
 
 For exploring CLIJ further, it is recommended to read the [introduction for macro programmers](macro_intro) and have a look at the [code examples](https://clij.github.io/clij-docs/src/main/macro);
 
-[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
+[Back to CLIJ documentation](https://clij.github.io/)
 

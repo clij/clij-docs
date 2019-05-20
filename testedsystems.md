@@ -4,7 +4,7 @@
 * NVidia GeForce GTX 960M (OpenCL 1.2, Win 10 64 bit, Feb 2018)
 * Intel(R) HD Graphics 620 (OpenCL 2.0, Fedora 27, Nov 2018)
 * Intel(R) HD Graphics 620 (OpenCL 1.2, Win 10 64bit, Sept 2018)
-* Intel(R) HD Graphics 630 (OpenCL 1.2, Win 10 64bit, March 2019)
+* Intel(R) HD Graphics 630 (OpenCL 1.2, Win 10 64bit, May 2019)
 * Intel(R) HD Graphics 530 (OpenCL 2.0, Win 10 64 bit, Feb 2018)
 * Intel(R) HD Graphics 515 (OpenCL 2.0, Win 10 64 bit, Feb 2018)
 * Intel(R) HD Graphics 405 (OpenCL 1.2, Win 10 64 bit, Feb 2018)
@@ -24,4 +24,4 @@ Some of the tests failed on these devices:
 
  &ast; These CPU devices are accompanied by built-in GPUs which were tested successfully using CLIJ.
  
-[Back to CLIJ documentation](https://clij.github.io/clij-docs/)
+[Back to CLIJ documentation](https://clij.github.io/)
