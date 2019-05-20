@@ -10,8 +10,8 @@
 run("Close All");
 
 // Get test data
-open("C:/structure/data/t1-head.tif");
-//run("T1 Head (2.4M, 16-bits)");
+//open("C:/structure/data/t1-head.tif");
+run("T1 Head (2.4M, 16-bits)");
 
 angle_step = 10;
 

@@ -14,7 +14,7 @@ getDimensions(width, height, channels, slices, frames);
 blurred = "Blurred";
 
 // Init GPU
-run("CLIJ Macro Extensions", "cl_device=geforce");
+run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // Local mean filter in CPU

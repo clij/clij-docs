@@ -11,8 +11,8 @@
 run("Blobs (25K)");
 
 //run("Close All");
-open("C:/structure/data/blobs.gif");
-run("CLIJ Macro Extensions", "cl_device=[Intel(R) HD Graphics 400]");
+//open("C:/structure/data/blobs.gif");
+run("CLIJ Macro Extensions", "cl_device=");
 
 Ext.CLIJ_push("blobs.gif");
 Ext.CLIJ_mean2DBox("blobs.gif", "CLIJ_mean2DBox_destination_blobs.gif", 2.0, 2.0);

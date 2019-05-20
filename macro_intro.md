@@ -131,72 +131,65 @@ Ext.CLIJ_pull(blurred);
 print("Pullning one image from the GPU took " + (getTime() - time) + " msec");
 ```
 
-When executing the macro on an Intel Core i7-8650U CPU with a built-in Intel UHD Graphics 620 GPU (Windows 10, 64 bit), the output is:
+When executing the macro on an Intel Core i7-8565U CPU with a built-in Intel UHD Graphics 620 GPU (Windows 10, 64 bit), the output is:
 
 ```java
-CPU mean filter no 1 took 3043 msec
-CPU mean filter no 2 took 4350 msec
-CPU mean filter no 3 took 4467 msec
-CPU mean filter no 4 took 4611 msec
-CPU mean filter no 5 took 4509 msec
-CPU mean filter no 6 took 4384 msec
-CPU mean filter no 7 took 4422 msec
-CPU mean filter no 8 took 4379 msec
-CPU mean filter no 9 took 4365 msec
-CPU mean filter no 10 took 4372 msec
-Pushing two images to the GPU took 819 msec
-GPU mean filter no 1 took 872 msec
-GPU mean filter no 2 took 183 msec
-GPU mean filter no 3 took 192 msec
-GPU mean filter no 4 took 195 msec
-GPU mean filter no 5 took 212 msec
-GPU mean filter no 6 took 251 msec
-GPU mean filter no 7 took 305 msec
-GPU mean filter no 8 took 300 msec
-GPU mean filter no 9 took 260 msec
-GPU mean filter no 10 took 263 msec
-Pulling one image from the GPU took 1123 msec
+CPU mean filter no 1 took 3907 msec
+CPU mean filter no 2 took 3664 msec
+CPU mean filter no 3 took 3569 msec
+CPU mean filter no 4 took 3414 msec
+CPU mean filter no 5 took 2325 msec
+CPU mean filter no 6 took 2752 msec
+CPU mean filter no 7 took 2395 msec
+CPU mean filter no 8 took 2633 msec
+CPU mean filter no 9 took 2543 msec
+CPU mean filter no 10 took 2610 msec
+Pushing one image to the GPU took 11 msec
+GPU mean filter no 1 took 489 msec
+GPU mean filter no 2 took 27 msec
+GPU mean filter no 3 took 27 msec
+GPU mean filter no 4 took 28 msec
+GPU mean filter no 5 took 29 msec
+GPU mean filter no 6 took 39 msec
+GPU mean filter no 7 took 34 msec
+GPU mean filter no 8 took 29 msec
+GPU mean filter no 9 took 30 msec
+GPU mean filter no 10 took 31 msec
+Pulling one image from the GPU took 47 msec
 ```
 
-Thus, on the **CPU it takes 43 seconds**, while using the **GPU it just takes 5 seconds**. Let's execute it again.
+Thus, on the **CPU it takes 30 seconds**, while using the **GPU it just takes 0.8 seconds**. Let's execute it again.
 
 ```java
-CPU mean filter no 1 took 2596 msec
-CPU mean filter no 2 took 2739 msec
-CPU mean filter no 3 took 2913 msec
-CPU mean filter no 4 took 3336 msec
-CPU mean filter no 5 took 4643 msec
-CPU mean filter no 6 took 4505 msec
-CPU mean filter no 7 took 4473 msec
-CPU mean filter no 8 took 4524 msec
-CPU mean filter no 9 took 4414 msec
-CPU mean filter no 10 took 4435 msec
-Pushing two images to the GPU took 249 msec
-GPU mean filter no 1 took 216 msec
-GPU mean filter no 2 took 222 msec
-GPU mean filter no 3 took 237 msec
-GPU mean filter no 4 took 245 msec
-GPU mean filter no 5 took 243 msec
-GPU mean filter no 6 took 244 msec
-GPU mean filter no 7 took 275 msec
-GPU mean filter no 8 took 251 msec
-GPU mean filter no 9 took 267 msec
-GPU mean filter no 10 took 253 msec
-Pulling one image from the GPU took 433 msec
+CPU mean filter no 1 took 2254 msec
+CPU mean filter no 2 took 2187 msec
+CPU mean filter no 3 took 2264 msec
+CPU mean filter no 4 took 2491 msec
+CPU mean filter no 5 took 2915 msec
+CPU mean filter no 6 took 2299 msec
+CPU mean filter no 7 took 2401 msec
+CPU mean filter no 8 took 2441 msec
+CPU mean filter no 9 took 2493 msec
+CPU mean filter no 10 took 2588 msec
+Pushing one image to the GPU took 9 msec
+GPU mean filter no 1 took 30 msec
+GPU mean filter no 2 took 28 msec
+GPU mean filter no 3 took 30 msec
+GPU mean filter no 4 took 39 msec
+GPU mean filter no 5 took 34 msec
+GPU mean filter no 6 took 34 msec
+GPU mean filter no 7 took 34 msec
+GPU mean filter no 8 took 32 msec
+GPU mean filter no 9 took 40 msec
+GPU mean filter no 10 took 32 msec
+Pulling one image from the GPU took 43 msec
 ```
 
-On the **CPU it still takes 39 seconds**, while using the **GPU it goes down to three seconds**. 
+On the **CPU it still takes 24 seconds**, while using the **GPU it goes down to 0.4 seconds**. 
 The additional speedup comes from the caching mechanism mentioned above.
 
 **Heureka, we can spare 90% of the time by executing the operation on the GPU!** 
-And this works on a small laptop without dedicated GPU. I tested some more systems, just to see if and how fast CLIJ performs. The following numbers are time measurements from the second run:
-* Running the same macro under Fedora linux on an Intel Core i7-8550U CPU with Intel HD Graphics, it takes 10 seconds.
-* On an **NVidia TITAN XP, it takes 0.7 seconds**.
-* An AMD Ryzen 3 / Vega GPU needed 4 seconds to perform the test.
-
-These are just rough benchmarks. 
-When CLIJ matures, I might do a more detailed benchmarking of several methods. 
-This example here should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
+And this works on a small laptop without dedicated GPU. This example should just motivate you to test your workflow on a GPU and guide you how to evaluate its performance.
 
 Side note: ImageJs mean filter runs _inplace_. That means the result is stored in the same memory as the input image. 
 With every iteration in the for loop, the image becomes more and more blurry. 

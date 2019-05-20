@@ -1,4 +1,4 @@
-// CLIJ example macro: turn_stack,ijm
+// CLIJ example macro: turn_stack.ijm
 //
 // This macro shows how to wrangle voxels in 3D in the GPU.
 //
@@ -12,7 +12,7 @@ run("Close All");
 
 run("T1 Head (2.4M, 16-bits)");
 //open("C:/structure/data/t1-head.tif");
-run("CLIJ Macro Extensions", "cl_device=[Intel(R) HD Graphics 400]");
+run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push("t1-head.tif");
 Ext.CLIJ_resliceLeft("t1-head.tif", "CLIJ_resliceLeft_destination_t1-head.tif");
 Ext.CLIJ_rotateRight("CLIJ_resliceLeft_destination_t1-head.tif", "CLIJ_rotateRight_destination_CLIJ_resliceLeft_destination_t1-head.tif");
