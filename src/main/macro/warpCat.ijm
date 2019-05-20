@@ -1,9 +1,11 @@
 // This script demonstrates how to apply a vector field
 // to an image in order to transform it non-rigidly
 //
-// It uses a picture showing Pixel. Yes, the cats name is Pixel
+// It uses a picture showing Pixel. 
+// Yes, the cats name is Pixel.
 //
-// Make sure to activate the "CLIJ" update site before running this macro in Fiji.
+// Make sure to activate the "CLIJ" update site before 
+// running this macro in Fiji.
 //
 // Author: Robert Haase, rhaase@mpi-cbg.de
 // May 2019
