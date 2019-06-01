@@ -22,7 +22,7 @@ The release cycle includes CLIJs main libraries:
 * https://github.com/clij/clij-core
 
 ## Major releases
-* Major releases aimed to be published annually on June 13th, starting in 2019.
+* Major releases aim to be published annually on June 13th, starting in 2019.
 * Major releases aim being backwards compatible. 
 * Major releases may mark CLIJ operations as deprecated.
 * Major releases may not contain operations which were marked as deprecated in any earlier major release.
