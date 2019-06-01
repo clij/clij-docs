@@ -1,7 +1,7 @@
 # CLIJ Release cycle
 tldr: In order to establish CLIJ as a reliable platform for workflow developers, an annual release cycle is aspired. Core functionality of CLIJ will not change between major releases. CLIJ operations may be marked as deprecated in any major release. Deprecated operations may be removed with any subsequent major release. Thus, developers have at lease one year time to make the transition.
 
-The following rules are listed to ease the life of downstream / workflow developers. However, to be safe on our side, these rules may be changed at any point in time. 
+The following rules are listed to ease the life of downstream / workflow developers. Ultimate goal is to allow development of long-term running, reliable CLIJ based workflows. However, to be safe on our side, these rules may be changed at any point in time.
 
 ## Releases
 CLIJ is released and distributed via two online resources:
