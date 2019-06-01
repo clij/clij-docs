@@ -29,7 +29,7 @@ The release cycle includes CLIJs main libraries:
 
 ## Hot fixes
 * Bugfixes and corrections may appear at any point in time. 
-  Code changes releated to these changes will be available on the master branch of CLIJs repositories.
+* Code changes releated to hot fixes will be available on the master branch of CLIJs repositories.
 * Hot fixes appear in the list of [release notes](https://github.com/clij/clij/releases).
 
 ## Nightly builds and BETA releases

@@ -734,6 +734,29 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBox.java)
 
+<a name="CLIJ_dilateBoxSliceBySlice"></a>
+## CLIJ_dilateBoxSliceBySlice
+
+Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
+The dilation takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+This method is comparable to the 'Dilate' menu in ImageJ in case it is applied to a 2D image. The only
+difference is that the output image contains values 0 and 1 instead of 0 and 255.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_dilateBoxSliceBySlice(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBoxSliceBySlice.java)
+
 <a name="CLIJ_dilateSphere"></a>
 ## CLIJ_dilateSphere
 
@@ -753,6 +776,26 @@ Ext.CLIJ_dilateSphere(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateSphere.java)
+
+<a name="CLIJ_dilateSphereSliceBySlice"></a>
+## CLIJ_dilateSphereSliceBySlice
+
+Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
+The dilation takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_dilateSphereSliceBySlice(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateSphereSliceBySlice.java)
 
 <a name="CLIJ_divideImages"></a>
 ## CLIJ_divideImages
@@ -856,6 +899,29 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBox.java)
 
+<a name="CLIJ_erodeBoxSliceBySlice"></a>
+## CLIJ_erodeBoxSliceBySlice
+
+Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
+The erosion takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+This method is comparable to the 'Erode' menu in ImageJ in case it is applied to a 2D image. The only
+difference is that the output image contains values 0 and 1 instead of 0 and 255.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_erodeBoxSliceBySlice(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBoxSliceBySlice.java)
+
 <a name="CLIJ_erodeSphere"></a>
 ## CLIJ_erodeSphere
 
@@ -875,6 +941,26 @@ Ext.CLIJ_erodeSphere(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeSphere.java)
+
+<a name="CLIJ_erodeSphereSliceBySlice"></a>
+## CLIJ_erodeSphereSliceBySlice
+
+Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
+The erosion takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+**Parameters**: Image source, Image destination
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_erodeSphereSliceBySlice(source, destination);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeSphereSliceBySlice.java)
 
 <a name="CLIJ_flip2D"></a>
 ## CLIJ_flip2D
@@ -1421,6 +1507,27 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MeanZProjection.java)
 
+<a name="CLIJ_median2DBox"></a>
+## CLIJ_median2DBox
+
+Computes the local median of a pixels rectangular neighborhood. The rectangle is specified by 
+its half-width and half-height (radius).
+
+For technical reasons, the area of the rectangle must have less than 1000 pixels.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_median2DBox(source, destination, radiusX, radiusY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median2DBox.java)
+
 <a name="CLIJ_median2DSphere"></a>
 ## CLIJ_median2DSphere
 
@@ -1431,7 +1538,7 @@ For technical reasons, the area of the ellipse must have less than 1000 pixels.
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
-**Available for**: 3D
+**Available for**: 2D
 
 **Macro example**: 
 ```
@@ -1441,6 +1548,27 @@ Ext.CLIJ_median2DSphere(source, destination, radiusX, radiusY);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median2DSphere.java)
+
+<a name="CLIJ_median3DBox"></a>
+## CLIJ_median3DBox
+
+Computes the local median of a pixels cuboid neighborhood. The cuboid size is specified by 
+its half-width, half-height and half-depth (radius).
+
+For technical reasons, the volume of the cuboid must contain less than 1000 voxels.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY, Number radiusZ
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_median3DBox(source, destination, radiusX, radiusY, radiusZ);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median3DBox.java)
 
 <a name="CLIJ_median3DSphere"></a>
 ## CLIJ_median3DSphere
@@ -1463,6 +1591,27 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Median3DSphere.java)
 
+<a name="CLIJ_medianSliceBySliceBox"></a>
+## CLIJ_medianSliceBySliceBox
+
+Computes the local median of a pixels rectangular neighborhood. This is done slice-by-slice in a 3D 
+image stack. The rectangle is specified by its half-width and half-height (radius).
+
+For technical reasons, the area of the rectangle must have less than 1000 pixels.
+
+**Parameters**: Image source, Image destination, Number radiusX, Number radiusY
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_medianSliceBySliceBox(source, destination, radiusX, radiusY);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MedianSliceBySliceBox.java)
+
 <a name="CLIJ_medianSliceBySliceSphere"></a>
 ## CLIJ_medianSliceBySliceSphere
 
@@ -1473,7 +1622,7 @@ For technical reasons, the area of the ellipse must have less than 1000 pixels.
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
-**Available for**: 2D
+**Available for**: 3D
 
 **Macro example**: 
 ```
@@ -2158,4 +2307,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-109 plugins documented.
+116 plugins documented.

@@ -1166,6 +1166,43 @@ src.close();
 dst.close();
 ```
 
+## dilateBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
+
+Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
+The dilation takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+This method is comparable to the 'Dilate' menu in ImageJ in case it is applied to a 2D image. The only
+difference is that the output image contains values 0 and 1 instead of 0 and 255.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+```
+
+```
+// Execute operation on GPU
+clij.op().dilateBoxSliceBySlice(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
 ## dilateSphere( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1188,6 +1225,40 @@ dst = clij.create(src);
 ```
 // Execute operation on GPU
 clij.op().dilateSphere(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
+## dilateSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
+
+Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
+The dilation takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+```
+
+```
+// Execute operation on GPU
+clij.op().dilateSphereSliceBySlice(src, dst);
 ```
 
 ```
@@ -1378,6 +1449,43 @@ src.close();
 dst.close();
 ```
 
+## erodeBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
+
+Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
+The erosion takes the Moore-neighborhood (8 pixels in 2D and 26 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+This method is comparable to the 'Erode' menu in ImageJ in case it is applied to a 2D image. The only
+difference is that the output image contains values 0 and 1 instead of 0 and 255.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+```
+
+```
+// Execute operation on GPU
+clij.op().erodeBoxSliceBySlice(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
 ## erodeSphere( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1400,6 +1508,40 @@ dst = clij.create(src);
 ```
 // Execute operation on GPU
 clij.op().erodeSphere(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
+## erodeSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
+
+Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
+The erosion takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
+The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+```
+
+```
+// Execute operation on GPU
+clij.op().erodeSphereSliceBySlice(src, dst);
 ```
 
 ```
@@ -2327,6 +2469,112 @@ dst = clij.create(src);
 ```
 // Execute operation on GPU
 clij.op().meanZProjection(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
+## medianBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
+
+
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+kernelSizeX = 10;
+kernelSizeY = 20;
+```
+
+```
+// Execute operation on GPU
+clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
+## medianBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
+
+
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+kernelSizeX = 10;
+kernelSizeY = 20;
+kernelSizeZ = 30;
+```
+
+```
+// Execute operation on GPU
+clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
+## medianSliceBySliceBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
+
+Computes the local median of a pixels rectangular neighborhood. This is done slice-by-slice in a 3D 
+image stack. The rectangle is specified by its half-width and half-height (radius).
+
+For technical reasons, the area of the rectangle must have less than 1000 pixels.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+clij = CLIJ.getInstance();
+
+// get input parameters
+src = clij.push(srcImagePlus);
+dst = clij.create(src);
+kernelSizeX = 10;
+kernelSizeY = 20;
+```
+
+```
+// Execute operation on GPU
+clij.op().medianSliceBySliceBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
@@ -3481,4 +3729,4 @@ dst.close();
 ```
 
 
-Documented 101 methods.
+Documented 108 methods.
