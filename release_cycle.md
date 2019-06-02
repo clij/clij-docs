@@ -3,7 +3,7 @@ tldr: In order to establish CLIJ as a reliable platform for workflow developers,
 Core functionality of CLIJ will not change between major releases (except hot fixes). 
 CLIJ operations may be marked as deprecated in any major release. 
 Deprecated operations may be removed with any subsequent major release. 
-Thus, developers have at lease one year time to make the transition.
+Thus, developers have at least one year time to make the transition.
 
 The following rules are listed to ease the life of downstream / workflow developers. 
 Ultimate goal is to allow development of long-term running, reliable CLIJ based workflows. 
@@ -36,7 +36,7 @@ The release cycle includes CLIJs main libraries:
 * Development of CLIJ will be done on the development branch. 
   Developers who want to test nightly-build like versions of CLIJ are suggested to compile the development branch and ship the binaries to their Fiji installation. 
   This can be done by running `mvn install` from the respective root directory.
-* By mid of May anually, a BETA release is published to allow workflow developers to test their workflows for compatibility with the new release.
+* By mid of May annually, a BETA release is published to allow workflow developers to test their workflows for compatibility with the new release.
 
 ## Further reading
 * [Disclaimer / BSD3 license](https://github.com/clij/clij/blob/master/license.txt) 
