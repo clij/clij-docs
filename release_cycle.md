@@ -20,6 +20,7 @@ Workflow developers are recommended to base their tools on the current [major re
 The release cycle includes CLIJs main libraries:
 * https://github.com/clij/clij
 * https://github.com/clij/clij-core
+* https://github.com/clij/clij-ops
 
 ## Major releases
 * Major releases aim to be published annually on June 13th, starting in 2019.
