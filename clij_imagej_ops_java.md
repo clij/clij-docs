@@ -24,7 +24,7 @@ To allow maven finding this artifact, add a repository to your pom.xml file:
 </repository>
 ```
  
- ## Initializing CLIJ
+## Initializing CLIJ
  
 When calling an Op, a `CLIJService` will automatically initialize CLIJ if this did not already happen. In case you want to initialize CLIJ with a custom GPU, this is the way to go:
 
