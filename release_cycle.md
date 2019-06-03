@@ -41,3 +41,6 @@ The release cycle includes CLIJs main libraries:
 
 ## Further reading
 * [Disclaimer / BSD3 license](https://github.com/clij/clij/blob/master/license.txt) 
+
+
+[Back to CLIJ documentation](https://clij.github.io/)

@@ -25,6 +25,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [CLIJ ImageJ Ops in Java](https://clij.github.io/clij-docs/clij_imagej_ops_java)
   * [CLIJ ImageJ Ops in the Script Editor](https://clij.github.io/clij-docs/clij_imagej_ops_scripteditor)
   * [Release notes](https://github.com/clij/clij/releases)
+  * [Release cycle](https://clij.github.io/clij-docs/release_cycle)
 * Application programming interface (API)
   * [API design principles](https://clij.github.io/clij-docs/api_design_priciples)
   * [ImageJ Macro](https://clij.github.io/clij-docs/reference)
