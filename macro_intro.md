@@ -78,7 +78,7 @@ Ext.CLIJ_push(input);
 run("Close All");
 
 // Blur in GPU
-Ext.CLIJ_blur3DFast(input, blurred, 10, 10, 1);
+Ext.CLIJ_blur3D(input, blurred, 10, 10, 1);
 
 // Get results back from GPU
 Ext.CLIJ_pull(blurred);
