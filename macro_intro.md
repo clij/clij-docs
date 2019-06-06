@@ -204,9 +204,7 @@ This is the view on results from the mean filter on CPU and GPU together with th
 ![Image](images/visual_CPU_GPU_comparison.png)
 
 In presented case, have a look at [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm) to see how different the results from CPU and GPU actually are. 
-In some of the filters, I observed small differences between ImageJ and OpenCL especially at the borders of the images. 
-I am aware of these issues. 
-There is a large number of [unit tests in the library](https://github.com/clij/clij/blob/master/src/main/java/net/haesleinhuepf/clij/), 
-ensuring these differences are small and in case they appear, they only influence the borders.
+In some of the filters, I observed small differences between ImageJ and OpenCL especially at the borders of the images. This is related to the fact that CLIJ contains new implementations of operations in ImageJ. There is a large number of [unit tests in the library](https://github.com/clij/clij/tree/master/src/test/java/net/haesleinhuepf/clij/macro/modules), 
+ensuring these differences are small and in case they appear, they mostly influence image borders.
 
 [Back to CLIJ documentation](https://clij.github.io/)
