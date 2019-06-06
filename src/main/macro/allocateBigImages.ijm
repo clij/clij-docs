@@ -1,6 +1,7 @@
-// CLIJ example macro: backgroundSubtraction.ijm
+// CLIJ example macro: allocateBigImages.ijm
 //
-// This macro shows how background subtraction can be done in the GPU.
+// This macro shows how to process/handle big images in the GPU.
+// Basically: They have to pushed in smaller blocks.
 //
 // Author: Robert Haase
 // December 2018
@@ -32,7 +33,8 @@ close();
 // create an 8 GB image in GPU memory
 Ext.CLIJ_create3D(bigStack, 2048, 2048, 1000, 16);
 
-for (i = 0; i < 10; i++) {
+
+for (i = 0; i < 10; i++) {
 	// fill the image with content
 	Ext.CLIJ_copySlice(input, bigStack, i);
 }
