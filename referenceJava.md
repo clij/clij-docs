@@ -664,6 +664,36 @@ src.close();
 dst.close();
 ```
 
+## centerOfMass( ClearCLBuffer input )
+
+Determines the center of mass of an image or image stack.
+
+**Parameters**:  ClearCLBuffer input 
+
+**Groovy example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
+CLIJ clij = CLIJ.getInstance();
+
+// get input parameters
+ClearCLBuffer input = clij.push(inputImagePlus);
+```
+
+```
+// Execute operation on GPU
+double[] resultCenterOfMass = clij.op().centerOfMass(input);
+```
+
+```
+//show result
+System.out.println(resultCenterOfMass);
+
+// cleanup memory on GPU
+input.close();
+```
+
 ## copy( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Copies an image.
@@ -3257,42 +3287,6 @@ output3dImagePlus.show());
 input3d.close();
 input2d.close();
 output3d.close();
-```
-
-## particleImageVelocimetry2D( ClearCLBuffer input1,  ClearCLBuffer input2,  ClearCLBuffer vfX,  ClearCLBuffer vfY,  Integer maxDelta  )
-
-
-
-**Parameters**:  ClearCLBuffer input1,  ClearCLBuffer input2,  ClearCLBuffer vfX,  ClearCLBuffer vfY,  Integer maxDelta  
-
-**Groovy example**: 
-```
-// init CLIJ and GPU
-import net.haesleinhuepf.clij.CLIJ;
-import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
-CLIJ clij = CLIJ.getInstance();
-
-// get input parameters
-ClearCLBuffer input1 = clij.push(input1ImagePlus);
-ClearCLBuffer input2 = clij.push(input2ImagePlus);
-ClearCLBuffer vfX = clij.push(vfXImagePlus);
-ClearCLBuffer vfY = clij.push(vfYImagePlus);
-int maxDelta = 10;
-```
-
-```
-// Execute operation on GPU
-clij.op().particleImageVelocimetry2D(input1, input2, vfX, vfY, maxDelta);
-```
-
-```
-//show result
-
-// cleanup memory on GPU
-input1.close();
-input2.close();
-vfX.close();
-vfY.close();
 ```
 
 ## power( ClearCLBuffer src,  ClearCLBuffer dst,  Float exponent )

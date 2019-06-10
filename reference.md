@@ -1868,28 +1868,6 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyStackWithPlane.java)
 
-<a name="CLIJ_particleImageVelocimetry"></a>
-## CLIJ_particleImageVelocimetry
-
-For every pixel in source image 1, determine the pixel with the most similar intensity in 
- the local neighborhood with a given radius in source image 2. Write the distance in 
-X and Y in the two corresponding destination images.
-
-**Parameters**: Image source1, Image source2, Image destinationDeltaX, Image destinationDeltaY, Number maxDelta
-
-**Available for**: 2D
-
-**Macro example**: 
-```
-run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_push(source1);
-Ext.CLIJ_push(source2);
-Ext.CLIJ_particleImageVelocimetry(source1, source2, destinationDeltaX, destinationDeltaY, maxDelta);
-Ext.CLIJ_pull(destinationDeltaX);
-Ext.CLIJ_pull(destinationDeltaY);
-```
-[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ParticleImageVelocimetry.java)
-
 <a name="CLIJ_power"></a>
 ## CLIJ_power
 
@@ -1941,6 +1919,22 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_push(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Push.java)
+
+<a name="CLIJ_pushCurrentSlice"></a>
+## CLIJ_pushCurrentSlice
+
+Copies an image specified by its name to GPU memory in order to process it there later.
+
+**Parameters**: String image
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_pushCurrentSlice(image);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PushCurrentSlice.java)
 
 <a name="CLIJ_release"></a>
 ## CLIJ_release
