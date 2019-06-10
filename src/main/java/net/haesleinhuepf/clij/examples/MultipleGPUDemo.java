@@ -41,8 +41,7 @@ public class MultipleGPUDemo {
             return;
         }
 
-        // get CLIJ instanced operating on different GPUs
-        // The indices were determined by looking in the list printed above
+        // get CLIJ instances operating on different GPUs
         CLIJ clijGPU1 = new CLIJ(deviceIndices.get(0));
         CLIJ clijGPU2 = new CLIJ(deviceIndices.get(1));
 
