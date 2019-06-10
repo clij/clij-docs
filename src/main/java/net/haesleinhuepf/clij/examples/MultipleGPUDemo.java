@@ -43,23 +43,23 @@ public class MultipleGPUDemo {
 
         // get CLIJ instanced operating on different GPUs
         // The indices were determined by looking in the list printed above
-        CLIJ clijIntel = new CLIJ(deviceIndices.get(0));
-        CLIJ clijNvidia = new CLIJ(deviceIndices.get(0));
+        CLIJ clijGPU1 = new CLIJ(deviceIndices.get(0));
+        CLIJ clijGPU2 = new CLIJ(deviceIndices.get(1));
 
         ImagePlus imp = IJ.openImage("src/main/resources/droso_crop.tif");
 
         // create multiple processors using different GPUs
-        Processor processorIntel = new Processor(clijIntel, imp);
-        Processor processorNvidia = new Processor(clijNvidia, imp);
+        Processor processorGPU1 = new Processor(clijGPU1, imp);
+        Processor processorGPU2 = new Processor(clijGPU2, imp);
 
         // start processing
-        processorIntel.start();
-        processorNvidia.start();
+        processorGPU1.start();
+        processorGPU2.start();
 
         // wait until processing is done on both GPUs
         try {
-            processorIntel.join();
-            processorNvidia.join();
+            processorGPU1.join();
+            processorGPU2.join();
 
             Thread.sleep(5000);
         } catch (InterruptedException e) {
