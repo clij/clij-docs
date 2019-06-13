@@ -4,9 +4,6 @@
 // plugins directory of MicroManager. 
 // Tested with MMSetup_64bit_2.0.0-gamma1_20190611
 //
-// Instead of using the methods clij.push() and clij.pull() it is necessary to 
-// use the procedure using manually created converters shown below.
-//
 // Author: Robert Haase
 // June 2019
 /////////////////////////////////////////////////////////////////////
@@ -20,32 +17,24 @@ import net.haesleinhuepf.clij.converters.implementations.ImagePlusToClearCLBuffe
 clij = CLIJ.getInstance();
 IJ.log(clij.clinfo());
 
-// instead of converting using the internal CLIJ converter service,
-// we setup two converters manually
-pushConverter = new ImagePlusToClearCLBufferConverter();
-pushConverter.setCLIJ(clij);
-pullConverter = new ClearCLBufferToImagePlusConverter();
-pullConverter.setCLIJ(clij);
-
 // get some test data
 imp = IJ.openImage("http://wsr.imagej.net/images/blobs.gif");
 imp.show();
 
 // send image to GPU and allocate some memory for result image
-gpu_input = pushConverter.convert(imp);
+gpu_input = clij.push(imp);
 gpu_output = clij.create(gpu_input);
 
 // blur the image
 clij.op().blur(gpu_input, gpu_output, 10, 10);
 
 // get the result back from the GPU and show it
-imp = pullConverter.convert(gpu_output);
+imp = clij.pull(gpu_output);
 imp.show();
 
 // clean up memory on the GPU
 gpu_input.close();
 gpu_output.close();
-
 
 
 
