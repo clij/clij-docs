@@ -8,7 +8,7 @@ f(x) = |x|
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -43,7 +43,7 @@ f(x, s) = x + s
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float scalar 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -79,7 +79,7 @@ f(x, y) = x + y
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -116,7 +116,7 @@ f(x, y, a, b) = x * a + y * b
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst,  Float factor,  Float factor1 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -153,7 +153,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform3D at 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -188,7 +188,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -221,7 +221,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -258,7 +258,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer vectorZ,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -298,7 +298,7 @@ Furthermore, another image is generated containing the z-index where the maximum
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst_max,  ClearCLBuffer dst_arg 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -338,7 +338,7 @@ of these methods in the method text field:
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -374,7 +374,7 @@ of these methods in the method text field:
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod,  Float minimumGreyValue,  Float maximumGreyValue,  Integer numberOfBins 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -414,7 +414,7 @@ f(x, y) = x & y
 
 **Parameters**:  ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -453,7 +453,7 @@ f(x) = !x
 
 **Parameters**:  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -488,7 +488,7 @@ All pixel values except 0 in the input images are interpreted as 1.f(x, y) = x |
 
 **Parameters**:  ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -527,7 +527,7 @@ f(x, y) = (x & !y) | (!x & y)
 
 **Parameters**:  ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -564,7 +564,7 @@ The 'fast' implementation is done separable. In case a sigma equals zero, the di
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -601,7 +601,7 @@ The 'fast' implementation is done separable. In case a sigma equals zero, the di
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY,  Float blurSigmaZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -637,7 +637,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  int kernelSizeX,  int kernelSizeY,  float sigmaX,  float sigmaY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -670,7 +670,7 @@ Determines the center of mass of an image or image stack.
 
 **Parameters**:  ClearCLBuffer input 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -702,7 +702,7 @@ f(x) = x
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -735,7 +735,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer planeIndex 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -769,7 +769,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -804,7 +804,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -839,7 +839,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY,  Integer radiusZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -875,7 +875,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer startX,  Integer startY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -910,7 +910,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer startX,  Integer startY,  Integer startZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -946,7 +946,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src1,  ClearCLBuffer meanSrc1,  ClearCLBuffer src2,  ClearCLBuffer meanSrc2,  ClearCLBuffer dst,  int radius,  int deltaPos,  int dimension 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -986,7 +986,7 @@ there is no other pixel in a given radius which has a higher intensity, and to 0
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1022,7 +1022,7 @@ given radius which has a higher intensity, and to 0 otherwise.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1057,7 +1057,7 @@ there is no other pixel in a given radius which has a lower intensity, and to 0 
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1093,7 +1093,7 @@ given radius which has a lower intensity, and to 0 otherwise.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1127,7 +1127,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius,  Boolean detectMaxima 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1162,7 +1162,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius,  Boolean detectMaxima 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1202,7 +1202,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1240,7 +1240,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1275,7 +1275,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1310,7 +1310,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1345,7 +1345,7 @@ f(x, y) = x / y
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1381,7 +1381,7 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float factorX,  Float factorY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1417,7 +1417,7 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float factorX,  Float factorY,  Float factorZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1455,7 +1455,7 @@ four corresponding pixels in the source image.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1493,7 +1493,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1531,7 +1531,7 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1566,7 +1566,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1601,7 +1601,7 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1634,7 +1634,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dstHistogram,  Float minimumGreyValue,  Float maximumGreyValue 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1669,7 +1669,7 @@ Flips an image in X and/or Y direction depending on boolean flags.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Boolean flipx,  Boolean flipy 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1704,7 +1704,7 @@ Flips an image in X and/or Y direction depending on boolean flags.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Boolean flipx,  Boolean flipy,  Boolean flipz 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1741,7 +1741,7 @@ Computes the gradient of gray values along X. Assuming a, b and c are three adja
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1775,7 +1775,7 @@ Computes the gradient of gray values along Y. Assuming a, b and c are three adja
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1809,7 +1809,7 @@ Computes the gradient of gray values along Z. Assuming a, b and c are three adja
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1842,7 +1842,7 @@ Determines the histogram of a given image.
 
 **Parameters**:  ClearCLBuffer image,  Float minGreyValue,  Float maxGreyValue,  Integer numberOfBins 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1880,7 +1880,7 @@ For binary images, use binaryNot.
 
 **Parameters**:  ClearCLBuffer input3d,  ClearCLBuffer output3d 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1916,7 +1916,7 @@ f(x) = (1 if (x >=  m)); (0 otherwise)
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  ClearCLBuffer threshold 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1955,7 +1955,7 @@ f(x,m) = (x if (m != 0); (0 otherwise))
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer mask,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -1994,7 +1994,7 @@ f(x,m) = (x if (m != 0); (0 otherwise))
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer mask,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2029,7 +2029,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2062,7 +2062,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2098,7 +2098,7 @@ f(x, s) = max(x, s)
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float valueB 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2134,7 +2134,7 @@ f(x, s) = max(x, y)
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2170,7 +2170,7 @@ Results table in the column 'Max'.
 
 **Parameters**:  ClearCLBuffer clImage 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2201,7 +2201,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2236,7 +2236,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2271,7 +2271,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2312,7 +2312,7 @@ Z = 2
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst_max,  Integer projectedDimensionX,  Integer projectedDimensionY,  Integer projectedDimension 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2348,7 +2348,7 @@ Determines the maximum projection of an image along Z.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst_max 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2381,7 +2381,7 @@ dst_max.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2414,7 +2414,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2449,7 +2449,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2484,7 +2484,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2519,7 +2519,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2555,7 +2555,7 @@ Determines the mean average projection of an image along Z.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2588,7 +2588,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2623,7 +2623,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2662,7 +2662,7 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2700,7 +2700,7 @@ For technical reasons, the area of the ellipse must have less than 1000 pixels.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2735,7 +2735,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2770,7 +2770,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2806,7 +2806,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2839,7 +2839,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2875,7 +2875,7 @@ f(x, s) = min(x, s)
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float valueB 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2911,7 +2911,7 @@ f(x, s) = min(x, y)
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2947,7 +2947,7 @@ Results table in the column 'Min'.
 
 **Parameters**:  ClearCLBuffer clImage 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -2978,7 +2978,7 @@ slice by slice. The ellipses size is specified by its half-width and half-height
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3013,7 +3013,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3048,7 +3048,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3084,7 +3084,7 @@ Determines the minimum projection of an image along Z.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst_min 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3117,7 +3117,7 @@ dst_min.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Integer dimension 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3153,7 +3153,7 @@ f(x, s) = x * s
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float scalar 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3189,7 +3189,7 @@ f(x, y) = x * y
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3224,7 +3224,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  float[] scalars 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3260,7 +3260,7 @@ f(x, y) = x * y
 
 **Parameters**:  ClearCLBuffer input3d,  ClearCLBuffer input2d,  ClearCLBuffer output3d 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3297,7 +3297,7 @@ f(x, a) = x * a
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float exponent 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3331,7 +3331,7 @@ dst.close();
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float deltaAngle 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3366,7 +3366,7 @@ offers less flexibility such as interpolation.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3400,7 +3400,7 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3434,7 +3434,7 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3468,7 +3468,7 @@ offers less flexibility such as interpolation.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3503,7 +3503,7 @@ such as interpolation.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3538,7 +3538,7 @@ such as interpolation.
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3573,7 +3573,7 @@ f(x) = v
 
 **Parameters**:  ClearCLBuffer clImage,  Float value 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3603,7 +3603,7 @@ clImage.close();
 
 **Parameters**:  ClearCLBuffer clImageIn,  ClearCLBuffer... clImagesOut 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3634,7 +3634,7 @@ clImagesOut.close();
 
 **Parameters**:  ClearCLBuffer source1,  ClearCLBuffer source2,  ClearCLBuffer destination 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3671,7 +3671,7 @@ f(x, y) = x - y
 
 **Parameters**:  ClearCLBuffer subtrahend,  ClearCLBuffer minuend,  ClearCLBuffer destination 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3706,7 +3706,7 @@ destination.close();
 
 **Parameters**:  ClearCLBuffer clImage 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3736,7 +3736,7 @@ clImage.close();
 
 **Parameters**:  ClearCLBuffer input 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3766,7 +3766,7 @@ Determines the sum projection of an image along Z.
 
 **Parameters**:  ClearCLBuffer clImage,  ClearCLBuffer clReducedImage 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;
@@ -3802,7 +3802,7 @@ This plugin is comparable to setting a raw threshold in ImageJ and using the 'Co
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  Float threshold 
 
-**Groovy example**: 
+**Java example**: 
 ```
 // init CLIJ and GPU
 import net.haesleinhuepf.clij.CLIJ;

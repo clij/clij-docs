@@ -81,7 +81,7 @@ public class MarkdownJavaOpDocumentationGenerator {
                     String description = findDocumentation(service, methodName, parametersWithType);
 
                     String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
-                            description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Groovy example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
+                            description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Java example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
                     blocks.add(output);
                     methods++;
