@@ -3,6 +3,7 @@
 // 
 // Before running this macro, please activate these update sites in Fiji
 // * 3D ImageJ suite
+// * ImageScience
 // * clij
 //
 // Author: Robert Haase, rhaase@mpi-cbg.de
@@ -19,17 +20,12 @@ run("Duplicate...", "duplicate channels=2");
 setOption("BlackBackground", true);
 run("Convert to Mask", "method=Default background=Dark calculate");
 
-// initialize two macro extensions
-run("3D Manager");
-run("CLIJ Macro Extensions", "cl_device=");
-
 for (i = 0;i < 10; i++) {
 
 	IJ.log("i " + i);
 
 	// use macro extension 2: 3D Manager
-	// this unfortunately opens another instance of the 3D viewer
-	// run("3D Manager");
+	run("3D ROI Manager (Singleton)");
 	Ext.Manager3D_AddImage();
 	
 	// use macro extension 1: clij
