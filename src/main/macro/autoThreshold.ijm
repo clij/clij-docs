@@ -1,4 +1,4 @@
-// CLIJ example macro: thresholding,ijm
+// CLIJ example macro: autoThreshold.ijm
 //
 // This macro shows how to apply an automatic 
 // threshold method to an image in the GPU.

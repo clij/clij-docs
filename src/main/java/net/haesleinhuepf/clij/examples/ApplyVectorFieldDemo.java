@@ -22,8 +22,6 @@ public class ApplyVectorFieldDemo {
 
         new ImageJ();
 
-        IJ.run("Close All");
-
         // get test image
         ImagePlus imp = IJ.openImage("https://samples.fiji.sc/blobs.png");
         IJ.run(imp,"32-bit", "");
@@ -43,9 +41,12 @@ public class ApplyVectorFieldDemo {
         // init GPU
         CLIJ clij = CLIJ.getInstance();
 
+        // push input to GPU
         ClearCLBuffer blobsGPU = clij.push(imp);
         ClearCLBuffer shiftXgpu = clij.push(shiftXimp);
         ClearCLBuffer shiftYgpu = clij.push(shiftYimp);
+
+        // allocate memory for results on GPU
         ClearCLBuffer rotatedShiftX = clij.create(blobsGPU);
         ClearCLBuffer result = clij.create(blobsGPU);
         ClearCLBuffer resultStack = clij.create(new long[]{256, 254, 36}, NativeTypeEnum.Float);
@@ -73,6 +74,14 @@ public class ApplyVectorFieldDemo {
         IJ.run(resultImp , "Invert LUT", "");
         resultImp.setDisplayRange(0, 256);
         resultImp.show();
+
+        // clean up memory
+        blobsGPU.close();
+        shiftXgpu.close();
+        shiftYgpu.close();
+        rotatedShiftX.close();
+        result.close();
+        resultStack.close();
 
     }
 }

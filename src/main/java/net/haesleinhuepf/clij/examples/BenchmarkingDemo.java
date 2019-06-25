@@ -43,9 +43,9 @@ public class BenchmarkingDemo {
         // Initialize ImageJ, CLIJ and test image
         ij = new ImageJ();
         ij.ui().showUI();
-        clij = CLIJ.getInstance("TITAN");
+        clij = CLIJ.getInstance();
 
-        input = IJ.openImage("src/main/resources/flybrain.tif");
+        input = IJ.openImage("https://imagej.net/images/flybrain.zip");
         input.show();
         IJ.run(input, "8-bit", "");
         img = ImageJFunctions.wrapReal(input);
