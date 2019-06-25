@@ -21,16 +21,14 @@ rename("original");
 
 getDimensions(width, height, channels, depth, frames);
 
-// reserve the right amount of memory for the result image
-newImage("target", "32-bit black", width, height, 1.0 / zoom_step);
-
 // init GPU
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // push images to GPU
 Ext.CLIJ_push("original");
-Ext.CLIJ_push("target");
+// reserve the right amount of memory for the result image
+Ext.CLIJ_create3D("target",  width, height, 1.0 / zoom_step, 32);
 
 // cleanup imagej
 run("Close All");

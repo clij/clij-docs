@@ -1,4 +1,4 @@
-// CLIJ example macro: project3D.ijm
+// CLIJ example macro: rotateFree.ijm
 //
 // This macro shows how to rotate an image in the GPU.
 //
@@ -20,17 +20,15 @@ run("32-bit");
 rename("original");
 
 getDimensions(width, height, channels, depth, frames);
-
-// reserve the right amount of memory for the result image
-newImage("target", "32-bit black", width, height, 360 / angle_step);
-
+
 // init GPU
 run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // push images to GPU
 Ext.CLIJ_push("original");
-Ext.CLIJ_push("target");
+// reserve the right amount of memory for the result image
+Ext.CLIJ_create3D("target",  width, height, 360 / angle_step, 32);
 
 // cleanup imagej
 run("Close All");
