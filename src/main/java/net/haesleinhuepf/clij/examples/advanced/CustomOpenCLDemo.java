@@ -1,4 +1,4 @@
-package net.haesleinhuepf.clij.examples;
+package net.haesleinhuepf.clij.examples.advanced;
 
 import ij.IJ;
 import ij.ImageJ;
@@ -20,7 +20,7 @@ import java.util.Map;
  * Author: Robert Haase (http://haesleinhuepf.net) at MPI CBG (http://mpi-cbg.de)
  * February 2018
  */
-public class PipelineCLDemo {
+public class CustomOpenCLDemo {
 
     public static void main(String... args) throws IOException {
         // Initialize ImageJ and example images

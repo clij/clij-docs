@@ -1,4 +1,4 @@
-package net.haesleinhuepf.clij.examples;
+package net.haesleinhuepf.clij.examples.advanced;
 
 import ij.IJ;
 import ij.macro.ExtensionDescriptor;
@@ -9,12 +9,12 @@ import net.imagej.ImageJ;
 import java.util.Arrays;
 
 /**
- * ServiceDemo
+ * CLIJMacroPluginServiceDemo
  * <p>
  * Author: @haesleinhuepf
  * December 2018
  */
-public class ServiceDemo {
+public class CLIJMacroPluginServiceDemo {
     public static void main(String... args) {
         ImageJ ij = new ImageJ();
         ij.ui().showUI();

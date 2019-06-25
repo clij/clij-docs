@@ -1,4 +1,4 @@
-package net.haesleinhuepf.clij.examples;
+package net.haesleinhuepf.clij.examples.advanced;
 
 import ij.IJ;
 import ij.ImageJ;
@@ -20,18 +20,20 @@ import java.util.Map;
  * Author: Robert Haase (http://haesleinhuepf.net) at MPI CBG (http://mpi-cbg.de)
  * February 2018
  */
-public class FlipCLDemo {
+public class DifferenceOfGaussianCLDemo {
     public static void main(String... args) throws IOException {
         new ImageJ();
-        ImagePlus lInputImagePlus = IJ.openImage("src/main/resources/flybrain.tif");
+        ImagePlus inputImp = IJ.openImage("src/main/resources/flybrain.tif");
 
-        RandomAccessibleInterval<UnsignedShortType> input = ImageJFunctions.wrap(lInputImagePlus);
+        inputImp = new Duplicator().run(inputImp, 25, 25);
 
-        RandomAccessibleInterval<UnsignedShortType> output = ImageJFunctions.wrap(new Duplicator().run(lInputImagePlus));
+        RandomAccessibleInterval<UnsignedShortType> input = ImageJFunctions.wrap(inputImp);
+
+        RandomAccessibleInterval<UnsignedShortType> output = ImageJFunctions.wrap(new Duplicator().run(inputImp));
 
         ImageJFunctions.show(input);
 
-        CLIJ clij = CLIJ.getInstance("hd");
+        CLIJ clij = CLIJ.getInstance("hd"); //CLIJ.getInstance();
 
         // ---------------------------------------------------------------
         // Example 1: Flip image in X
@@ -39,14 +41,14 @@ public class FlipCLDemo {
             ClearCLBuffer srcImage = clij.push(input);
             ClearCLBuffer dstImage = clij.push(output);
 
-            Map<String, Object> lParameterMap = new HashMap<>();
-            lParameterMap.put("src", srcImage);
-            lParameterMap.put("dst", dstImage);
-            lParameterMap.put("flipx", 1);
-            lParameterMap.put("flipy", 0);
-            lParameterMap.put("flipz", 0);
+            Map<String, Object> parameterMap = new HashMap<>();
+            parameterMap.put("src", srcImage);
+            parameterMap.put("dst", dstImage);
+            parameterMap.put("radius", 6);
+            parameterMap.put("sigma_minuend", 1.5f);
+            parameterMap.put("sigma_subtrahend", 3f);
 
-            clij.execute("src/main/java/net/haesleinhuepf/clij/kernels/flip.cl", "flip_3d", lParameterMap);
+            clij.execute("src/main/jython/differenceOfGaussian/differenceOfGaussian.cl", "subtract_convolved_images_2d_fast", parameterMap);
 
             ImagePlus result = clij.pull(dstImage);
             result.show();
