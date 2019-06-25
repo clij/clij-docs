@@ -31,7 +31,7 @@ import java.io.IOException;
  * Author: Robert Haase (http://haesleinhuepf.net) at MPI CBG (http://mpi-cbg.de)
  * March 2018
  */
-public class BenchmarkingDemo {
+public class BenchmarkingWorkflowDemo {
 
     private static ImageJ ij;
     private static CLIJ clij;
@@ -62,8 +62,8 @@ public class BenchmarkingDemo {
             System.out.println("The ImageJ2 way took " + (System.currentTimeMillis() - timestamp) + " msec");
 
             timestamp = System.currentTimeMillis();
-            demoClearCLIJ();
-            System.out.println("The ClearCL way took " + (System.currentTimeMillis() - timestamp) + " msec");
+            demoCLIJ();
+            System.out.println("The CLIJ way took " + (System.currentTimeMillis() - timestamp) + " msec");
             // ---------------------------------------
         }
     }
@@ -129,7 +129,7 @@ public class BenchmarkingDemo {
         return rai;
     }
 
-    private static void demoClearCLIJ() throws IOException {
+    private static void demoCLIJ() throws IOException {
         ClearCLBuffer input = clij.push(img);
         ClearCLBuffer flip = clij.create(input.getDimensions(), input.getNativeType());
         ClearCLBuffer flop = clij.create(input.getDimensions(), input.getNativeType());

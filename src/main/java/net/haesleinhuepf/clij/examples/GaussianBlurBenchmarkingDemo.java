@@ -2,23 +2,15 @@ package net.haesleinhuepf.clij.examples;
 
 import ij.IJ;
 import ij.ImagePlus;
-import ij.Prefs;
 import ij.plugin.Duplicator;
-import ij.plugin.ImageCalculator;
 import net.haesleinhuepf.clij.CLIJ;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.imagej.ImageJ;
-import net.imglib2.IterableInterval;
 import net.imglib2.RandomAccessibleInterval;
-import net.imglib2.algorithm.neighborhood.DiamondShape;
 import net.imglib2.img.Img;
 import net.imglib2.img.display.imagej.ImageJFunctions;
-import net.imglib2.roi.Regions;
 import net.imglib2.type.BooleanType;
 import net.imglib2.type.numeric.RealType;
-import net.imglib2.type.numeric.integer.UnsignedByteType;
-import net.imglib2.util.Pair;
-import net.imglib2.view.Views;
 
 import java.io.IOException;
 
@@ -61,8 +53,8 @@ public class GaussianBlurBenchmarkingDemo {
             System.out.println("The ImageJ2 way took " + (System.currentTimeMillis() - timestamp) + " msec");
 
             timestamp = System.currentTimeMillis();
-            demoClearCLIJ();
-            System.out.println("The ClearCL way took " + (System.currentTimeMillis() - timestamp) + " msec");
+            demoCLIJ();
+            System.out.println("The CLIJ way took " + (System.currentTimeMillis() - timestamp) + " msec");
             // ---------------------------------------
             System.out.println("-----");
         }
@@ -82,7 +74,7 @@ public class GaussianBlurBenchmarkingDemo {
         ImageJFunctions.show(gauss);
     }
 
-    private static void demoClearCLIJ() throws IOException {
+    private static void demoCLIJ() throws IOException {
         ClearCLBuffer input = clij.push(img);
         ClearCLBuffer blurred = clij.create(input);
 
