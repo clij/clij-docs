@@ -25,13 +25,6 @@ IJ.log("CPU 3D projection took " + (getTime()-time) + " msec");
 
 getDimensions(width, height, channels, depth, frames);
 
-// reserve the right amount of memory for the result image
-newImage("target", "32-bit black", width, height, 360 / angle_step);
-
-// reserve a bit more pixels in Z for translated and rotated image because we
-// need space for the shoulders if we rotated the patient around the Y-axis
-newImage("rotated", "32-bit black", width, height, depth * 2);
-newImage("translated", "32-bit black", width, height, depth * 2);
 
 // init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -41,9 +34,13 @@ time = getTime();
 
 // push images to GPU
 Ext.CLIJ_push("original");
-Ext.CLIJ_push("target");
-Ext.CLIJ_push("translated");
-Ext.CLIJ_push("rotated");
+// reserve the right amount of memory for the result image
+Ext.CLIJ_create3D("target", width, height, 360 / angle_step, 32);
+
+// reserve a bit more pixels in Z for translated and rotated image because we
+// need space for the shoulders if we rotated the patient around the Y-axis
+Ext.CLIJ_create3D("rotated", width, height, depth * 2, 32);
+Ext.CLIJ_create3D("translated", width, height, depth * 2, 32);
 
 // cleanup imagej
 run("Close All");

@@ -12,7 +12,6 @@ run("T1 Head (2.4M, 16-bits)");
 input = getTitle();
 getDimensions(width, height, channels, slices, frames);
 
-// create an emtpy image to put the blurred pixels in
 blurred = "Blurred";
 
 // Init GPU

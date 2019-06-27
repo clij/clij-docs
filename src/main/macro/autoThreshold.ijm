@@ -14,10 +14,7 @@ run("Blobs (25K)");
 getDimensions(width, height, channels, slices, frames);
 input = getTitle();
 
-// create memory for mask image
-newImage("Untitled", "8-bit black", width, height, slices);
-rename("Mask");
-mask = getTitle();
+mask = "Mask";
 
 // Init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -25,7 +22,6 @@ Ext.CLIJ_clear();
 
 // push data to GPU
 Ext.CLIJ_push(input);
-Ext.CLIJ_push(mask);
 
 // cleanup ImageJ
 run("Close All");
