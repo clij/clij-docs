@@ -20,8 +20,9 @@ https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus
 ## Are results of CLIJ filters expected to be exactly the same as when using ImageJ?
 No. While algorithms on the CPU can make use of double-precision, common GPUs only support single precision for floating point numbers. Furthermore, following priorities were set while developing CLIJs filters:
 * Mathematical correctness
-* Constistency, e.g. between 2D and 3D filter
-* Simplicity of code
+* Consistency, e.g. results in 2D and 3D should be reasonably similar
+* Simplicity of code to ease maintenance
+* Performance
 * Similarity of results generated with ImageJ
 For example, the minimum filter of ImageJ takes different neighborhoods into account when being applied in 2D and 3D. CLIJs filters are consistend in 2D and 3D. Thus, results may differ between ImageJ and CLIJ as shown here:
 ![Image](images/mean_filter_comparison_r1.png)
