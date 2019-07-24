@@ -102,6 +102,5 @@ function zoom(count) {
 }
 
 function setWindowPosition(x, y) {
-	factor = 400;
-	setLocation(x * factor, y * factor);
+	setLocation(x * 330, y * 370);
 }
