@@ -14,7 +14,7 @@ from net.haesleinhuepf.clij import CLIJ;
 IJ.run("Close All");
 
 # load example image
-imp = IJ.openImage("c:/structure/code/clij-docs/src/main/resources/blobs.tif");
+imp = IJ.openImage("http://wsr.imagej.net/images/blobs.gif");
 imp.show();
 
 # init GPU

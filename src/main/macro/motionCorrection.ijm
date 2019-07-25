@@ -10,7 +10,8 @@
 run("Close All");
 
 // define move to correct
-file = "C:/structure/code/clij-docs/src/main/resources/motion_correction_Drosophila_DSmanila1.tif";
+file = "https://github.com/clij/clij-docs/raw/master/src/main/resources/motion_correction_Drosophila_DSmanila1.tif";
+//file = "C:/structure/code/clij-docs/src/main/resources/motion_correction_Drosophila_DSmanila1.tif";
 
 // define identifiers for intermediate results in the GPU
 inputStack = "inputStack";
