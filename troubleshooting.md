@@ -10,6 +10,10 @@ Here is more information about what TDR is: https://docs.microsoft.com/en-us/win
 
 ## Initialisation fails
 Fiji crashes when calling the first CLIJ filter: Check if the initialisation contains a proper name for a GPU.
+
+## Repeated initialisation fails on AMD Vega 10
+When creating CLIJ instances and closing them repeatedly, it crashes after about 40 attempts. [This test](https://github.com/clij/clij-core/blob/master/src/test/java/net/haesleinhuepf/clij/test/InitialisationTest.java#L17) allows reproducing the issue on specified hardward. Workaround:
+Don't close the CLIJ instance and keep working with the singleton instance.
 ## Result image is black or shows random textures
 This might happend with older GPUs which have not been tested. A helpful workaround is converting all images to 32 bit using `run("32-bit");` before sending them to the GPU.
 ## filename.cl not found
