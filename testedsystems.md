@@ -1,6 +1,6 @@
 # Supported / tested platforms
 * Intel(R) HD Graphics 620 (OpenCL 1.2, Win 10 64bit, July 2019)
-  * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij-core_myers-pc-21.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij_myers-pc-21.txt)
+  * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij-core_ulice.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij_ulice.txt)
 
 * AMD Radeon RX Vega 6 (OpenCL 2.0, Win 10 64 bit, Nov 2018)
 * Nvidia GeForce 940MX (OpenCL 2.0, Win 10 64 bit, Apr 2018)
