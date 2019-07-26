@@ -11,8 +11,8 @@
 //run("Close All");
 
 // Get test data
-//run("Blobs (25K)");
-open("C:/structure/data/blobs.gif");
+run("Blobs (25K)");
+//open("C:/structure/data/blobs.gif");
 
 
 step = 10;
