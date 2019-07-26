@@ -50,8 +50,8 @@ run("Close All");
 for (i = 0; i < 36; i++) {
 
 	// change the shift from slice to slice
-	Ext.CLIJ_affineTransform("shiftX", "rotatedShiftX", "center rotate=" + (i * 10) + " -center");
-	Ext.CLIJ_affineTransform("shiftY", "rotatedShiftY", "center rotate=" + (i * 10) + " -center");
+	Ext.CLIJ_affineTransform2D("shiftX", "rotatedShiftX", "center rotate=" + (i * 10) + " -center");
+	Ext.CLIJ_affineTransform2D("shiftY", "rotatedShiftY", "center rotate=" + (i * 10) + " -center");
 	
 	// apply transform
 	Ext.CLIJ_applyVectorField2D("cat", "rotatedShiftX", "rotatedShiftY", "transformed");

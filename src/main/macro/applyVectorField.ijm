@@ -38,7 +38,7 @@ Ext.CLIJ_push("resultStack");
 for (i = 0; i < 36; i++) {
 
 	// change the shift from slice to slice
-	Ext.CLIJ_affineTransform("shiftX", "rotatedShiftX", "center rotate=" + (i * 10) + " -center");
+	Ext.CLIJ_affineTransform2D("shiftX", "rotatedShiftX", "center rotate=" + (i * 10) + " -center");
 	
 	// apply transform
 	Ext.CLIJ_applyVectorField2D("blobs", "rotatedShiftX", "shiftY", "transformed");
