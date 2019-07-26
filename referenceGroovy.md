@@ -4,7 +4,7 @@
 
 Computes the absolute value of every individual pixel x in a given image.
 
-f(x) = |x| 
+<pre>f(x) = |x| </pre>
 
 **Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
 

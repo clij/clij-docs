@@ -1,13 +1,16 @@
 # Frequently asked questions
 
 ## Which GPUs are supported by CLIJ?
-CLIJ was successfully tested on a variety of Intel, Nvidia and AMD GPUs.
+CLIJ was successfully tested on a variety of Intel, Nvidia and AMD GPUs. See the full list of tested systems:
+https://clij.github.io/clij-docs/testedsystems
 
 ## Do I have to buy a dedicated GPU in order to benefit from GPU-acceleration using CLIJ?
-No. Common Intel Core and AMD Ryzen processors contain built-in GPUs which are compatible with CLIJ. However, as dedicated GPUs come with their own GDDR-memory, additional speed-up can be gained by utilizing dedicated GPUs.
+No. Common Intel Core and AMD Ryzen processors contain built-in GPUs which are compatible with CLIJ. 
+However, as dedicated graphics cards come with their own GDDR-memory, additional speed-up can be gained by utilizing dedicated GPUs.
 
 ## With which operating systems is CLIJ compatible?
-CLIJ was succesfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. In order to make it run, current GPU and OpenCL drivers must be installed.
+CLIJ was succesfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. 
+Current GPU and OpenCL drivers must be installed.
 
 ## Is CLIJ compatible with ImageJ without Fiji?
 With some limitations, yes. You find details and installation instructions here:
