@@ -63,6 +63,11 @@ Binary output images are filled with pixel values 0 and 1. Any input image can s
 Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-independent OpenCL. These benefits come with performance loss. Calling an OpenCL kernel via ClearCL directly may be about a millisecond faster than calling it via CLIJ. Example code demonstrating this is available here:
 https://github.com/clij/clij-benchmarking/blob/master/src/main/java/net/haesleinhuepf/clij/benchmark/clearclclijcomparison/ClearCLVersusCLIJComparison.java
 
+## The CLIJ Java API offers methods for processing ClearCLBuffers and ClearCLImages. What's the difference?
+Images and buffers are defined in the OpenCL standard. We tried to have as many operations as possible compatible to both, images and buffers. Differences are:
+* When applying affine transforms and warping to images, linear interpolation is used. When using buffers, the nearest neighbor pixel delivers the resulting intensity. 
+* Images are not generally supported by GPU devices runnning OpenCL 1.1. 
+We recommend using buffers in general for maximum device compatibility.
 
 [Back to CLIJ documentation](https://clij.github.io/)
 
