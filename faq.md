@@ -30,7 +30,7 @@ Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top)
 https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm
 
 ## Which pixel values does CLIJ take into account when processing edge pixels of the image?
-CLIJ uses the strategy `clamp to edge` assuming pixels outside the image have the same pixel value as the closest border pixel of the image.
+CLIJ in general uses the strategy `clamp to edge` assuming pixels outside the image have the same pixel value as the closest border pixel of the image. For transforms such as rotation, translation, scaling, and affine transforms, 'zero-padding' is applied assuming pixels having value 0 out of the image.
 
 ## Does CLIJ take physical pixel units into account?
 No. All numeric spatial parameters in CLIJ such as radius and sigma are always entered in pixels. There is no operation in CLIJ which makes use of any physical units.
