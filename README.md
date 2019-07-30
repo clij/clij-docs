@@ -67,6 +67,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
 ## Acknowledgements
 Development of CLIJ is a community effort. We would like to thank everybody who helped developing and testing. In particular thanks goes to
 Brenton Cavanagh (RCSI),
+Brian Northan (True North Intelligent Algorithms),
 Bruno C. Vellutini (MPI CBG),
 Curtis Rueden (UW-Madison LOCI),
 Damir Krunic (DKFZ),
@@ -80,6 +81,7 @@ Juergen Gluch (Fraunhofer IKTS),
 Kota Miura (Heidelberg),
 Laurent Thomas (Acquifer), 
 Nico Stuurman (UCSF),
+Peter Haub,
 Pradeep Rajasekhar (Monash University),
 Tobias Pietzsch (MPI-CBG),
 Wilsom Adams (VU Biophotonics)
