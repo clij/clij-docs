@@ -25,7 +25,7 @@ Ext.CLIJ_pull(destination);
 
 Adds a scalar value s to all pixels x of a given image X.
 
-f(x, s) = x + s
+<pre>f(x, s) = x + s</pre>
 
 **Parameters**: Image source, Image destination, Number scalar
 
@@ -45,7 +45,7 @@ Ext.CLIJ_pull(destination);
 
 Calculates the sum of pairs of pixels x and y of two images X and Y.
 
-f(x, y) = x + y
+<pre>f(x, y) = x + y</pre>
 
 **Parameters**: Image summand1, Image summand2, Image destination
 
@@ -66,7 +66,7 @@ Ext.CLIJ_pull(destination);
 
 Calculates the sum of pairs of pixels x and y from images X and Y weighted with factors a and b.
 
-f(x, y, a, b) = x * a + y * b
+<pre>f(x, y, a, b) = x * a + y * b</pre>
 
 **Parameters**: Image summand1, Image summand2, Image destination, Number factor1, Number factor2
 
@@ -85,7 +85,9 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_affineTransform"></a>
 ## CLIJ_affineTransform
 
-Applies an affine transform to an image. Individual transforms must be separated by spaces.
+CLIJ affineTransform is deprecated. Use affineTransform2D or affineTransform3D instead.
+
+Applies an affine transform to a 3D image. Individual transforms must be separated by spaces.
 
 Supported transforms:
 * center: translate the coordinate origin to the center of the image
@@ -124,6 +126,80 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform.java)
 
+<a name="CLIJ_affineTransform2D"></a>
+## CLIJ_affineTransform2D
+
+Applies an affine transform to a 2D image. Individual transforms must be separated by spaces.
+
+Supported transforms:
+* center: translate the coordinate origin to the center of the image
+* -center: translate the coordinate origin back to the initial origin
+* rotate=[angle]: rotate in X/Y plane (around Z-axis) by the given angle in degrees
+* scale=[factor]: isotropic scaling according to given zoom factor
+* scaleX=[factor]: scaling along X-axis according to given zoom factor
+* scaleY=[factor]: scaling along Y-axis according to given zoom factor
+* shearXY=[factor]: shearing along X-axis in XY plane according to given factor
+* translateX=[distance]: translate along X-axis by distance given in pixels
+* translateY=[distance]: translate along X-axis by distance given in pixels
+
+Example transform:
+transform = "center scale=2 rotate=45 -center";
+
+**Parameters**: Image source, Image destination, String transform
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_affineTransform2D(source, destination, transform);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform2D.java)
+
+<a name="CLIJ_affineTransform3D"></a>
+## CLIJ_affineTransform3D
+
+Applies an affine transform to a 3D image. Individual transforms must be separated by spaces.
+
+Supported transforms:
+* center: translate the coordinate origin to the center of the image
+* -center: translate the coordinate origin back to the initial origin
+* rotate=[angle]: rotate in X/Y plane (around Z-axis) by the given angle in degrees
+* rotateX=[angle]: rotate in Y/Z plane (around X-axis) by the given angle in degrees
+* rotateY=[angle]: rotate in X/Z plane (around Y-axis) by the given angle in degrees
+* rotateZ=[angle]: rotate in X/Y plane (around Z-axis) by the given angle in degrees
+* scale=[factor]: isotropic scaling according to given zoom factor
+* scaleX=[factor]: scaling along X-axis according to given zoom factor
+* scaleY=[factor]: scaling along Y-axis according to given zoom factor
+* scaleZ=[factor]: scaling along Z-axis according to given zoom factor
+* shearXY=[factor]: shearing along X-axis in XY plane according to given factor
+* shearXZ=[factor]: shearing along X-axis in XZ plane according to given factor
+* shearYX=[factor]: shearing along Y-axis in XY plane according to given factor
+* shearYZ=[factor]: shearing along Y-axis in YZ plane according to given factor
+* shearZX=[factor]: shearing along Z-axis in XZ plane according to given factor
+* shearZY=[factor]: shearing along Z-axis in YZ plane according to given factor
+* translateX=[distance]: translate along X-axis by distance given in pixels
+* translateY=[distance]: translate along X-axis by distance given in pixels
+* translateZ=[distance]: translate along X-axis by distance given in pixels
+
+Example transform:
+transform = "center scale=2 rotate=45 -center";
+
+**Parameters**: Image source, Image destination, String transform
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_affineTransform3D(source, destination, transform);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform3D.java)
+
 <a name="CLIJ_applyVectorField2D"></a>
 ## CLIJ_applyVectorField2D
 
@@ -149,7 +225,7 @@ Ext.CLIJ_pull(destination);
 
 Image source, Image vectorX, Image vectorY, Image vectorZ, Image destination
 
-**Parameters**: Deforms an image according to distances provided in the given vector images. It is recommended to use 32-bit images for input, output and vector images. 
+**Parameters**: Deforms an image stack according to distances provided in the given vector image stacks. It is recommended to use 32-bit image stacks for input, output and vector image stacks. 
 
 **Available for**: 3D
 
@@ -163,8 +239,8 @@ Ext.CLIJ_applyVectorField3D(an, and);
 <a name="CLIJ_argMaximumZProjection"></a>
 ## CLIJ_argMaximumZProjection
 
-Determines the maximum projection of an image along Z.
-Furthermore, another image is generated containing the z-index where the maximum was found (zero based).
+Determines the maximum projection of an image stack along Z.
+Furthermore, another 2D image is generated with pixels containing the z-index where the maximum was found (zero based).
 
 **Parameters**: Image source, Image destination_max, Image destination_arg_max
 
@@ -208,7 +284,7 @@ Computes a binary image (containing pixel values 0 and 1) from two images X and 
 pixels x and y with the binary AND operator &.
 All pixel values except 0 in the input images are interpreted as 1.
 
-f(x, y) = x & y
+<pre>f(x, y) = x & y</pre>
 
 **Parameters**: Image operand1, Image operand2, Image destination
 
@@ -227,11 +303,11 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_binaryNot"></a>
 ## CLIJ_binaryNot
 
-Computes a binary image (containing pixel values 0 and 1) from and image X by negating its pixel values
+Computes a binary image (containing pixel values 0 and 1) from an image X by negating its pixel values
 x using the binary NOT operator !
 All pixel values except 0 in the input image are interpreted as 1.
 
-f(x) = !x
+<pre>f(x) = !x</pre>
 
 **Parameters**: Image source, Image destination
 
@@ -251,7 +327,7 @@ Ext.CLIJ_pull(destination);
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
 pixels x and y with the binary OR operator |.
-All pixel values except 0 in the input images are interpreted as 1.f(x, y) = x | y
+All pixel values except 0 in the input images are interpreted as 1.<pre>f(x, y) = x | y</pre>
 
 **Parameters**: Image operand1, Image operand2, Image destination
 
@@ -271,10 +347,10 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_binaryXOr
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
-pixels x and y with the binary operators AND &, OR | and NOT !
+pixels x and y with the binary operators AND &, OR | and NOT ! implementing the XOR operator.
 All pixel values except 0 in the input images are interpreted as 1.
 
-f(x, y) = (x & !y) | (!x & y)
+<pre>f(x, y) = (x & !y) | (!x & y)</pre>
 
 **Parameters**: Image operand1, Image operand2, Image destination
 
@@ -295,7 +371,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
 
-The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
+The implementation is done separable. In case a sigma equals zero, the direction is not blurred.
 
 **Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY
 
@@ -315,7 +391,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the Gaussian blurred image of an image given two sigma values in X, Y and Z. Thus, the filterkernel can have non-isotropic shape.
 
-The 'fast' implementation is done separable. In case a sigma equals zero, the direction is not blurred.
+The implementation is done separable. In case a sigma equals zero, the direction is not blurred.
 
 **Parameters**: Image source, Image destination, Number sigmaX, Number sigmaY, Number sigmaZ
 
@@ -353,7 +429,8 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_centerOfMass"></a>
 ## CLIJ_centerOfMass
 
-Determines the center of mass of an image or image stack.
+Determines the center of mass of an image or image stack and writes the result in the results table
+in the columns MassX, MassY and MassZ.
 
 **Parameters**: Image source
 
@@ -423,7 +500,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_convertUInt16
 
 Convert the input image to a unsigned integer image with 16 bits per pixel.
-Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cuting-off intensity ranges.
+Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cutting-off intensity ranges.
 The target image should not exist with a different type before this 
 method is called.
 
@@ -444,7 +521,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_convertUInt8
 
 Convert the input image to a unsigned integer image with 8 bits per pixel.
-Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cuting-off intensity ranges.
+Pixel values are copied as they are. Use multiplyImageWithScalar in order to scalepixel values when reducing bit-depth to prevent cutting-off intensity ranges.
 The target image should not exist with a different type before this 
 method is called.
 
@@ -466,7 +543,7 @@ Ext.CLIJ_pull(destination);
 
 Copies an image.
 
-f(x) = x
+<pre>f(x) = x</pre>
 
 **Parameters**: Image source, Image destination
 
@@ -744,6 +821,8 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 This method is comparable to the 'Dilate' menu in ImageJ in case it is applied to a 2D image. The only
 difference is that the output image contains values 0 and 1 instead of 0 and 255.
 
+This filter is applied slice by slice in 2D.
+
 **Parameters**: Image source, Image destination
 
 **Available for**: 2D, 3D
@@ -784,6 +863,8 @@ Computes a binary image with pixel values 0 and 1 containing the binary dilation
 The dilation takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
 The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
 
+This filter is applied slice by slice in 2D.
+
 **Parameters**: Image source, Image destination
 
 **Available for**: 2D, 3D
@@ -802,7 +883,7 @@ Ext.CLIJ_pull(destination);
 
 Divides two images X and Y by each other pixel wise.
 
-f(x, y) = x / y
+<pre>f(x, y) = x / y</pre>
 
 **Parameters**: Image divident, Image divisor, Image destination
 
@@ -859,7 +940,7 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_downsampleSliceBySliceHalfMedian"></a>
 ## CLIJ_downsampleSliceBySliceHalfMedian
 
-Scales an image using scaling factors 0.5 for X and Y dimensions. The Z dimension stays untouched.
+Scales an image using scaling factors 0.5 for X and Y dimensions. The Z dimension stays untouched. Thus, each slice is processed separately.
 The median method is applied. Thus, each pixel value in the destination image equals to the median of
 four corresponding pixels in the source image.
 
@@ -909,6 +990,8 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 This method is comparable to the 'Erode' menu in ImageJ in case it is applied to a 2D image. The only
 difference is that the output image contains values 0 and 1 instead of 0 and 255.
 
+This filter is applied slice by slice in 2D.
+
 **Parameters**: Image source, Image destination
 
 **Available for**: 2D, 3D
@@ -948,6 +1031,8 @@ Ext.CLIJ_pull(destination);
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
 The erosion takes the von-Neumann-neighborhood (4 pixels in 2D and 6 pixels in 3d) into account.
 The pixels in the input image with pixel value not equal to 0 will be interpreted as 1.
+
+This filter is applied slice by slice in 2D.
 
 **Parameters**: Image source, Image destination
 
@@ -1002,7 +1087,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_gradientX
 
 Computes the gradient of gray values along X. Assuming a, b and c are three adjacent
- pixels in X direction. In the target image will be saved as: b = c - a;
+ pixels in X direction. In the target image will be saved as: <pre>b' = c - a;</pre>
 
 **Parameters**: Image source, Image destination
 
@@ -1021,7 +1106,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_gradientY
 
 Computes the gradient of gray values along Y. Assuming a, b and c are three adjacent
- pixels in Y direction. In the target image will be saved as: b = c - a;
+ pixels in Y direction. In the target image will be saved as: <pre>b' = c - a;</pre>
 
 **Parameters**: Image source, Image destination
 
@@ -1040,7 +1125,7 @@ Ext.CLIJ_pull(destination);
 ## CLIJ_gradientZ
 
 Computes the gradient of gray values along Z. Assuming a, b and c are three adjacent
- pixels in Z direction. In the target image will be saved as: b = c - a;
+ pixels in Z direction. In the target image will be saved as: <pre>b' = c - a;</pre>
 
 **Parameters**: Image source, Image destination
 
@@ -1096,7 +1181,7 @@ Ext.CLIJ_pull(destination);
 Computes the negative value of all pixels in a given image. It is recommended to convert images to 
 32-bit float before applying this operation.
 
-f(x) = - x
+<pre>f(x) = - x</pre>
 
 For binary images, use binaryNot.
 
@@ -1119,7 +1204,7 @@ Ext.CLIJ_pull(destination);
 Computes a binary image with pixel values 0 and 1 depending on if a pixel value x in image X 
 was above of equal to the pixel value m in mask image M.
 
-f(x) = (1 if (x >=  m)); (0 otherwise)
+<pre>f(x) = (1 if (x >=  m)); (0 otherwise)</pre>
 
 **Parameters**: Image source, Image localThreshold, Image destination
 
@@ -1142,7 +1227,7 @@ Computes a masked image by applying a mask to an image. All pixel values x of im
 to the destination image in case pixel value m at the same position in the mask image is not equal to 
 zero.
 
-f(x,m) = (x if (m != 0); (0 otherwise))
+<pre>f(x,m) = (x if (m != 0); (0 otherwise))</pre>
 
 **Parameters**: Image source, Image mask, Image destination
 
@@ -1165,7 +1250,7 @@ Computes a masked image by applying a 2D mask to an image stack. All pixel value
 to the destination image in case pixel value m at the same spatial position in the mask image is not equal to 
 zero.
 
-f(x,m) = (x if (m != 0); (0 otherwise))
+<pre>f(x,m) = (x if (m != 0); (0 otherwise))</pre>
 
 **Parameters**: Image source, Image mask, Image destination
 
@@ -1262,7 +1347,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
 
-f(x, s) = max(x, s)
+<pre>f(x, s) = max(x, s)</pre>
 
 **Parameters**: Image source, Image destination, Number scalar
 
@@ -1282,7 +1367,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the maximum of a pair of pixel values x, y from two given images X and Y.
 
-f(x, s) = max(x, y)
+<pre>f(x, y) = max(x, y)</pre>
 
 **Parameters**: Image source1, Image source2, Image destination
 
@@ -1321,6 +1406,8 @@ Ext.CLIJ_maximumOfAllPixels(source);
 
 Computes the local maximum of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
+
+This filter is applied slice by slice in 2D.
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
@@ -1475,6 +1562,8 @@ Ext.CLIJ_meanOfAllPixels(source);
 
 Computes the local mean average of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
+
+This filter is applied slice by slice in 2D.
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
@@ -1714,7 +1803,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
 
-f(x, s) = min(x, s)
+<pre>f(x, s) = min(x, s)</pre>
 
 **Parameters**: Image source, Image destination, Number scalar
 
@@ -1734,7 +1823,7 @@ Ext.CLIJ_pull(destination);
 
 Computes the minimum of a pair of pixel values x, y from two given images X and Y.
 
-f(x, s) = min(x, y)
+<pre>f(x, y) = min(x, y)</pre>
 
 **Parameters**: Image source1, Image source2, Image destination
 
@@ -1774,6 +1863,8 @@ Ext.CLIJ_minimumOfAllPixels(source);
 Computes the local minimum of a pixels ellipsoidal 2D neighborhood in an image stack 
 slice by slice. The ellipses size is specified by its half-width and half-height (radius).
 
+This filter is applied slice by slice in 2D.
+
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
 **Available for**: 3D
@@ -1810,7 +1901,7 @@ Ext.CLIJ_pull(destination_sum);
 
 Multiplies all pixels value x in a given image X with a constant scalar s.
 
-f(x, s) = x * s
+<pre>f(x, s) = x * s</pre>
 
 **Parameters**: Image source, Image destination, Number scalar
 
@@ -1830,7 +1921,7 @@ Ext.CLIJ_pull(destination);
 
 Multiplies all pairs of pixel values x and y from two image X and Y.
 
-f(x, y) = x * y
+<pre>f(x, y) = x * y</pre>
 
 **Parameters**: Image factor1, Image factor2, Image destination
 
@@ -1852,7 +1943,7 @@ Ext.CLIJ_pull(destination);
 Multiplies all pairs of pixel values x and y from an image stack X and a 2D image Y. x and y are at 
 the same spatial position within a plane.
 
-f(x, y) = x * y
+<pre>f(x, y) = x * y</pre>
 
 **Parameters**: Image sourceStack, Image sourcePlane, Image destination
 
@@ -1873,7 +1964,7 @@ Ext.CLIJ_pull(destination);
 
 Computes all pixels value x to the power of a given exponent a.
 
-f(x, a) = x * a
+<pre>f(x, a) = x ^ a</pre>
 
 **Parameters**: Image source, Image destination, Number exponent
 
@@ -2149,11 +2240,11 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_scale"></a>
 ## CLIJ_scale
 
-Scales an image with a given factor.
+DEPRECATED: CLIJ scale() is deprecated. Use scale2D or scale3D instead!
 
 **Parameters**: Image source, Image destination, Number scaling_factor, Boolean scale_to_center
 
-**Available for**: 2D, 3D
+**Available for**: 3D
 
 **Macro example**: 
 ```
@@ -2164,12 +2255,48 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale.java)
 
+<a name="CLIJ_scale2D"></a>
+## CLIJ_scale2D
+
+Scales an image with a given factor.
+
+**Parameters**: Image source, Image destination, Number scaling_factor, Boolean scale_to_center
+
+**Available for**: 2D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_scale2D(source, destination, scaling_factor, scale_to_center);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale2D.java)
+
+<a name="CLIJ_scale3D"></a>
+## CLIJ_scale3D
+
+Scales an image with a given factor.
+
+**Parameters**: Image source, Image destination, Number scaling_factor, Boolean scale_to_center
+
+**Available for**: 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_push(source);
+Ext.CLIJ_scale3D(source, destination, scaling_factor, scale_to_center);
+Ext.CLIJ_pull(destination);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale3D.java)
+
 <a name="CLIJ_set"></a>
 ## CLIJ_set
 
 Sets all pixel values x of a given image X to a constant value v.
 
-f(x) = v
+<pre>f(x) = v</pre>
 
 **Parameters**: Image source, Number value
 
@@ -2188,7 +2315,7 @@ Ext.CLIJ_set(source, value);
 
 Subtracts one image X from another image Y pixel wise.
 
-f(x, y) = x - y
+<pre>f(x, y) = x - y</pre>
 
 **Parameters**: Image subtrahend, Image minuend, Image destination
 
@@ -2301,4 +2428,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-116 plugins documented.
+120 plugins documented.

@@ -16,7 +16,7 @@ import java.util.Collections;
  * Author: @haesleinhuepf
  * 01 2019
  */
-public class MarkdownJythonOpDocumentationGenerator {
+public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentationGenerator  {
     final static String rootFolder = "C:/structure/code/clij-core/";
 
     public static void main(String ... args) throws IOException {
@@ -184,48 +184,5 @@ public class MarkdownJythonOpDocumentationGenerator {
 
         return code.toString();
     }
-
-    private static boolean isOutputParameter(String parameter) {
-        return (parameter.contains("ClearCLImage") || parameter.contains("ClearCLBuffer")) && (parameter.contains("destination") || parameter.contains("dst") || parameter.contains("output"));
-    }
-
-    private static boolean isInputParameter(String parameter) {
-        return (parameter.contains("ClearCLImage") || parameter.contains("ClearCLBuffer")) && (!parameter.contains("destination") && !parameter.contains("dst") && !parameter.contains("output"));
-    }
-
-    private static String findDocumentation(CLIJMacroPluginService service, String methodName, StringBuilder parametersWithType) {
-
-        if (isSpecialCase(methodName)) {
-            return "";
-        }
-
-        String[] potentialMethodNames = {
-                "CLIJ_" + methodName,
-                "CLIJ_" + methodName + "2D",
-                "CLIJ_" + methodName + "3D"
-        };
-
-        for (String name : potentialMethodNames) {
-
-            CLIJMacroPlugin plugin = service.getCLIJMacroPlugin(name);
-            if (plugin != null) {
-                if (plugin instanceof OffersDocumentation) {
-                    return ((OffersDocumentation) plugin).getDescription();
-                } else {
-                    return plugin.getParameterHelpText();
-                }
-            }
-        }
-        return "";
-    }
-
-    private static boolean isSpecialCase(String methodName) {
-        return (
-                methodName.compareTo("affineTransform") == 0 ||
-                methodName.compareTo("crop") == 0 ||
-                methodName.compareTo("copySlice") == 0
-        );
-    }
-
 
 }
