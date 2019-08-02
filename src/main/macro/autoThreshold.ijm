@@ -30,4 +30,4 @@ run("Close All");
 Ext.CLIJ_automaticThreshold(input, mask, "Otsu");
 
 // show result
-Ext.CLIJ_pull(mask);
+Ext.CLIJ_pullBinary(mask);

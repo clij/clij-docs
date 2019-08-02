@@ -34,4 +34,4 @@ run("Close All");
 Ext.CLIJ_threshold(input, mask, threshold);
 
 // show result
-Ext.CLIJ_pull(mask);
+Ext.CLIJ_pullBinary(mask);

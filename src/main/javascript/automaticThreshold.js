@@ -28,8 +28,7 @@ output = clij.create(input);
 clij.op().automaticThreshold(input, output, "Otsu");
 
 // show result
-clij.pull(output).show();
-IJ.setMinAndMax(0, 1);
+clij.pullBinary(output).show();
 
 
 
