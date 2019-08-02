@@ -27,17 +27,19 @@ Ext.CLIJ_push("original");
 // cleanup imagej
 run("Close All");
 
-// copy the image 10 times wihile reusing target memory
-time = getTime();
-for (i = 0; i < 10; i++) {
-	Ext.CLIJ_copy("original", "copy");
+for (j = 0; j < 10; j++) {
+	// copy the image 10 times wihile reusing target memory
+	time = getTime();
+	for (i = 0; i < 10; i++) {
+		Ext.CLIJ_copy("original", "copy");
+	}
+	IJ.log("Copying with memory reusing took " + (getTime() - time));
+	
+	// copy the image 10 times while releasing and reallocating target memory.
+	time = getTime();
+	for (i = 0; i < 10; i++) {
+		Ext.CLIJ_copy("original", "copy");
+		Ext.CLIJ_release("copy");
+	}
+	IJ.log("Copying with memory reallocation took " + (getTime() - time));
 }
-IJ.log("Copying with memory reusing took " + (getTime() - time));
-
-// copy the image 10 times while releasing and reallocating target memory.
-time = getTime();
-for (i = 0; i < 10; i++) {
-	Ext.CLIJ_copy("original", "copy");
-	Ext.CLIJ_release("copy");
-}
-IJ.log("Copying with memory reallocation took " + (getTime() - time));
