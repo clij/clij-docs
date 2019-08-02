@@ -83,6 +83,7 @@ Laurent Thomas (Acquifer),
 Nico Stuurman (UCSF),
 Peter Haub,
 Pradeep Rajasekhar (Monash University),
+Tanner Fadero (UNC-Chapel Hill),
 Tobias Pietzsch (MPI-CBG),
 Wilsom Adams (VU Biophotonics)
 
