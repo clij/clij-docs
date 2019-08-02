@@ -603,7 +603,7 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_countNonZeroPixelsSliceBySliceSphere"></a>
 ## CLIJ_countNonZeroPixelsSliceBySliceSphere
 
-Counts non-zero pixels in a sphere around every pixel slice by slice in a stack.Put the number in the result image.
+Counts non-zero pixels in a sphere around every pixel slice by slice in a stack and puts the resulting number in the destination image stack.
 
 **Parameters**: Image source, Image destination, Number radiusX, Number radiusY
 
@@ -673,7 +673,7 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_crop2D"></a>
 ## CLIJ_crop2D
 
-Crops a given rectangle out of a given image stack.
+Crops a given rectangle out of a given image.
 
 Note: If the destination image pre-exists already, it will be overwritten and keep it's dimensions.
 
@@ -1995,6 +1995,22 @@ Ext.CLIJ_pull(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Pull.java)
 
+<a name="CLIJ_pullBinary"></a>
+## CLIJ_pullBinary
+
+Copies a binary image specified by its name from GPU memory back to ImageJ and shows it. This binary image will have 0 and 255 pixel intensities as needed for ImageJ to interpret it as binary.
+
+**Parameters**: String image
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_pullBinary(image);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PullBinary.java)
+
 <a name="CLIJ_push"></a>
 ## CLIJ_push
 
@@ -2428,4 +2444,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-120 plugins documented.
+121 plugins documented.
