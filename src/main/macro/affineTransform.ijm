@@ -32,7 +32,7 @@ transform = transform + " scaleX=2"; // relative zoom factor
 transform = transform + " translateY=25"; // pixels
 transform = transform + " -center";
 
-Ext.CLIJ_affineTransform("original", "target", transform);
+Ext.CLIJ_affineTransform2D("original", "target", transform);
 
 // show result
 Ext.CLIJ_pull("target");
