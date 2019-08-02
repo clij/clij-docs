@@ -14,7 +14,6 @@ run("T1 Head (2.4M, 16-bits)");
 input = getTitle();
 background = "background";
 background_subtracted = "background_subtracted";
-maximum_projected = "maximum_projected";
 
 // Init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -32,11 +31,10 @@ Ext.CLIJ_blur3D(input, background, 10, 10, 1);
 // subtraction from original
 Ext.CLIJ_addImagesWeighted(input, background, background_subtracted, 1, -1);
 
-// maximum projection
-Ext.CLIJ_maximumZProjection(background_subtracted, maximum_projected);
-
 // Get results back from GPU
-Ext.CLIJ_pull(maximum_projected);
+Ext.CLIJ_pull(background_subtracted);
+Ext.CLIJ_pull(input);
+
 
 // Cleanup by the end
 Ext.CLIJ_clear();
