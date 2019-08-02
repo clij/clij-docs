@@ -43,7 +43,7 @@ public class BinaryProcessingDemo {
         clij.op().dilateBox(temp, thresholded);
 
         // show result
-        ImagePlus result = clij.pull(thresholded);
+        ImagePlus result = clij.pullBinary(thresholded);
         result.show();
 
         // cleanup

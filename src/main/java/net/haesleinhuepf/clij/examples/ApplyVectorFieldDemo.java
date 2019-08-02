@@ -8,6 +8,7 @@ import ij.gui.OvalRoi;
 import net.haesleinhuepf.clij.CLIJ;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.coremem.enums.NativeTypeEnum;
+import net.imglib2.realtransform.AffineTransform2D;
 import net.imglib2.realtransform.AffineTransform3D;
 
 /**
@@ -53,13 +54,13 @@ public class ApplyVectorFieldDemo {
 
         for (int i = 0; i < 36; i++) {
             // define affine transform
-            AffineTransform3D at = new AffineTransform3D();
+            AffineTransform2D at = new AffineTransform2D();
             at.translate(-imp.getWidth() / 2, -imp.getHeight() / 2, 0);
-            at.rotate(2, (double)i * 10 / 180 * Math.PI);
+            at.rotate((double)i * 10 / 180 * Math.PI);
             at.translate(imp.getWidth() / 2, imp.getHeight() / 2, 0);
 
             // rotate vector field
-            clij.op().affineTransform(shiftXgpu, rotatedShiftX, at);
+            clij.op().affineTransform2D(shiftXgpu, rotatedShiftX, at);
 
             // apply vector field / transform
             clij.op().applyVectorfield(blobsGPU, rotatedShiftX, shiftYgpu, result);

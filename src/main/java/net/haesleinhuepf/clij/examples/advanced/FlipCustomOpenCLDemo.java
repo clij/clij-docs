@@ -23,7 +23,7 @@ import java.util.Map;
 public class FlipCustomOpenCLDemo {
     public static void main(String... args) throws IOException {
         new ImageJ();
-        ImagePlus lInputImagePlus = IJ.openImage("src/main/resources/flybrain.tif");
+        ImagePlus lInputImagePlus = IJ.openImage("https://github.com/clij/clij-docs/raw/master/src/main/resources/flybrain.tif");
 
         RandomAccessibleInterval<UnsignedShortType> input = ImageJFunctions.wrap(lInputImagePlus);
 
@@ -31,7 +31,7 @@ public class FlipCustomOpenCLDemo {
 
         ImageJFunctions.show(input);
 
-        CLIJ clij = CLIJ.getInstance("hd");
+        CLIJ clij = CLIJ.getInstance();
 
         // ---------------------------------------------------------------
         // Example 1: Flip image in X
@@ -46,10 +46,11 @@ public class FlipCustomOpenCLDemo {
             lParameterMap.put("flipy", 0);
             lParameterMap.put("flipz", 0);
 
-            clij.execute("src/main/java/net/haesleinhuepf/clij/kernels/flip.cl", "flip_3d", lParameterMap);
+            clij.execute("src/main/java/net/haesleinhuepf/clij/examples/advanced/flip.cl", "flip_3d", lParameterMap);
 
             ImagePlus result = clij.pull(dstImage);
             result.show();
+            IJ.run(result,"Enhance Contrast", "saturated=0.35");
         }
 
     }

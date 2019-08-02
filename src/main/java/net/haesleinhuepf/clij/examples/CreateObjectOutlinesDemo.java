@@ -46,7 +46,7 @@ public class CreateObjectOutlinesDemo {
 
 
         // show result
-        ImagePlus result = clij.pull(outline);
+        ImagePlus result = clij.pullBinary(outline);
         result.show();
 
         // cleanup

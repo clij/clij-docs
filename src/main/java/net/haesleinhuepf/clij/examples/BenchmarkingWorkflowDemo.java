@@ -45,7 +45,7 @@ public class BenchmarkingWorkflowDemo {
         ij.ui().showUI();
         clij = CLIJ.getInstance();
 
-        input = IJ.openImage("https://imagej.net/images/flybrain.zip");
+        input = IJ.openImage("https://github.com/clij/clij-docs/raw/master/src/main/resources/flybrain.tif");
         input.show();
         IJ.run(input, "8-bit", "");
         img = ImageJFunctions.wrapReal(input);

@@ -37,7 +37,7 @@ public class AffineTransformDemo {
         transform.translate(inputOnGPU.getWidth() / 2, inputOnGPU.getHeight() / 2, inputOnGPU.getDepth() / 2);
 
         // apply transform
-        clij.op().affineTransform(inputOnGPU, resultOnGPU, transform);
+        clij.op().affineTransform3D(inputOnGPU, resultOnGPU, transform);
 
         // retrieve result or show it
         ImagePlus result = clij.pull(resultOnGPU);

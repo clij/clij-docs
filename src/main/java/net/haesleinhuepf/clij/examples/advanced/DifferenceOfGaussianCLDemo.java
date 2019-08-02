@@ -23,7 +23,7 @@ import java.util.Map;
 public class DifferenceOfGaussianCLDemo {
     public static void main(String... args) throws IOException {
         new ImageJ();
-        ImagePlus inputImp = IJ.openImage("src/main/resources/flybrain.tif");
+        ImagePlus inputImp = IJ.openImage("https://github.com/clij/clij-docs/raw/master/src/main/resources/flybrain.tif");
 
         inputImp = new Duplicator().run(inputImp, 25, 25);
 
@@ -33,7 +33,7 @@ public class DifferenceOfGaussianCLDemo {
 
         ImageJFunctions.show(input);
 
-        CLIJ clij = CLIJ.getInstance("hd"); //CLIJ.getInstance();
+        CLIJ clij = CLIJ.getInstance();
 
         // ---------------------------------------------------------------
         // Example 1: Flip image in X
@@ -52,6 +52,8 @@ public class DifferenceOfGaussianCLDemo {
 
             ImagePlus result = clij.pull(dstImage);
             result.show();
+            IJ.run(result,"Enhance Contrast", "saturated=0.35");
+
         }
 
     }

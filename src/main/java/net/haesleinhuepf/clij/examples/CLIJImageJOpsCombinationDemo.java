@@ -8,6 +8,7 @@ import net.haesleinhuepf.clij.coremem.enums.NativeTypeEnum;
 import net.imagej.ImageJ;
 import net.imglib2.RandomAccessibleInterval;
 import net.imglib2.algorithm.labeling.ConnectedComponents;
+import net.imglib2.img.display.imagej.ImageJFunctions;
 import net.imglib2.roi.labeling.ImgLabeling;
 import net.imglib2.roi.labeling.LabelRegions;
 import net.imglib2.type.logic.BitType;
@@ -54,7 +55,7 @@ public class CLIJImageJOpsCombinationDemo {
         blurred.close();
         thresholded.close();
 
-        // show result
+        // show result from GPU
         result.show();
 
         //continue with Ops
@@ -63,6 +64,9 @@ public class CLIJImageJOpsCombinationDemo {
         LabelRegions<IntegerType> regions = new LabelRegions(cca);
 
         System.out.print("Number of objects found: " + regions.getExistingLabels().size());
+
+        // show results of labelling on CPU
+        ImageJFunctions.show(cca.getIndexImg());
 
     }
 }

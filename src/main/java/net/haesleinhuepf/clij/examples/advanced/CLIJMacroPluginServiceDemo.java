@@ -9,7 +9,7 @@ import net.imagej.ImageJ;
 import java.util.Arrays;
 
 /**
- * CLIJMacroPluginServiceDemo
+ * The CLIJMacroPluginServiceDemo shows how to run CLJI Macro modules from Java.
  * <p>
  * Author: @haesleinhuepf
  * December 2018
@@ -18,30 +18,25 @@ public class CLIJMacroPluginServiceDemo {
     public static void main(String... args) {
         ImageJ ij = new ImageJ();
         ij.ui().showUI();
-        //new ij.ImageJ();
 
+        // get the plugin service from ImageJ
         CLIJMacroPluginService clijMacroPluginService = ij.get(CLIJMacroPluginService.class);
 
+        // print out registered plugins / methods
         for (String name : clijMacroPluginService.getCLIJMethodNames()) {
             System.out.println(name);
         }
 
+        // print some more details; namely parameters
         for (ExtensionDescriptor ed : CLIJHandler.getInstance().getExtensionFunctions()) {
             System.out.println(ed.name + " " + Arrays.toString(ed.argTypes));
         }
 
-        //new ImageJ();
-        //CLIJMacroExtensions ext = new CLIJMacroExtensions();
-        //CLIJHandler.getInstance().setCLIJ(CLIJ.getInstance());
-        //ext.clij = CLIJ.getInstance("gfx902");
-        //ext.getExtensionFunctions();
-
-        IJ.open("c:/structure/code/haesleinhuepf_clearclij/src/main/resources/flybrain.tif");
+        // load image and push it to GPU
+        IJ.open("https://github.com/clij/clij-docs/raw/master/src/main/resources/flybrain.tif");
         CLIJHandler.getInstance().handleExtension("CLIJ_push", new Object[] {"flybrain.tif"});
 
-        IJ.getImage().setTitle("out");
-        CLIJHandler.getInstance().handleExtension("CLIJ_push", new Object[] {"out"});
-
+        // execute a processing CLIJ macro operation on it
         Object[] arguments = new Object[]{
                 "flybrain.tif",
                 "out",
@@ -49,12 +44,12 @@ public class CLIJMacroPluginServiceDemo {
                 new Double(5),
                 new Double(5)
         };
-        CLIJHandler.getInstance().handleExtension("CLIJ_mean3d", arguments);
+        CLIJHandler.getInstance().handleExtension("CLIJ_mean3DBox", arguments);
 
-        //ext.handleExtension("CLIJ_erode", arguments);
-
+        // retrieve result
         CLIJHandler.getInstance().handleExtension("CLIJ_pull", new Object[] {"out"});
 
+        // clean up
         CLIJHandler.getInstance().handleExtension("CLIJ_clear", new Object[]{});
 
     }

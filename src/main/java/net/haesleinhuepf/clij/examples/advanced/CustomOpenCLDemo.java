@@ -25,7 +25,7 @@ public class CustomOpenCLDemo {
     public static void main(String... args) throws IOException {
         // Initialize ImageJ and example images
         new ImageJ();
-        ImagePlus inputImp = IJ.openImage("src/main/resources/flybrain.tif");
+        ImagePlus inputImp = IJ.openImage("https://github.com/clij/clij-docs/raw/master/src/main/resources/flybrain.tif");
         inputImp.show();
 
         // Startup OpenCL device, convert images to ClearCL format
