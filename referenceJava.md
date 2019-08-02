@@ -887,6 +887,39 @@ System.out.println(resultCenterOfMass);
 input.close();
 ```
 
+## convertToImageJBinary( ClearCLBuffer src,  ClearCLBuffer dst )
+
+Convert a binary image to an image with values 0 and 255 as it can be interpreted by ImageJ as binary image.
+
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst 
+
+**Java example**: 
+```
+// init CLIJ and GPU
+import net.haesleinhuepf.clij.CLIJ;
+import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
+CLIJ clij = CLIJ.getInstance();
+
+// get input parameters
+ClearCLBuffer src = clij.push(srcImagePlus);
+ClearCLBuffer dst = clij.create(src);
+```
+
+```
+// Execute operation on GPU
+clij.op().convertToImageJBinary(src, dst);
+```
+
+```
+//show result
+dstImagePlus = clij.pull(dst);
+dstImagePlus.show());
+
+// cleanup memory on GPU
+src.close();
+dst.close();
+```
+
 ## copy( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Copies an image.
@@ -4028,4 +4061,4 @@ dst.close();
 ```
 
 
-Documented 111 methods.
+Documented 112 methods.

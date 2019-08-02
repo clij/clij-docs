@@ -110,6 +110,7 @@ public class AbstractDocumentationGenerator {
         specialCaseDocumentation.put("multiplySliceBySliceWithScalars", "Multiplies all pixels value x in input image X with a scalar s given as an array with values for every z-slice.");
         specialCaseDocumentation.put("affineTransform2D", "Applies an affine transform to a 2D image.\n");
         specialCaseDocumentation.put("affineTransform3D", "Applies an affine transform to a 3D image.\n");
+        specialCaseDocumentation.put("convertToImageJBinary", "Convert a binary image to an image with values 0 and 255 as it can be interpreted by ImageJ as binary image.");
     }
 
 }

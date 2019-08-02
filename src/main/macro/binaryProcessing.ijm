@@ -43,6 +43,6 @@ Ext.CLIJ_dilateBox(temp, mask);
 
 
 // show result
-Ext.CLIJ_pull(mask);
+Ext.CLIJ_pullBinary(mask);
 
 
