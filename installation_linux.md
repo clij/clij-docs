@@ -1,4 +1,9 @@
-Installation Ubuntu 18.04 LTS
+# Installation on linux
+
+* Ubuntu
+* Fedora
+
+## Installation Ubuntu 18.04 LTS
 
 Fresh OS:
 
@@ -55,4 +60,12 @@ ASSERTION FAILED: Not implemented
   at file /build/beignet-Bevceu/beignet-1.3.2/backend/src/llvm/llvm_scalarize.cpp, function bool gbe::Scalarize::scalarizeInsert(llvm::InsertElementInst*), line 838
 ```
 
+```
+sudo apt-get install build-essential
+sudo apt-get install cmake
+sudo apt-get install llvm
+sudo apt-get install llvm-dev
+sudo apt-get install pkg-config
+
+```
 
