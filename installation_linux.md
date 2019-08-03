@@ -49,4 +49,10 @@ net.haesleinhuepf.clij.clearcl.exceptions.OpenCLException: OpenCL error: -1001 -
 sudo apt-get install beignet clinfo
 ```
 
+Error on command line output:
+```
+ASSERTION FAILED: Not implemented
+  at file /build/beignet-Bevceu/beignet-1.3.2/backend/src/llvm/llvm_scalarize.cpp, function bool gbe::Scalarize::scalarizeInsert(llvm::InsertElementInst*), line 838
+```
+
 
