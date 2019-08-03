@@ -66,6 +66,17 @@ sudo apt-get install cmake
 sudo apt-get install llvm
 sudo apt-get install llvm-dev
 sudo apt-get install pkg-config
+sudo apt-get install libclang-dev
+sudo apt-get install lib32z1-dev
+
+git clone https://github.com/intel/beignet.git
+cd beignet/
+mkdir build
+cd build
+
+cmake ../
+sudo make install
+
 
 ```
 
