@@ -1,0 +1,322 @@
+/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/jbr/bin/java -Dmaven.multiModuleProjectDirectory=/home/haase/code/clij-core -Dmaven.home=/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/plugins/maven/lib/maven3 -Dclassworlds.conf=/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/plugins/maven/lib/maven3/bin/m2.conf -Dmaven.ext.class.path=/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/plugins/maven/lib/maven-event-listener.jar -javaagent:/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/lib/idea_rt.jar=38477:/home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/bin -Dfile.encoding=UTF-8 -classpath /home/haase/programs/ideaIC-2019.2/idea-IC-192.5728.98/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar org.codehaus.classworlds.Launcher -Didea.version2019.2 test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< net.haesleinhuepf:clij-core >---------------------
+[INFO] Building clij-core 1.1.2
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-rules) @ clij-core ---
+[INFO] Skipping Rule Enforcement.
+[INFO]
+[INFO] --- build-helper-maven-plugin:3.0.0:regex-property (sanitize-version) @ clij-core ---
+[INFO]
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ clij-core ---
+[INFO] Executing: /bin/sh -c cd '/home/haase/code/clij-core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /home/haase/code/clij-core
+[INFO] Storing buildNumber: b3b9918d5967b9d52d1e2b14304c41d8e806781e at timestamp: 1564861793373
+[INFO] Storing buildScmBranch: master
+[INFO]
+[INFO] --- scijava-maven-plugin:1.1.0:set-rootdir (set-rootdir) @ clij-core ---
+[INFO] Setting rootdir: /home/haase/code/clij-core
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ clij-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 41 resources
+[INFO] Copying 0 resource
+[INFO] skip non existing resourceDirectory /home/haase/code/clij-core/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ clij-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ clij-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ clij-core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ clij-core ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running net.haesleinhuepf.clij.test.BlurUnsignedByteImageTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.66 s - in net.haesleinhuepf.clij.test.BlurUnsignedByteImageTest
+[INFO] Running net.haesleinhuepf.clij.test.BufferDataTypeConverterTests
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.648 s - in net.haesleinhuepf.clij.test.BufferDataTypeConverterTests
+[INFO] Running net.haesleinhuepf.clij.test.OutOfMemoryTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in net.haesleinhuepf.clij.test.OutOfMemoryTest
+[INFO] Running net.haesleinhuepf.clij.test.KernelsTest
+Todo: implement test for DoG slice by slice
+Todo: implement test for DoG
+Todo: implement test for DoG
+Todo: implement test for Tenengrad fusion
+Todo: implement test for Tenengrad weights
+[WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 1.238 s - in net.haesleinhuepf.clij.test.KernelsTest
+[INFO] Running net.haesleinhuepf.clij.test.MaximumFilterTest
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 1373
+Black: 260771
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 797
+Black: 261347
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 1373
+Black: 260771
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 797
+Black: 261347
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 1373
+Black: 260771
+White: 5
+Black: 262139
+White: 113
+Black: 262031
+White: 377
+Black: 261767
+White: 797
+Black: 261347
+White: 797
+Black: 261347
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 75.087 s - in net.haesleinhuepf.clij.test.MaximumFilterTest
+[INFO] Running net.haesleinhuepf.clij.test.AllocateManyImagesTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in net.haesleinhuepf.clij.test.AllocateManyImagesTest
+[INFO] Running net.haesleinhuepf.clij.test.MinimumFilterTest
+White: 262139
+Black: 5
+White: 262031
+Black: 113
+White: 261767
+Black: 377
+White: 261347
+Black: 797
+White: 260771
+Black: 1373
+White: 262139
+Black: 5
+White: 262031
+Black: 113
+White: 261767
+Black: 377
+White: 261347
+Black: 797
+White: 261347
+Black: 797
+White: 262139
+Black: 5
+White: 262031
+Black: 113
+White: 261767
+Black: 377
+White: 261347
+Black: 797
+White: 260771
+Black: 1373
+White: 262139
+Black: 5
+White: 262031
+Black: 113
+White: 261767
+Black: 377
+White: 261347
+Black: 797
+White: 261347
+Black: 797
+White: 157357
+Black: 104787
+White: 157357
+Black: 104787
+White: 157357
+Black: 104787
+White: 157357
+Black: 104787
+White: 157357
+Black: 104787
+White: 131072
+Black: 131072
+White: 131072
+Black: 131072
+White: 131072
+Black: 131072
+White: 131072
+Black: 131072
+White: 131072
+Black: 131072
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.064 s - in net.haesleinhuepf.clij.test.MinimumFilterTest
+[INFO] Running net.haesleinhuepf.clij.test.CLDeviceSwitchTest
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : atiocl64
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : amdocl64
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : atiocl32
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : atiocl
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : amdocl32
+Aug 03, 2019 9:51:55 PM org.bridj.BridJ log
+INFO: Library not found : amdocl
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.606 s - in net.haesleinhuepf.clij.test.CLDeviceSwitchTest
+[INFO] Running net.haesleinhuepf.clij.test.AffineTransformTest
+0.0 0.0 0.0 0.0 1.0 4.0
+0.0 0.0 0.0 0.0 6.0 9.0
+
+0.0 0.0 0.0 0.0 1.0 4.0
+0.0 0.0 0.0 0.0 6.0 9.0
+
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.278 s - in net.haesleinhuepf.clij.test.AffineTransformTest
+[INFO] Running net.haesleinhuepf.clij.test.ImageSizeCLMacroTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.515 s - in net.haesleinhuepf.clij.test.ImageSizeCLMacroTest
+[INFO] Running net.haesleinhuepf.clij.test.DoubleFlipTest
+Testing Intel(R) HD Graphics Kabylake Desktop GT1.5
+sum 1.23621015E8
+Should be different:
+lCursor1 0.0
+lCursor2 16.0
+Value different
+Should be same:
+sum 1.23621015E8
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.197 s - in net.haesleinhuepf.clij.test.DoubleFlipTest
+[INFO] Running net.haesleinhuepf.clij.test.ImageConverterTest
+sum 4.0
+Testing device Intel(R) HD Graphics Kabylake Desktop GT1.5
+sum 40004.0
+sum 4.0
+sum 4.0
+sum 40004.0
+sum -25532.0
+sum -25400.0
+Forth took 23 msec
+Back took 15 msec
+Forth took 7 msec
+Back took 6 msec
+sum 40000.0
+sum -25400.0
+sum 40004.0
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.075 s - in net.haesleinhuepf.clij.test.ImageConverterTest
+[INFO] Running net.haesleinhuepf.clij.test.InitialisationTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in net.haesleinhuepf.clij.test.InitialisationTest
+[INFO] Running net.haesleinhuepf.clij.test.BlurImageVersusBuffersTest
+356.180 ms for blurSep buffer
+373.620 ms for blurSep image
+47.7758 ms for blurSep buffer
+28.5495 ms for blurSep image
+30.4682 ms for blurSep buffer
+28.7409 ms for blurSep image
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.578 s - in net.haesleinhuepf.clij.test.BlurImageVersusBuffersTest
+[INFO] Running net.haesleinhuepf.clij.test.MultipleGPUsTest
+Intel(R) HD Graphics Kabylake Desktop GT1.5
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s - in net.haesleinhuepf.clij.test.MultipleGPUsTest
+[INFO] Running net.haesleinhuepf.clij.converters.implementations.ImagePlusToClearCLBufferConverterTest
+41.6353 ms for conversion
+128.753 ms for legacy conversion
+27.5271 ms for conversion
+119.514 ms for legacy conversion
+21.6208 ms for conversion
+119.827 ms for legacy conversion
+29.0844 ms for conversion
+134.159 ms for legacy conversion
+22.3604 ms for conversion
+126.384 ms for legacy conversion
+30.4934 ms for conversion
+125.296 ms for legacy conversion
+28.9785 ms for conversion
+120.811 ms for legacy conversion
+29.2478 ms for conversion
+138.057 ms for legacy conversion
+25.6300 ms for conversion
+133.648 ms for legacy conversion
+28.6283 ms for conversion
+211.407 ms for legacy conversion
+48.9731 ms for conversion
+110.516 ms for legacy conversion
+49.0417 ms for conversion
+113.273 ms for legacy conversion
+52.0630 ms for conversion
+116.138 ms for legacy conversion
+48.3772 ms for conversion
+98.6138 ms for legacy conversion
+48.2428 ms for conversion
+125.157 ms for legacy conversion
+47.0091 ms for conversion
+127.486 ms for legacy conversion
+51.5434 ms for conversion
+124.263 ms for legacy conversion
+46.6543 ms for conversion
+121.135 ms for legacy conversion
+47.1815 ms for conversion
+127.006 ms for legacy conversion
+46.5426 ms for conversion
+139.556 ms for legacy conversion
+0.166867 ms for conversion
+0.302375 ms for legacy conversion
+11.7448 ms for conversion
+179.139 ms for legacy conversion
+10.0500 ms for conversion
+170.831 ms for legacy conversion
+10.8604 ms for conversion
+163.713 ms for legacy conversion
+11.4053 ms for conversion
+156.199 ms for legacy conversion
+11.3159 ms for conversion
+195.821 ms for legacy conversion
+18.4217 ms for conversion
+164.763 ms for legacy conversion
+11.1619 ms for conversion
+166.597 ms for legacy conversion
+11.5931 ms for conversion
+156.725 ms for legacy conversion
+13.5807 ms for conversion
+156.505 ms for legacy conversion
+12.1145 ms for conversion
+178.919 ms for legacy conversion
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.056 s - in net.haesleinhuepf.clij.converters.implementations.ImagePlusToClearCLBufferConverterTest
+[INFO] Running net.haesleinhuepf.clij.converters.implementations.ClearCLBufferToImagePlusConverterTest
+[WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0 s - in net.haesleinhuepf.clij.converters.implementations.ClearCLBufferToImagePlusConverterTest
+[INFO]
+[INFO] Results:
+[INFO]
+[WARNING] Tests run: 49, Failures: 0, Errors: 0, Skipped: 8
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:26 min
+[INFO] Finished at: 2019-08-03T21:52:17+02:00
+[INFO] ------------------------------------------------------------------------
