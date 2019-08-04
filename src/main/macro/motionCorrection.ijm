@@ -60,7 +60,7 @@ for (z = 0; z  < slices; z++) {
 		deltaY = y - formerY;
 
 		// apply translation transformation
-		Ext.CLIJ_affineTransform(slice, shifted, "translatex=" + deltaX + " translatey=" + deltaY);
+		Ext.CLIJ_affineTransform2D(slice, shifted, "translatex=" + deltaX + " translatey=" + deltaY);
 
 		// copy result back
 		Ext.CLIJ_copySlice(shifted, inputStack, z);
