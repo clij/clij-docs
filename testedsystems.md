@@ -3,6 +3,11 @@
   * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij-core_ulice.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190726_clij_ulice.txt)
 * Intel(R) HD Graphics 620 (OpenCL 2.0, Ubuntu 18.04, 64 bit / beignet 1.3.2, August 2019)
   * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190803_clij-core_ux38.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190803_clij_ux38.txt)
+* Intel(R) HD Graphics 630 (OpenCL 2.1, Win 10 64 bit, August 2019)
+  * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij-core_einstein.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij_einstein.txt)
+* NVidia GeForce 1070 Max-Q (OpenCL 1.2, Win 10 64 bit, August 2019)
+  * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij-core_einstein2.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij_einstein2.txt)
+
 
 * AMD Radeon RX Vega 6 (OpenCL 2.0, Win 10 64 bit, Nov 2018)
 * Nvidia GeForce 940MX (OpenCL 2.0, Win 10 64 bit, Apr 2018)
