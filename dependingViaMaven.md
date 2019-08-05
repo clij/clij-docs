@@ -7,7 +7,7 @@ If you want to access CLIJ from your Java code, it is recommended to depend on C
 <dependency>
   <groupId>net.haesleinhuepf</groupId>
   <artifactId>clij_</artifactId>
-  <version>1.0.7</version>
+  <version>1.1.3</version>
 </dependency>
 ```
 
