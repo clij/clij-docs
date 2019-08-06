@@ -18,8 +18,8 @@ Current GPU and OpenCL drivers must be installed.
 <a name="optimal_performance">
 ## How can I achieve optimal performance using CLIJ?
 In order to exploit GPU-accelerated image processing, one should
-* Run as many operations in a block as possible without back and forth pulling/pushing image data to/from GPU memory.
-* Process images larger than 10 MB (rule of thumb, depends on actual GPU hardware)
+* Run as many operations as possible in a block without back and forth pulling/pushing image data to/from GPU memory.
+* Process images larger than 10 MB (rule of thumb, depends on actual CPU/GPU hardware). Background: Image processing on the CPU can be pretty fast if the accessed memory is smaller than the cache of the CPU. When processing exceeds this cache size, using GPU might become beneficial.
 * Process many images of the same size and type subsequently, because in that way compiled GPU-code can be reused.
 * Reuse memory. Releasing and allocating memory takes time. Try to reuse memory if possible.
 * Use a dedicated graphics card. When deciding for the right GPU, check the memory bandwidth. Image processing is usually memory-bound. The faster the memory access, the faster images can be processed. The computing power / clock rate of the GPU and number of compute cores is of secondary interest.
