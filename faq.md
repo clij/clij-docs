@@ -15,6 +15,18 @@ However, as dedicated graphics cards come with their own GDDR-memory, additional
 CLIJ was succesfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. 
 Current GPU and OpenCL drivers must be installed.
 
+<a name="optimal_performance">
+## How can I achieve optimal performance using CLIJ?
+In order to exploit GPU-accelerated image processing, one should
+* Run as many operations in a block as possible without back and forth pulling/pushing image data to/from GPU memory.
+* Process images larger than 10 MB (rule of thumb, depends on actual GPU hardware)
+* Process many images of the same size and type subsequently, because in that way compiled GPU-code can be reused.
+* Reuse memory. Releasing and allocating memory takes time. Try to reuse memory if possible.
+* Use a dedicated graphics card. When deciding for the right GPU, check the memory bandwidth. Image processing is usually memory-bound. The faster the memory access, the faster images can be processed. The computing power / clock rate of the GPU and number of compute cores is of secondary interest.
+* Some CLIJ marked with "Box" in their name filters are implemented separable (Gaussian blur, minimum, maximum, mean filters). Separable filters are faster than others (e.g. marked with "Sphere").
+* You can speedup ImageJ/Fiji in general by running it in headless mode because the user interface will not be refreshed while processing: https://imagej.net/Headless
+* Further speedup can be achieved by combining filters on OpenCL kernel level. This means implementing OpenCL kernels containing whole workflows. This custom OpenCL code can be distributed as custom CLIJ plugin. A plugin template can be found here: https://github.com/clij/clij-plugin-template/
+
 <a name="compatibility_imagej"></a>
 ## Is CLIJ compatible with ImageJ without Fiji?
 With some limitations, yes. You find details and installation instructions here:
