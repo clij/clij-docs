@@ -113,12 +113,12 @@ function setWindowPosition(x, y) {
 function makeOverlay() {
 	for (y = 1; y <= 9; y += 2) {
 		makeRectangle(0, y, 10, 1);
-		Roi.setStrokeColor("grey");
+		Roi.setStrokeColor("gray");
 		run("Add Selection...");
 	}
 	for (x = 1; x <= 9; x += 2) {
 		makeRectangle(x, 0, 1, 10);
-		Roi.setStrokeColor("grey");
+		Roi.setStrokeColor("gray");
 		run("Add Selection...");	
 	}
 	run("Select None");
