@@ -10,7 +10,7 @@
 
 run("Close All");
 
-radius = 3;
+radius = 1;
 
 
 // -----------------------------------------------------------------
@@ -26,6 +26,7 @@ run("Select None");
 zoom(10);
 setWindowPosition(0, 0);
 setMinAndMax(0, 1);
+makeOverlay();
 
 // init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -40,6 +41,7 @@ Ext.CLIJ_pull(outputGPU);
 zoom(10);
 setWindowPosition(1, 0);
 setMinAndMax(0, 1);
+makeOverlay();
 
 // do operation on CPU
 selectWindow(input);
@@ -50,6 +52,7 @@ run("Mean...", "radius=" + radius);
 zoom(10);
 setWindowPosition(2, 0);
 setMinAndMax(0, 1);
+makeOverlay();
 
 // -----------------------------------------------------------------
 
@@ -65,6 +68,7 @@ run("Select None");
 zoom(10);
 setWindowPosition(0, 1);
 setMinAndMax(0, 1);
+makeOverlay();
 
 // init GPU
 run("CLIJ Macro Extensions", "cl_device=");
@@ -80,6 +84,7 @@ setSlice(4);
 zoom(10);
 setWindowPosition(1, 1);
 setMinAndMax(0, 1);
+makeOverlay();
 
 // do operation on CPU
 selectWindow(input);
@@ -91,7 +96,7 @@ zoom(10);
 setSlice(4);
 setWindowPosition(2, 1);
 setMinAndMax(0, 1);
-
+makeOverlay();
 
 // -----------------------------------------------------------------
 
@@ -103,4 +108,18 @@ function zoom(count) {
 
 function setWindowPosition(x, y) {
 	setLocation(x * 330, y * 370);
+}
+
+function makeOverlay() {
+	for (y = 1; y <= 9; y += 2) {
+		makeRectangle(0, y, 10, 1);
+		Roi.setStrokeColor("grey");
+		run("Add Selection...");
+	}
+	for (x = 1; x <= 9; x += 2) {
+		makeRectangle(x, 0, 1, 10);
+		Roi.setStrokeColor("grey");
+		run("Add Selection...");	
+	}
+	run("Select None");
 }
