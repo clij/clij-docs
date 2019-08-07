@@ -15,7 +15,7 @@ However, as dedicated graphics cards come with their own GDDR-memory, additional
 CLIJ was succesfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. 
 Current GPU and OpenCL drivers must be installed.
 
-<a name="optimal_performance">
+<a name="optimal_performance"></a>
 ## How can I achieve optimal performance using CLIJ?
 In order to exploit GPU-accelerated image processing, one should
 * Run as many operations as possible in a block without back and forth pulling/pushing image data to/from GPU memory.
@@ -27,7 +27,7 @@ In order to exploit GPU-accelerated image processing, one should
 * You can speedup ImageJ/Fiji in general by running it in headless mode because the user interface will not be refreshed while processing: https://imagej.net/Headless
 * Further speedup can be achieved by combining filters on OpenCL kernel level. This means implementing OpenCL kernels containing whole workflows. This custom OpenCL code can be distributed as custom CLIJ plugin. A plugin template can be found here: https://github.com/clij/clij-plugin-template/
 
-<a name="how_to_measure_speedup">
+<a name="how_to_measure_speedup"></a>
 ## How can I measure the speedup of workflow?
 The simplest way for measuring the speedup of workflows is using time measurements before and after execution, e.g. in ImageJ macro:
 
