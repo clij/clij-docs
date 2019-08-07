@@ -8,7 +8,7 @@ https://clij.github.io/clij-docs/testedsystems
 <a name="buy_gpus"></a>
 ## Do I have to buy a dedicated GPU in order to benefit from GPU-acceleration using CLIJ?
 No. Common Intel Core and AMD Ryzen processors contain built-in GPUs which are compatible with CLIJ. 
-However, as dedicated graphics cards come with their own GDDR-memory, additional speed-up can be gained by utilizing dedicated GPUs.
+However, as dedicated graphics cards come with their own GDDR-memory, additional speed-up can be gained by utilizing dedicated GPUs though.
 
 <a name="supported_os"></a>
 ## With which operating systems is CLIJ compatible?
@@ -45,6 +45,7 @@ No. While algorithms on the CPU can make use of double-precision, common GPUs on
 * Simplicity of code to ease maintenance
 * Performance
 * Similarity of results generated with ImageJ
+
 For example, the minimum filter of ImageJ takes different neighborhoods into account when being applied in 2D and 3D. CLIJs filters are consistend in 2D and 3D. Thus, results may differ between ImageJ and CLIJ as shown here:
 ![Image](images/mean_filter_comparison_r1.png)
 Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top) and 3D (bottom). The result can be reproduced by running the following macro with radius = 1:
@@ -64,11 +65,11 @@ Pixel coordinates in X, Y and Z are zero-based indiced.
 
 <a name="multi)_channels"></a>
 ## Are multi-channel images and timelapse data supported by CLIJ?
-In general no. CLIJ supports two and three dimensional images. If the third dimension represents channels or frames, these images can be processed using CLIJs 3D filters. When processing 4D or 5D images, it is recommended to split it into 3D blocks.
+In general no. CLIJ supports two and three dimensional images. If the third dimension represents channels or frames, these images can be processed using CLIJs 3D filters. When processing 4D or 5D images, it is recommended to split them into 3D blocks.
 
 <a name="inplace_operations"></a>
 ## Are in-place operations supported?
-No. There are no in-place operations supported in CLIJ. No operation overwrites its input images. However, when implementing your own OpenCL-code and wrapping it into CLIJ plugins, in-place operations may be supported depending on used hardware, driver version and supported OpenCL version.
+No. There are no in-place operations implemented in CLIJ. No built-in operation overwrites its input images. However, when implementing your own custom OpenCL-code and wrapping it into CLIJ plugins, in-place operations may be supported depending on used hardware, driver version and supported OpenCL version.
 
 <a name="active_imagej_window"></a>
 ## Does it matter which is the currently active image window in ImageJ?
@@ -80,7 +81,7 @@ If a specified output image does not exist in GPU memory, it will be generated a
 
 <a name="output_existing_macro"></a>
 ## What happens in ImageJ macro if a specified output image exists already?
-If a specified output image exists already in GPU memory, it will be overwritten.
+If a specified output image exists already in GPU memory, it will be overwritten. If the output image has the wrong size, it will not be changed.
 
 <a name="return_values_macro"></a>
 ## What is the return value of Ext.CLIJ_... methods in ImageJ macro?
@@ -88,11 +89,11 @@ CLIJ operations called from ImageJ macro have no return values. They either proc
 
 <a name="binary_image_characteristics"></a>
 ## How are binary image characterized in CLIJ?
-Binary output images are filled with pixel values 0 and 1. Any input image can serve as binary image and will be interpreted by differentiating 0 and non-zero values.
+Binary output images are filled with pixel values 0 and 1. Any input image can serve as binary image and will be interpreted by differentiating 0 and non-zero values. In order to pull a binary image back to ImageJ which is compatible, use `pullBinary()`. This delivers a binary 8-bit image with 0 and 255 as pixel values.
 
 <a name="clearcl_vs_clij_performance_benefits"></a>
 ## Are there performance benefits expected when calling OpenCL kernels directly via ClearCL instead of CLIJ?
-Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-independent OpenCL. These benefits come with performance loss. Calling an OpenCL kernel via ClearCL directly may be about a millisecond faster than calling it via CLIJ. Example code demonstrating this is available here:
+Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-independent OpenCL. These benefits come with small performance loss. Calling an OpenCL kernel via ClearCL directly may be about _a millisecond_ faster than calling it via CLIJ. Example code demonstrating this is available here:
 https://github.com/clij/clij-benchmarking/blob/master/src/main/java/net/haesleinhuepf/clij/benchmark/clearclclijcomparison/ClearCLVersusCLIJComparison.java
 
 <a name="buffers_vs_images"></a>
@@ -100,6 +101,8 @@ https://github.com/clij/clij-benchmarking/blob/master/src/main/java/net/haeslein
 Images and buffers are defined in the OpenCL standard. We tried to have as many operations as possible compatible to both, images and buffers. Differences are:
 * When applying affine transforms and warping to images, linear interpolation is used. When using buffers, the nearest neighbor pixel delivers the resulting intensity. 
 * Images are not generally supported by GPU devices runnning OpenCL 1.1. 
+* For filters which access the local neighborhood of pixels, using images brings performance gain.
+
 We recommend using buffers in general for maximum device compatibility.
 
 [Back to CLIJ documentation](https://clij.github.io/)
