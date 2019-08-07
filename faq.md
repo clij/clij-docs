@@ -24,7 +24,6 @@ In order to exploit GPU-accelerated image processing, one should
 * Reuse memory. Releasing and allocating memory takes time. Try to reuse memory if possible.
 * Use a dedicated graphics card. When deciding for the right GPU, check the memory bandwidth. Image processing is usually memory-bound. The faster the memory access, the faster images can be processed. The computing power / clock rate of the GPU and number of compute cores is of secondary interest.
 * Some CLIJ marked with "Box" in their name filters are implemented separable (Gaussian blur, minimum, maximum, mean filters). Separable filters are faster than others (e.g. marked with "Sphere").
-* You can speedup ImageJ/Fiji in general by running it in headless mode because the user interface will not be refreshed while processing: https://imagej.net/Headless
 * Further speedup can be achieved by combining filters on OpenCL kernel level. This means implementing OpenCL kernels containing whole workflows. This custom OpenCL code can be distributed as custom CLIJ plugin. A plugin template can be found here: https://github.com/clij/clij-plugin-template/
 
 <a name="how_to_measure_speedup"></a>
