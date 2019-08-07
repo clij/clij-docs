@@ -28,7 +28,7 @@ In order to exploit GPU-accelerated image processing, one should
 * Further speedup can be achieved by combining filters on OpenCL kernel level. This means implementing OpenCL kernels containing whole workflows. This custom OpenCL code can be distributed as custom CLIJ plugin. A plugin template can be found here: https://github.com/clij/clij-plugin-template/
 
 <a name="how_to_measure_speedup"></a>
-## How can I measure the speedup of workflow?
+## How can I measure the speedup of my workflows?
 The simplest way for measuring the speedup of workflows is using time measurements before and after execution, e.g. in ImageJ macro:
 
 ```
