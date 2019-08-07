@@ -27,6 +27,34 @@ In order to exploit GPU-accelerated image processing, one should
 * You can speedup ImageJ/Fiji in general by running it in headless mode because the user interface will not be refreshed while processing: https://imagej.net/Headless
 * Further speedup can be achieved by combining filters on OpenCL kernel level. This means implementing OpenCL kernels containing whole workflows. This custom OpenCL code can be distributed as custom CLIJ plugin. A plugin template can be found here: https://github.com/clij/clij-plugin-template/
 
+<a name="how_to_measure_speedup">
+## How can I measure the speedup of workflow?
+The simplest way for measuring the speedup of workflows is using time measurements before and after execution, e.g. in ImageJ macro:
+
+```
+time = getTime(); // gives current time in milliseconds
+// ...
+// my workflow
+// ...
+print("Processing the workflow took " + (getTime() - time) + " msec"));
+```
+
+However, in order to make these measurements reliable, some hints shall be given:
+* Measure the timing of execution in a loop several times. The first exection(s) may be slower than subsequent exeutions because of so called _warmup_ effects.
+* Exclude file input/output from the time measurements to exclude harddrive read/write speed from the performance benchmarking of your workflow.
+* Also measure the similarity of the ImageJ and CLIJ workflows results. For example: Some CLIJ_*Box filters are potentially much faster than CLIJ_*Sphere filters, which are more similar to ImageJs filters. In this case, performance can be gained by paying with reduced workflow result similarity.
+
+ImageJ macros benchmarking CPU/GPU performance can be found here:
+* https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm
+* https://github.com/clij/clij-benchmarking/tree/master/src/main/macro_benchmarking_workflow
+
+For more professional benchmarking, we recommend the OpenJDK Java Microbenchmark Harness (JMH). As the name suggests, this involves Java programming. You find more details here:
+https://openjdk.java.net/projects/code-tools/jmh/
+
+To give an overview, some of CLIJs operations have been benchmarked with JMH:
+https://github.com/clij/clij-benchmarking-jmh
+
+
 <a name="compatibility_imagej"></a>
 ## Is CLIJ compatible with ImageJ without Fiji?
 With some limitations, yes. You find details and installation instructions here:
