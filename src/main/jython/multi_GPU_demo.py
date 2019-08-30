@@ -7,7 +7,7 @@
 # Author: Robert Haase, rhaase@mpi-cbg.de
 #         August 2019
 #
-########################################################3
+########################################################
 
 from ij import IJ;
 
@@ -38,7 +38,8 @@ class Processor(Thread):
 		# set status flags and initialize
 		self.finished = False;
 		self.working = True;
-		print("" + str(self.clij) + " starts working...\n");
+		# print("" + str(self.clij) + " starts working...\n");
+		
 		clij = self.clij;
 
 		# push the image to GPU memory
@@ -56,8 +57,8 @@ class Processor(Thread):
 
 		# pull result back from GPU memory and show it
 		result = clij.pull(max_projection_image);
-		result.show();
-		IJ.run("Enhance Contrast", "saturated=0.35");
+		# result.show();
+		# IJ.run("Enhance Contrast", "saturated=0.35");
 
 		# clean up by the end
 		input_image.close();
@@ -78,8 +79,8 @@ class Processor(Thread):
 	def getCLIJ(self):
 		return self.clij;
 
-imp = IJ.openImage("C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/000116.raw.tif");
-# imp = IJ.openImage("https://bds.mpi-cbg.de/CLIJ_benchmarking_data/000461.raw.tif");
+#imp = IJ.openImage("C:/structure/data/2018-05-23-16-18-13-89-Florence_multisample/processed/tif/000116.raw.tif");
+imp = IJ.openImage("https://bds.mpi-cbg.de/CLIJ_benchmarking_data/000461.raw.tif");
 
 from net.haesleinhuepf.clij import CLIJ;
 
@@ -93,10 +94,12 @@ processors = []
 for i in range(0, len(CLIJ.getAvailableDeviceNames())):
 	processors.append(Processor(CLIJ(i)));
 
+from java.lang import System;
+startTime = System.currentTimeMillis();
 
 # loop until a given number of images was processed
 processed_images = 0;
-while(processed_images < 5):
+while(processed_images < 10):
 	# go trough all processors and see if one is doing nothing
 	for j in range(0, len(processors)):
 		processor = processors[j];
@@ -120,3 +123,5 @@ while(processed_images < 5):
 
 	# wait a moment
 	Thread.sleep(100);
+
+print("Processing on " + str(len(CLIJ.getAvailableDeviceNames())) + " devices took " + str(System.currentTimeMillis() - startTime) + " ms");
