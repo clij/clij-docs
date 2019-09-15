@@ -38,7 +38,3 @@ mx = getResult("Sum", nResults() - 1);
 Ext.CLIJ_centerOfMass(binary);
 mx = getResult("MassX", nResults() - 1);
 my = getResult("MassY", nResults() - 1);
-
-Ext.CLIJ_copySlice(Image source, Image destination, Number sliceIndex);
-
-Ext.CLIJ_pullBinary(String image);
