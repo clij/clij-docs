@@ -2,8 +2,8 @@
 
 <a name="supported_gpus"></a>
 ## Which GPUs are supported by CLIJ?
-CLIJ was successfully tested on a variety of Intel, Nvidia and AMD GPUs. See the full list of tested systems:
-https://clij.github.io/clij-docs/testedsystems
+CLIJ was successfully tested on a variety of Intel, Nvidia and AMD GPUs. See the 
+[full list of tested systems](https://clij.github.io/clij-docs/testedsystems)
 
 <a name="buy_gpus"></a>
 ## Do I have to buy a dedicated GPU in order to benefit from GPU-acceleration using CLIJ?
@@ -43,26 +43,27 @@ However, in order to make these measurements reliable, some hints shall be given
 * Exclude file input/output from the time measurements to exclude harddrive read/write speed from the performance benchmarking of your workflow.
 * Also measure the similarity of the ImageJ and CLIJ workflows results. For example: Some CLIJ_*Box filters are potentially much faster than CLIJ_*Sphere filters, which are more similar to ImageJs filters. In this case, performance can be gained by paying with reduced workflow result similarity.
 
-ImageJ macros benchmarking CPU/GPU performance can be found here:
-* https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm
-* https://github.com/clij/clij-benchmarking/tree/master/src/main/macro_benchmarking_workflow
+ImageJ macros benchmarking CPU/GPU performance can be found 
+[here](https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm) 
+ and 
+[here](https://github.com/clij/clij-benchmarking/tree/master/src/main/macro_benchmarking_workflow)
 
-For more professional benchmarking, we recommend the OpenJDK Java Microbenchmark Harness (JMH). As the name suggests, this involves Java programming. You find more details here:
-https://openjdk.java.net/projects/code-tools/jmh/
+For more professional benchmarking, we recommend the OpenJDK Java Microbenchmark Harness (JMH). As the name suggests, this involves Java programming. You find more details 
+[here](https://openjdk.java.net/projects/code-tools/jmh/)
 
-To give an overview, some of CLIJs operations have been benchmarked with JMH:
-https://github.com/clij/clij-benchmarking-jmh
+To give an overview, some of CLIJs operations have been 
+[benchmarked with JMH](https://github.com/clij/clij-benchmarking-jmh)
 
 
 <a name="compatibility_imagej"></a>
 ## Is CLIJ compatible with ImageJ without Fiji?
-With some limitations, yes. You find details and installation instructions here:
-https://github.com/clij/clij-legacy/
+With some limitations, yes. You find details and installation instructions 
+[here](https://github.com/clij/clij-legacy/)
 
 <a name="memory_reuse"></a>
 ## Does reusing memory bring additional speed-up?
-Yes. When processing images of the same size and type, it is recommended to reuse memory instead of releasing memory and reallocating memory in every iteration. An example macro demonstrating this can be found here:
-https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm
+Yes. When processing images of the same size and type, it is recommended to reuse memory instead of releasing memory and reallocating memory in every iteration. An example macro demonstrating this can be found 
+[here](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
 
 <a name="result_comparibility_imagej"></a>
 ## Are results of CLIJ filters expected to be exactly the same as when using ImageJ?
@@ -75,8 +76,9 @@ No. While algorithms on the CPU can make use of double-precision, common GPUs on
 
 For example, the minimum filter of ImageJ takes different neighborhoods into account when being applied in 2D and 3D. CLIJs filters are consistend in 2D and 3D. Thus, results may differ between ImageJ and CLIJ as shown here:
 ![Image](images/mean_filter_comparison_r1.png)
-Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top) and 3D (bottom). The result can be reproduced by running the following macro with radius = 1:
-https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm
+Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top) and 3D (bottom). The result can be reproduced by running the 
+[this example macro](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+ with radius = 1:
 
 <a name="image_edge_handling"></a>
 ## Which pixel values does CLIJ take into account when processing edge pixels of the image?
@@ -120,8 +122,8 @@ Binary output images are filled with pixel values 0 and 1. Any input image can s
 
 <a name="clearcl_vs_clij_performance_benefits"></a>
 ## Are there performance benefits expected when calling OpenCL kernels directly via ClearCL instead of CLIJ?
-Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-independent OpenCL. These benefits come with small performance loss. Calling an OpenCL kernel via ClearCL directly may be about _a millisecond_ faster than calling it via CLIJ. Example code demonstrating this is available here:
-https://github.com/clij/clij-benchmarking/blob/master/src/main/java/net/haesleinhuepf/clij/benchmark/clearclclijcomparison/ClearCLVersusCLIJComparison.java
+Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-independent OpenCL. These benefits come with small performance loss. Calling an OpenCL kernel via ClearCL directly may be about _a millisecond_ faster than calling it via CLIJ. Example code demonstrating this is available 
+[here](https://github.com/clij/clij-benchmarking/blob/master/src/main/java/net/haesleinhuepf/clij/benchmark/clearclclijcomparison/ClearCLVersusCLIJComparison.java)
 
 <a name="buffers_vs_images"></a>
 ## The CLIJ Java API offers methods for processing ClearCLBuffers and ClearCLImages. What's the difference?
@@ -131,6 +133,13 @@ Images and buffers are defined in the OpenCL standard. We tried to have as many 
 * For filters which access the local neighborhood of pixels, using images brings performance gain.
 
 We recommend using buffers in general for maximum device compatibility.
+
+<a name="headless"></a>
+## Does CLIJ run in Fijis headless mode?
+Yes. As operations executed on the GPU anyway don't make use of user interface elements, CLIJs operations in general run headless and need no user interaction. Furthermore, it can be run from the 
+[command line](https://github.com/clij/clij-executable-example)
+ and in 
+[cloud systems using docker](https://github.com/clij/clij-apeer-template).
 
 [Back to CLIJ documentation](https://clij.github.io/)
 
