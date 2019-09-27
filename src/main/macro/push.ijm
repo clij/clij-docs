@@ -8,14 +8,11 @@
 
 
 // Get test data
-// run("T1 Head (2.4M, 16-bits)");
-newImage("Untitled", "16-bit black", 256, 256, 128);
-rename("Mean CPU")
+run("T1 Head (2.4M, 16-bits)");
 input = getTitle();
-getDimensions(width, height, channels, slices, frames);
 
 // Init GPU
-run("CLIJ Macro Extensions", "cl_device=gfx902");
+run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // push images to GPU
