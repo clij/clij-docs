@@ -2043,6 +2043,22 @@ Ext.CLIJ_pushCurrentSlice(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PushCurrentSlice.java)
 
+<a name="CLIJ_pushCurrentZStack"></a>
+## CLIJ_pushCurrentZStack
+
+Copies an image specified by its name to GPU memory in order to process it there later.
+
+**Parameters**: String image
+
+**Available for**: 2D, 3D
+
+**Macro example**: 
+```
+run("CLIJ Macro Extensions", "cl_device=");
+Ext.CLIJ_pushCurrentZStack(image);
+```
+[Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PushCurrentZStack.java)
+
 <a name="CLIJ_release"></a>
 ## CLIJ_release
 
@@ -2444,4 +2460,4 @@ Ext.CLIJ_pull(destination);
 
 
 
-121 plugins documented.
+122 plugins documented.
