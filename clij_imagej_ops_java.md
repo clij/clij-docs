@@ -11,7 +11,7 @@ To use the CLIJ ImageJ Ops in your own project, link it as a maven dependency:
 <dependency>
   <groupId>net.haesleinhuepf</groupId>
   <artifactId>clij-ops</artifactId>
-  <version>1.2.0</version>
+  <version>1.3.0</version>
 </dependency>
 ```
 
