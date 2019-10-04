@@ -17,18 +17,19 @@ IJ.run("Close All");
 # init CLIJ and GPU
 clij = CLIJ.getInstance();
 
+# get an example data set
 imp = IJ.openImage("http://imagej.nih.gov/ij/images/t1-head.zip");
 imp.show();
 imp.setRoi(86,3,100,250);
 imp = imp.crop("25-74");
 imp.show();
-#imp = IJ.getImage();
 
-# get input parameters
+# push it to the GPU
 src = clij.push(imp);
+# generate the output-image on the GPU with thee right size
 dst = clij.create([src.getWidth(), src.getDepth(), src.getHeight()], src.getNativeType());
 
-# Execute operation on GPU
+# Reslice on GPU
 clij.op().resliceTop(src, dst);
 
 # show result
