@@ -134,7 +134,7 @@ public class MarkdownJavaOpDocumentationGenerator extends AbstractDocumentationG
                 }
                 code.append("ClearCLBuffer " + parameterName + " = clij.push(" + parameterName + "ImagePlus);\n");
             } else if (isOutputParameter(parameter)) {
-                code.append("ClearCLBuffer " + parameterName + " = clij.create(" + inputImage + ");\n");
+                code.append(createOutputImageCode(methodName, parameterName, inputImage));
             } else if (parameter.startsWith("Float")) {
                 code.append("float " + parameterName + " = " + floatParameterValues[floatParameterIndex]+ ";\n");
                 floatParameterIndex++;
@@ -169,7 +169,7 @@ public class MarkdownJavaOpDocumentationGenerator extends AbstractDocumentationG
             String parameterName = parameter.split(" ")[1];
             if (isOutputParameter(parameter)) {
                 code.append(parameterName + "ImagePlus = clij.pull(" + parameterName + ");\n");
-                code.append(parameterName + "ImagePlus.show());\n");
+                code.append(parameterName + "ImagePlus.show();\n");
             }
         }
 

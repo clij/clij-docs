@@ -17,7 +17,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -28,7 +28,7 @@ clij.op().absolute(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -52,7 +52,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float scalar = 1.0;
 ```
 
@@ -64,7 +64,7 @@ clij.op().addImageAndScalar(src, dst, scalar);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -89,7 +89,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -100,7 +100,7 @@ clij.op().addImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -126,7 +126,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float factor = 1.0;
 float factor1 = 2.0;
 ```
@@ -139,7 +139,7 @@ clij.op().addImagesWeighted(src, src1, dst, factor, factor1);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -188,7 +188,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 AffineTransform3D at = new AffineTransform3D();
 at.translate(4, 0, 0);
 ```
@@ -201,7 +201,7 @@ clij.op().affineTransform(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -249,7 +249,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -260,7 +260,7 @@ clij.op().affineTransform(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -283,7 +283,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -294,7 +294,7 @@ clij.op().affineTransform2D(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -317,7 +317,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -328,7 +328,7 @@ clij.op().affineTransform2D(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -351,7 +351,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 AffineTransform3D at = new AffineTransform3D();
 at.translate(4, 0, 0);
 ```
@@ -364,7 +364,7 @@ clij.op().affineTransform3D(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -387,7 +387,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -398,7 +398,7 @@ clij.op().affineTransform3D(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -422,7 +422,7 @@ CLIJ clij = CLIJ.getInstance();
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer vectorX = clij.push(vectorXImagePlus);
 ClearCLBuffer vectorY = clij.push(vectorYImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -433,7 +433,7 @@ clij.op().applyVectorfield(src, vectorX, vectorY, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -460,7 +460,7 @@ ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer vectorX = clij.push(vectorXImagePlus);
 ClearCLBuffer vectorY = clij.push(vectorYImagePlus);
 ClearCLBuffer vectorZ = clij.push(vectorZImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -471,7 +471,7 @@ clij.op().applyVectorfield(src, vectorX, vectorY, vectorZ, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -497,8 +497,8 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst_max = clij.create(src);
-ClearCLBuffer dst_arg = clij.create(src);
+dst_max = clij.create(src);
+dst_arg = clij.create(src);
 ```
 
 ```
@@ -509,9 +509,9 @@ clij.op().argMaximumZProjection(src, dst_max, dst_arg);
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 dst_argImagePlus = clij.pull(dst_arg);
-dst_argImagePlus.show());
+dst_argImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -537,7 +537,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -548,7 +548,7 @@ clij.op().automaticThreshold(src, dst, userSelectedMethod);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -573,7 +573,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float minimumGreyValue = 1.0;
 float maximumGreyValue = 2.0;
 int numberOfBins = 10;
@@ -587,7 +587,7 @@ clij.op().automaticThreshold(src, dst, userSelectedMethod, minimumGreyValue, max
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -614,7 +614,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
 ClearCLBuffer src2 = clij.push(src2ImagePlus);
-ClearCLBuffer dst = clij.create(src1);
+dst = clij.create(src1);
 ```
 
 ```
@@ -625,7 +625,7 @@ clij.op().binaryAnd(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -652,7 +652,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src1);
+dst = clij.create(src1);
 ```
 
 ```
@@ -663,7 +663,7 @@ clij.op().binaryNot(src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -688,7 +688,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
 ClearCLBuffer src2 = clij.push(src2ImagePlus);
-ClearCLBuffer dst = clij.create(src1);
+dst = clij.create(src1);
 ```
 
 ```
@@ -699,7 +699,7 @@ clij.op().binaryOr(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -727,7 +727,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
 ClearCLBuffer src2 = clij.push(src2ImagePlus);
-ClearCLBuffer dst = clij.create(src1);
+dst = clij.create(src1);
 ```
 
 ```
@@ -738,7 +738,7 @@ clij.op().binaryXOr(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -763,7 +763,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float blurSigmaX = 1.0;
 float blurSigmaY = 2.0;
 ```
@@ -776,7 +776,7 @@ clij.op().blur(src, dst, blurSigmaX, blurSigmaY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -800,7 +800,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float blurSigmaX = 1.0;
 float blurSigmaY = 2.0;
 float blurSigmaZ = 3.0;
@@ -814,7 +814,7 @@ clij.op().blur(src, dst, blurSigmaX, blurSigmaY, blurSigmaZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -838,7 +838,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -849,7 +849,7 @@ clij.op().blurSliceBySlice(src, dst, kernelSizeX, kernelSizeY, sigmaX, sigmaY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -902,7 +902,8 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+from net.haesleinhuepf.clij.coremem.enums import NativeTypeEnum;
+ClearCLBuffer dst = clij.create(src.getDimensions(), src.getHeight()], NativeTypeEnum.UnsignedByte);
 ```
 
 ```
@@ -913,7 +914,7 @@ clij.op().convertToImageJBinary(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -937,7 +938,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -948,7 +949,7 @@ clij.op().copy(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -970,7 +971,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 int planeIndex = 10;
 ```
 
@@ -982,7 +983,7 @@ clij.op().copySlice(src, dst, planeIndex);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1004,7 +1005,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radiusX = 10;
 int radiusY = 20;
 ```
@@ -1017,7 +1018,7 @@ clij.op().countNonZeroPixelsLocally(src, dst, radiusX, radiusY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1039,7 +1040,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radiusX = 10;
 int radiusY = 20;
 ```
@@ -1052,7 +1053,7 @@ clij.op().countNonZeroPixelsLocallySliceBySlice(src, dst, radiusX, radiusY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1074,7 +1075,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radiusX = 10;
 int radiusY = 20;
 int radiusZ = 30;
@@ -1088,7 +1089,7 @@ clij.op().countNonZeroVoxelsLocally(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1110,7 +1111,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int startX = 10;
 int startY = 20;
 ```
@@ -1123,7 +1124,7 @@ clij.op().crop(src, dst, startX, startY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1145,7 +1146,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int startX = 10;
 int startY = 20;
 int startZ = 30;
@@ -1159,7 +1160,7 @@ clij.op().crop(src, dst, startX, startY, startZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1182,7 +1183,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -1194,7 +1195,7 @@ clij.op().detectMaximaBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1218,7 +1219,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -1230,7 +1231,7 @@ clij.op().detectMaximaSliceBySliceBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1253,7 +1254,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -1265,7 +1266,7 @@ clij.op().detectMinimaBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1289,7 +1290,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -1301,7 +1302,7 @@ clij.op().detectMinimaSliceBySliceBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1323,7 +1324,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 boolean detectMaxima = true;
 ```
@@ -1336,7 +1337,7 @@ clij.op().detectOptima(src, dst, radius, detectMaxima);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1358,7 +1359,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 boolean detectMaxima = true;
 ```
@@ -1371,7 +1372,7 @@ clij.op().detectOptimaSliceBySlice(src, dst, radius, detectMaxima);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1398,7 +1399,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1409,7 +1410,7 @@ clij.op().dilateBox(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1438,7 +1439,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1449,7 +1450,7 @@ clij.op().dilateBoxSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1473,7 +1474,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1484,7 +1485,7 @@ clij.op().dilateSphere(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1510,7 +1511,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1521,7 +1522,7 @@ clij.op().dilateSphereSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1546,7 +1547,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1557,7 +1558,7 @@ clij.op().divideImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1581,7 +1582,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float factorX = 1.0;
 float factorY = 2.0;
 ```
@@ -1594,7 +1595,7 @@ clij.op().downsample(src, dst, factorX, factorY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1617,7 +1618,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float factorX = 1.0;
 float factorY = 2.0;
 float factorZ = 3.0;
@@ -1631,7 +1632,7 @@ clij.op().downsample(src, dst, factorX, factorY, factorZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1655,7 +1656,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1666,7 +1667,7 @@ clij.op().downsampleSliceBySliceHalfMedian(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1693,7 +1694,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1704,7 +1705,7 @@ clij.op().erodeBox(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1733,7 +1734,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1744,7 +1745,7 @@ clij.op().erodeBoxSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1768,7 +1769,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1779,7 +1780,7 @@ clij.op().erodeSphere(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1805,7 +1806,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1816,7 +1817,7 @@ clij.op().erodeSphereSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1838,7 +1839,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dstHistogram = clij.create(src);
+dstHistogram = clij.create(src);
 float minimumGreyValue = 1.0;
 float maximumGreyValue = 2.0;
 ```
@@ -1851,7 +1852,7 @@ clij.op().fillHistogram(src, dstHistogram, minimumGreyValue, maximumGreyValue);
 ```
 //show result
 dstHistogramImagePlus = clij.pull(dstHistogram);
-dstHistogramImagePlus.show());
+dstHistogramImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1873,7 +1874,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 boolean flipx = true;
 boolean flipy = false;
 ```
@@ -1886,7 +1887,7 @@ clij.op().flip(src, dst, flipx, flipy);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1908,7 +1909,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 boolean flipx = true;
 boolean flipy = false;
 boolean flipz = false;
@@ -1922,7 +1923,7 @@ clij.op().flip(src, dst, flipx, flipy, flipz);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1945,7 +1946,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1956,7 +1957,7 @@ clij.op().gradientX(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1979,7 +1980,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -1990,7 +1991,7 @@ clij.op().gradientY(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2013,7 +2014,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2024,7 +2025,7 @@ clij.op().gradientZ(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2084,7 +2085,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer input3d = clij.push(input3dImagePlus);
-ClearCLBuffer output3d = clij.create(input3d);
+output3d = clij.create(input3d);
 ```
 
 ```
@@ -2095,7 +2096,7 @@ clij.op().invert(input3d, output3d);
 ```
 //show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
 // cleanup memory on GPU
 input3d.close();
@@ -2120,7 +2121,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ClearCLBuffer threshold = clij.push(thresholdImagePlus);
 ```
 
@@ -2132,7 +2133,7 @@ clij.op().localThreshold(src, dst, threshold);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2160,7 +2161,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer mask = clij.push(maskImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2171,7 +2172,7 @@ clij.op().mask(src, mask, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2199,7 +2200,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer mask = clij.push(maskImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2210,7 +2211,7 @@ clij.op().maskStackWithPlane(src, mask, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2234,7 +2235,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2245,7 +2246,7 @@ clij.op().maximumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2267,7 +2268,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -2279,7 +2280,7 @@ clij.op().maximumIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2303,7 +2304,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float valueB = 1.0;
 ```
 
@@ -2315,7 +2316,7 @@ clij.op().maximumImageAndScalar(src, dst, valueB);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2340,7 +2341,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2351,7 +2352,7 @@ clij.op().maximumImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2408,7 +2409,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2421,7 +2422,7 @@ clij.op().maximumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2444,7 +2445,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2457,7 +2458,7 @@ clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2480,7 +2481,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 int kernelSizeZ = 30;
@@ -2494,7 +2495,7 @@ clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2521,7 +2522,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst_max = clij.create(src);
+dst_max = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 int projectedDimensionX = 10;
 int projectedDimensionY = 20;
 int projectedDimension = 30;
@@ -2535,7 +2536,7 @@ clij.op().maximumXYZProjection(src, dst_max, projectedDimensionX, projectedDimen
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2557,7 +2558,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst_max = clij.create(src);
+dst_max = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -2568,7 +2569,7 @@ clij.op().maximumZProjection(src, dst_max);
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2591,7 +2592,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -2602,7 +2603,7 @@ clij.op().meanBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2624,7 +2625,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -2636,7 +2637,7 @@ clij.op().meanIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2661,7 +2662,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2674,7 +2675,7 @@ clij.op().meanSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2697,7 +2698,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2710,7 +2711,7 @@ clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2733,7 +2734,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 int kernelSizeZ = 30;
@@ -2747,7 +2748,7 @@ clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2769,7 +2770,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -2780,7 +2781,7 @@ clij.op().meanZProjection(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2805,7 +2806,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2818,7 +2819,7 @@ clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2843,7 +2844,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 int kernelSizeZ = 30;
@@ -2857,7 +2858,7 @@ clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2882,7 +2883,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2895,7 +2896,7 @@ clij.op().medianSliceBySliceBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2920,7 +2921,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2933,7 +2934,7 @@ clij.op().medianSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2958,7 +2959,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -2971,7 +2972,7 @@ clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2996,7 +2997,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 int kernelSizeZ = 30;
@@ -3010,7 +3011,7 @@ clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3033,7 +3034,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3044,7 +3045,7 @@ clij.op().minimumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3066,7 +3067,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int radius = 10;
 ```
 
@@ -3078,7 +3079,7 @@ clij.op().minimumIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3102,7 +3103,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float valueB = 1.0;
 ```
 
@@ -3114,7 +3115,7 @@ clij.op().minimumImageAndScalar(src, dst, valueB);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3139,7 +3140,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3150,7 +3151,7 @@ clij.op().minimumImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3207,7 +3208,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -3220,7 +3221,7 @@ clij.op().minimumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3243,7 +3244,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 ```
@@ -3256,7 +3257,7 @@ clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3279,7 +3280,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int kernelSizeX = 10;
 int kernelSizeY = 20;
 int kernelSizeZ = 30;
@@ -3293,7 +3294,7 @@ clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3315,7 +3316,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst_min = clij.create(src);
+dst_min = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3326,7 +3327,7 @@ clij.op().minimumZProjection(src, dst_min);
 ```
 //show result
 dst_minImagePlus = clij.pull(dst_min);
-dst_minImagePlus.show());
+dst_minImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3349,7 +3350,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 int dimension = 10;
 ```
 
@@ -3361,7 +3362,7 @@ clij.op().multiplyImageAndCoordinate(src, dst, dimension);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3385,7 +3386,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float scalar = 1.0;
 ```
 
@@ -3397,7 +3398,7 @@ clij.op().multiplyImageAndScalar(src, dst, scalar);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3422,7 +3423,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 ClearCLBuffer src1 = clij.push(src1ImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3433,7 +3434,7 @@ clij.op().multiplyImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3456,7 +3457,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3467,7 +3468,7 @@ clij.op().multiplySliceBySliceWithScalars(src, dst, scalars);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3493,7 +3494,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer input3d = clij.push(input3dImagePlus);
 ClearCLBuffer input2d = clij.push(input2dImagePlus);
-ClearCLBuffer output3d = clij.create(input3d);
+output3d = clij.create(input3d);
 ```
 
 ```
@@ -3504,7 +3505,7 @@ clij.op().multiplyStackWithPlane(input3d, input2d, output3d);
 ```
 //show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
 // cleanup memory on GPU
 input3d.close();
@@ -3529,7 +3530,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float exponent = 1.0;
 ```
 
@@ -3541,7 +3542,7 @@ clij.op().power(src, dst, exponent);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3564,7 +3565,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float deltaAngle = 1.0;
 ```
 
@@ -3576,7 +3577,7 @@ clij.op().radialProjection(src, dst, deltaAngle);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3599,7 +3600,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3610,7 +3611,7 @@ clij.op().resliceBottom(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3633,7 +3634,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
@@ -3644,7 +3645,7 @@ clij.op().resliceLeft(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3667,7 +3668,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
@@ -3678,7 +3679,7 @@ clij.op().resliceRight(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3701,7 +3702,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3712,7 +3713,7 @@ clij.op().resliceTop(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3736,7 +3737,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3747,7 +3748,7 @@ clij.op().rotateLeft(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3771,7 +3772,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 ```
 
 ```
@@ -3782,7 +3783,7 @@ clij.op().rotateRight(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3873,7 +3874,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer source1 = clij.push(source1ImagePlus);
 ClearCLBuffer source2 = clij.push(source2ImagePlus);
-ClearCLBuffer destination = clij.create(source1);
+destination = clij.create(source1);
 ```
 
 ```
@@ -3884,7 +3885,7 @@ clij.op().subtract(source1, source2, destination);
 ```
 //show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
 // cleanup memory on GPU
 source1.close();
@@ -3910,7 +3911,7 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer subtrahend = clij.push(subtrahendImagePlus);
 ClearCLBuffer minuend = clij.push(minuendImagePlus);
-ClearCLBuffer destination = clij.create(subtrahend);
+destination = clij.create(subtrahend);
 ```
 
 ```
@@ -3921,7 +3922,7 @@ clij.op().subtractImages(subtrahend, minuend, destination);
 ```
 //show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
 // cleanup memory on GPU
 subtrahend.close();
@@ -4041,7 +4042,7 @@ CLIJ clij = CLIJ.getInstance();
 
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
-ClearCLBuffer dst = clij.create(src);
+dst = clij.create(src);
 float threshold = 1.0;
 ```
 
@@ -4053,7 +4054,7 @@ clij.op().threshold(src, dst, threshold);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();

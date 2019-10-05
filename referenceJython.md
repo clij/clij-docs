@@ -10,26 +10,26 @@ Computes the absolute value of every individual pixel x in a given image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().absolute(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -44,27 +44,27 @@ Adds a scalar value s to all pixels x of a given image X.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 scalar = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().addImageAndScalar(src, dst, scalar);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -79,27 +79,27 @@ Calculates the sum of pairs of pixels x and y of two images X and Y.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().addImages(src, src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -115,11 +115,11 @@ Calculates the sum of pairs of pixels x and y from images X and Y weighted with 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
@@ -128,16 +128,16 @@ factor1 = 2.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().addImagesWeighted(src, src1, dst, factor, factor1);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -177,11 +177,11 @@ transform = "center scale=2 rotate=45 -center";
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 at = new AffineTransform3D();
@@ -189,16 +189,16 @@ at.translate(4, 0, 0);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform(src, dst, at);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -237,26 +237,26 @@ transform = "center scale=2 rotate=45 -center";
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform(src, dst, matrix);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -270,26 +270,26 @@ Applies an affine transform to a 2D image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform2D(src, dst, at);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -303,26 +303,26 @@ Applies an affine transform to a 2D image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform2D(src, dst, matrix);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -336,11 +336,11 @@ Applies an affine transform to a 3D image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 at = new AffineTransform3D();
@@ -348,16 +348,16 @@ at.translate(4, 0, 0);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform3D(src, dst, at);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -371,26 +371,26 @@ Applies an affine transform to a 3D image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().affineTransform3D(src, dst, matrix);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -403,11 +403,11 @@ Deforms an image according to distances provided in the given vector images. It 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 vectorX = clij.push(vectorXImagePlus);
 vectorY = clij.push(vectorYImagePlus);
@@ -415,16 +415,16 @@ dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().applyVectorfield(src, vectorX, vectorY, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 vectorX.close();
 vectorY.close();
@@ -439,11 +439,11 @@ Deforms an image according to distances provided in the given vector images. It 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 vectorX = clij.push(vectorXImagePlus);
 vectorY = clij.push(vectorYImagePlus);
@@ -452,16 +452,16 @@ dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().applyVectorfield(src, vectorX, vectorY, vectorZ, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 vectorX.close();
 vectorY.close();
@@ -478,29 +478,29 @@ Furthermore, another 2D image is generated with pixels containing the z-index wh
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst_max = clij.create(src);
 dst_arg = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().argMaximumZProjection(src, dst_max, dst_arg);
 ```
 
 ```
-//show result
+# show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 dst_argImagePlus = clij.pull(dst_arg);
-dst_argImagePlus.show());
+dst_argImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst_max.close();
 dst_arg.close();
@@ -517,26 +517,26 @@ of these methods in the method text field:
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().automaticThreshold(src, dst, userSelectedMethod);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -552,11 +552,11 @@ of these methods in the method text field:
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 minimumGreyValue = 1.0;
@@ -565,16 +565,16 @@ numberOfBins = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().automaticThreshold(src, dst, userSelectedMethod, minimumGreyValue, maximumGreyValue, numberOfBins);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -591,27 +591,27 @@ All pixel values except 0 in the input images are interpreted as 1.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src1 = clij.push(src1ImagePlus);
 src2 = clij.push(src2ImagePlus);
 dst = clij.create(src1);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().binaryAnd(src1, src2, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src1.close();
 src2.close();
 dst.close();
@@ -629,26 +629,26 @@ All pixel values except 0 in the input image are interpreted as 1.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src1);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().binaryNot(src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src1.close();
 dst.close();
 ```
@@ -663,27 +663,27 @@ All pixel values except 0 in the input images are interpreted as 1.<pre>f(x, y) 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src1 = clij.push(src1ImagePlus);
 src2 = clij.push(src2ImagePlus);
 dst = clij.create(src1);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().binaryOr(src1, src2, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src1.close();
 src2.close();
 dst.close();
@@ -701,27 +701,27 @@ All pixel values except 0 in the input images are interpreted as 1.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src1 = clij.push(src1ImagePlus);
 src2 = clij.push(src2ImagePlus);
 dst = clij.create(src1);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().binaryXOr(src1, src2, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src1.close();
 src2.close();
 dst.close();
@@ -737,11 +737,11 @@ The implementation is done separable. In case a sigma equals zero, the direction
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 blurSigmaX = 1.0;
@@ -749,16 +749,16 @@ blurSigmaY = 2.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().blur(src, dst, blurSigmaX, blurSigmaY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -773,11 +773,11 @@ The implementation is done separable. In case a sigma equals zero, the direction
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 blurSigmaX = 1.0;
@@ -786,16 +786,16 @@ blurSigmaZ = 3.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().blur(src, dst, blurSigmaX, blurSigmaY, blurSigmaZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -810,26 +810,26 @@ The Gaussian blur is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().blurSliceBySlice(src, dst, kernelSizeX, kernelSizeY, sigmaX, sigmaY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -843,24 +843,24 @@ in the columns MassX, MassY and MassZ.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 input = clij.push(inputImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultCenterOfMass = clij.op().centerOfMass(input);
 ```
 
 ```
-//show result
+# show result
 print(resultCenterOfMass);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 input.close();
 ```
 
@@ -872,26 +872,27 @@ Convert a binary image to an image with values 0 and 255 as it can be interprete
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+from net.haesleinhuepf.clij.coremem.enums import NativeTypeEnum;
+dst = clij.create(src.getDimensions(), src.getHeight()}, NativeTypeEnum.UnsignedByte);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().convertToImageJBinary(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -906,26 +907,26 @@ Copies an image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().copy(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -938,27 +939,27 @@ Copies a slice with a given index out of an input image stack into a 2D image, i
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getWidth(), src.getHeight()}, src.getNativeType());
 planeIndex = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().copySlice(src, dst, planeIndex);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -971,11 +972,11 @@ Counts non-zero pixels in the neighborhood of every pixel in a 2D image and writ
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radiusX = 10;
@@ -983,16 +984,16 @@ radiusY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().countNonZeroPixelsLocally(src, dst, radiusX, radiusY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1005,11 +1006,11 @@ Counts non-zero pixels in the 2D-neighborhood of every pixel in a 3D image stack
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radiusX = 10;
@@ -1017,16 +1018,16 @@ radiusY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().countNonZeroPixelsLocallySliceBySlice(src, dst, radiusX, radiusY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1039,11 +1040,11 @@ Counts non-zero pixels in the 2D-neighborhood of every pixel in a 3D image stack
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radiusX = 10;
@@ -1052,16 +1053,16 @@ radiusZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().countNonZeroVoxelsLocally(src, dst, radiusX, radiusY, radiusZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1074,11 +1075,11 @@ Crops out a region of a 2D image or a substack out of a given image stack. Size 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 startX = 10;
@@ -1086,16 +1087,16 @@ startY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().crop(src, dst, startX, startY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1108,11 +1109,11 @@ Crops out a region of a 2D image or a substack out of a given image stack. Size 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 startX = 10;
@@ -1121,16 +1122,16 @@ startZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().crop(src, dst, startX, startY, startZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1144,27 +1145,27 @@ there is no other pixel in a given radius which has a higher intensity, and to 0
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectMaximaBox(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1179,27 +1180,27 @@ given radius which has a higher intensity, and to 0 otherwise.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectMaximaSliceBySliceBox(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1213,27 +1214,27 @@ there is no other pixel in a given radius which has a lower intensity, and to 0 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectMinimaBox(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1248,27 +1249,27 @@ given radius which has a lower intensity, and to 0 otherwise.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectMinimaSliceBySliceBox(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1281,11 +1282,11 @@ It is recommended to detectMaxima and detectMinima.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
@@ -1293,16 +1294,16 @@ detectMaxima = true;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectOptima(src, dst, radius, detectMaxima);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1315,11 +1316,11 @@ It is recommended to detectMaximaSliceBySlice and detectMinimaSliceBySlice.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
@@ -1327,16 +1328,16 @@ detectMaxima = true;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().detectOptimaSliceBySlice(src, dst, radius, detectMaxima);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1354,26 +1355,26 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().dilateBox(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1393,26 +1394,26 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().dilateBoxSliceBySlice(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1427,26 +1428,26 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().dilateSphere(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1463,26 +1464,26 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().dilateSphereSliceBySlice(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1497,27 +1498,27 @@ Divides two images X and Y by each other pixel wise.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().divideImages(src, src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -1532,11 +1533,11 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 factorX = 1.0;
@@ -1544,16 +1545,16 @@ factorY = 2.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().downsample(src, dst, factorX, factorY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1567,11 +1568,11 @@ is applied. In ImageJ the method which is similar is called 'Interpolation metho
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 factorX = 1.0;
@@ -1580,16 +1581,16 @@ factorZ = 3.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().downsample(src, dst, factorX, factorY, factorZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1604,26 +1605,26 @@ four corresponding pixels in the source image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().downsampleSliceBySliceHalfMedian(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1641,26 +1642,26 @@ difference is that the output image contains values 0 and 1 instead of 0 and 255
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().erodeBox(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1680,26 +1681,26 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().erodeBoxSliceBySlice(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1714,26 +1715,26 @@ The pixels in the input image with pixel value not equal to 0 will be interprete
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().erodeSphere(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1750,26 +1751,26 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().erodeSphereSliceBySlice(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1782,11 +1783,11 @@ Generates a histogram of a 2D image or 3D stack and writes into a 2D image where
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dstHistogram = clij.create(src);
 minimumGreyValue = 1.0;
@@ -1794,16 +1795,16 @@ maximumGreyValue = 2.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().fillHistogram(src, dstHistogram, minimumGreyValue, maximumGreyValue);
 ```
 
 ```
-//show result
+# show result
 dstHistogramImagePlus = clij.pull(dstHistogram);
-dstHistogramImagePlus.show());
+dstHistogramImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dstHistogram.close();
 ```
@@ -1816,11 +1817,11 @@ Flips an image in X and/or Y direction depending on boolean flags.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 flipx = true;
@@ -1828,16 +1829,16 @@ flipy = false;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().flip(src, dst, flipx, flipy);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1850,11 +1851,11 @@ Flips an image in X and/or Y direction depending on boolean flags.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 flipx = true;
@@ -1863,16 +1864,16 @@ flipz = false;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().flip(src, dst, flipx, flipy, flipz);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1886,26 +1887,26 @@ Computes the gradient of gray values along X. Assuming a, b and c are three adja
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().gradientX(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1919,26 +1920,26 @@ Computes the gradient of gray values along Y. Assuming a, b and c are three adja
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().gradientY(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1952,26 +1953,26 @@ Computes the gradient of gray values along Z. Assuming a, b and c are three adja
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().gradientZ(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -1984,11 +1985,11 @@ Determines the histogram of a given image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 image = clij.push(imageImagePlus);
 minGreyValue = 1.0;
 maxGreyValue = 2.0;
@@ -1996,15 +1997,15 @@ numberOfBins = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultHistogram = clij.op().histogram(image, minGreyValue, maxGreyValue, numberOfBins);
 ```
 
 ```
-//show result
+# show result
 print(resultHistogram);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 image.close();
 ```
 
@@ -2021,26 +2022,26 @@ For binary images, use binaryNot.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 input3d = clij.push(input3dImagePlus);
 output3d = clij.create(input3d);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().invert(input3d, output3d);
 ```
 
 ```
-//show result
+# show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 input3d.close();
 output3d.close();
 ```
@@ -2056,27 +2057,27 @@ was above of equal to the pixel value m in mask image M.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 threshold = clij.push(thresholdImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().localThreshold(src, dst, threshold);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 threshold.close();
@@ -2094,27 +2095,27 @@ zero.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 mask = clij.push(maskImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().mask(src, mask, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 mask.close();
 dst.close();
@@ -2132,27 +2133,27 @@ zero.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 mask = clij.push(maskImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maskStackWithPlane(src, mask, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 mask.close();
 dst.close();
@@ -2167,26 +2168,26 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2199,27 +2200,27 @@ This method is deprecated. Consider using maximumBox or maximumSphere instead.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumIJ(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2234,27 +2235,27 @@ Computes the maximum of a constant scalar s and each pixel value x in a given im
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 valueB = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumImageAndScalar(src, dst, valueB);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2269,27 +2270,27 @@ Computes the maximum of a pair of pixel values x, y from two given images X and 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumImages(src, src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -2304,24 +2305,24 @@ Results table in the column 'Max'.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImage = clij.push(clImageImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultMaximumOfAllPixels = clij.op().maximumOfAllPixels(clImage);
 ```
 
 ```
-//show result
+# show result
 print(resultMaximumOfAllPixels);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImage.close();
 ```
 
@@ -2336,11 +2337,11 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2348,16 +2349,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2371,11 +2372,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2383,16 +2384,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2406,11 +2407,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2419,16 +2420,16 @@ kernelSizeZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2446,29 +2447,29 @@ Z = 2
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst_max = clij.create(src);
+dst_max = clij.create([src.getWidth(), src.getHeight()}, src.getNativeType());
 projectedDimensionX = 10;
 projectedDimensionY = 20;
 projectedDimension = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumXYZProjection(src, dst_max, projectedDimensionX, projectedDimensionY, projectedDimension);
 ```
 
 ```
-//show result
+# show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst_max.close();
 ```
@@ -2481,26 +2482,26 @@ Determines the maximum projection of an image along Z.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst_max = clij.create(src);
+dst_max = clij.create([src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().maximumZProjection(src, dst_max);
 ```
 
 ```
-//show result
+# show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst_max.close();
 ```
@@ -2514,26 +2515,26 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2546,27 +2547,27 @@ This method is deprecated. Consider using meanBox or meanSphere instead.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanIJ(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2582,11 +2583,11 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2594,16 +2595,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2617,11 +2618,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2629,16 +2630,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2652,11 +2653,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2665,16 +2666,16 @@ kernelSizeZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2687,26 +2688,26 @@ Determines the mean average projection of an image along Z.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().meanZProjection(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2722,11 +2723,11 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2734,16 +2735,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2759,11 +2760,11 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2772,16 +2773,16 @@ kernelSizeZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2797,11 +2798,11 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2809,16 +2810,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianSliceBySliceBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2834,11 +2835,11 @@ For technical reasons, the area of the ellipse must have less than 1000 pixels.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2846,16 +2847,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2871,11 +2872,11 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2883,16 +2884,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2908,11 +2909,11 @@ For technical reasons, the area of the rectangle must have less than 1000 pixels
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -2921,16 +2922,16 @@ kernelSizeZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2944,26 +2945,26 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -2976,27 +2977,27 @@ This method is deprecated. Consider using minimumBox or minimumSphere instead.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 radius = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumIJ(src, dst, radius);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3011,27 +3012,27 @@ Computes the maximum of a constant scalar s and each pixel value x in a given im
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 valueB = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumImageAndScalar(src, dst, valueB);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3046,27 +3047,27 @@ Computes the minimum of a pair of pixel values x, y from two given images X and 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumImages(src, src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -3081,24 +3082,24 @@ Results table in the column 'Min'.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImage = clij.push(clImageImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultMinimumOfAllPixels = clij.op().minimumOfAllPixels(clImage);
 ```
 
 ```
-//show result
+# show result
 print(resultMinimumOfAllPixels);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImage.close();
 ```
 
@@ -3113,11 +3114,11 @@ This filter is applied slice by slice in 2D.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -3125,16 +3126,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3148,11 +3149,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -3160,16 +3161,16 @@ kernelSizeY = 20;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3183,11 +3184,11 @@ its half-width and half-height (radius).
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 kernelSizeX = 10;
@@ -3196,16 +3197,16 @@ kernelSizeZ = 30;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3218,26 +3219,26 @@ Determines the minimum projection of an image along Z.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst_min = clij.create(src);
+dst_min = clij.create([src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().minimumZProjection(src, dst_min);
 ```
 
 ```
-//show result
+# show result
 dst_minImagePlus = clij.pull(dst_min);
-dst_minImagePlus.show());
+dst_minImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst_min.close();
 ```
@@ -3251,27 +3252,27 @@ This method can be used to calculate the center of mass of an image.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 dimension = 10;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().multiplyImageAndCoordinate(src, dst, dimension);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3286,27 +3287,27 @@ Multiplies all pixels value x in a given image X with a constant scalar s.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 scalar = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().multiplyImageAndScalar(src, dst, scalar);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3321,27 +3322,27 @@ Multiplies all pairs of pixel values x and y from two image X and Y.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 src1 = clij.push(src1ImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().multiplyImages(src, src1, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 src1.close();
 dst.close();
@@ -3355,26 +3356,26 @@ Multiplies all pixels value x in input image X with a scalar s given as an array
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().multiplySliceBySliceWithScalars(src, dst, scalars);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3390,27 +3391,27 @@ the same spatial position within a plane.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 input3d = clij.push(input3dImagePlus);
 input2d = clij.push(input2dImagePlus);
 output3d = clij.create(input3d);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().multiplyStackWithPlane(input3d, input2d, output3d);
 ```
 
 ```
-//show result
+# show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 input3d.close();
 input2d.close();
 output3d.close();
@@ -3426,27 +3427,27 @@ Computes all pixels value x to the power of a given exponent a.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 exponent = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().power(src, dst, exponent);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3460,27 +3461,27 @@ X/Y-plane of a given input image stack. This operation is similar to ImageJs 'Ra
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 deltaAngle = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().radialProjection(src, dst, deltaAngle);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3494,26 +3495,26 @@ offers less flexibility such as interpolation.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().resliceBottom(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3527,26 +3528,26 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().resliceLeft(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3560,26 +3561,26 @@ Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().resliceRight(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3593,26 +3594,26 @@ offers less flexibility such as interpolation.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create([src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().resliceTop(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3627,26 +3628,26 @@ such as interpolation.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().rotateLeft(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3661,26 +3662,26 @@ such as interpolation.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().rotateRight(src, dst);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```
@@ -3695,24 +3696,24 @@ Sets all pixel values x of a given image X to a constant value v.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImage = clij.push(clImageImagePlus);
 value = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().set(clImage, value);
 ```
 
 ```
-//show result
+# show result
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImage.close();
 ```
 
@@ -3727,24 +3728,24 @@ Only up to 12 output stacks are supported.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImageIn = clij.push(clImageInImagePlus);
 clImagesOut = clij.push(clImagesOutImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().splitStack(clImageIn, clImagesOut);
 ```
 
 ```
-//show result
+# show result
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImageIn.close();
 clImagesOut.close();
 ```
@@ -3759,27 +3760,27 @@ Subtracts one image X from another image Y pixel wise.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 source1 = clij.push(source1ImagePlus);
 source2 = clij.push(source2ImagePlus);
 destination = clij.create(source1);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().subtract(source1, source2, destination);
 ```
 
 ```
-//show result
+# show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 source1.close();
 source2.close();
 destination.close();
@@ -3795,27 +3796,27 @@ Subtracts one image X from another image Y pixel wise.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 subtrahend = clij.push(subtrahendImagePlus);
 minuend = clij.push(minuendImagePlus);
 destination = clij.create(subtrahend);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().subtractImages(subtrahend, minuend, destination);
 ```
 
 ```
-//show result
+# show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 subtrahend.close();
 minuend.close();
 destination.close();
@@ -3830,24 +3831,24 @@ Results table in the column 'Sum'.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImage = clij.push(clImageImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultSumPixels = clij.op().sumPixels(clImage);
 ```
 
 ```
-//show result
+# show result
 print(resultSumPixels);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImage.close();
 ```
 
@@ -3859,24 +3860,24 @@ Sums all pixels in X and Y slice by slice and returns the resulting numbers for 
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 input = clij.push(inputImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 resultSumPixelsSliceBySlice = clij.op().sumPixelsSliceBySlice(input);
 ```
 
 ```
-//show result
+# show result
 print(resultSumPixelsSliceBySlice);
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 input.close();
 ```
 
@@ -3888,24 +3889,24 @@ Determines the sum projection of an image along Z.
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 clImage = clij.push(clImageImagePlus);
 clReducedImage = clij.push(clReducedImageImagePlus);
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().sumZProjection(clImage, clReducedImage);
 ```
 
 ```
-//show result
+# show result
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 clImage.close();
 clReducedImage.close();
 ```
@@ -3923,27 +3924,27 @@ This plugin is comparable to setting a raw threshold in ImageJ and using the 'Co
 
 **Jython example**: 
 ```
-// init CLIJ and GPU
+# init CLIJ and GPU
 from net.haesleinhuepf.clij import CLIJ;
 clij = CLIJ.getInstance();
 
-// get input parameters
+# get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
 threshold = 1.0;
 ```
 
 ```
-// Execute operation on GPU
+# Execute operation on GPU
 clij.op().threshold(src, dst, threshold);
 ```
 
 ```
-//show result
+# show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
-// cleanup memory on GPU
+# cleanup memory on GPU
 src.close();
 dst.close();
 ```

@@ -27,7 +27,7 @@ clij.op().absolute(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -62,7 +62,7 @@ clij.op().addImageAndScalar(src, dst, scalar);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -97,7 +97,7 @@ clij.op().addImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -135,7 +135,7 @@ clij.op().addImagesWeighted(src, src1, dst, factor, factor1);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -196,7 +196,7 @@ clij.op().affineTransform(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -254,7 +254,7 @@ clij.op().affineTransform(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -287,7 +287,7 @@ clij.op().affineTransform2D(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -320,7 +320,7 @@ clij.op().affineTransform2D(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -355,7 +355,7 @@ clij.op().affineTransform3D(src, dst, at);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -388,7 +388,7 @@ clij.op().affineTransform3D(src, dst, matrix);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -422,7 +422,7 @@ clij.op().applyVectorfield(src, vectorX, vectorY, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -459,7 +459,7 @@ clij.op().applyVectorfield(src, vectorX, vectorY, vectorZ, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -496,9 +496,9 @@ clij.op().argMaximumZProjection(src, dst_max, dst_arg);
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 dst_argImagePlus = clij.pull(dst_arg);
-dst_argImagePlus.show());
+dst_argImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -534,7 +534,7 @@ clij.op().automaticThreshold(src, dst, userSelectedMethod);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -572,7 +572,7 @@ clij.op().automaticThreshold(src, dst, userSelectedMethod, minimumGreyValue, max
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -609,7 +609,7 @@ clij.op().binaryAnd(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -646,7 +646,7 @@ clij.op().binaryNot(src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -681,7 +681,7 @@ clij.op().binaryOr(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -719,7 +719,7 @@ clij.op().binaryXOr(src1, src2, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src1.close();
@@ -756,7 +756,7 @@ clij.op().blur(src, dst, blurSigmaX, blurSigmaY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -793,7 +793,7 @@ clij.op().blur(src, dst, blurSigmaX, blurSigmaY, blurSigmaZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -827,7 +827,7 @@ clij.op().blurSliceBySlice(src, dst, kernelSizeX, kernelSizeY, sigmaX, sigmaY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -878,7 +878,8 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+from net.haesleinhuepf.clij.coremem.enums import NativeTypeEnum;
+ClearCLBuffer dst = clij.create(src.getDimensions(), src.getHeight()], NativeTypeEnum.UnsignedByte);
 ```
 
 ```
@@ -889,7 +890,7 @@ clij.op().convertToImageJBinary(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -923,7 +924,7 @@ clij.op().copy(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -944,7 +945,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 planeIndex = 10;
 ```
 
@@ -956,7 +957,7 @@ clij.op().copySlice(src, dst, planeIndex);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -990,7 +991,7 @@ clij.op().countNonZeroPixelsLocally(src, dst, radiusX, radiusY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1024,7 +1025,7 @@ clij.op().countNonZeroPixelsLocallySliceBySlice(src, dst, radiusX, radiusY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1059,7 +1060,7 @@ clij.op().countNonZeroVoxelsLocally(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1093,7 +1094,7 @@ clij.op().crop(src, dst, startX, startY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1128,7 +1129,7 @@ clij.op().crop(src, dst, startX, startY, startZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1162,7 +1163,7 @@ clij.op().detectMaximaBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1197,7 +1198,7 @@ clij.op().detectMaximaSliceBySliceBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1231,7 +1232,7 @@ clij.op().detectMinimaBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1266,7 +1267,7 @@ clij.op().detectMinimaSliceBySliceBox(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1300,7 +1301,7 @@ clij.op().detectOptima(src, dst, radius, detectMaxima);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1334,7 +1335,7 @@ clij.op().detectOptimaSliceBySlice(src, dst, radius, detectMaxima);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1371,7 +1372,7 @@ clij.op().dilateBox(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1410,7 +1411,7 @@ clij.op().dilateBoxSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1444,7 +1445,7 @@ clij.op().dilateSphere(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1480,7 +1481,7 @@ clij.op().dilateSphereSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1515,7 +1516,7 @@ clij.op().divideImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1551,7 +1552,7 @@ clij.op().downsample(src, dst, factorX, factorY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1587,7 +1588,7 @@ clij.op().downsample(src, dst, factorX, factorY, factorZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1621,7 +1622,7 @@ clij.op().downsampleSliceBySliceHalfMedian(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1658,7 +1659,7 @@ clij.op().erodeBox(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1697,7 +1698,7 @@ clij.op().erodeBoxSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1731,7 +1732,7 @@ clij.op().erodeSphere(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1767,7 +1768,7 @@ clij.op().erodeSphereSliceBySlice(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1801,7 +1802,7 @@ clij.op().fillHistogram(src, dstHistogram, minimumGreyValue, maximumGreyValue);
 ```
 //show result
 dstHistogramImagePlus = clij.pull(dstHistogram);
-dstHistogramImagePlus.show());
+dstHistogramImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1835,7 +1836,7 @@ clij.op().flip(src, dst, flipx, flipy);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1870,7 +1871,7 @@ clij.op().flip(src, dst, flipx, flipy, flipz);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1903,7 +1904,7 @@ clij.op().gradientX(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1936,7 +1937,7 @@ clij.op().gradientY(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -1969,7 +1970,7 @@ clij.op().gradientZ(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2038,7 +2039,7 @@ clij.op().invert(input3d, output3d);
 ```
 //show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
 // cleanup memory on GPU
 input3d.close();
@@ -2074,7 +2075,7 @@ clij.op().localThreshold(src, dst, threshold);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2112,7 +2113,7 @@ clij.op().mask(src, mask, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2150,7 +2151,7 @@ clij.op().maskStackWithPlane(src, mask, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2184,7 +2185,7 @@ clij.op().maximumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2217,7 +2218,7 @@ clij.op().maximumIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2252,7 +2253,7 @@ clij.op().maximumImageAndScalar(src, dst, valueB);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2287,7 +2288,7 @@ clij.op().maximumImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2355,7 +2356,7 @@ clij.op().maximumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2390,7 +2391,7 @@ clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2426,7 +2427,7 @@ clij.op().maximumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2452,7 +2453,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst_max = clij.create(src);
+dst_max = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 projectedDimensionX = 10;
 projectedDimensionY = 20;
 projectedDimension = 30;
@@ -2466,7 +2467,7 @@ clij.op().maximumXYZProjection(src, dst_max, projectedDimensionX, projectedDimen
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2487,7 +2488,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst_max = clij.create(src);
+dst_max = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -2498,7 +2499,7 @@ clij.op().maximumZProjection(src, dst_max);
 ```
 //show result
 dst_maxImagePlus = clij.pull(dst_max);
-dst_maxImagePlus.show());
+dst_maxImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2531,7 +2532,7 @@ clij.op().meanBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2564,7 +2565,7 @@ clij.op().meanIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2601,7 +2602,7 @@ clij.op().meanSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2636,7 +2637,7 @@ clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2672,7 +2673,7 @@ clij.op().meanSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2693,7 +2694,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -2704,7 +2705,7 @@ clij.op().meanZProjection(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2741,7 +2742,7 @@ clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2779,7 +2780,7 @@ clij.op().medianBox(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2816,7 +2817,7 @@ clij.op().medianSliceBySliceBox(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2853,7 +2854,7 @@ clij.op().medianSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2890,7 +2891,7 @@ clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2928,7 +2929,7 @@ clij.op().medianSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2961,7 +2962,7 @@ clij.op().minimumBox(src, dst, radiusX, radiusY, radiusZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -2994,7 +2995,7 @@ clij.op().minimumIJ(src, dst, radius);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3029,7 +3030,7 @@ clij.op().minimumImageAndScalar(src, dst, valueB);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3064,7 +3065,7 @@ clij.op().minimumImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3132,7 +3133,7 @@ clij.op().minimumSliceBySliceSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3167,7 +3168,7 @@ clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3203,7 +3204,7 @@ clij.op().minimumSphere(src, dst, kernelSizeX, kernelSizeY, kernelSizeZ);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3224,7 +3225,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst_min = clij.create(src);
+dst_min = clij.create(new long[]{src.getWidth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3235,7 +3236,7 @@ clij.op().minimumZProjection(src, dst_min);
 ```
 //show result
 dst_minImagePlus = clij.pull(dst_min);
-dst_minImagePlus.show());
+dst_minImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3269,7 +3270,7 @@ clij.op().multiplyImageAndCoordinate(src, dst, dimension);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3304,7 +3305,7 @@ clij.op().multiplyImageAndScalar(src, dst, scalar);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3339,7 +3340,7 @@ clij.op().multiplyImages(src, src1, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3372,7 +3373,7 @@ clij.op().multiplySliceBySliceWithScalars(src, dst, scalars);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3408,7 +3409,7 @@ clij.op().multiplyStackWithPlane(input3d, input2d, output3d);
 ```
 //show result
 output3dImagePlus = clij.pull(output3d);
-output3dImagePlus.show());
+output3dImagePlus.show();
 
 // cleanup memory on GPU
 input3d.close();
@@ -3444,7 +3445,7 @@ clij.op().power(src, dst, exponent);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3478,7 +3479,7 @@ clij.op().radialProjection(src, dst, deltaAngle);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3500,7 +3501,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3511,7 +3512,7 @@ clij.op().resliceBottom(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3533,7 +3534,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
@@ -3544,7 +3545,7 @@ clij.op().resliceLeft(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3566,7 +3567,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getHeight(), src.getDepth(), src.getWidth()}, src.getNativeType());
 ```
 
 ```
@@ -3577,7 +3578,7 @@ clij.op().resliceRight(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3599,7 +3600,7 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
+dst = clij.create(new long[]{src.getWidth(), src.getDepth(), src.getHeight()}, src.getNativeType());
 ```
 
 ```
@@ -3610,7 +3611,7 @@ clij.op().resliceTop(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3644,7 +3645,7 @@ clij.op().rotateLeft(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3678,7 +3679,7 @@ clij.op().rotateRight(src, dst);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
@@ -3777,7 +3778,7 @@ clij.op().subtract(source1, source2, destination);
 ```
 //show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
 // cleanup memory on GPU
 source1.close();
@@ -3813,7 +3814,7 @@ clij.op().subtractImages(subtrahend, minuend, destination);
 ```
 //show result
 destinationImagePlus = clij.pull(destination);
-destinationImagePlus.show());
+destinationImagePlus.show();
 
 // cleanup memory on GPU
 subtrahend.close();
@@ -3941,7 +3942,7 @@ clij.op().threshold(src, dst, threshold);
 ```
 //show result
 dstImagePlus = clij.pull(dst);
-dstImagePlus.show());
+dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();

@@ -113,4 +113,26 @@ public class AbstractDocumentationGenerator {
         specialCaseDocumentation.put("convertToImageJBinary", "Convert a binary image to an image with values 0 and 255 as it can be interpreted by ImageJ as binary image.");
     }
 
+    protected static String createOutputImageCode(String methodName, String parameterName, String inputImage) {
+        if (methodName.compareTo("resliceTop") == 0 ||
+                methodName.compareTo("resliceBottom") == 0 ) {
+            return parameterName + " = clij.create(new long[]{" + inputImage + ".getWidth(), " + inputImage + ".getDepth(), " + inputImage + ".getHeight()}, " + inputImage + ".getNativeType());\n";
+        } else if (methodName.compareTo("resliceLeft") == 0 ||
+                methodName.compareTo("resliceRight") == 0 ) {
+            return parameterName + " = clij.create(new long[]{" + inputImage + ".getHeight(), " + inputImage + ".getDepth(), " + inputImage + ".getWidth()}, " + inputImage + ".getNativeType());\n";
+        } else if (methodName.compareTo("maximumZProjection") == 0 ||
+                methodName.compareTo("maximumXYZProjection") == 0  ||
+                methodName.compareTo("meanZProjection") == 0  ||
+                methodName.compareTo("copySlice") == 0  ||
+                methodName.compareTo("minimumZProjection") == 0 ) {
+            return parameterName + " = clij.create(new long[]{" + inputImage + ".getWidth(), " + inputImage + ".getHeight()}, " + inputImage + ".getNativeType());\n";
+        } else if (methodName.compareTo("convertToImageJBinary") == 0) {
+            return "from net.haesleinhuepf.clij.coremem.enums import NativeTypeEnum;\n" +
+                    "ClearCLBuffer " + parameterName + " = clij.create(" + inputImage + ".getDimensions(), " + inputImage + ".getHeight()], NativeTypeEnum.UnsignedByte);\n";
+        } else {
+            return parameterName + " = clij.create(" + inputImage + ");\n";
+        }
+    }
+
+
 }

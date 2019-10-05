@@ -134,7 +134,7 @@ public class MarkdownGroovyOpDocumentationGenerator extends AbstractDocumentatio
                 }
                 code.append(parameterName + " = clij.push(" + parameterName + "ImagePlus);\n");
             } else if (isOutputParameter(parameter)) {
-                code.append(parameterName + " = clij.create(" + inputImage + ");\n");
+                code.append(createOutputImageCode(methodName, parameterName, inputImage));
             } else if (parameter.startsWith("Float")) {
                 code.append(parameterName + " = " + floatParameterValues[floatParameterIndex]+ ";\n");
                 floatParameterIndex++;
@@ -169,7 +169,7 @@ public class MarkdownGroovyOpDocumentationGenerator extends AbstractDocumentatio
             String parameterName = parameter.split(" ")[1];
             if (isOutputParameter(parameter)) {
                 code.append(parameterName + "ImagePlus = clij.pull(" + parameterName + ");\n");
-                code.append(parameterName + "ImagePlus.show());\n");
+                code.append(parameterName + "ImagePlus.show();\n");
             }
         }
 

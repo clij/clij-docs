@@ -1,5 +1,6 @@
 package net.haesleinhuepf.clij.macro.documentation;
 
+import net.haesleinhuepf.clij.coremem.enums.NativeTypeEnum;
 import net.haesleinhuepf.clij.macro.CLIJMacroPlugin;
 import net.haesleinhuepf.clij.macro.CLIJMacroPluginService;
 import org.scijava.Context;
@@ -117,11 +118,11 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
 
         StringBuilder code = new StringBuilder();
 
-        code.append("// init CLIJ and GPU\n");
+        code.append("# init CLIJ and GPU\n");
         code.append("from net.haesleinhuepf.clij import CLIJ;\n");
         code.append("clij = CLIJ.getInstance();\n\n");
 
-        code.append("// get input parameters\n");
+        code.append("# get input parameters\n");
         String[] parametersArray = parametersWithType.split(",");
         String inputImage = "";
         for (String parameter : parametersArray) {
@@ -133,7 +134,11 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
                 }
                 code.append(parameterName + " = clij.push(" + parameterName + "ImagePlus);\n");
             } else if (isOutputParameter(parameter)) {
-                code.append(parameterName + " = clij.create(" + inputImage + ");\n");
+                code.append(
+                        createOutputImageCode(methodName, parameterName, inputImage)
+                        .replace("ClearCLBuffer ", "")
+                                .replace("new long[]{","[")
+                                .replace("]","}"));
             } else if (parameter.startsWith("Float")) {
                 code.append(parameterName + " = " + floatParameterValues[floatParameterIndex]+ ";\n");
                 floatParameterIndex++;
@@ -151,14 +156,14 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
 
 
         code.append("```\n\n```");
-        code.append("\n// Execute operation on GPU\n");
+        code.append("\n# Execute operation on GPU\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
             code.append("result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + " = ");
         }
         code.append("clij.op()." + methodName + "(" + parameters + ");\n");
         code.append("```\n\n```");
 
-        code.append("\n//show result\n");
+        code.append("\n# show result\n");
         if (returnType.toLowerCase().compareTo("boolean") != 0) {
             code.append("print(result" + methodName.substring(0,1).toUpperCase() + methodName.substring(1, methodName.length()) + ");\n");
         }
@@ -168,12 +173,12 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
             String parameterName = parameter.split(" ")[1];
             if (isOutputParameter(parameter)) {
                 code.append(parameterName + "ImagePlus = clij.pull(" + parameterName + ");\n");
-                code.append(parameterName + "ImagePlus.show());\n");
+                code.append(parameterName + "ImagePlus.show();\n");
             }
         }
 
 
-        code.append("\n// cleanup memory on GPU\n");
+        code.append("\n# cleanup memory on GPU\n");
         for (String parameter : parametersArray) {
             parameter = parameter.trim();
             String parameterName = parameter.split(" ")[1];
@@ -184,5 +189,6 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
 
         return code.toString();
     }
+
 
 }
