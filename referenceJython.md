@@ -541,6 +541,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [automaticThreshold.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/automaticThreshold.py)
+
+
 ## automaticThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod,  Float minimumGreyValue,  Float maximumGreyValue,  Integer numberOfBins )
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -578,6 +584,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [automaticThreshold.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/automaticThreshold.py)
+
 
 ## binaryAnd( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
@@ -763,6 +775,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+
+
 ## blur( ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY,  Float blurSigmaZ )
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -799,6 +817,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+
 
 ## blurSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst,  int kernelSizeX,  int kernelSizeY,  float sigmaX,  float sigmaY )
 
@@ -2506,6 +2530,13 @@ src.close();
 dst_max.close();
 ```
 
+
+
+### Example scripts
+* [maximumProjection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/maximumProjection.py)
+* [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+
+
 ## meanBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -3618,6 +3649,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [reslicing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/reslicing.py)
+
+
 ## rotateLeft( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Rotates a given input image by 90 degrees counter-clockwise. For that, X and Y axis of an image stack
@@ -3785,6 +3822,12 @@ source1.close();
 source2.close();
 destination.close();
 ```
+
+
+
+### Example scripts
+* [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+
 
 ## subtractImages( ClearCLBuffer subtrahend,  ClearCLBuffer minuend,  ClearCLBuffer destination )
 

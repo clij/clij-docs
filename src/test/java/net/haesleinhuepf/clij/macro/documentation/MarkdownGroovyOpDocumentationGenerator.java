@@ -84,6 +84,11 @@ public class MarkdownGroovyOpDocumentationGenerator extends AbstractDocumentatio
                     String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
                             description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Groovy example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
+                    String linkToExamples = searchForExampleScripts("op()." + methodName, "src/main/groovy/", "https://github.com/clij/clij-docs/blob/master/src/main/groovy/");
+                    if(linkToExamples.length() > 0) {
+                        output = output + "\n\n### Example scripts\n" + linkToExamples + "\n\n";
+                    }
+
                     blocks.add(output);
                     methods++;
                 }

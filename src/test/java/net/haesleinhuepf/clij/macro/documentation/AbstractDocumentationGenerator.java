@@ -3,7 +3,9 @@ package net.haesleinhuepf.clij.macro.documentation;
 
 import net.haesleinhuepf.clij.macro.CLIJMacroPlugin;
 import net.haesleinhuepf.clij.macro.CLIJMacroPluginService;
+import org.python.antlr.ast.Str;
 
+import java.io.*;
 import java.util.HashMap;
 
 /**
@@ -132,6 +134,50 @@ public class AbstractDocumentationGenerator {
         } else {
             return parameterName + " = clij.create(" + inputImage + ");\n";
         }
+    }
+
+    protected static String searchForExampleScripts(String searchFor, String searchinFolder, String baseLink) {
+        StringBuilder result = new StringBuilder();
+        for (File file : new File(searchinFolder).listFiles()) {
+            if (!file.isDirectory()) {
+                String content = readFile(file.getAbsolutePath());
+                if (content.contains(searchFor)) {
+                    result.append("* [" + file.getName() + "](" + baseLink + file.getName() + ")\n");
+                }
+            }
+        }
+        return result.toString();
+    }
+
+    public static String readFile(String filename) {
+        System.out.println("Reading " + filename);
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+
+            while (line != null) {
+                sb.append(line);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+            }
+            br.close();
+            return sb.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
 
 

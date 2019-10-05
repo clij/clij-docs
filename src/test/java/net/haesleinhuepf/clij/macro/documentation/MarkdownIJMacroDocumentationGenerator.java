@@ -46,6 +46,12 @@ public class MarkdownIJMacroDocumentationGenerator {
                 documentation.append("## " + name);
                 documentation.append("Parameters: " + plugin.getParameterHelpText());
             }
+
+            String linkToExamples = AbstractDocumentationGenerator.searchForExampleScripts(name, "src/main/macro/", "https://github.com/clij/clij-docs/blob/master/src/main/macro/");
+            if(linkToExamples.length() > 0) {
+                documentation.append("\n\n### Example scripts\n" + linkToExamples + "\n\n");
+            }
+
         }
         documentation.append("\n\n" + methodNames.size() + " plugins documented.");
 

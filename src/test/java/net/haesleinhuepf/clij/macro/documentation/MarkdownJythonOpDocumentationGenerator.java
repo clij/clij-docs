@@ -84,6 +84,12 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
                     String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
                             description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Jython example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
+                    String linkToExamples = searchForExampleScripts("op()." + methodName, "src/main/jython/", "https://github.com/clij/clij-docs/blob/master/src/main/jython/");
+                    if(linkToExamples.length() > 0) {
+                        output = output + "\n\n### Example scripts\n" + linkToExamples + "\n\n";
+                    }
+
+
                     blocks.add(output);
                     methods++;
                 }

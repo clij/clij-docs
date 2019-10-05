@@ -541,6 +541,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [automaticThreshold.groovy](https://github.com/clij/clij-docs/blob/master/src/main/groovy/automaticThreshold.groovy)
+
+
 ## automaticThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod,  Float minimumGreyValue,  Float maximumGreyValue,  Integer numberOfBins )
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -578,6 +584,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [automaticThreshold.groovy](https://github.com/clij/clij-docs/blob/master/src/main/groovy/automaticThreshold.groovy)
+
 
 ## binaryAnd( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
@@ -2505,6 +2517,12 @@ dst_maxImagePlus.show();
 src.close();
 dst_max.close();
 ```
+
+
+
+### Example scripts
+* [maximumProjection.groovy](https://github.com/clij/clij-docs/blob/master/src/main/groovy/maximumProjection.groovy)
+
 
 ## meanBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 

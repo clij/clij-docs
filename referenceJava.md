@@ -208,6 +208,14 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
+
 ## affineTransform( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 CLIJ affineTransform is deprecated. Use affineTransform2D or affineTransform3D instead.
@@ -267,6 +275,14 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
+
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform2D at )
 
 Applies an affine transform to a 2D image.
@@ -301,6 +317,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+
+
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 Applies an affine transform to a 2D image.
@@ -334,6 +356,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+
 
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform3D at )
 
@@ -371,6 +399,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
+
+
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 Applies an affine transform to a 3D image.
@@ -404,6 +438,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
+
 
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer dst )
 
@@ -441,6 +481,12 @@ vectorX.close();
 vectorY.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+
 
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer vectorZ,  ClearCLBuffer dst )
 
@@ -480,6 +526,12 @@ vectorY.close();
 vectorZ.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+
 
 ## argMaximumZProjection( ClearCLBuffer src,  ClearCLBuffer dst_max,  ClearCLBuffer dst_arg )
 
@@ -555,6 +607,16 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [AutoThresholdDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AutoThresholdDemo.java)
+* [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
+* [BinaryProcessingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BinaryProcessingDemo.java)
+* [CLIJImageJOpsCombinationDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CLIJImageJOpsCombinationDemo.java)
+* [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
+
+
 ## automaticThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod,  Float minimumGreyValue,  Float maximumGreyValue,  Integer numberOfBins )
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -593,6 +655,16 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [AutoThresholdDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AutoThresholdDemo.java)
+* [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
+* [BinaryProcessingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BinaryProcessingDemo.java)
+* [CLIJImageJOpsCombinationDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CLIJImageJOpsCombinationDemo.java)
+* [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
+
 
 ## binaryAnd( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
@@ -746,6 +818,12 @@ src2.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
+
+
 ## blur( ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY )
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -782,6 +860,15 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+* [BlurDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BlurDemo.java)
+* [CLIJImageJOpsCombinationDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CLIJImageJOpsCombinationDemo.java)
+* [MultipleGPUDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MultipleGPUDemo.java)
+
 
 ## blur( ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY,  Float blurSigmaZ )
 
@@ -820,6 +907,15 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+* [BlurDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BlurDemo.java)
+* [CLIJImageJOpsCombinationDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CLIJImageJOpsCombinationDemo.java)
+* [MultipleGPUDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MultipleGPUDemo.java)
+
 
 ## blurSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst,  int kernelSizeX,  int kernelSizeY,  float sigmaX,  float sigmaY )
 
@@ -886,6 +982,12 @@ System.out.println(resultCenterOfMass);
 // cleanup memory on GPU
 input.close();
 ```
+
+
+
+### Example programs
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
 
 ## convertToImageJBinary( ClearCLBuffer src,  ClearCLBuffer dst )
 
@@ -956,6 +1058,14 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
+
 ## copySlice( ClearCLBuffer src,  ClearCLBuffer dst,  Integer planeIndex )
 
 Copies a slice with a given index out of an input image stack into a 2D image, if 3D and 2D image are given as parameters. OrCopies a given slice into a given image stack, if 2D and 3D images are given as parameters.
@@ -989,6 +1099,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
 
 ## countNonZeroPixelsLocally( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY )
 
@@ -1417,6 +1534,13 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [BinaryProcessingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BinaryProcessingDemo.java)
+* [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
+
+
 ## dilateBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1491,6 +1615,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+
 
 ## dilateSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
@@ -1712,6 +1842,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [BinaryProcessingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BinaryProcessingDemo.java)
+
+
 ## erodeBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1786,6 +1922,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+
 
 ## erodeSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
@@ -2576,6 +2718,12 @@ src.close();
 dst_max.close();
 ```
 
+
+
+### Example programs
+* [MaximumProjectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MaximumProjectionDemo.java)
+
+
 ## meanBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2609,6 +2757,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
+
 
 ## meanIJ( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
@@ -3442,6 +3596,12 @@ src1.close();
 dst.close();
 ```
 
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+
+
 ## multiplySliceBySliceWithScalars( ClearCLBuffer src,  ClearCLBuffer dst,  float[] scalars )
 
 Multiplies all pixels value x in input image X with a scalar s given as an array with values for every z-slice.
@@ -3893,6 +4053,12 @@ source2.close();
 destination.close();
 ```
 
+
+
+### Example programs
+* [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
+
+
 ## subtractImages( ClearCLBuffer subtrahend,  ClearCLBuffer minuend,  ClearCLBuffer destination )
 
 Subtracts one image X from another image Y pixel wise.
@@ -4060,6 +4226,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example programs
+* [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
+* [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
+
 
 
 Documented 112 methods.

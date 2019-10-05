@@ -83,6 +83,11 @@ public class MarkdownJavaOpDocumentationGenerator extends AbstractDocumentationG
                     String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
                             description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Java example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
+                    String linkToExamples = searchForExampleScripts("op()." + methodName, "src/main/java/net/haesleinhuepf/clij/examples/", "https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/");
+                    if(linkToExamples.length() > 0) {
+                        output = output + "\n\n### Example programs\n" + linkToExamples + "\n\n";
+                    }
+
                     blocks.add(output);
                     methods++;
                 }

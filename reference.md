@@ -61,6 +61,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AddImages.java)
 
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+
+
 <a name="CLIJ_addImagesWeighted"></a>
 ## CLIJ_addImagesWeighted
 
@@ -81,6 +88,13 @@ Ext.CLIJ_addImagesWeighted(summand1, summand2, destination, factor1, factor2);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AddImagesWeighted.java)
+
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+
 
 <a name="CLIJ_affineTransform"></a>
 ## CLIJ_affineTransform
@@ -126,6 +140,17 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform.java)
 
+
+
+### Example scripts
+* [affineTransform.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/affineTransform.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
+
 <a name="CLIJ_affineTransform2D"></a>
 ## CLIJ_affineTransform2D
 
@@ -157,6 +182,17 @@ Ext.CLIJ_affineTransform2D(source, destination, transform);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AffineTransform2D.java)
+
+
+
+### Example scripts
+* [affineTransform.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/affineTransform.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
 
 <a name="CLIJ_affineTransform3D"></a>
 ## CLIJ_affineTransform3D
@@ -220,6 +256,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ApplyVectorField2D.java)
 
+
+
+### Example scripts
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
+
 <a name="CLIJ_applyVectorField3D"></a>
 ## CLIJ_applyVectorField3D
 
@@ -276,6 +319,13 @@ Ext.CLIJ_automaticThreshold(input, destination, method);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/AutomaticThreshold.java)
+
+
+
+### Example scripts
+* [autoThreshold.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/autoThreshold.ijm)
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+
 
 <a name="CLIJ_binaryAnd"></a>
 ## CLIJ_binaryAnd
@@ -366,6 +416,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/BinaryXOr.java)
 
+
+
+### Example scripts
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+
+
 <a name="CLIJ_blur2D"></a>
 ## CLIJ_blur2D
 
@@ -406,6 +462,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Blur3D.java)
 
+
+
+### Example scripts
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+* [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+
+
 <a name="CLIJ_blur3DSliceBySlice"></a>
 ## CLIJ_blur3DSliceBySlice
 
@@ -444,6 +507,14 @@ Ext.CLIJ_centerOfMass(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CenterOfMass.java)
 
+
+
+### Example scripts
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+
+
 <a name="CLIJ_clInfo"></a>
 ## CLIJ_clInfo
 
@@ -460,6 +531,12 @@ Ext.CLIJ_clInfo();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ClInfo.java)
 
+
+
+### Example scripts
+* [clInfo.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/clInfo.ijm)
+
+
 <a name="CLIJ_clear"></a>
 ## CLIJ_clear
 
@@ -475,6 +552,48 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Clear.java)
+
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [affineTransform.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/affineTransform.ijm)
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [autoThreshold.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/autoThreshold.ijm)
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+* [benchmarking.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm)
+* [bigImageTransfer.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bigImageTransfer.ijm)
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
+* [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+* [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
+* [flip.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/flip.ijm)
+* [localMaximum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/localMaximum.ijm)
+* [maximumProjection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/maximumProjection.ijm)
+* [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
+* [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
+* [memory_reuse_versus_reallocation.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
+* [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [orthogonalMaximumProjections.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/orthogonalMaximumProjections.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [push.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/push.ijm)
+* [pushCurrentZStack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushCurrentZStack.ijm)
+* [pushSlice.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushSlice.ijm)
+* [reslicing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/reslicing.ijm)
+* [rotate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+* [thresholding.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/thresholding.ijm)
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
 
 <a name="CLIJ_convertFloat"></a>
 ## CLIJ_convertFloat
@@ -495,6 +614,12 @@ Ext.CLIJ_convertFloat(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertFloat.java)
+
+
+
+### Example scripts
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+
 
 <a name="CLIJ_convertUInt16"></a>
 ## CLIJ_convertUInt16
@@ -517,6 +642,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertUInt16.java)
 
+
+
+### Example scripts
+* [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+
+
 <a name="CLIJ_convertUInt8"></a>
 ## CLIJ_convertUInt8
 
@@ -538,6 +670,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ConvertUInt8.java)
 
+
+
+### Example scripts
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+
+
 <a name="CLIJ_copy"></a>
 ## CLIJ_copy
 
@@ -557,6 +695,22 @@ Ext.CLIJ_copy(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Copy.java)
+
+
+
+### Example scripts
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [memory_reuse_versus_reallocation.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
 
 <a name="CLIJ_copySlice"></a>
 ## CLIJ_copySlice
@@ -581,6 +735,21 @@ Ext.CLIJ_copySlice(source, destination, sliceIndex);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/CopySlice.java)
+
+
+
+### Example scripts
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
 
 <a name="CLIJ_countNonZeroPixels2DSphere"></a>
 ## CLIJ_countNonZeroPixels2DSphere
@@ -653,6 +822,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Create2D.java)
 
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+
+
 <a name="CLIJ_create3D"></a>
 ## CLIJ_create3D
 
@@ -669,6 +844,17 @@ Ext.CLIJ_create3D(destination, width, height, depth, bitDepth);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Create3D.java)
+
+
+
+### Example scripts
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+
 
 <a name="CLIJ_crop2D"></a>
 ## CLIJ_crop2D
@@ -690,6 +876,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Crop2D.java)
 
+
+
+### Example scripts
+* [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
+
+
 <a name="CLIJ_crop3D"></a>
 ## CLIJ_crop3D
 
@@ -709,6 +901,12 @@ Ext.CLIJ_crop3D(source, destination, startX, startY, startZ, width, height, dept
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Crop3D.java)
+
+
+
+### Example scripts
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+
 
 <a name="CLIJ_detectMaximaBox"></a>
 ## CLIJ_detectMaximaBox
@@ -810,6 +1008,12 @@ Ext.CLIJ_dilateBox(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/DilateBox.java)
+
+
+
+### Example scripts
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+
 
 <a name="CLIJ_dilateBoxSliceBySlice"></a>
 ## CLIJ_dilateBoxSliceBySlice
@@ -937,6 +1141,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Downsample3D.java)
 
+
+
+### Example scripts
+* [orthogonalMaximumProjections.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/orthogonalMaximumProjections.ijm)
+
+
 <a name="CLIJ_downsampleSliceBySliceHalfMedian"></a>
 ## CLIJ_downsampleSliceBySliceHalfMedian
 
@@ -979,6 +1189,13 @@ Ext.CLIJ_erodeBox(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ErodeBox.java)
+
+
+
+### Example scripts
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+
 
 <a name="CLIJ_erodeBoxSliceBySlice"></a>
 ## CLIJ_erodeBoxSliceBySlice
@@ -1083,6 +1300,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Flip3D.java)
 
+
+
+### Example scripts
+* [flip.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/flip.ijm)
+
+
 <a name="CLIJ_gradientX"></a>
 ## CLIJ_gradientX
 
@@ -1156,6 +1379,12 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_help(searchFor);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Help.java)
+
+
+
+### Example scripts
+* [help.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/help.ijm)
+
 
 <a name="CLIJ_histogram"></a>
 ## CLIJ_histogram
@@ -1304,6 +1533,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum2DSphere.java)
 
+
+
+### Example scripts
+* [localMaximum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/localMaximum.ijm)
+
+
 <a name="CLIJ_maximum3DBox"></a>
 ## CLIJ_maximum3DBox
 
@@ -1323,6 +1558,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum3DBox.java)
 
+
+
+### Example scripts
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+
+
 <a name="CLIJ_maximum3DSphere"></a>
 ## CLIJ_maximum3DSphere
 
@@ -1341,6 +1582,12 @@ Ext.CLIJ_maximum3DSphere(source, destination, radiusX, radiusY, radiusZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Maximum3DSphere.java)
+
+
+
+### Example scripts
+* [localMaximum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/localMaximum.ijm)
+
 
 <a name="CLIJ_maximumImageAndScalar"></a>
 ## CLIJ_maximumImageAndScalar
@@ -1401,6 +1648,12 @@ Ext.CLIJ_maximumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumOfAllPixels.java)
 
+
+
+### Example scripts
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+
+
 <a name="CLIJ_maximumSliceBySliceSphere"></a>
 ## CLIJ_maximumSliceBySliceSphere
 
@@ -1445,6 +1698,12 @@ Ext.CLIJ_pull(destination_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumXYZProjection.java)
 
+
+
+### Example scripts
+* [orthogonalMaximumProjections.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/orthogonalMaximumProjections.ijm)
+
+
 <a name="CLIJ_maximumZProjection"></a>
 ## CLIJ_maximumZProjection
 
@@ -1462,6 +1721,14 @@ Ext.CLIJ_maximumZProjection(source, destination_max);
 Ext.CLIJ_pull(destination_max);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MaximumZProjection.java)
+
+
+
+### Example scripts
+* [bigImageTransfer.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bigImageTransfer.ijm)
+* [maximumProjection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/maximumProjection.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+
 
 <a name="CLIJ_mean2DBox"></a>
 ## CLIJ_mean2DBox
@@ -1482,6 +1749,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DBox.java)
 
+
+
+### Example scripts
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+* [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
+
+
 <a name="CLIJ_mean2DSphere"></a>
 ## CLIJ_mean2DSphere
 
@@ -1500,6 +1774,12 @@ Ext.CLIJ_mean2DSphere(source, destination, radiusX, radiusY);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean2DSphere.java)
+
+
+
+### Example scripts
+* [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+
 
 <a name="CLIJ_mean3DBox"></a>
 ## CLIJ_mean3DBox
@@ -1520,6 +1800,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean3DBox.java)
 
+
+
+### Example scripts
+* [benchmarking.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm)
+
+
 <a name="CLIJ_mean3DSphere"></a>
 ## CLIJ_mean3DSphere
 
@@ -1538,6 +1824,13 @@ Ext.CLIJ_mean3DSphere(source, destination, radiusX, radiusY, radiusZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Mean3DSphere.java)
+
+
+
+### Example scripts
+* [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
+* [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+
 
 <a name="CLIJ_meanOfAllPixels"></a>
 ## CLIJ_meanOfAllPixels
@@ -1722,6 +2015,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MedianSliceBySliceSphere.java)
 
+
+
+### Example scripts
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+
+
 <a name="CLIJ_minimum2DBox"></a>
 ## CLIJ_minimum2DBox
 
@@ -1778,6 +2077,13 @@ Ext.CLIJ_minimum3DBox(source, destination, radiusX, radiusY, radiusZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Minimum3DBox.java)
+
+
+
+### Example scripts
+* [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+
 
 <a name="CLIJ_minimum3DSphere"></a>
 ## CLIJ_minimum3DSphere
@@ -1857,6 +2163,12 @@ Ext.CLIJ_minimumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MinimumOfAllPixels.java)
 
+
+
+### Example scripts
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+
+
 <a name="CLIJ_minimumSliceBySliceSphere"></a>
 ## CLIJ_minimumSliceBySliceSphere
 
@@ -1915,6 +2227,12 @@ Ext.CLIJ_multiplyImageAndScalar(source, destination, scalar);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/MultiplyImageAndScalar.java)
+
+
+
+### Example scripts
+* [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
+
 
 <a name="CLIJ_multiplyImages"></a>
 ## CLIJ_multiplyImages
@@ -1995,6 +2313,49 @@ Ext.CLIJ_pull(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Pull.java)
 
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [affineTransform.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/affineTransform.ijm)
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [autoThreshold.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/autoThreshold.ijm)
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+* [benchmarking.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm)
+* [bigImageTransfer.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bigImageTransfer.ijm)
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
+* [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+* [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
+* [flip.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/flip.ijm)
+* [localMaximum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/localMaximum.ijm)
+* [maximumProjection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/maximumProjection.ijm)
+* [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
+* [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
+* [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+* [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [orthogonalMaximumProjections.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/orthogonalMaximumProjections.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [pushCurrentZStack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushCurrentZStack.ijm)
+* [pushSlice.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushSlice.ijm)
+* [reslicing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/reslicing.ijm)
+* [rotate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [thresholding.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/thresholding.ijm)
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+* [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
+
 <a name="CLIJ_pullBinary"></a>
 ## CLIJ_pullBinary
 
@@ -2010,6 +2371,14 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_pullBinary(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PullBinary.java)
+
+
+
+### Example scripts
+* [autoThreshold.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/autoThreshold.ijm)
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [thresholding.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/thresholding.ijm)
+
 
 <a name="CLIJ_push"></a>
 ## CLIJ_push
@@ -2027,6 +2396,52 @@ Ext.CLIJ_push(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Push.java)
 
+
+
+### Example scripts
+* [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [affineTransform.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/affineTransform.ijm)
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
+* [autoThreshold.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/autoThreshold.ijm)
+* [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
+* [benchmarking.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/benchmarking.ijm)
+* [bigImageTransfer.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bigImageTransfer.ijm)
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
+* [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+* [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
+* [flip.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/flip.ijm)
+* [localMaximum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/localMaximum.ijm)
+* [maximumProjection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/maximumProjection.ijm)
+* [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
+* [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
+* [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+* [memory_reuse_versus_reallocation.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
+* [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [orthogonalMaximumProjections.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/orthogonalMaximumProjections.ijm)
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+* [push.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/push.ijm)
+* [pushCurrentZStack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushCurrentZStack.ijm)
+* [pushSlice.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushSlice.ijm)
+* [reslicing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/reslicing.ijm)
+* [rotate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate.ijm)
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+* [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+* [thresholding.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/thresholding.ijm)
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+* [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
+* [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+
+
 <a name="CLIJ_pushCurrentSlice"></a>
 ## CLIJ_pushCurrentSlice
 
@@ -2042,6 +2457,12 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_pushCurrentSlice(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PushCurrentSlice.java)
+
+
+
+### Example scripts
+* [pushSlice.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushSlice.ijm)
+
 
 <a name="CLIJ_pushCurrentZStack"></a>
 ## CLIJ_pushCurrentZStack
@@ -2059,6 +2480,12 @@ Ext.CLIJ_pushCurrentZStack(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/PushCurrentZStack.java)
 
+
+
+### Example scripts
+* [pushCurrentZStack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/pushCurrentZStack.ijm)
+
+
 <a name="CLIJ_release"></a>
 ## CLIJ_release
 
@@ -2074,6 +2501,12 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_release(image);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Release.java)
+
+
+
+### Example scripts
+* [memory_reuse_versus_reallocation.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
+
 
 <a name="CLIJ_reportMemory"></a>
 ## CLIJ_reportMemory
@@ -2091,6 +2524,15 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_reportMemory();
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ReportMemory.java)
+
+
+
+### Example scripts
+* [allocateBigImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/allocateBigImages.ijm)
+* [bigImageTransfer.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bigImageTransfer.ijm)
+* [push.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/push.ijm)
+* [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
+
 
 <a name="CLIJ_resliceBottom"></a>
 ## CLIJ_resliceBottom
@@ -2129,6 +2571,13 @@ Ext.CLIJ_resliceLeft(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ResliceLeft.java)
+
+
+
+### Example scripts
+* [reslicing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/reslicing.ijm)
+* [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
+
 
 <a name="CLIJ_resliceRadial"></a>
 ## CLIJ_resliceRadial
@@ -2208,6 +2657,13 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate2D.java)
 
+
+
+### Example scripts
+* [rotateFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateFree.ijm)
+* [rotateOverwriteOriginal.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotateOverwriteOriginal.ijm)
+
+
 <a name="CLIJ_rotate3D"></a>
 ## CLIJ_rotate3D
 
@@ -2229,6 +2685,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Rotate3D.java)
 
+
+
+### Example scripts
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+
+
 <a name="CLIJ_rotateLeft"></a>
 ## CLIJ_rotateLeft
 
@@ -2248,6 +2710,12 @@ Ext.CLIJ_rotateLeft(source, destination);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/RotateLeft.java)
+
+
+
+### Example scripts
+* [rotate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate.ijm)
+
 
 <a name="CLIJ_rotateRight"></a>
 ## CLIJ_rotateRight
@@ -2269,6 +2737,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/RotateRight.java)
 
+
+
+### Example scripts
+* [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
+
+
 <a name="CLIJ_scale"></a>
 ## CLIJ_scale
 
@@ -2287,6 +2761,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale.java)
 
+
+
+### Example scripts
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+
+
 <a name="CLIJ_scale2D"></a>
 ## CLIJ_scale2D
 
@@ -2304,6 +2784,12 @@ Ext.CLIJ_scale2D(source, destination, scaling_factor, scale_to_center);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Scale2D.java)
+
+
+
+### Example scripts
+* [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
+
 
 <a name="CLIJ_scale3D"></a>
 ## CLIJ_scale3D
@@ -2363,6 +2849,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SubtractImages.java)
 
+
+
+### Example scripts
+* [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
+
+
 <a name="CLIJ_sumOfAllPixels"></a>
 ## CLIJ_sumOfAllPixels
 
@@ -2380,6 +2872,12 @@ Ext.CLIJ_push(source);
 Ext.CLIJ_sumOfAllPixels(source);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/SumOfAllPixels.java)
+
+
+
+### Example scripts
+* [statistics.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/statistics.ijm)
+
 
 <a name="CLIJ_sumZProjection"></a>
 ## CLIJ_sumZProjection
@@ -2422,6 +2920,16 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Threshold.java)
 
+
+
+### Example scripts
+* [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
+* [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
+* [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
+* [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
+* [thresholding.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/thresholding.ijm)
+
+
 <a name="CLIJ_translate2D"></a>
 ## CLIJ_translate2D
 
@@ -2440,6 +2948,12 @@ Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Translate2D.java)
 
+
+
+### Example scripts
+* [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
+
+
 <a name="CLIJ_translate3D"></a>
 ## CLIJ_translate3D
 
@@ -2457,6 +2971,12 @@ Ext.CLIJ_translate3D(source, destination, translateX, translateY, translateZ);
 Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/Translate3D.java)
+
+
+
+### Example scripts
+* [project3D.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/project3D.ijm)
+
 
 
 
