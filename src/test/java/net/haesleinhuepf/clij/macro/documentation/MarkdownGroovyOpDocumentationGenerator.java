@@ -81,7 +81,8 @@ public class MarkdownGroovyOpDocumentationGenerator extends AbstractDocumentatio
                 if (!parametersWithType.toString().contains("ClearCLImage")) {
                     String description = findDocumentation(service, methodName, parametersWithType);
 
-                    String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
+                    String output = "<a name=\"" + methodName + "\"></a>\n" +
+                            "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
                             description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Groovy example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
                     String linkToExamples = searchForExampleScripts("op()." + methodName, "src/main/groovy/", "https://github.com/clij/clij-docs/blob/master/src/main/groovy/");

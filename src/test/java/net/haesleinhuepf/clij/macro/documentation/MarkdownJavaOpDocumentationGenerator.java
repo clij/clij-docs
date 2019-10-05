@@ -80,7 +80,8 @@ public class MarkdownJavaOpDocumentationGenerator extends AbstractDocumentationG
                 if (!parametersWithType.toString().contains("ClearCLImage")) {
                     String description = findDocumentation(service, methodName, parametersWithType);
 
-                    String output = "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
+                    String output = "<a name=\"" + methodName + "\"></a>\n" +
+                            "## " + methodName + "(" + parametersWithType.toString() + ")\n\n" +
                             description + "\n\n**Parameters**: " + parametersWithType.toString() + "\n\n**Java example**: \n```\n" + generateExampleCode(methodName, parametersWithType.toString(), parametersForCall.toString(), returnType) + "```\n\n";
 
                     String linkToExamples = searchForExampleScripts("op()." + methodName, "src/main/java/net/haesleinhuepf/clij/examples/", "https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/");

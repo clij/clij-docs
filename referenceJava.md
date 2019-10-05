@@ -1,5 +1,6 @@
 # CLIJ reference for ImageJ/Java
 
+<a name="absolute"></a>
 ## absolute( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes the absolute value of every individual pixel x in a given image.
@@ -35,6 +36,7 @@ src.close();
 dst.close();
 ```
 
+<a name="addImageAndScalar"></a>
 ## addImageAndScalar( ClearCLBuffer src,  ClearCLBuffer dst,  Float scalar )
 
 Adds a scalar value s to all pixels x of a given image X.
@@ -71,6 +73,7 @@ src.close();
 dst.close();
 ```
 
+<a name="addImages"></a>
 ## addImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Calculates the sum of pairs of pixels x and y of two images X and Y.
@@ -108,6 +111,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="addImagesWeighted"></a>
 ## addImagesWeighted( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst,  Float factor,  Float factor1 )
 
 Calculates the sum of pairs of pixels x and y from images X and Y weighted with factors a and b.
@@ -147,6 +151,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="affineTransform"></a>
 ## affineTransform( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform3D at )
 
 CLIJ affineTransform is deprecated. Use affineTransform2D or affineTransform3D instead.
@@ -216,6 +221,7 @@ dst.close();
 * [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
 
 
+<a name="affineTransform"></a>
 ## affineTransform( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 CLIJ affineTransform is deprecated. Use affineTransform2D or affineTransform3D instead.
@@ -283,6 +289,7 @@ dst.close();
 * [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
 
 
+<a name="affineTransform2D"></a>
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform2D at )
 
 Applies an affine transform to a 2D image.
@@ -323,6 +330,7 @@ dst.close();
 * [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
 
 
+<a name="affineTransform2D"></a>
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 Applies an affine transform to a 2D image.
@@ -363,6 +371,7 @@ dst.close();
 * [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
 
 
+<a name="affineTransform3D"></a>
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform3D at )
 
 Applies an affine transform to a 3D image.
@@ -405,6 +414,7 @@ dst.close();
 * [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
 
 
+<a name="affineTransform3D"></a>
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
 Applies an affine transform to a 3D image.
@@ -445,6 +455,7 @@ dst.close();
 * [AffineTransformDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/AffineTransformDemo.java)
 
 
+<a name="applyVectorfield"></a>
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer dst )
 
 Deforms an image according to distances provided in the given vector images. It is recommended to use 32-bit images for input, output and vector images. 
@@ -488,6 +499,7 @@ dst.close();
 * [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
 
 
+<a name="applyVectorfield"></a>
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer vectorZ,  ClearCLBuffer dst )
 
 Deforms an image according to distances provided in the given vector images. It is recommended to use 32-bit images for input, output and vector images. 
@@ -533,6 +545,7 @@ dst.close();
 * [ApplyVectorFieldDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/ApplyVectorFieldDemo.java)
 
 
+<a name="argMaximumZProjection"></a>
 ## argMaximumZProjection( ClearCLBuffer src,  ClearCLBuffer dst_max,  ClearCLBuffer dst_arg )
 
 Determines the maximum projection of an image stack along Z.
@@ -571,6 +584,7 @@ dst_max.close();
 dst_arg.close();
 ```
 
+<a name="automaticThreshold"></a>
 ## automaticThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod )
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -617,6 +631,7 @@ dst.close();
 * [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
 
 
+<a name="automaticThreshold"></a>
 ## automaticThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  String userSelectedMethod,  Float minimumGreyValue,  Float maximumGreyValue,  Integer numberOfBins )
 
 The automatic thresholder utilizes the threshold methods from ImageJ on a histogram determined on 
@@ -666,6 +681,7 @@ dst.close();
 * [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
 
 
+<a name="binaryAnd"></a>
 ## binaryAnd( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -705,6 +721,7 @@ src2.close();
 dst.close();
 ```
 
+<a name="binaryNot"></a>
 ## binaryNot( ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Computes a binary image (containing pixel values 0 and 1) from an image X by negating its pixel values
@@ -742,6 +759,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="binaryOr"></a>
 ## binaryOr( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -779,6 +797,7 @@ src2.close();
 dst.close();
 ```
 
+<a name="binaryXOr"></a>
 ## binaryXOr( ClearCLBuffer src1,  ClearCLBuffer src2,  ClearCLBuffer dst )
 
 Computes a binary image (containing pixel values 0 and 1) from two images X and Y by connecting pairs of
@@ -824,6 +843,7 @@ dst.close();
 * [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
 
 
+<a name="blur"></a>
 ## blur( ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY )
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -870,6 +890,7 @@ dst.close();
 * [MultipleGPUDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MultipleGPUDemo.java)
 
 
+<a name="blur"></a>
 ## blur( ClearCLBuffer src,  ClearCLBuffer dst,  Float blurSigmaX,  Float blurSigmaY,  Float blurSigmaZ )
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -917,6 +938,7 @@ dst.close();
 * [MultipleGPUDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MultipleGPUDemo.java)
 
 
+<a name="blurSliceBySlice"></a>
 ## blurSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst,  int kernelSizeX,  int kernelSizeY,  float sigmaX,  float sigmaY )
 
 Computes the Gaussian blurred image of an image given two sigma values in X and Y. Thus, the filterkernel can have non-isotropic shape.
@@ -952,6 +974,7 @@ src.close();
 dst.close();
 ```
 
+<a name="centerOfMass"></a>
 ## centerOfMass( ClearCLBuffer input )
 
 Determines the center of mass of an image or image stack and writes the result in the results table
@@ -989,6 +1012,7 @@ input.close();
 * [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
 
 
+<a name="convertToImageJBinary"></a>
 ## convertToImageJBinary( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Convert a binary image to an image with values 0 and 255 as it can be interpreted by ImageJ as binary image.
@@ -1023,6 +1047,7 @@ src.close();
 dst.close();
 ```
 
+<a name="copy"></a>
 ## copy( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Copies an image.
@@ -1066,6 +1091,7 @@ dst.close();
 * [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
 
 
+<a name="copySlice"></a>
 ## copySlice( ClearCLBuffer src,  ClearCLBuffer dst,  Integer planeIndex )
 
 Copies a slice with a given index out of an input image stack into a 2D image, if 3D and 2D image are given as parameters. OrCopies a given slice into a given image stack, if 2D and 3D images are given as parameters.
@@ -1107,6 +1133,7 @@ dst.close();
 * [MotionCorrectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MotionCorrectionDemo.java)
 
 
+<a name="countNonZeroPixelsLocally"></a>
 ## countNonZeroPixelsLocally( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY )
 
 Counts non-zero pixels in the neighborhood of every pixel in a 2D image and writes the resulting count in the corresponding pixel of the target image.
@@ -1142,6 +1169,7 @@ src.close();
 dst.close();
 ```
 
+<a name="countNonZeroPixelsLocallySliceBySlice"></a>
 ## countNonZeroPixelsLocallySliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY )
 
 Counts non-zero pixels in the 2D-neighborhood of every pixel in a 3D image stack and writes the resulting count in the corresponding pixel of the target image.
@@ -1177,6 +1205,7 @@ src.close();
 dst.close();
 ```
 
+<a name="countNonZeroVoxelsLocally"></a>
 ## countNonZeroVoxelsLocally( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY,  Integer radiusZ )
 
 Counts non-zero pixels in the 2D-neighborhood of every pixel in a 3D image stack and writes the resulting count in the corresponding pixel of the target image.
@@ -1213,6 +1242,7 @@ src.close();
 dst.close();
 ```
 
+<a name="crop"></a>
 ## crop( ClearCLBuffer src,  ClearCLBuffer dst,  Integer startX,  Integer startY )
 
 Crops out a region of a 2D image or a substack out of a given image stack. Size of the region is determined from the given destination image stack.
@@ -1248,6 +1278,7 @@ src.close();
 dst.close();
 ```
 
+<a name="crop"></a>
 ## crop( ClearCLBuffer src,  ClearCLBuffer dst,  Integer startX,  Integer startY,  Integer startZ )
 
 Crops out a region of a 2D image or a substack out of a given image stack. Size of the region is determined from the given destination image stack.
@@ -1284,6 +1315,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectMaximaBox"></a>
 ## detectMaximaBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 Detects local maxima in a given square/cubic neighborhood. Pixels in the resulting image are set to 1 if
@@ -1319,6 +1351,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectMaximaSliceBySliceBox"></a>
 ## detectMaximaSliceBySliceBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 Detects local maxima in a given square neighborhood of an input image stack. The input image stack is 
@@ -1355,6 +1388,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectMinimaBox"></a>
 ## detectMinimaBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 Detects local minima in a given square/cubic neighborhood. Pixels in the resulting image are set to 1 if
@@ -1390,6 +1424,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectMinimaSliceBySliceBox"></a>
 ## detectMinimaSliceBySliceBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 Detects local minima in a given square neighborhood of an input image stack. The input image stack is 
@@ -1426,6 +1461,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectOptima"></a>
 ## detectOptima( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius,  Boolean detectMaxima )
 
 It is recommended to detectMaxima and detectMinima.
@@ -1461,6 +1497,7 @@ src.close();
 dst.close();
 ```
 
+<a name="detectOptimaSliceBySlice"></a>
 ## detectOptimaSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius,  Boolean detectMaxima )
 
 It is recommended to detectMaximaSliceBySlice and detectMinimaSliceBySlice.
@@ -1496,6 +1533,7 @@ src.close();
 dst.close();
 ```
 
+<a name="dilateBox"></a>
 ## dilateBox( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1541,6 +1579,7 @@ dst.close();
 * [CreateObjectOutlinesDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/CreateObjectOutlinesDemo.java)
 
 
+<a name="dilateBoxSliceBySlice"></a>
 ## dilateBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1581,6 +1620,7 @@ src.close();
 dst.close();
 ```
 
+<a name="dilateSphere"></a>
 ## dilateSphere( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1622,6 +1662,7 @@ dst.close();
 * [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
 
 
+<a name="dilateSphereSliceBySlice"></a>
 ## dilateSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary dilation of a given input image.
@@ -1659,6 +1700,7 @@ src.close();
 dst.close();
 ```
 
+<a name="divideImages"></a>
 ## divideImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Divides two images X and Y by each other pixel wise.
@@ -1696,6 +1738,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="downsample"></a>
 ## downsample( ClearCLBuffer src,  ClearCLBuffer dst,  Float factorX,  Float factorY )
 
 Scales an image using given scaling factors for X and Y dimensions. The nearest-neighbor method
@@ -1732,6 +1775,7 @@ src.close();
 dst.close();
 ```
 
+<a name="downsample"></a>
 ## downsample( ClearCLBuffer src,  ClearCLBuffer dst,  Float factorX,  Float factorY,  Float factorZ )
 
 Scales an image using given scaling factors for X and Y dimensions. The nearest-neighbor method
@@ -1769,6 +1813,7 @@ src.close();
 dst.close();
 ```
 
+<a name="downsampleSliceBySliceHalfMedian"></a>
 ## downsampleSliceBySliceHalfMedian( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Scales an image using scaling factors 0.5 for X and Y dimensions. The Z dimension stays untouched. Thus, each slice is processed separately.
@@ -1804,6 +1849,7 @@ src.close();
 dst.close();
 ```
 
+<a name="erodeBox"></a>
 ## erodeBox( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1848,6 +1894,7 @@ dst.close();
 * [BinaryProcessingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BinaryProcessingDemo.java)
 
 
+<a name="erodeBoxSliceBySlice"></a>
 ## erodeBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1888,6 +1935,7 @@ src.close();
 dst.close();
 ```
 
+<a name="erodeSphere"></a>
 ## erodeSphere( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1929,6 +1977,7 @@ dst.close();
 * [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
 
 
+<a name="erodeSphereSliceBySlice"></a>
 ## erodeSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 containing the binary erosion of a given input image.
@@ -1966,6 +2015,7 @@ src.close();
 dst.close();
 ```
 
+<a name="fillHistogram"></a>
 ## fillHistogram( ClearCLBuffer src,  ClearCLBuffer dstHistogram,  Float minimumGreyValue,  Float maximumGreyValue )
 
 Generates a histogram of a 2D image or 3D stack and writes into a 2D image where X corresponds to the bin index and Y corresponds to the count of found pixels.
@@ -2001,6 +2051,7 @@ src.close();
 dstHistogram.close();
 ```
 
+<a name="flip"></a>
 ## flip( ClearCLBuffer src,  ClearCLBuffer dst,  Boolean flipx,  Boolean flipy )
 
 Flips an image in X and/or Y direction depending on boolean flags.
@@ -2036,6 +2087,7 @@ src.close();
 dst.close();
 ```
 
+<a name="flip"></a>
 ## flip( ClearCLBuffer src,  ClearCLBuffer dst,  Boolean flipx,  Boolean flipy,  Boolean flipz )
 
 Flips an image in X and/or Y direction depending on boolean flags.
@@ -2072,6 +2124,7 @@ src.close();
 dst.close();
 ```
 
+<a name="gradientX"></a>
 ## gradientX( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes the gradient of gray values along X. Assuming a, b and c are three adjacent
@@ -2106,6 +2159,7 @@ src.close();
 dst.close();
 ```
 
+<a name="gradientY"></a>
 ## gradientY( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes the gradient of gray values along Y. Assuming a, b and c are three adjacent
@@ -2140,6 +2194,7 @@ src.close();
 dst.close();
 ```
 
+<a name="gradientZ"></a>
 ## gradientZ( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Computes the gradient of gray values along Z. Assuming a, b and c are three adjacent
@@ -2174,6 +2229,7 @@ src.close();
 dst.close();
 ```
 
+<a name="histogram"></a>
 ## histogram( ClearCLBuffer image,  Float minGreyValue,  Float maxGreyValue,  Integer numberOfBins )
 
 Determines the histogram of a given image.
@@ -2207,6 +2263,7 @@ System.out.println(resultHistogram);
 image.close();
 ```
 
+<a name="invert"></a>
 ## invert( ClearCLBuffer input3d,  ClearCLBuffer output3d )
 
 Computes the negative value of all pixels in a given image. It is recommended to convert images to 
@@ -2245,6 +2302,7 @@ input3d.close();
 output3d.close();
 ```
 
+<a name="localThreshold"></a>
 ## localThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  ClearCLBuffer threshold )
 
 Computes a binary image with pixel values 0 and 1 depending on if a pixel value x in image X 
@@ -2283,6 +2341,7 @@ dst.close();
 threshold.close();
 ```
 
+<a name="mask"></a>
 ## mask( ClearCLBuffer src,  ClearCLBuffer mask,  ClearCLBuffer dst )
 
 Computes a masked image by applying a mask to an image. All pixel values x of image X will be copied
@@ -2322,6 +2381,7 @@ mask.close();
 dst.close();
 ```
 
+<a name="maskStackWithPlane"></a>
 ## maskStackWithPlane( ClearCLBuffer src,  ClearCLBuffer mask,  ClearCLBuffer dst )
 
 Computes a masked image by applying a 2D mask to an image stack. All pixel values x of image X will be copied
@@ -2361,6 +2421,7 @@ mask.close();
 dst.close();
 ```
 
+<a name="maximumBox"></a>
 ## maximumBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 
 Computes the local maximum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2395,6 +2456,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumIJ"></a>
 ## maximumIJ( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 This method is deprecated. Consider using maximumBox or maximumSphere instead.
@@ -2429,6 +2491,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumImageAndScalar"></a>
 ## maximumImageAndScalar( ClearCLBuffer src,  ClearCLBuffer dst,  Float valueB )
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
@@ -2465,6 +2528,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumImages"></a>
 ## maximumImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Computes the maximum of a pair of pixel values x, y from two given images X and Y.
@@ -2502,6 +2566,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="maximumOfAllPixels"></a>
 ## maximumOfAllPixels( ClearCLBuffer clImage )
 
 Determines the maximum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -2533,6 +2598,7 @@ System.out.println(resultMaximumOfAllPixels);
 clImage.close();
 ```
 
+<a name="maximumSliceBySliceSphere"></a>
 ## maximumSliceBySliceSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local maximum of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -2571,6 +2637,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumSphere"></a>
 ## maximumSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local maximum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2607,6 +2674,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumSphere"></a>
 ## maximumSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
 
 Computes the local maximum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2644,6 +2712,7 @@ src.close();
 dst.close();
 ```
 
+<a name="maximumXYZProjection"></a>
 ## maximumXYZProjection( ClearCLBuffer src,  ClearCLBuffer dst_max,  Integer projectedDimensionX,  Integer projectedDimensionY,  Integer projectedDimension )
 
 Determines the maximum projection of an image along a given dimension. Furthermore, the X and Y
@@ -2685,6 +2754,7 @@ src.close();
 dst_max.close();
 ```
 
+<a name="maximumZProjection"></a>
 ## maximumZProjection( ClearCLBuffer src,  ClearCLBuffer dst_max )
 
 Determines the maximum projection of an image along Z.
@@ -2724,6 +2794,7 @@ dst_max.close();
 * [MaximumProjectionDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/MaximumProjectionDemo.java)
 
 
+<a name="meanBox"></a>
 ## meanBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2764,6 +2835,7 @@ dst.close();
 * [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
 
 
+<a name="meanIJ"></a>
 ## meanIJ( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 This method is deprecated. Consider using meanBox or meanSphere instead.
@@ -2798,6 +2870,7 @@ src.close();
 dst.close();
 ```
 
+<a name="meanSliceBySliceSphere"></a>
 ## meanSliceBySliceSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local mean average of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -2836,6 +2909,7 @@ src.close();
 dst.close();
 ```
 
+<a name="meanSphere"></a>
 ## meanSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2872,6 +2946,7 @@ src.close();
 dst.close();
 ```
 
+<a name="meanSphere"></a>
 ## meanSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
 
 Computes the local mean average of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -2909,6 +2984,7 @@ src.close();
 dst.close();
 ```
 
+<a name="meanZProjection"></a>
 ## meanZProjection( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Determines the mean average projection of an image along Z.
@@ -2942,6 +3018,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianBox"></a>
 ## medianBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local median of a pixels rectangular neighborhood. The rectangle is specified by 
@@ -2980,6 +3057,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianBox"></a>
 ## medianBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
 
 Computes the local median of a pixels rectangular neighborhood. The rectangle is specified by 
@@ -3019,6 +3097,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianSliceBySliceBox"></a>
 ## medianSliceBySliceBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local median of a pixels rectangular neighborhood. This is done slice-by-slice in a 3D 
@@ -3057,6 +3136,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianSliceBySliceSphere"></a>
 ## medianSliceBySliceSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local median of a pixels ellipsoidal neighborhood. This is done slice-by-slice in a 3D 
@@ -3095,6 +3175,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianSphere"></a>
 ## medianSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local median of a pixels rectangular neighborhood. The rectangle is specified by 
@@ -3133,6 +3214,7 @@ src.close();
 dst.close();
 ```
 
+<a name="medianSphere"></a>
 ## medianSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
 
 Computes the local median of a pixels rectangular neighborhood. The rectangle is specified by 
@@ -3172,6 +3254,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumBox"></a>
 ## minimumBox( ClearCLBuffer src,  ClearCLBuffer dst,  int radiusX,  int radiusY,  int radiusZ )
 
 Computes the local minimum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -3206,6 +3289,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumIJ"></a>
 ## minimumIJ( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
 
 This method is deprecated. Consider using minimumBox or minimumSphere instead.
@@ -3240,6 +3324,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumImageAndScalar"></a>
 ## minimumImageAndScalar( ClearCLBuffer src,  ClearCLBuffer dst,  Float valueB )
 
 Computes the maximum of a constant scalar s and each pixel value x in a given image X.
@@ -3276,6 +3361,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumImages"></a>
 ## minimumImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Computes the minimum of a pair of pixel values x, y from two given images X and Y.
@@ -3313,6 +3399,7 @@ src1.close();
 dst.close();
 ```
 
+<a name="minimumOfAllPixels"></a>
 ## minimumOfAllPixels( ClearCLBuffer clImage )
 
 Determines the minimum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -3344,6 +3431,7 @@ System.out.println(resultMinimumOfAllPixels);
 clImage.close();
 ```
 
+<a name="minimumSliceBySliceSphere"></a>
 ## minimumSliceBySliceSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local minimum of a pixels ellipsoidal 2D neighborhood in an image stack 
@@ -3382,6 +3470,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumSphere"></a>
 ## minimumSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY )
 
 Computes the local minimum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -3418,6 +3507,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumSphere"></a>
 ## minimumSphere( ClearCLBuffer src,  ClearCLBuffer dst,  Integer kernelSizeX,  Integer kernelSizeY,  Integer kernelSizeZ )
 
 Computes the local minimum of a pixels rectangular neighborhood. The rectangles size is specified by 
@@ -3455,6 +3545,7 @@ src.close();
 dst.close();
 ```
 
+<a name="minimumZProjection"></a>
 ## minimumZProjection( ClearCLBuffer src,  ClearCLBuffer dst_min )
 
 Determines the minimum projection of an image along Z.
@@ -3488,6 +3579,7 @@ src.close();
 dst_min.close();
 ```
 
+<a name="multiplyImageAndCoordinate"></a>
 ## multiplyImageAndCoordinate( ClearCLBuffer src,  ClearCLBuffer dst,  Integer dimension )
 
 Multiply every pixel intensity with its X/Y/Z coordinate depending on given dimension.
@@ -3523,6 +3615,7 @@ src.close();
 dst.close();
 ```
 
+<a name="multiplyImageAndScalar"></a>
 ## multiplyImageAndScalar( ClearCLBuffer src,  ClearCLBuffer dst,  Float scalar )
 
 Multiplies all pixels value x in a given image X with a constant scalar s.
@@ -3559,6 +3652,7 @@ src.close();
 dst.close();
 ```
 
+<a name="multiplyImages"></a>
 ## multiplyImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )
 
 Multiplies all pairs of pixel values x and y from two image X and Y.
@@ -3602,6 +3696,7 @@ dst.close();
 * [BenchmarkingWorkflowDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BenchmarkingWorkflowDemo.java)
 
 
+<a name="multiplySliceBySliceWithScalars"></a>
 ## multiplySliceBySliceWithScalars( ClearCLBuffer src,  ClearCLBuffer dst,  float[] scalars )
 
 Multiplies all pixels value x in input image X with a scalar s given as an array with values for every z-slice.
@@ -3635,6 +3730,7 @@ src.close();
 dst.close();
 ```
 
+<a name="multiplyStackWithPlane"></a>
 ## multiplyStackWithPlane( ClearCLBuffer input3d,  ClearCLBuffer input2d,  ClearCLBuffer output3d )
 
 Multiplies all pairs of pixel values x and y from an image stack X and a 2D image Y. x and y are at 
@@ -3673,6 +3769,7 @@ input2d.close();
 output3d.close();
 ```
 
+<a name="power"></a>
 ## power( ClearCLBuffer src,  ClearCLBuffer dst,  Float exponent )
 
 Computes all pixels value x to the power of a given exponent a.
@@ -3709,6 +3806,7 @@ src.close();
 dst.close();
 ```
 
+<a name="radialProjection"></a>
 ## radialProjection( ClearCLBuffer src,  ClearCLBuffer dst,  Float deltaAngle )
 
 Computes a radial projection of an image stack. Starting point for the line is the center in any 
@@ -3744,6 +3842,7 @@ src.close();
 dst.close();
 ```
 
+<a name="resliceBottom"></a>
 ## resliceBottom( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Flippes Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method but
@@ -3778,6 +3877,7 @@ src.close();
 dst.close();
 ```
 
+<a name="resliceLeft"></a>
 ## resliceLeft( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method 
@@ -3812,6 +3912,7 @@ src.close();
 dst.close();
 ```
 
+<a name="resliceRight"></a>
 ## resliceRight( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Flippes X, Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method 
@@ -3846,6 +3947,7 @@ src.close();
 dst.close();
 ```
 
+<a name="resliceTop"></a>
 ## resliceTop( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Flippes Y and Z axis of an image stack. This operation is similar to ImageJs 'Reslice [/]' method but
@@ -3880,6 +3982,7 @@ src.close();
 dst.close();
 ```
 
+<a name="rotateLeft"></a>
 ## rotateLeft( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Rotates a given input image by 90 degrees counter-clockwise. For that, X and Y axis of an image stack
@@ -3915,6 +4018,7 @@ src.close();
 dst.close();
 ```
 
+<a name="rotateRight"></a>
 ## rotateRight( ClearCLBuffer src,  ClearCLBuffer dst )
 
 Rotates a given input image by 90 degrees clockwise. For that, X and Y axis of an image stack
@@ -3950,6 +4054,7 @@ src.close();
 dst.close();
 ```
 
+<a name="set"></a>
 ## set( ClearCLBuffer clImage,  Float value )
 
 Sets all pixel values x of a given image X to a constant value v.
@@ -3982,6 +4087,7 @@ clij.op().set(clImage, value);
 clImage.close();
 ```
 
+<a name="splitStack"></a>
 ## splitStack( ClearCLBuffer clImageIn,  ClearCLBuffer... clImagesOut )
 
 Splits an input stack into #n# image stacks. 
@@ -4016,6 +4122,7 @@ clImageIn.close();
 clImagesOut.close();
 ```
 
+<a name="subtract"></a>
 ## subtract( ClearCLBuffer source1,  ClearCLBuffer source2,  ClearCLBuffer destination )
 
 Subtracts one image X from another image Y pixel wise.
@@ -4059,6 +4166,7 @@ destination.close();
 * [BackgroundSubtractionandThresholdingDemo.java](https://github.com/clij/clij-docs/blob/master/src/main/java/net/haesleinhuepf/clij/examples/BackgroundSubtractionandThresholdingDemo.java)
 
 
+<a name="subtractImages"></a>
 ## subtractImages( ClearCLBuffer subtrahend,  ClearCLBuffer minuend,  ClearCLBuffer destination )
 
 Subtracts one image X from another image Y pixel wise.
@@ -4096,6 +4204,7 @@ minuend.close();
 destination.close();
 ```
 
+<a name="sumPixels"></a>
 ## sumPixels( ClearCLBuffer clImage )
 
 Determines the sum of all pixels in a given image. It will be stored in a new row of ImageJs
@@ -4127,6 +4236,7 @@ System.out.println(resultSumPixels);
 clImage.close();
 ```
 
+<a name="sumPixelsSliceBySlice"></a>
 ## sumPixelsSliceBySlice( ClearCLBuffer input )
 
 Sums all pixels in X and Y slice by slice and returns the resulting numbers for all slices as an array.
@@ -4157,6 +4267,7 @@ System.out.println(resultSumPixelsSliceBySlice);
 input.close();
 ```
 
+<a name="sumZProjection"></a>
 ## sumZProjection( ClearCLBuffer clImage,  ClearCLBuffer clReducedImage )
 
 Determines the sum projection of an image along Z.
@@ -4188,6 +4299,7 @@ clImage.close();
 clReducedImage.close();
 ```
 
+<a name="threshold"></a>
 ## threshold( ClearCLBuffer src,  ClearCLBuffer dst,  Float threshold )
 
 Computes a binary image with pixel values 0 and 1. All pixel values x of a given input image with 
