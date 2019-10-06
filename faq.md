@@ -12,7 +12,7 @@ However, as dedicated graphics cards come with their own GDDR-memory, additional
 
 <a name="supported_os"></a>
 ## With which operating systems is CLIJ compatible?
-CLIJ was succesfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. 
+CLIJ was successfully tested on Windows, MacOS, Fedora linux and Ubuntu linux. 
 Current GPU and OpenCL drivers must be installed.
 
 <a name="optimal_performance"></a>
@@ -39,8 +39,8 @@ print("Processing the workflow took " + (getTime() - time) + " msec"));
 ```
 
 However, in order to make these measurements reliable, some hints shall be given:
-* Measure the timing of execution in a loop several times. The first exection(s) may be slower than subsequent exeutions because of so called _warmup_ effects.
-* Exclude file input/output from the time measurements to exclude harddrive read/write speed from the performance benchmarking of your workflow.
+* Measure the timing of execution in a loop several times. The first execution(s) may be slower than subsequent executions because of so called _warmup_ effects.
+* Exclude file input/output from the time measurements to exclude hard drive read/write speed from the performance benchmarking of your workflow.
 * Also measure the similarity of the ImageJ and CLIJ workflows results. For example: Some CLIJ_*Box filters are potentially much faster than CLIJ_*Sphere filters, which are more similar to ImageJs filters. In this case, performance can be gained by paying with reduced workflow result similarity.
 
 ImageJ macros benchmarking CPU/GPU performance can be found 
@@ -74,9 +74,9 @@ No. While algorithms on the CPU can make use of double-precision, common GPUs on
 * Performance
 * Similarity of results generated with ImageJ
 
-For example, the minimum filter of ImageJ takes different neighborhoods into account when being applied in 2D and 3D. CLIJs filters are consistend in 2D and 3D. Thus, results may differ between ImageJ and CLIJ as shown here:
+For example, the minimum filter of ImageJ takes different neighborhoods into account when being applied in 2D and 3D. CLIJs filters are consistent in 2D and 3D. Thus, results may differ between ImageJ and CLIJ as shown in Figure 1.
 ![Image](images/mean_filter_comparison_r1.png)
-Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top) and 3D (bottom). The result can be reproduced by running the 
+Figure 1: Comparing CLIJs mean filter (center) and ImageJs mean filter (right) in 2D (top) and 3D (bottom). The result can be reproduced by running the 
 [this example macro](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
  with radius = 1:
 
@@ -129,7 +129,7 @@ Yes. CLIJ brings OpenCL-kernel caching and the possibility of image/pixel-type-i
 ## The CLIJ Java API offers methods for processing ClearCLBuffers and ClearCLImages. What's the difference?
 Images and buffers are defined in the OpenCL standard. We tried to have as many operations as possible compatible to both, images and buffers. Differences are:
 * When applying affine transforms and warping to images, linear interpolation is used. When using buffers, the nearest neighbor pixel delivers the resulting intensity. 
-* Images are not generally supported by GPU devices runnning OpenCL 1.1. 
+* Images are not generally supported by GPU devices running OpenCL 1.1. 
 * For filters which access the local neighborhood of pixels, using images brings performance gain.
 
 We recommend using buffers in general for maximum device compatibility.
