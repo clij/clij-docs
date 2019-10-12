@@ -220,6 +220,8 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="affineTransform"></a>
@@ -286,6 +288,8 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="affineTransform2D"></a>
@@ -330,6 +334,8 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="affineTransform2D"></a>
@@ -371,6 +377,8 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="affineTransform3D"></a>
@@ -610,6 +618,7 @@ dst.close();
 
 ### Example scripts
 * [automaticThreshold.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/automaticThreshold.py)
+* [statistics.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/statistics.py)
 
 
 <a name="automaticThreshold"></a>
@@ -655,6 +664,7 @@ dst.close();
 
 ### Example scripts
 * [automaticThreshold.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/automaticThreshold.py)
+* [statistics.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/statistics.py)
 
 
 <a name="binaryAnd"></a>
@@ -850,6 +860,7 @@ dst.close();
 
 ### Example scripts
 * [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
+* [blur.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blur.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
 
 
@@ -895,6 +906,7 @@ dst.close();
 
 ### Example scripts
 * [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
+* [blur.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blur.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
 
 
@@ -1037,6 +1049,8 @@ dst.close();
 
 ### Example scripts
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="copySlice"></a>
@@ -1077,6 +1091,8 @@ dst.close();
 
 ### Example scripts
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
+* [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
 
 
 <a name="countNonZeroPixelsLocally"></a>
@@ -1220,6 +1236,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [crop.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/crop.py)
+
+
 <a name="crop"></a>
 ## crop( ClearCLBuffer src,  ClearCLBuffer dst,  Integer startX,  Integer startY,  Integer startZ )
 
@@ -1255,6 +1277,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [crop.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/crop.py)
+
 
 <a name="detectMaximaBox"></a>
 ## detectMaximaBox( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radius )
@@ -1505,6 +1533,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [binaryProcessing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/binaryProcessing.py)
+* [blurg.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blurg.py)
+
 
 <a name="dilateBoxSliceBySlice"></a>
 ## dilateBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
@@ -1800,6 +1835,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [binaryProcessing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/binaryProcessing.py)
+* [blurg.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blurg.py)
+
 
 <a name="erodeBoxSliceBySlice"></a>
 ## erodeBoxSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
@@ -2268,6 +2310,12 @@ src.close();
 mask.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [statistics.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/statistics.py)
+
 
 <a name="maskStackWithPlane"></a>
 ## maskStackWithPlane( ClearCLBuffer src,  ClearCLBuffer mask,  ClearCLBuffer dst )
@@ -4082,6 +4130,12 @@ print(resultSumPixels);
 clImage.close();
 ```
 
+
+
+### Example scripts
+* [statistics.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/statistics.py)
+
+
 <a name="sumPixelsSliceBySlice"></a>
 ## sumPixelsSliceBySlice( ClearCLBuffer input )
 
@@ -4181,6 +4235,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [binaryProcessing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/binaryProcessing.py)
+* [blurg.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blurg.py)
+
 
 
 Documented 112 methods.

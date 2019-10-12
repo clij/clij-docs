@@ -1,10 +1,10 @@
-# automaticThreshold.py
+# statistics.py
 # =====================
 #
-# Apply an automatic threshold method to an image on the GPU
+# Derive some statistics of an image on the GPU
 #
 # Author: Robert Haase, rhaase@mpi-cbg.de
-#         April 2019
+#         October 2019
 #########################################
 
 from ij import IJ;

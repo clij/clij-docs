@@ -38,7 +38,7 @@ for (angle = 0; angle < 360; angle += angle_step) {
 	Ext.CLIJ_rotate2D("original", "rotated", angle_step, true);
 
 	// never overwrite the original with the rotated image!
-	// the is just an academic example to show what can go wrong
+	// this is just an academic example to show what can go wrong
 	Ext.CLIJ_copy("rotated", "original");
 
 	// put the rotated image in the right place in the result stack
