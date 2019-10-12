@@ -27,3 +27,8 @@ clij.show(imageOutput, "output");
 
 # get the result back as variable
 result = clij.pull(imageOutput);
+
+# clean up
+imageInput.close();
+imageOutput.close();
+

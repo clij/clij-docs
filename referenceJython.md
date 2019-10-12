@@ -219,6 +219,7 @@ dst.close();
 
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
 
 
 <a name="affineTransform"></a>
@@ -284,6 +285,7 @@ dst.close();
 
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
 
 
 <a name="affineTransform2D"></a>
@@ -327,6 +329,7 @@ dst.close();
 
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
 
 
 <a name="affineTransform2D"></a>
@@ -367,6 +370,7 @@ dst.close();
 
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
 
 
 <a name="affineTransform3D"></a>
@@ -477,6 +481,12 @@ vectorY.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+
+
 <a name="applyVectorfield"></a>
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer vectorZ,  ClearCLBuffer dst )
 
@@ -515,6 +525,12 @@ vectorY.close();
 vectorZ.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+
 
 <a name="argMaximumZProjection"></a>
 ## argMaximumZProjection( ClearCLBuffer src,  ClearCLBuffer dst_max,  ClearCLBuffer dst_arg )
@@ -833,6 +849,7 @@ dst.close();
 
 
 ### Example scripts
+* [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
 
 
@@ -877,6 +894,7 @@ dst.close();
 
 
 ### Example scripts
+* [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
 
 
@@ -1015,6 +1033,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+
+
 <a name="copySlice"></a>
 ## copySlice( ClearCLBuffer src,  ClearCLBuffer dst,  Integer planeIndex )
 
@@ -1048,6 +1072,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+
 
 <a name="countNonZeroPixelsLocally"></a>
 ## countNonZeroPixelsLocally( ClearCLBuffer src,  ClearCLBuffer dst,  Integer radiusX,  Integer radiusY )
@@ -3974,6 +4004,7 @@ destination.close();
 
 
 ### Example scripts
+* [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
 
 
@@ -4013,6 +4044,12 @@ subtrahend.close();
 minuend.close();
 destination.close();
 ```
+
+
+
+### Example scripts
+* [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
+
 
 <a name="sumPixels"></a>
 ## sumPixels( ClearCLBuffer clImage )

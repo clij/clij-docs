@@ -1,7 +1,7 @@
 # affineTransform.py
 # ==================
 #
-# This script demonstrates how to apppl an
+# This script demonstrates how to apply an
 # affine transform on the GPU
 #
 # Author: Robert Haase, rhaase@mpi-cbg.de

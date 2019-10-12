@@ -33,7 +33,9 @@ clij.op().automaticThreshold(input, output, "Otsu");
 clij.pull(output).show();
 IJ.setMinAndMax(0, 1);
 
-
+# clean up
+input.close();
+output.close();
 
 
 

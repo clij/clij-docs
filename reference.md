@@ -1779,6 +1779,7 @@ Ext.CLIJ_pull(destination);
 
 ### Example scripts
 * [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+* [mean_detailed_comparison_IJ_CLIJ_radius.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ_radius.ijm)
 
 
 <a name="CLIJ_mean3DBox"></a>
@@ -2336,6 +2337,7 @@ Ext.CLIJ_pull(image);
 * [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
 * [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
 * [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+* [mean_detailed_comparison_IJ_CLIJ_radius.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ_radius.ijm)
 * [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
 * [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
 * [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
@@ -2419,6 +2421,7 @@ Ext.CLIJ_push(image);
 * [mean.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean.ijm)
 * [mean2d.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean2d.ijm)
 * [mean_detailed_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ.ijm)
+* [mean_detailed_comparison_IJ_CLIJ_radius.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/mean_detailed_comparison_IJ_CLIJ_radius.ijm)
 * [memory_reuse_versus_reallocation.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/memory_reuse_versus_reallocation.ijm)
 * [minimum.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/minimum.ijm)
 * [motionCorrection.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection.ijm)
