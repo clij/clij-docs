@@ -108,6 +108,12 @@ src1.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [addImages.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/addImages.py)
+
+
 <a name="addImagesWeighted"></a>
 ## addImagesWeighted( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst,  Float factor,  Float factor1 )
 
@@ -189,7 +195,8 @@ clij = CLIJ.getInstance();
 # get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
-at = new AffineTransform3D();
+from net.imglib2.realtransform import AffineTransform3D;
+at = AffineTransform3D();
 at.translate(4, 0, 0);
 ```
 
@@ -207,6 +214,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+
 
 <a name="affineTransform"></a>
 ## affineTransform( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
@@ -267,6 +280,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+
+
 <a name="affineTransform2D"></a>
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform2D at )
 
@@ -284,6 +303,9 @@ clij = CLIJ.getInstance();
 # get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
+from net.imglib2.realtransform import AffineTransform2D;
+at = AffineTransform2D();
+at.translate(4, 0);
 ```
 
 ```
@@ -300,6 +322,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+
 
 <a name="affineTransform2D"></a>
 ## affineTransform2D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
@@ -335,6 +363,12 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
+
+
 <a name="affineTransform3D"></a>
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  AffineTransform3D at )
 
@@ -352,7 +386,8 @@ clij = CLIJ.getInstance();
 # get input parameters
 src = clij.push(srcImagePlus);
 dst = clij.create(src);
-at = new AffineTransform3D();
+from net.imglib2.realtransform import AffineTransform3D;
+at = AffineTransform3D();
 at.translate(4, 0, 0);
 ```
 
@@ -3435,6 +3470,12 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [addImages.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/addImages.py)
+
 
 <a name="multiplyImages"></a>
 ## multiplyImages( ClearCLBuffer src,  ClearCLBuffer src1,  ClearCLBuffer dst )

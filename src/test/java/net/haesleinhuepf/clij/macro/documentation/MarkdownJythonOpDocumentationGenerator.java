@@ -156,9 +156,15 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
                 code.append(parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
                 booleanParameterIndex++;
             } else if (parameter.startsWith("AffineTransform3D")) {
-                code.append("at = new AffineTransform3D();\n" +
+                code.append("from net.imglib2.realtransform import AffineTransform3D;\n");
+                code.append("at = AffineTransform3D();\n" +
                         "at.translate(4, 0, 0);\n");
+            } else if (parameter.startsWith("AffineTransform2D")) {
+                code.append("from net.imglib2.realtransform import AffineTransform2D;\n");
+                code.append("at = AffineTransform2D();\n" +
+                        "at.translate(4, 0);\n");
             }
+
         }
 
 

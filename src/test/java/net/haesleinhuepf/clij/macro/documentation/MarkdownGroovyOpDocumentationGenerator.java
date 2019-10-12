@@ -151,8 +151,13 @@ public class MarkdownGroovyOpDocumentationGenerator extends AbstractDocumentatio
                 code.append(parameterName + " = " + booleanParameterValues[booleanParameterIndex] + ";\n");
                 booleanParameterIndex++;
             } else if (parameter.startsWith("AffineTransform3D")) {
+                code.append("import net.imglib2.realtransform.AffineTransform3D;\n");
                 code.append("at = new AffineTransform3D();\n" +
                         "at.translate(4, 0, 0);\n");
+            } else if (parameter.startsWith("AffineTransform2D")) {
+                code.append("import net.imglib2.realtransform.AffineTransform2D;\n");
+                code.append("at = new AffineTransform2D();\n" +
+                        "at.translate(4, 0);\n");
             }
         }
 

@@ -194,7 +194,8 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 dst = clij.create(src);
-AffineTransform3D at = new AffineTransform3D();
+import net.imglib2.realtransform.AffineTransform3D;
+at = new AffineTransform3D();
 at.translate(4, 0, 0);
 ```
 
@@ -307,6 +308,9 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 dst = clij.create(src);
+import net.imglib2.realtransform.AffineTransform2D;
+at = new AffineTransform2D();
+at.translate(4, 0);
 ```
 
 ```
@@ -389,7 +393,8 @@ CLIJ clij = CLIJ.getInstance();
 // get input parameters
 ClearCLBuffer src = clij.push(srcImagePlus);
 dst = clij.create(src);
-AffineTransform3D at = new AffineTransform3D();
+import net.imglib2.realtransform.AffineTransform3D;
+at = new AffineTransform3D();
 at.translate(4, 0, 0);
 ```
 
