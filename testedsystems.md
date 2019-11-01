@@ -1,4 +1,6 @@
 # Supported / tested platforms
+* Intel(R) Iris(R) Plus Graphics (OpenCL 2.0, Win 10 64 bit, November 2019)
+  * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20191101_clij-core_finley.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20191101_clij_finley.txt)
 * Intel(R) HD Graphics 620 (OpenCL 1.2, Win 10 64 bit, August 2019)
   * [clij-core](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij-core_ulice.txt) [clij](https://github.com/clij/clij-docs/blob/master/testprotocols/20190804_clij_ulice.txt)
 * NVidia GeForce 1070 Max-Q (OpenCL 1.2, Win 10 64 bit, August 2019)

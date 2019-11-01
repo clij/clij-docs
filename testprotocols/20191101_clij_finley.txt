@@ -1,0 +1,188 @@
+"C:\Program Files\Java\jdk1.8.0_181\bin\java.exe" -Dmaven.multiModuleProjectDirectory=C:\structure\code\clij "-Dmaven.home=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\plugins\maven\lib\maven-event-listener.jar" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar" org.codehaus.classworlds.Launcher -Didea.version2019.2.3 test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< net.haesleinhuepf:clij_ >-----------------------
+[INFO] Building clij 1.4.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-rules) @ clij_ ---
+[INFO] Skipping Rule Enforcement.
+[INFO]
+[INFO] --- build-helper-maven-plugin:3.0.0:regex-property (sanitize-version) @ clij_ ---
+[INFO]
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ clij_ ---
+[INFO] Executing: cmd.exe /X /C "git rev-parse --verify HEAD"
+[INFO] Working directory: C:\structure\code\clij
+[WARNING] Cannot get the revision information from the scm repository, proceeding with revision of UNKNOWN :
+Exception while executing SCM command.
+[INFO] Storing buildNumber: UNKNOWN at timestamp: 1572599037143
+[WARNING] Cannot get the branch information from the git repository:
+Error while executing command.
+[INFO] Executing: cmd.exe /X /C "git rev-parse --verify HEAD"
+[INFO] Working directory: C:\structure\code\clij
+[WARNING] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH :
+Exception while executing SCM command.
+[INFO] Storing buildScmBranch: UNKNOWN_BRANCH
+[INFO]
+[INFO] --- scijava-maven-plugin:1.1.0:set-rootdir (set-rootdir) @ clij_ ---
+[INFO] Setting rootdir: C:\structure\code\clij
+[INFO]
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (jacoco-initialize) @ clij_ ---
+[INFO] argLine set to -javaagent:C:\\Users\\rober\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.4\\org.jacoco.agent-0.8.4-runtime.jar=destfile=C:\\structure\\code\\clij\\target\\jacoco.exec
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ clij_ ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 0 resource
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ clij_ ---
+[INFO] Compiling 2 source files to C:\structure\code\clij\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ clij_ ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ clij_ ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ clij_ ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running net.haesleinhuepf.clij.macro.modules.AbsoluteTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.14 s - in net.haesleinhuepf.clij.macro.modules.AbsoluteTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.AddImageAndScalarTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.47 s - in net.haesleinhuepf.clij.macro.modules.AddImageAndScalarTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.AddImagesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.383 s - in net.haesleinhuepf.clij.macro.modules.AddImagesTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.AddImagesWeightedTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.482 s - in net.haesleinhuepf.clij.macro.modules.AddImagesWeightedTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ArgMaximumZProjectionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.185 s - in net.haesleinhuepf.clij.macro.modules.ArgMaximumZProjectionTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.BinaryAndTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.182 s - in net.haesleinhuepf.clij.macro.modules.BinaryAndTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.BinaryNotTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.581 s - in net.haesleinhuepf.clij.macro.modules.BinaryNotTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.BinaryOrTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.6 s - in net.haesleinhuepf.clij.macro.modules.BinaryOrTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Blur2DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.567 s - in net.haesleinhuepf.clij.macro.modules.Blur2DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Blur3DSliceBySliceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.589 s - in net.haesleinhuepf.clij.macro.modules.Blur3DSliceBySliceTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Blur3DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.281 s - in net.haesleinhuepf.clij.macro.modules.Blur3DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.CopySliceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.681 s - in net.haesleinhuepf.clij.macro.modules.CopySliceTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.CopyTest
+sum 313310.19294793904
+sum 945417.891812278
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.406 s - in net.haesleinhuepf.clij.macro.modules.CopyTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Crop2DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.016 s - in net.haesleinhuepf.clij.macro.modules.Crop2DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Crop3DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.177 s - in net.haesleinhuepf.clij.macro.modules.Crop3DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.DetectMaximaBoxTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.8 s - in net.haesleinhuepf.clij.macro.modules.DetectMaximaBoxTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.DilateBoxIJTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.335 s - in net.haesleinhuepf.clij.macro.modules.DilateBoxIJTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.DilateSphereTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.904 s - in net.haesleinhuepf.clij.macro.modules.DilateSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.DivideImagesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.177 s - in net.haesleinhuepf.clij.macro.modules.DivideImagesTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Downsample2DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.317 s - in net.haesleinhuepf.clij.macro.modules.Downsample2DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Downsample3DTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.243 s - in net.haesleinhuepf.clij.macro.modules.Downsample3DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.DownsampleSliceBySliceHalfMedianTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.759 s - in net.haesleinhuepf.clij.macro.modules.DownsampleSliceBySliceHalfMedianTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ErodeBoxIJTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.353 s - in net.haesleinhuepf.clij.macro.modules.ErodeBoxIJTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ErodeSphereTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.283 s - in net.haesleinhuepf.clij.macro.modules.ErodeSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Flip2DTest
+pixels different | 100.0 - 1.0 | > 0.0
+pixels different | 100.0 - 64.69081 | > 0.0
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.995 s - in net.haesleinhuepf.clij.macro.modules.Flip2DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Flip3DTest
+pixels different | 10.331473 - 100.0 | > 0.0
+pixels different | 44.172207 - 16.126093 | > 0.0
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.979 s - in net.haesleinhuepf.clij.macro.modules.Flip3DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.LocalThresholdTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.LocalThresholdTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Maximum2DSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.001 s - in net.haesleinhuepf.clij.macro.modules.Maximum2DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Maximum3DSphereTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.42 s - in net.haesleinhuepf.clij.macro.modules.Maximum3DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MaximumOfAllPixelsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in net.haesleinhuepf.clij.macro.modules.MaximumOfAllPixelsTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MaximumSliceBySliceSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.MaximumSliceBySliceSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MaximumZProjectionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.87 s - in net.haesleinhuepf.clij.macro.modules.MaximumZProjectionTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Mean2DSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.001 s - in net.haesleinhuepf.clij.macro.modules.Mean2DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Mean3DSphereTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.74 s - in net.haesleinhuepf.clij.macro.modules.Mean3DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MeanSliceBySliceSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.MeanSliceBySliceSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Median2DSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.Median2DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Median3DSphereTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.83 s - in net.haesleinhuepf.clij.macro.modules.Median3DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MedianSliceBySliceSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.MedianSliceBySliceSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Minimum2DBoxTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.Minimum2DBoxTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Minimum2DSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.021 s - in net.haesleinhuepf.clij.macro.modules.Minimum2DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Minimum3DBoxTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.Minimum3DBoxTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Minimum3DSphereTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.622 s - in net.haesleinhuepf.clij.macro.modules.Minimum3DSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MinimumSliceBySliceSphereTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0 s - in net.haesleinhuepf.clij.macro.modules.MinimumSliceBySliceSphereTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MultiplyImageAndScalarTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.432 s - in net.haesleinhuepf.clij.macro.modules.MultiplyImageAndScalarTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MultiplyImagesTest
+[WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 4.313 s - in net.haesleinhuepf.clij.macro.modules.MultiplyImagesTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.MultiplyStackWithPlaneTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.939 s - in net.haesleinhuepf.clij.macro.modules.MultiplyStackWithPlaneTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.PowerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.956 s - in net.haesleinhuepf.clij.macro.modules.PowerTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ResliceBottomTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.598 s - in net.haesleinhuepf.clij.macro.modules.ResliceBottomTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ResliceLeftTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.872 s - in net.haesleinhuepf.clij.macro.modules.ResliceLeftTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ResliceRightTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.772 s - in net.haesleinhuepf.clij.macro.modules.ResliceRightTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ResliceTopTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.613 s - in net.haesleinhuepf.clij.macro.modules.ResliceTopTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.Rotate2DTest
+pixels with huge differences: 303
+pixels with huge differences: 450
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.597 s - in net.haesleinhuepf.clij.macro.modules.Rotate2DTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.RotateLeftTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.065 s - in net.haesleinhuepf.clij.macro.modules.RotateLeftTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.RotateRightTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.043 s - in net.haesleinhuepf.clij.macro.modules.RotateRightTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.SetTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.729 s - in net.haesleinhuepf.clij.macro.modules.SetTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.SumOfAllPixelsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.413 s - in net.haesleinhuepf.clij.macro.modules.SumOfAllPixelsTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.SumZProjectionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.062 s - in net.haesleinhuepf.clij.macro.modules.SumZProjectionTest
+[INFO] Running net.haesleinhuepf.clij.macro.modules.ThresholdIJTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.372 s - in net.haesleinhuepf.clij.macro.modules.ThresholdIJTest
+[INFO]
+[INFO] Results:
+[INFO]
+[WARNING] Tests run: 162, Failures: 0, Errors: 0, Skipped: 23
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:51 min
+[INFO] Finished at: 2019-11-01T09:06:46Z
+[INFO] ------------------------------------------------------------------------
