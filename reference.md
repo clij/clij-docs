@@ -2992,6 +2992,8 @@ Ext.CLIJ_pull(destination);
 
 
 
-122 plugins documented.[Back to CLIJ documentation](https://clij.github.io/)
+122 plugins documented.
+
+[Back to CLIJ documentation](https://clij.github.io/)
 
 [Imprint](https://clij.github.io/imprint)
