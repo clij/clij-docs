@@ -1,5 +1,5 @@
 // This script demonstrates how to apply a vector field
-// to an image in order to transform it non-rigidly
+// to an RGB image in order to transform it non-rigidly
 //
 // It uses a picture showing Pixel. 
 // Yes, the cats name is Pixel.
