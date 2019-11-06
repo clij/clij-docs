@@ -1,4 +1,5 @@
-Copyright 2019 Robert Haase, Max Planck Institute for Molecular Cell Biology 
+Copyright 2019 Robert Haase, Deborah Schmidt,
+Max Planck Institute for Molecular Cell Biology 
 and Genetics, Dresden
 
 Redistribution and use in source and binary forms, with or without 
