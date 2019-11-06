@@ -12,30 +12,15 @@ This is how your code might look like if you do GPU based image processing in Im
 ## Installation
 Follow the [installation instructions](installationInFiji);
 
-## A first macro
-A first example macro is [help.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/help.ijm).
-It will assist us to get an overview which methods are supported by CLIJ to process images. 
-It looks like this:
+## Activating CLIJs macro extensions
+
+To get started, all ImageJ macros using CLIJ have a line like this at the beginning:
 
 ```java
 run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_help("add");
 ```
 
-By executing it, you will find a list of commands containing the term `add` in their names:
-
-```java
-Found 3 method(s) containing the pattern "add":
-Ext.CLIJ_addImageAndScalar(Image source, Image destination, Number scalar);
-Ext.CLIJ_addImages(Image summand1, Image summand2, Image destination);
-Ext.CLIJ_addImagesWeighted(Image summand1, Image summand2, Image destination, Number factor1, Number factor2);
-```
-
-Keep this example program, you might need it later again if you want to search for help on CLIJ methods. 
-It also tells you which parameters the methods need in order to run. The whole [reference of all command with description and example code is available online](https://clij.github.io/clij-docs/reference).
-
-
-Note: The first line of this macro may contain the specific name for a GPU.
+Note: This line may contain the specific name for a GPU.
 You can - but you don't have to - specify one. 
 If none is specified, the system will take the first one found.
 If you don't have the named GPU in your computer, another one will be chosen.
@@ -44,7 +29,6 @@ In order to run on any `HD` named GPU, change the macro like this:
 
 ```java
 run("CLIJ Macro Extensions", "cl_device=HD");
-Ext.CLIJ_help("add");
 ```
 
 ## Transferring images between ImageJ and the GPU
