@@ -208,3 +208,5 @@ In some of the filters, I observed small differences between ImageJ and OpenCL e
 ensuring these differences are small and in case they appear, they mostly influence image borders.
 
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

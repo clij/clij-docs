@@ -55,6 +55,10 @@ public class MarkdownIJMacroDocumentationGenerator {
         }
         documentation.append("\n\n" + methodNames.size() + " plugins documented.");
 
+        documentation.append("[Back to CLIJ documentation](https://clij.github.io/)\n" +
+                "\n" +
+                "[Imprint](https://clij.github.io/imprint)\n");
+
         FileWriter writer = new FileWriter(new File("reference.md"));
         writer.write(documentation.toString());
         writer.close();

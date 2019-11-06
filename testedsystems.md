@@ -35,4 +35,7 @@ Some of the tests failed on these devices:
 
  &ast; These CPU devices are accompanied by built-in GPUs which were tested successfully using CLIJ.
  
+
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

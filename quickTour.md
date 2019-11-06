@@ -17,3 +17,5 @@ For exploring CLIJ further, it is recommended to read the [introduction for macr
 
 [Back to CLIJ documentation](https://clij.github.io/)
 
+[Imprint](https://clij.github.io/imprint)
+

@@ -143,4 +143,7 @@ Yes. As operations executed on the GPU anyway don't make use of user interface e
 
 [Back to CLIJ documentation](https://clij.github.io/)
 
+[Imprint](https://clij.github.io/imprint)
+
+
 

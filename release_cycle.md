@@ -44,3 +44,5 @@ The release cycle includes CLIJs main libraries:
 
 
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

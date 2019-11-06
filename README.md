@@ -68,6 +68,7 @@ If you search for support, please open a thread on the [image.sc](https://image.
   * [List of tested systems](https://clij.github.io/clij-docs/testedsystems)
   * [Troubleshooting](https://clij.github.io/clij-docs/troubleshooting)
   * [Support](https://image.sc)
+  * [Imprint](https://clij.github.io/imprint)
 
 ## Acknowledgements
 Development of CLIJ is a community effort. We would like to thank everybody who helped developing and testing. In particular thanks goes to
@@ -99,5 +100,16 @@ Thomas Irmer (Zeiss),
 Tobias Pietzsch (MPI-CBG),
 Wilson Adams (VU Biophotonics)
 
+R.H. was supported by the German Federal Ministry of
+Research and Education (BMBF) under the code 031L0044
+(Sysbio II) and D.S. received support from the German
+Research Foundation (DFG) under the code JU3110/1-1.
+P.T. was supported by the European Regional
+Development Fund in the IT4Innovations national
+supercomputing center-path to exascale project,
+project number CZ.02.1.01/0.0/0.0/16_013/0001791
+within the Operational Programme Research, Development
+and Education.
 
+[Imprint](https://clij.github.io/imprint)
   

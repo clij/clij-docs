@@ -12,6 +12,8 @@ In order to simplify image processing using CLIJ from an application programming
 * CLIJ operations called from ImageJ macro have no return values. They either process pixels and save results to images or they save their results to ImageJs results table.
 * Binary output images are filled with pixel values 0 and 1. Any input image can serve as binary image and will be interpreted by differentiating 0 and non-zero values.
 
-[Back to CLIJ documentation](https://clij.github.io/)
+[Back to CLIJ documentation](https://clij.github.io/) 
+
+[Imprint](https://clij.github.io/imprint)
 
 

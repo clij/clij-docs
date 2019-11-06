@@ -112,3 +112,5 @@ instead of `float` or `int4` in order to make the OpenCL code type agnostic.
 
 
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

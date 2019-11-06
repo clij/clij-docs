@@ -21,3 +21,6 @@ To allow maven finding this artifact, add a repository to your pom.xml file:
 ```
 
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)
+

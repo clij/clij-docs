@@ -105,6 +105,11 @@ public class MarkdownJythonOpDocumentationGenerator extends AbstractDocumentatio
         builder.append("\n");
         builder.append("Documented " + methods + " methods.\n");
 
+
+        builder.append("[Back to CLIJ documentation](https://clij.github.io/)\n" +
+                "\n" +
+                "[Imprint](https://clij.github.io/imprint)\n");
+
         File outputTarget = new File("referenceJython.md");
 
         FileWriter writer = new FileWriter(outputTarget);

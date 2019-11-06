@@ -12,3 +12,5 @@ Linux users need to install drivers for OpenCL, even on Intel HD GPUs. It is rec
 
 [Back to CLIJ documentation](https://clij.github.io/)
 
+[Imprint](https://clij.github.io/imprint)
+

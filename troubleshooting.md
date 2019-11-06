@@ -47,4 +47,7 @@ sudo make install
 More info can be found on the website of the [beignet project](https://www.freedesktop.org/wiki/Software/Beignet/).
 
 
+
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

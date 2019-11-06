@@ -22,3 +22,6 @@ install.bat
 For development it is recommended to use an integrated development environment such as IntelliJ or Eclipse.
 
 [Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)
+

@@ -6,3 +6,7 @@ In order to get CLIJ accessible from [MicroManager 2.0 gamma](https://valelab4.u
 * clij-core.jar
 
 Afterwards, restart MicroManager. You can try if it works by running [this beanshell script](https://github.com/clij/clij-docs/blob/master/src/main/beanshell/clij_micromanager.bsh) to see if it works.
+
+[Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)

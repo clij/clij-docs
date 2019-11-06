@@ -149,6 +149,7 @@ Ext.CLIJ_pull(destination);
 * [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
 * [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_affineTransform2D"></a>
@@ -192,6 +193,7 @@ Ext.CLIJ_pull(destination);
 * [motionCorrection_compare_stackreg.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/motionCorrection_compare_stackreg.ijm)
 * [rotate_comparison_IJ_CLIJ.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/rotate_comparison_IJ_CLIJ.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_affineTransform3D"></a>
@@ -261,6 +263,7 @@ Ext.CLIJ_pull(destination);
 ### Example scripts
 * [applyVectorField.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/applyVectorField.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_applyVectorField3D"></a>
@@ -593,6 +596,7 @@ Ext.CLIJ_clear();
 * [topHat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/topHat.ijm)
 * [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_convertFloat"></a>
@@ -710,6 +714,7 @@ Ext.CLIJ_pull(destination);
 * [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
 * [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_copySlice"></a>
@@ -749,6 +754,7 @@ Ext.CLIJ_pull(destination);
 * [scaleFree.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/scaleFree.ijm)
 * [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_countNonZeroPixels2DSphere"></a>
@@ -826,6 +832,7 @@ Ext.CLIJ_pull(destination);
 
 ### Example scripts
 * [addImages.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/addImages.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_create3D"></a>
@@ -2356,6 +2363,7 @@ Ext.CLIJ_pull(image);
 * [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
 * [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_pullBinary"></a>
@@ -2443,6 +2451,7 @@ Ext.CLIJ_push(image);
 * [translate.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/translate.ijm)
 * [turn_stack.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/turn_stack.ijm)
 * [warpCat.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat.ijm)
+* [warpCat_RGB.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/warpCat_RGB.ijm)
 
 
 <a name="CLIJ_pushCurrentSlice"></a>
@@ -2983,4 +2992,6 @@ Ext.CLIJ_pull(destination);
 
 
 
-122 plugins documented.
+122 plugins documented.[Back to CLIJ documentation](https://clij.github.io/)
+
+[Imprint](https://clij.github.io/imprint)
