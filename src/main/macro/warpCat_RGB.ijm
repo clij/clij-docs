@@ -53,7 +53,7 @@ run("Close All");
 for (i = 0; i < 36; i++) {
 	// iterate over channels
 	for (c = 0; c < 3; c++) {
-	    Ext.CLIJ_copySlice("catRGB", "cat", c);
+		Ext.CLIJ_copySlice("catRGB", "cat", c);
 	
 		// change the shift from slice to slice
 		Ext.CLIJ_affineTransform2D("shiftX", "rotatedShiftX", "center translateX=" + (i * 20) + " translateY=" + (i * -10) + " -center");
