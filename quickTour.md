@@ -11,7 +11,8 @@ When clicking on the menu, you see a dialog asking for the parameters of the spe
 ![Image](images/dialogs.gif)
 
 CLIJ is fully macro-recordable. After recording your workflow, it can be executed right away. 
-![Image](images/clij_macro_recorder.gif)
+![Image](images/clij_macro_recorder2.gif)
+![Image](images/clij_macro_recorder.mp4)
 
 For exploring CLIJ further, it is recommended to read the [introduction for macro programmers](macro_intro) and have a look at the [code examples](https://clij.github.io/clij-docs/src/main/macro);
 
