@@ -10,8 +10,8 @@ Furthermore, CLIJ has its own menu: `Plugins > ImageJ on GPU (CLIJ)` with sub me
 When clicking on the menu, you see a dialog asking for the parameters of the specific CLIJ operation. Furthermore, user documentation and parameter exlanation is given in the same dialog.
 ![Image](images/dialogs.gif)
 
-If ImageJs macro recorder up and running, the parameters entered in the dialog are recorded together with additional call necessary for pushing the image to the GPUs memory and pull the result back:
-![Image](images/macro_recorder.png)
+CLIJ is fully macro-recordable. After recording your workflow, it can be executed right away. 
+![Image](images/clij_macro_recorder.gif)
 
 For exploring CLIJ further, it is recommended to read the [introduction for macro programmers](macro_intro) and have a look at the [code examples](https://clij.github.io/clij-docs/src/main/macro);
 
