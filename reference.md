@@ -470,6 +470,7 @@ Ext.CLIJ_pull(destination);
 ### Example scripts
 * [backgroundSubtraction.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/backgroundSubtraction.ijm)
 * [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [blur_batch.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur_batch.ijm)
 
 
 <a name="CLIJ_blur3DSliceBySlice"></a>
@@ -569,6 +570,7 @@ Ext.CLIJ_clear();
 * [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
 * [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
 * [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [blur_batch.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur_batch.ijm)
 * [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
 * [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
 * [flip.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/flip.ijm)
@@ -2335,6 +2337,7 @@ Ext.CLIJ_pull(image);
 * [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
 * [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
 * [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [blur_batch.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur_batch.ijm)
 * [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
 * [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
 * [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
@@ -2420,6 +2423,7 @@ Ext.CLIJ_push(image);
 * [binaryProcessing.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/binaryProcessing.ijm)
 * [bitdepthConversion.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/bitdepthConversion.ijm)
 * [blur.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur.ijm)
+* [blur_batch.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/blur_batch.ijm)
 * [convert.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/convert.ijm)
 * [create_object_outlines.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/create_object_outlines.ijm)
 * [crop.ijm](https://github.com/clij/clij-docs/blob/master/src/main/macro/crop.ijm)
@@ -2992,8 +2996,6 @@ Ext.CLIJ_pull(destination);
 
 
 
-122 plugins documented.
-
-[Back to CLIJ documentation](https://clij.github.io/)
+122 plugins documented.[Back to CLIJ documentation](https://clij.github.io/)
 
 [Imprint](https://clij.github.io/imprint)
