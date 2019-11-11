@@ -27,11 +27,6 @@ If you search for support, please open a thread on the [image.sc](https://image.
 * Installation
   * [Fiji update site](https://clij.github.io/clij-docs/installationInFiji)
   * [Depending on CLIJ via maven](https://clij.github.io/clij-docs/dependingViaMaven)
-  * [Icy](https://clij.github.io/clicy/) (experimental)
-  * [ImageJ1](https://github.com/clij/clij-legacy/) (experimental)
-  * [Matlab](https://clij.github.io/clatlab/) (experimental)
-  * [MicroManager 2.0](https://clij.github.io/clij-docs/installationInMicroManager) (experimental)
-  * [Python](https://clij.github.io/clijpy/) (experimental)
 * Introduction to CLIJ programming
   * [CLIJ for ImageJ Macro programmers](https://clij.github.io/clij-docs/macro_intro)
   * [CLIJ for Java programmers](https://clij.github.io/clij-docs/api_intro)
@@ -63,6 +58,13 @@ If you search for support, please open a thread on the [image.sc](https://image.
 * Extending CLIJ functionality
   * [Plugin template](https://github.com/clij/clij-plugin-template/)
   * [Example plugin for convolution/deconvolution](https://github.com/clij/clij-custom-convolution-plugin/)
+* CLIJx - the upcoming successor of CLIJ
+  * [CLIJ2 development repository](https://github.com/clij/clij-advanced-filters) (experimental)
+  * [Icy](https://clij.github.io/clicy/) (experimental)
+  * [ImageJ1](https://github.com/clij/clij-legacy/) (experimental)
+  * [Matlab](https://clij.github.io/clatlab/) (experimental)
+  * [MicroManager 2.0](https://clij.github.io/clij-docs/installationInMicroManager) (experimental)
+  * [Python](https://clij.github.io/clijpy/) (experimental)  
 * FAQ / support
   * [Frequently asked questions](https://clij.github.io/clij-docs/faq)
   * [List of tested systems](https://clij.github.io/clij-docs/testedsystems)
