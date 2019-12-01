@@ -220,8 +220,10 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
 * [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="affineTransform"></a>
@@ -288,8 +290,10 @@ dst.close();
 ### Example scripts
 * [affineTransform.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/affineTransform.py)
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
 * [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="affineTransform2D"></a>
@@ -418,6 +422,13 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
+
 <a name="affineTransform3D"></a>
 ## affineTransform3D( ClearCLBuffer src,  ClearCLBuffer dst,  float[] matrix )
 
@@ -451,6 +462,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
 
 <a name="applyVectorfield"></a>
 ## applyVectorfield( ClearCLBuffer src,  ClearCLBuffer vectorX,  ClearCLBuffer vectorY,  ClearCLBuffer dst )
@@ -861,7 +879,9 @@ dst.close();
 ### Example scripts
 * [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
 * [blur.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blur.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="blur"></a>
@@ -907,7 +927,9 @@ dst.close();
 ### Example scripts
 * [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
 * [blur.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blur.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="blurSliceBySlice"></a>
@@ -1049,8 +1071,10 @@ dst.close();
 
 ### Example scripts
 * [applyVectorField.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/applyVectorField.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [rotateFree.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateFree.py)
 * [rotateOverwriteOiginal.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/rotateOverwriteOiginal.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="copySlice"></a>
@@ -1539,6 +1563,8 @@ dst.close();
 ### Example scripts
 * [binaryProcessing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/binaryProcessing.py)
 * [blurg.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/blurg.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="dilateBoxSliceBySlice"></a>
@@ -1615,6 +1641,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
 
 <a name="dilateSphereSliceBySlice"></a>
 ## dilateSphereSliceBySlice( ClearCLBuffer src,  ClearCLBuffer dst )
@@ -2716,8 +2749,10 @@ dst_max.close();
 
 
 ### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [maximumProjection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/maximumProjection.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="meanBox"></a>
@@ -3734,6 +3769,13 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
+
 <a name="resliceBottom"></a>
 ## resliceBottom( ClearCLBuffer src,  ClearCLBuffer dst )
 
@@ -3801,6 +3843,13 @@ dstImagePlus.show();
 src.close();
 dst.close();
 ```
+
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
 
 <a name="resliceRight"></a>
 ## resliceRight( ClearCLBuffer src,  ClearCLBuffer dst )
@@ -3873,7 +3922,9 @@ dst.close();
 
 
 ### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [reslicing.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/reslicing.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="rotateLeft"></a>
@@ -3946,6 +3997,13 @@ src.close();
 dst.close();
 ```
 
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
+
 <a name="set"></a>
 ## set( ClearCLBuffer clImage,  Float value )
 
@@ -3977,6 +4035,13 @@ clij.op().set(clImage, value);
 # cleanup memory on GPU
 clImage.close();
 ```
+
+
+
+### Example scripts
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
+
 
 <a name="splitStack"></a>
 ## splitStack( ClearCLBuffer clImageIn,  ClearCLBuffer... clImagesOut )
@@ -4053,7 +4118,9 @@ destination.close();
 
 ### Example scripts
 * [backgroundSubtraction.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/backgroundSubtraction.py)
+* [interactiveSpotDetection.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/interactiveSpotDetection.py)
 * [multi_GPU_demo.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py)
+* [spotDetectionpy.py](https://github.com/clij/clij-docs/blob/master/src/main/jython/spotDetectionpy.py)
 
 
 <a name="subtractImages"></a>
