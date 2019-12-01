@@ -117,7 +117,7 @@ If a specified output image exists already in GPU memory, it will be overwritten
 CLIJ operations called from ImageJ macro have no return values. They either process pixels and save results to images or they save their results to ImageJs results table.
 
 <a name="binary_image_characteristics"></a>
-## How are binary image characterized in CLIJ?
+## How are binary images characterized in CLIJ?
 Binary output images are filled with pixel values 0 and 1. Any input image can serve as binary image and will be interpreted by differentiating 0 and non-zero values. In order to pull a binary image back to ImageJ which is compatible, use `pullBinary()`. This delivers a binary 8-bit image with 0 and 255 as pixel values.
 
 <a name="clearcl_vs_clij_performance_benefits"></a>
