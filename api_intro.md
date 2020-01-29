@@ -4,7 +4,7 @@
 CLIJ is a Java library and a ImageJ/Fiji plugin allowing you to run OpenCL GPU accelerated code from Java.
 
 ## High level API
-The high level API of CLIJ becomes accessible from your Java prpject by [linking its maven dependency](dependingViaMaven). Furthermore, it can be used from ImageJs scripting languages such as Groovy and Jython from Fijis script editor. Therefore, the [CLIJ update site needs to be activated](installationInFiji).
+The high level API of CLIJ becomes accessible from your Java project by [linking its maven dependency](dependingViaMaven). Furthermore, it can be used from ImageJs scripting languages such as Groovy and Jython from Fijis script editor. Therefore, the [CLIJ update site needs to be activated](installationInFiji).
 
 To get started, you need a `clij` variable containing the CLIJ instance to access the GPU. The following example shows how to do this from ImageJ Jython:
 ```python
