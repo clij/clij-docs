@@ -22,7 +22,7 @@ IJ.run(imp, "Make Composite", "display=Composite");
 # initialize ClearCL context and convenience layer
 clij = CLIJ.getInstance();
 
-# convert imglib2 image to CL images (ready for the GPU)
+# convert ImagePlus image to CL images (ready for the GPU)
 input = clij.push(imp);
 output = clij.create(input);
 
@@ -36,7 +36,7 @@ parameters = {
 
 clij.execute(filesPath + "rgbReplaceBlackAndWhite.cl", "rgbReplaceBlackAndWhite", parameters);
 
-# convert the result back to imglib2 and show it
+# convert the result back to ImagePlus and show it
 result = clij.pull(output)
 result.show();
 IJ.run(result, "Make Composite", "display=Composite");
