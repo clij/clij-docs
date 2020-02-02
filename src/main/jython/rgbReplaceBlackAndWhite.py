@@ -8,6 +8,7 @@
 
 from net.haesleinhuepf.clij import CLIJ;
 from ij import IJ;
+from java.lang import System;
 import os;
 import inspect
 
@@ -21,12 +22,12 @@ imp.show();
 IJ.run(imp, "Make Composite", "display=Composite");
 
 # initialize ClearCL context and convenience layer
+time = System.currentTimeMillis();
 clij = CLIJ.getInstance();
 
 # convert ImagePlus image to CL images (ready for the GPU)
 input = clij.push(imp);
 output = clij.create(input);
-
 
 # apply a filter to the image using ClearCL / OpenCL
 parameters = {
@@ -38,6 +39,8 @@ clij.execute(filesPath + "rgbReplaceBlackAndWhite.cl", "rgbReplaceBlackAndWhite"
 # convert the result back to ImagePlus and show it
 result = clij.pull(output)
 result.show();
+IJ.log("The custom kernel execution took " + str(System.currentTimeMillis() - time) + " ms");
+
 IJ.run(result, "Make Composite", "display=Composite");
 
 # clean up

@@ -21,6 +21,7 @@ run("CLIJ Macro Extensions", "cl_device=");
 Ext.CLIJ_clear();
 
 // send input to GPU
+time = getTime();
 Ext.CLIJ_push(input);
 
 // crop three 2D single channel images
@@ -63,5 +64,6 @@ Ext.CLIJ2_copySlice(result, input, 2);
 
 // -------------------------------------------------
 Ext.CLIJ_pull(input);
+print("The workflow execution took " + (getTime() - time) + " ms");
 run("8-bit");
 run("Make Composite", "display=Composite");
