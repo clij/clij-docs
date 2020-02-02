@@ -2121,14 +2121,14 @@ output3d.close();
 ```
 
 <a name="localThreshold"></a>
-## localThreshold( ClearCLBuffer src,  ClearCLBuffer dst,  ClearCLBuffer threshold )
+## localThreshold( ClearCLBuffer src,  ClearCLBuffer threshold,  ClearCLBuffer dst )
 
 Computes a binary image with pixel values 0 and 1 depending on if a pixel value x in image X 
 was above of equal to the pixel value m in mask image M.
 
 <pre>f(x) = (1 if (x >=  m)); (0 otherwise)</pre>
 
-**Parameters**:  ClearCLBuffer src,  ClearCLBuffer dst,  ClearCLBuffer threshold 
+**Parameters**:  ClearCLBuffer src,  ClearCLBuffer threshold,  ClearCLBuffer dst 
 
 **Groovy example**: 
 ```
@@ -2138,13 +2138,13 @@ clij = CLIJ.getInstance();
 
 // get input parameters
 src = clij.push(srcImagePlus);
-dst = clij.create(src);
 threshold = clij.push(thresholdImagePlus);
+dst = clij.create(src);
 ```
 
 ```
 // Execute operation on GPU
-clij.op().localThreshold(src, dst, threshold);
+clij.op().localThreshold(src, threshold, dst);
 ```
 
 ```
@@ -2154,8 +2154,8 @@ dstImagePlus.show();
 
 // cleanup memory on GPU
 src.close();
-dst.close();
 threshold.close();
+dst.close();
 ```
 
 <a name="mask"></a>

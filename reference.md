@@ -269,16 +269,21 @@ Ext.CLIJ_pull(destination);
 <a name="CLIJ_applyVectorField3D"></a>
 ## CLIJ_applyVectorField3D
 
-Image source, Image vectorX, Image vectorY, Image vectorZ, Image destination
+Deforms an image stack according to distances provided in the given vector image stacks. It is recommended to use 32-bit image stacks for input, output and vector image stacks. 
 
-**Parameters**: Deforms an image stack according to distances provided in the given vector image stacks. It is recommended to use 32-bit image stacks for input, output and vector image stacks. 
+**Parameters**: Image source, Image vectorX, Image vectorY, Image vectorZ, Image destination
 
 **Available for**: 3D
 
 **Macro example**: 
 ```
 run("CLIJ Macro Extensions", "cl_device=");
-Ext.CLIJ_applyVectorField3D(an, and);
+Ext.CLIJ_push(source);
+Ext.CLIJ_push(vectorX);
+Ext.CLIJ_push(vectorY);
+Ext.CLIJ_push(vectorZ);
+Ext.CLIJ_applyVectorField3D(source, vectorX, vectorY, vectorZ, destination);
+Ext.CLIJ_pull(destination);
 ```
 [Link to source](http://github.com/clij/clij/tree/master/src/main/java/net/haesleinhuepf/clij/macro/modules/ApplyVectorField3D.java)
 
