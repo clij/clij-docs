@@ -11,6 +11,8 @@ In order to get CLIJ accessible from [MicroManager 2.0 gamma](https://valelab4.u
 * [clij-advanced-filters_-0.21.3.jar](https://github.com/clij/clij-advanced-filters/releases/download/0.21.3/clij-advanced-filters_-0.21.3.jar)
 * [fiji-lib-2.1.2.jar](https://sites.imagej.net/Java-8/jars/fiji-lib-2.1.2.jar-20170530201750)
 
+While copying these files, please make sure to remove older verrsions of the same dependencies, such as clij-clearcl-0.10.1.jar, imagej-common-0.26.1.jar and imglib2-realtransform-2.0.0.jar.
+
 Afterwards, restart MicroManager. You can try if it works by running [this beanshell script](https://github.com/clij/clij-docs/blob/master/src/main/beanshell/clij_micromanager.bsh) to see if it works.
 
 [Back to CLIJ documentation](https://clij.github.io/)
