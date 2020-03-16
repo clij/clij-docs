@@ -8,13 +8,13 @@
 	<parent>
 		<groupId>net.haesleinhuepf</groupId>
 		<artifactId>clij-parent-pom</artifactId>
-		<version>1.4.4</version>
+		<version>1.5.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>net.haesleinhuepf</groupId>
 	<artifactId>clij-docs</artifactId>
-	<version>1.4.4</version>
+	<version>1.5.0</version>
 
 	<name>clij-docs</name>
 	<description>clij-docs contains CLIJ documentation and documentation generators.</description>
