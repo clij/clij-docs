@@ -74,7 +74,7 @@ result.show();
 inputCLBuffer.close();
 outputCLBuffer.close();
 ```
-More examples can be found in the [src/main/jython](https://github.com/clij/clij-docs/blob/master/src/main/jython/) and [src/main/java](https://github.com/mpicbg-csbd/clij-docs/blob/master/src/main/java/) directories.
+More examples can be found in the [src/main/jython](https://github.com/clij/clij-docs/blob/master/src/main/jython/) and [src/main/java](https://github.com/clij/clij-docs/blob/master/src/main/java/) directories.
 
 ## OpenCL Kernel calls with CLIJ.execute()
 The execute function asks for three or four parameters
