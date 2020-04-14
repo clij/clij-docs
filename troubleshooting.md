@@ -1,5 +1,5 @@
 # Troubleshooting
-## Big Images on NVidia cards
+## Big Images on NVidia graphics cards
 Errors may pop up when processing big images on NVidia cards on Windows (CL_INVALID_COMMAND_QUEUE, CL_INVALID_PROGRAM_EXECUTABLE, CL_MEM_OBJECT_ALLOCATION_FAILURE): The issue is related to a timeout of the operating system interrupting processing on the GPU. Add these keys to the windows registry and restart the machine (warning, don't do this if you're not sure. Ask you IT department for support. [Read the BSD3 license file](license.txt) for details on what why we're not responsible for your actions on your computer ):
 ```
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
@@ -7,6 +7,17 @@ Errors may pop up when processing big images on NVidia cards on Windows (CL_INVA
 "TdrDdiDelay"=dword:0000003c
 ```
 Here is more information about what TDR is: https://docs.microsoft.com/en-us/windows-hardware/drivers/display/tdr-registry-keys
+
+## Big Images on AMD graphics cards
+Similar to NVidia drives (see above), issues may appear due to a timeout when processing large images. The issue is related to a timeout of the operating system interrupting processing on the GPU. Add these keys to the windows registry and restart the machine (warning, don't do this if you're not sure. Ask you IT department for support. [Read the BSD3 license file](license.txt) for details on what why we're not responsible for your actions on your computer ). Similar to the solution above, enter a new key in the registry of Windows in this path
+```
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers
+```
+The key should be called `TdrDelay` and have a value of 8.
+
+Sources: 
+https://community.amd.com/thread/180166
+https://support.microsoft.com/en-us/help/2665946/display-driver-stopped-responding-and-has-recovered-error-in-windows-7
 
 ## Initialisation fails
 Fiji crashes when calling the first CLIJ filter: Check if the initialisation contains a proper name for a GPU.
