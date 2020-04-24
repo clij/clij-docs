@@ -60,6 +60,12 @@ To give an overview, some of CLIJs operations have been
 With some limitations, yes. You find details and installation instructions 
 [here](https://github.com/clij/clij-legacy/)
 
+<a name="thread_safe"></a>
+## Is CLIJ thread safe?
+If you use CLIJ from ImageJ macro, you cannot execute it in parallel from several threads. 
+If you use CLIJ from any other programming language, please use one CLIJ instance per thread.
+By using multiple threads in combination with multiple CLIJ instances, you can also [execute operations on multiple graphics cards](https://github.com/clij/clij-docs/blob/master/src/main/jython/multi_GPU_demo.py) at a time.
+
 <a name="memory_reuse"></a>
 ## Does reusing memory bring additional speed-up?
 Yes. When processing images of the same size and type, it is recommended to reuse memory instead of releasing memory and reallocating memory in every iteration. An example macro demonstrating this can be found 
